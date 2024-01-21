@@ -6,11 +6,13 @@ However, Jenny is in love with Johnny and would like to greet him differently: "
 
 **code**
 
+
     `name = input()
     if name == "Johnny":
         print("Hello, my love!")
     else:
         print(f"Hello, {name}!")`
+
 
 2.	Drink Something
 Kids drink toddy, teens drink coke, young adults drink beer, and adults drink whisky. 
@@ -23,6 +25,7 @@ An adult is defined as someone above the age of 21.
 Note: All the values are inclusive except the last one!
 
 **code**
+
 
     `age = int(input())
     drinks = ""
@@ -51,6 +54,7 @@ For each number, the program should print a different message:
 
 **code** 
 
+
     `message_number = int(input())
     message = ""
     for _ in range(message_number):
@@ -78,6 +82,7 @@ Note: it is guaranteed that N is found.
 
 **code**
 
+
     `divisor = int(input())
     boundary = int(input())
     
@@ -104,6 +109,7 @@ Both the price of a coffee and the total price must be formatted to the second d
 
 **code**
 
+
     `total_price = 0
     
     n = int(input())
@@ -124,6 +130,7 @@ Both the price of a coffee and the total price must be formatted to the second d
     
     print(f"Total: ${total_price:.2f}")`
 
+
 6.	String Pureness
 You will be given the number n. After that, you'll receive different strings n times. 
 Your task is to check if the given strings are pure, 
@@ -131,7 +138,8 @@ meaning that they do NOT consist of any of the characters: comma ",", period "."
 •	If a string is pure, print "{string} is pure."
 •	Otherwise, print "{string} is not pure!"
 
-**code**
+**code**  
+
 
     `string_number = int(input())
     special_chars = [',', '.', '_']
@@ -174,6 +182,17 @@ meaning that they do NOT consist of any of the characters: comma ",", period "."
             print(f"{my_string} is pure.")`
 
 
+| Input | Output|
+|---------------------------------------------|---|
+| 2</br>pure string</br>not_pure_string	      | pure string is pure.</br>not_pure_string is not pure!  |
+| 3</br>SoftUni</br>12345</br>string.pureness | SoftUni is pure.</br>12345 is pure.</br>string.pureness is not pure!  |
+
+	
+
+
+
+
+
 7.	Double Char
 You will be given strings until you receive the command "End". 
 For each string given, you should print a string in which each character (case-sensitive) is repeated twice. 
@@ -181,10 +200,19 @@ Note that if you receive the string "SoftUni", you should NOT print it!
 
 **code**
 
+
     `for string_input in iter(input,"End"):
         if string_input != "SoftUni":
             doubled_string = ''.join(char * 2 for char in string_input)
             print(doubled_string)`
+
+
+|  Input: | Output: |
+|---|---------|
+|Hello World</br>Repeat</br>End|HHeelllloo</br>WWoorrlldd</br>RReeppeeaatt|
+
+
+
 
 
 8.	How Much Coffee Do You Need?
@@ -205,6 +233,7 @@ Each event can be lowercase or uppercase:
 In the end, print the number of coffees you will need. If the count has exceeded 5, just print "You need extra sleep".
 
 **code**
+
 
     `needed_coffee = 0
     
@@ -246,6 +275,13 @@ or
         print(needed_coffee)`
 
 
+|  Input: | Output: |
+|---|---------|
+| dog</br>CAT</br>gaming</br>END| 3       |
+|movie</br>CODING</br>MOVIE</br>CLEANING</br>cat</br>END|You need extra sleep|
+
+
+
 9. Sorting Hat
 Help out the sorting hat to sort the new students in the houses of Hogwarts. You will be receiving names until the command "Welcome!". The length of each name determines in which house the student is going:
 
@@ -262,6 +298,7 @@ While receiving names, if you receive "Voldemort", print "You must not speak of 
   If all students are sorted successfully, print "Welcome to Hogwarts."
 
 **code**
+
 
     `voldemort_flag = False
     name = input()
@@ -286,6 +323,14 @@ While receiving names, if you receive "Voldemort", print "You must not speak of 
     if not voldemort_flag:
         print("Welcome to Hogwarts.")`
 
+
+| Input:  | Output:  |
+|---|---|
+| Luna</br>Hermione</br>Neville</br>Voldemort| Luna goes to Gryffindor.</br>Hermione goes to Hufflepuff.</br>Neville goes to Hufflepuff.</br>You must not speak of that name!</br>|
+
+
+
+
 10.	'* Mutate Strings
 
 You will be given **two strings**. 
@@ -295,13 +340,19 @@ You will be given **two strings**.
 
 **code**
 
-    `first_text = input()
+
     second_text = input()
     
     for index in range(len(first_text)):
         if first_text[index] != second_text[index]:
             first_text = second_text[:index + 1] + first_text[index + 1:]
             print(first_text)`
+
+
+|  Input: |  Output:  |
+|---|---|
+| bubble gum</br>turtle hum  | tubble gum</br> turble gum</br> turtle gum</br> turtle hum  |
+
 
 
 11. Easter Bread
@@ -343,3 +394,108 @@ after receiving the usual 3 colored eggs for your bread.
 * In the end, print the number of loaves of Easter bread you have made, the colored eggs you have gathered, 
  and the money formatted to the 2nd decimal place in the format described above.
 
+
+    `budget = float(input())
+    price_flour = float(input())
+    price_egg_one_pack = 0.75 * price_flour
+    price_l_milk = 1.25 * price_flour
+    price_quarter_milk = price_l_milk * 0.25
+    price_loaf = price_egg_one_pack + price_flour + price_quarter_milk
+    colored_eggs = 0
+    current_bread_count = 0
+    money_left = budget
+    
+    while money_left >= price_loaf:
+        current_bread_count += 1
+        money_left -= price_loaf
+        colored_eggs += 3
+    
+        if current_bread_count % 3 == 0:
+            colored_eggs -= (current_bread_count - 2)
+    
+    print(f"You made {current_bread_count} loaves of Easter bread! Now you have {colored_eggs} eggs and {money_left:.2f}BGN left.")`
+
+
+| Input:  | Output:  |
+|---|---|
+| 100 <br/> 5  | You made 9 loaves of Easter bread! Now you have 15 eggs and 7.19BGN left.  |
+
+
+12.	Christmas Spirit<br/>It is time to get in a Christmas mood.
+<br/>You need to decorate the house in time for the big event, but you have limited days to do so.
+<br/>Write a program that calculates how much money you will need to spend on Christmas decorations<br/> 
+and how much your Christmas spirit will improve.
+<br/>On the **first line**, you will receive the quantity of decorations you should buy each time you go shopping. 
+<br/>On the second line, you will receive the days left until Christmas. 
+<br/>There are 4 types of decorations, and each piece costs a certain price. <br/>
+Also, each time you go shopping for a concrete type of decoration, your Christmas spirit is improved by some points:
+
+| Decoration  | Price/<br/>Piece  | Points/<br/>Shopping |
+|---|---|-----------------|
+|  Ornament Set | 2$  | 5               |
+|  Tree Skirt | 5$  | 3               |
+| Tree Garland  |  3$ | 10              |
+| Tree Lights | 15$  | 17              |
+
+
+<Until Christmas, you go shopping for a certain decoration as follows:
+* Every second day you buy Ornament Sets.
+* Every third day you buy Tree Skirts and Tree Garlands.
+* Every fifth day you buy Tree Lights. 
+  * If you have bought Tree Skirts and Tree Garlands on the same day, you additionally increase your spirit by 30. <br/>
+    * **Hint: A day happens to be the third one as well as the fifth one at the same time (for example the 15th day).**<br/>
+  That's not all! You have a cat at home that really likes to mess around with the decorations:
+* Every tenth day your cat ruins all tree decorations, and you lose 20 points of the spirit:
+  * Because of that, you go shopping (for a second time during the day) to buy one piece of tree skirt, 
+garlands, and lights, but you do NOT earn additional spirit points for them.
+* Also, because of the cat - at the beginning of every eleventh day,
+you are forced to increase the quantity of decorations needed to be bought each time you go shopping by adding 2.
+* If the last day is the tenth day, the cat demolishes even more and ruins the Christmas turkey, 
+and you lose an additional 30 points of spirit.
+    In the end, you must print the total cost and the gained spirit.
+
+Output
+In the end, print the **total cost** and the total gained **spirit** in the following format:
+* "Total cost: {budget}"
+  * "Total spirit: {totalSpirit}"
+
+
+    `quantity = int(input())
+    days = int(input())
+    ornament_set = 2
+    tree_skirt = 5
+    tree_garlands = 3
+    tree_lights = 15
+    total_cost = 0
+    gained_spirit = 0
+    for day in range(1, days + 1):
+        tree_set = False
+        if day % 11 == 0:
+            quantity += 2
+        if day % 2 == 0:
+            total_cost += ornament_set * quantity
+            gained_spirit += 5
+        if day % 3 == 0:
+            total_cost += (tree_skirt + tree_garlands) * quantity
+            tree_set = True
+            gained_spirit += 13
+        if day % 5 == 0:
+            total_cost += tree_lights * quantity
+            gained_spirit += 17
+            if tree_set:
+                gained_spirit += 30
+        if day % 10 == 0:
+            total_cost += tree_skirt + tree_garlands + tree_lights
+            gained_spirit -= 20
+    if days % 10 == 0:
+        gained_spirit -= 30
+  
+    print(f"Total cost: {total_cost}")
+    print(f"Total spirit: {gained_spirit}")`
+
+
+
+| Input:     | Output:                                |
+|------------|----------------------------------------|
+| 1 <br/> 7  | Total cost: 37 <br/>Total spirit: 58   |
+| 3 <br/> 20 | Total cost: 558 <br/>Total spirit: 156 |
