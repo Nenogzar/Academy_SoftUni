@@ -2,11 +2,11 @@
 1. Write a python program to print following star pattern: 
 
 
-    *  *  *  *  *
-    *  *  *  *  *
-    *  *  *  *  *
-    *  *  *  *  *
-    *  *  *  *  *
+        *  *  *  *  *
+        *  *  *  *  *
+        *  *  *  *  *
+        *  *  *  *  *
+        *  *  *  *  *
 
         
 Code:
@@ -22,11 +22,11 @@ Code:
 1.1. Hollow Square of Stars Pattern 5 in Python
 
       
-      *  *  *  *  * 
-      *           * 
-      *           *
-      *           *
-      *  *  *  *  *
+        *  *  *  *  * 
+        *           * 
+        *           *
+        *           *
+        *  *  *  *  *
 
 
 Please Enter any Side of a Square  :5
@@ -50,11 +50,11 @@ Code:
 2. Write a python program to print following pattern: 
 
 
-    *
-    *  *
-    *  *  *
-    *  *  *  *        
-    *  *  *  *  *
+        *
+        *  *
+        *  *  *
+        *  *  *  *        
+        *  *  *  *  *
 
 
 Code:
@@ -70,11 +70,11 @@ Code:
 3. Write a python code to print following star pattern: 
 
 
-    *  *  *  *  *
-    *  *  *  *
-    *  *  *
-    *  *
-    *
+        *  *  *  *  *
+        *  *  *  *
+        *  *  *
+        *  *
+        *
 
 
 Code:    
@@ -89,11 +89,11 @@ Code:
 4. Write a python code to print following pattern: 
 
 
-                    *
-                *   *
-            *   *   *
-        *   *   *   *
-    *   *   *   *   *
+                        *
+                    *   *
+                *   *   *
+            *   *   *   *
+        *   *   *   *   *
 
 
 Code:
@@ -111,11 +111,11 @@ Code:
 5. Write a python program to print following star pattern: 
 
 
-    *   *   *   *   *
-        *   *   *   *
-            *   *   *
-                *   *
-                    *
+        *   *   *   *   *
+            *   *   *   *
+                *   *   *
+                    *   *
+                        *
 
 
 Code:
@@ -133,11 +133,11 @@ Code:
 6. Write a python program to print following hill star pattern: 
 
 
-                    *
-                *   *   *
-            *   *   *   *   *
-        *   *   *   *   *   *   *
-    *   *   *   *   *   *   *   *   *
+                        *
+                    *   *   *
+                *   *   *   *   *
+            *   *   *   *   *   *   *
+        *   *   *   *   *   *   *   *   *
 
 
 Code:
@@ -157,11 +157,11 @@ Code:
 7. Write a python program to print revers hill star pattern: 
 
 
-    *   *   *   *   *   *   *   *   *
-        *   *   *   *   *   *   *   
-            *   *   *   *   * 
-                *   *   *
-                    *
+        *   *   *   *   *   *   *   *   *
+            *   *   *   *   *   *   *   
+                *   *   *   *   * 
+                    *   *   *
+                        *
 
 Code:
 
@@ -180,15 +180,15 @@ Code:
 8. Write a python code to print Dimond pattern with star: 
 
 
-                    *
-                *   *   *
-            *   *   *   *   *
-        *   *   *   *   *   *   *
-    *   *   *   *   *   *   *   *   *
-        *   *   *   *   *   *   *   
-            *   *   *   *   * 
-                *   *   *
-                    *
+                        *
+                    *   *   *
+                *   *   *   *   *
+            *   *   *   *   *   *   *
+        *   *   *   *   *   *   *   *   *
+            *   *   *   *   *   *   *   
+                *   *   *   *   * 
+                    *   *   *
+                        *
 
 
 Code:
@@ -216,28 +216,28 @@ Code:
 8.1. Python Hollow Star Diamond
 
    
-                  *
-               *     *
-            *           *
-         *                 *
-      *                       *
-         *                 *
-            *           *
-               *     *
-                  * 
+                      *
+                   *     *
+                *           *
+             *                 *
+          *                       *
+             *                 *
+                *           *
+                   *     *
+                      * 
 
 
 9. Print Trouser Style Pattern
 
 
-    ****************
-    *******  *******
-    ******    ******
-    *****      *****
-    ****        ****
-    ***          ***
-    **            **
-    *              *
+        ****************
+        *******  *******
+        ******    ******
+        *****      *****
+        ****        ****
+        ***          ***
+        **            **
+        *              *
 
 
 Code: 
@@ -260,14 +260,14 @@ Code:
 9.1. Python Pyramid Program to Display Trouser Line Star Pattern
 
 
-    ****************
-    *******--*******
-    ******----******
-    *****------*****
-    ****--------****
-    ***----------***
-    **------------**
-    *--------------*
+        ****************
+        *******--*******
+        ******----******
+        *****------*****
+        ****--------****
+        ***----------***
+        **------------**
+        *--------------*
 
 
 Code: 
@@ -294,15 +294,15 @@ star pattern 10
 Enter number of Rows:5
 
 
-         * * * * * 
-          * * * * 
-           * * * 
-            * * 
-             * 
-            * * 
-           * * * 
-          * * * * 
-         * * * * * 
+             * * * * * 
+              * * * * 
+               * * * 
+                * * 
+                 * 
+                * * 
+               * * * 
+              * * * * 
+             * * * * * 
 
 
 code:
