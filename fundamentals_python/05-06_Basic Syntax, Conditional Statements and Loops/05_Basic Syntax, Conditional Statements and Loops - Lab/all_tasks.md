@@ -130,4 +130,4 @@ Write a program that receives a number and creates the following pattern. The nu
                    print("*" * width)
 
 
-[More tasks and solutions for patterns](07_patterns.py)
+[More tasks and solutions for patterns](patterns.md)
