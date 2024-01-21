@@ -1,20 +1,23 @@
 # Star Pattern Programs In Python
 1. Write a python program to print following star pattern: 
 
-         *  *  *  *  *
-         *  *  *  *  *
-         *  *  *  *  *
-         *  *  *  *  *
-         *  *  *  *  *
+
+    *  *  *  *  *
+    *  *  *  *  *
+    *  *  *  *  *
+    *  *  *  *  *
+    *  *  *  *  *
 
         
 Code:
+
 
     n=5
     for i in range(n):
         for j in range(n):
             print('*', end=' ')
         print()
+
 
 1.1. Hollow Square of Stars Pattern 5 in Python
 
@@ -25,10 +28,12 @@ Code:
       *           *
       *  *  *  *  *
 
+
 Please Enter any Side of a Square  :5
 Hollow Square Star Pattern
 
 Code: 
+
 
       side = int(input("Please Enter any Side of a Square  : "))
       
@@ -42,17 +47,18 @@ Code:
           print()
 
 
-
-
 2. Write a python program to print following pattern: 
 
-         *
-         *  *
-         *  *  *
-         *  *  *  *        
-         *  *  *  *  *
+
+    *
+    *  *
+    *  *  *
+    *  *  *  *        
+    *  *  *  *  *
+
 
 Code:
+
 
     n = 5 
     for i in range(n): 
@@ -60,15 +66,19 @@ Code:
           print('*', end=' ')
        print()
 
+
 3. Write a python code to print following star pattern: 
 
-         *  *  *  *  *
-         *  *  *  *
-         *  *  *
-         *  *
-         *
+
+    *  *  *  *  *
+    *  *  *  *
+    *  *  *
+    *  *
+    *
+
 
 Code:    
+
 
     n = 5 
     for i in range(n): 
@@ -78,13 +88,16 @@ Code:
 
 4. Write a python code to print following pattern: 
 
-                        *
-                    *   *
-                *   *   *
-            *   *   *   *
-        *   *   *   *   *
+
+                    *
+                *   *
+            *   *   *
+        *   *   *   *
+    *   *   *   *   *
+
 
 Code:
+
 
     n = 5 
     for i in range(n): 
@@ -94,14 +107,19 @@ Code:
          print('*', end=' ')
       print()
 
+
 5. Write a python program to print following star pattern: 
 
-        *   *   *   *   *
-            *   *   *   *
-                *   *   *
-                    *   *
-                        *
+
+    *   *   *   *   *
+        *   *   *   *
+            *   *   *
+                *   *
+                    *
+
+
 Code:
+
 
         n = 5 
         for i in range(n): 
@@ -110,7 +128,6 @@ Code:
            for j in range(i, n):
               print('*', end=' ')
            print()
-
 
 
 6. Write a python program to print following hill star pattern: 
@@ -122,7 +139,9 @@ Code:
         *   *   *   *   *   *   *
     *   *   *   *   *   *   *   *   *
 
+
 Code:
+
 
         n = 5 
         for i in range(n): 
@@ -143,7 +162,9 @@ Code:
             *   *   *   *   * 
                 *   *   *
                     *
+
 Code:
+
 
         n = 5 
         for i in range(n): 
@@ -154,6 +175,7 @@ Code:
            for j in range(i, n):
               print('*', end=' ')
            print()
+
 
 8. Write a python code to print Dimond pattern with star: 
 
@@ -168,7 +190,9 @@ Code:
                 *   *   *
                     *
 
+
 Code:
+
 
     n = 5 
     for i in range(n-1): 
@@ -188,6 +212,7 @@ Code:
           print('*', end=' ')
        print()
 
+
 8.1. Python Hollow Star Diamond
 
    
@@ -202,20 +227,21 @@ Code:
                   * 
 
 
-
 9. Print Trouser Style Pattern
 
 
-      ****************
-      *******  *******
-      ******    ******
-      *****      *****
-      ****        ****
-      ***          ***
-      **            **
-      *              *
+    ****************
+    *******  *******
+    ******    ******
+    *****      *****
+    ****        ****
+    ***          ***
+    **            **
+    *              *
+
 
 Code: 
+
 
       n = 16
       print("*" * n, end="\n")
@@ -230,18 +256,22 @@ Code:
               i = i - 1
               j = j + 2
 
+
 9.1. Python Pyramid Program to Display Trouser Line Star Pattern
 
-      ****************
-      *******--*******
-      ******----******
-      *****------*****
-      ****--------****
-      ***----------***
-      **------------**
-      *--------------*
+
+    ****************
+    *******--*******
+    ******----******
+    *****------*****
+    ****--------****
+    ***----------***
+    **------------**
+    *--------------*
+
 
 Code: 
+
 
       n = 16
       print("*" * n, end="\n")
@@ -256,11 +286,13 @@ Code:
               i = i - 1
               j = j + 2
 
+
 10. Sand Glass star pattern 10 in Python Programming
 Write a Python program
 to display Sand glass
 star pattern 10
 Enter number of Rows:5
+
 
          * * * * * 
           * * * * 
@@ -271,4 +303,35 @@ Enter number of Rows:5
            * * * 
           * * * * 
          * * * * * 
+
+
+code:
+
+
+    rows = int(input("Enter number of Rows:"))
+    
+    for i in range(1,rows):
+        for j in range(1,i):
+            # print required number of spaces
+            print('', end=' ')
+    
+        k = i
+        for k in range(i,rows+1):
+            print('*', end=' ')
+    
+        print()
+        
+    i = rows - 1
+    while i >= 0:
+        j = 0
+        while j < i:
+            print('', end=' ')
+            j += 1
+        k = i
+        while k <= rows - 1:
+            print('*', end=' ')
+            k += 1
+        print('')
+        i -= 1
+
 

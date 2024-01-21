@@ -151,15 +151,42 @@ meaning that they do NOT consist of any of the characters: comma ",", period "."
 
 """ or """
 
-num_strings = int(input())
+# num_strings = int(input())
+#
+# for n in range(num_strings):
+#     my_string = input()
+#
+#     contains_special_chars = any(char in my_string for char in [',', '.', '_'])
+#
+#     if contains_special_chars:
+#         print(f"{my_string} is not pure.")
+#     else:
+#         print(f"{my_string} is pure.")
+"""
+7.	Double Char
+You will be given strings until you receive the command "End". 
+For each string given, you should print a string in which each character (case-sensitive) is repeated twice. 
+Note that if you receive the string "SoftUni", you should NOT print it!
+"""
+# for string_input in iter(input,"End"):
+#     if string_input != "SoftUni":
+#         doubled_string = ''.join(char * 2 for char in string_input)
+#         print(doubled_string)
 
-for n in range(num_strings):
-    my_string = input()
+"""
+8.	How Much Coffee Do You Need?
+Everybody knows that you spend too much time awake during nighttime.
+Your task is to define how much coffee you need to stay awake. 
+Until you receive the command "END", you need to read commands on different lines. 
+According to the commands, calculate the number of coffees you need to drink to stay awake during the daytime.
+The list of events can contain the following:
+•	You have homework to do ("coding").
+•	You have a dog or a cat that decided to wake you up too early ("dog" or "cat").
+•	You watch a movie ("movie").
+•	If other events are present, they will be represented by arbitrary strings. Just ignore them!
+Each event can be lowercase or uppercase:
+•	If it is lowercase, you need 1 coffee by an event.
+•	If it is uppercase, you need 2 coffees by an event.
+In the end, print the number of coffees you will need. If the count has exceeded 5, just print "You need extra sleep".
 
-    contains_special_chars = any(char in my_string for char in [',', '.', '_'])
-
-    if contains_special_chars:
-        print(f"{my_string} is not pure.")
-    else:
-        print(f"{my_string} is pure.")
-
+"""
