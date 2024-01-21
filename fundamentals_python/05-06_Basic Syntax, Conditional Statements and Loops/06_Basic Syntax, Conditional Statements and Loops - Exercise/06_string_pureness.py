@@ -59,7 +59,7 @@ for _ in range(num_strings):
     contains_special_chars = any(char in my_string for char in [',', '.', '_'])
 
     if contains_special_chars:
-        print(f"{my_string} is not pure.")
+        print(f"{my_string} is not pure!")
     else:
         print(f"{my_string} is pure.")
 
