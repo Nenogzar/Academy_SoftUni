@@ -5,11 +5,11 @@ The greeting should be in the format "Hello, {name}!".
 However, Jenny is in love with Johnny and would like to greet him differently: "Hello, my love!". Could you help her?
 
 
-    name = input()
-    if name == "Johnny":
-        print("Hello, my love!")
-    else:
-        print(f"Hello, {name}!")
+        name = input()
+        if name == "Johnny":
+            print("Hello, my love!")
+        else:
+            print(f"Hello, {name}!")
 
 
 2.	Drink Something
@@ -23,19 +23,19 @@ An adult is defined as someone above the age of 21.
 Note: All the values are inclusive except the last one!
 
 
-    age = int(input())
-    drinks = ""
-    
-    if age <= 14:
-        drinks = "toddy"
-    elif age <= 18:
-        drinks = "coke"
-    elif age <=21:
-        drinks = "beer"
-    else:
-        drinks = "whisky"
-    
-    print(f"drink {drinks}")
+        age = int(input())
+        drinks = ""
+        
+        if age <= 14:
+            drinks = "toddy"
+        elif age <= 18:
+            drinks = "coke"
+        elif age <=21:
+            drinks = "beer"
+        else:
+            drinks = "whisky"
+        
+        print(f"drink {drinks}")
 
 
 3.	Chat Codes
@@ -49,20 +49,21 @@ For each number, the program should print a different message:
 •	If the number is over 88 - "Bye."
 
 
-    message_number = int(input())
-    message = ""
-    for _ in range(message_number):
-        code = int(input())
-    
-        if code == 88:
-            message = "Hello"
-        elif code == 86:
-            message = "How are you?"
-        elif code < 88:
-            message = "GREAT!"
-        else:
-            message = "Bye."
-        print(message)
+        message_number = int(input())
+        message = ""
+        for _ in range(message_number):
+            code = int(input())
+        
+            if code == 88:
+                message = "Hello"
+            elif code == 86:
+                message = "How are you?"
+            elif code < 88:
+                message = "GREAT!"
+            else:
+                message = "Bye."
+            print(message)
+
 
 4.	Maximum Multiple
 On the first line, you will be given a positive number, which will serve as a divisor. 
@@ -73,11 +74,13 @@ You should find the largest integer N, that is:
 •	greater than 0
 Note: it is guaranteed that N is found.
 
-    divisor = int(input())
-    boundary = int(input())
-    
-    result = (boundary // divisor) * divisor
-    print(result)
+
+        divisor = int(input())
+        boundary = int(input())
+        
+        result = (boundary // divisor) * divisor
+        print(result)
+
 
 5.	Orders
 You work at a coffee shop, and your job is to place orders with the distributors. 
@@ -97,26 +100,25 @@ After you go through all orders, you need to print the total price in the follow
 Both the price of a coffee and the total price must be formatted to the second decimal place. 
 
 
-
-    total_price = 0
+        total_price = 0
+        
+        n = int(input())
+        
+        for _ in range(n):
+            price_per_capsule = float(input())
+            days = int(input())
+            capsules_per_day = int(input())
+        
+            # Validate the input ranges
+            if not (0.01 <= price_per_capsule <= 100.00) or not (1 <= days <= 31) or not (1 <= capsules_per_day <= 2000):
+        
+                continue
+        
+            order_price = price_per_capsule * days * capsules_per_day
+            total_price += order_price
+            print(f"The price for the coffee is: ${order_price:.2f}")
     
-    n = int(input())
-    
-    for _ in range(n):
-        price_per_capsule = float(input())
-        days = int(input())
-        capsules_per_day = int(input())
-    
-        # Validate the input ranges
-        if not (0.01 <= price_per_capsule <= 100.00) or not (1 <= days <= 31) or not (1 <= capsules_per_day <= 2000):
-    
-            continue
-    
-        order_price = price_per_capsule * days * capsules_per_day
-        total_price += order_price
-        print(f"The price for the coffee is: ${order_price:.2f}")
-
-print(f"Total: ${total_price:.2f}")
+        print(f"Total: ${total_price:.2f}")
 
 
 6.	String Pureness
@@ -126,43 +128,47 @@ meaning that they do NOT consist of any of the characters: comma ",", period "."
 •	If a string is pure, print "{string} is pure."
 •	Otherwise, print "{string} is not pure!"
 
-    string_number = int(input())
-    special_chars = [',', '.', '_']
-    contains_comma = False
-    contains_dot = False
-    contains_underscore = False
-    
-    for _ in range(string_number):
-        my_string = input()
-    
-    
-        for char in special_chars:
-            if char in my_string:
-                if char == ',':
-                    contains_comma = True
-                elif char == '.':
-                    contains_dot = True
-                elif char == '_':
-                    contains_underscore = True
-    
-        if contains_comma or contains_dot or contains_underscore:
-            print(f"{my_string} is not pure!")
-        else:
-            print(f"{my_string} is pure.")
+
+        string_number = int(input())
+        special_chars = [',', '.', '_']
+        contains_comma = False
+        contains_dot = False
+        contains_underscore = False
+        
+        for _ in range(string_number):
+            my_string = input()
+        
+        
+            for char in special_chars:
+                if char in my_string:
+                    if char == ',':
+                        contains_comma = True
+                    elif char == '.':
+                        contains_dot = True
+                    elif char == '_':
+                        contains_underscore = True
+        
+            if contains_comma or contains_dot or contains_underscore:
+                print(f"{my_string} is not pure!")
+            else:
+                print(f"{my_string} is pure.")
+
 
  or 
 
-    num_strings = int(input())
-    
-    for n in range(num_strings):
-        my_string = input()
-    
-        contains_special_chars = any(char in my_string for char in [',', '.', '_'])
-    
-        if contains_special_chars:
-            print(f"{my_string} is not pure.")
-        else:
-            print(f"{my_string} is pure.")
+
+        num_strings = int(input())
+        
+        for n in range(num_strings):
+            my_string = input()
+        
+            contains_special_chars = any(char in my_string for char in [',', '.', '_'])
+        
+            if contains_special_chars:
+                print(f"{my_string} is not pure.")
+            else:
+                print(f"{my_string} is pure.")
+
 
 7.	Double Char
 You will be given strings until you receive the command "End". 
@@ -170,10 +176,10 @@ For each string given, you should print a string in which each character (case-s
 Note that if you receive the string "SoftUni", you should NOT print it!
 
 
-    for string_input in iter(input,"End"):
-        if string_input != "SoftUni":
-            doubled_string = ''.join(char * 2 for char in string_input)
-            print(doubled_string)
+        for string_input in iter(input,"End"):
+            if string_input != "SoftUni":
+                doubled_string = ''.join(char * 2 for char in string_input)
+                print(doubled_string)
 
 
 8.	How Much Coffee Do You Need?
