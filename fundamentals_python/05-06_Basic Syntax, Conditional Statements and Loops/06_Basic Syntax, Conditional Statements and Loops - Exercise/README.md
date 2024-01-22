@@ -7,11 +7,11 @@ However, Jenny is in love with Johnny and would like to greet him differently: "
 **code**
 
 
-    `name = input()
+    name = input()
     if name == "Johnny":
         print("Hello, my love!")
     else:
-        print(f"Hello, {name}!")`
+        print(f"Hello, {name}!")
 
 
 2.	Drink Something
@@ -27,7 +27,7 @@ Note: All the values are inclusive except the last one!
 **code**
 
 
-    `age = int(input())
+    age = int(input())
     drinks = ""
     
     if age <= 14:
@@ -39,7 +39,7 @@ Note: All the values are inclusive except the last one!
     else:
         drinks = "whisky"
     
-    print(f"drink {drinks}")`
+    print(f"drink {drinks}")
 
 
 3.	Chat Codes
@@ -55,7 +55,7 @@ For each number, the program should print a different message:
 **code** 
 
 
-    `message_number = int(input())
+    message_number = int(input())
     message = ""
     for _ in range(message_number):
         code = int(input())
@@ -68,7 +68,7 @@ For each number, the program should print a different message:
             message = "GREAT!"
         else:
             message = "Bye."
-        print(message)`
+        print(message)
 
 
 4.	Maximum Multiple
@@ -83,11 +83,11 @@ Note: it is guaranteed that N is found.
 **code**
 
 
-    `divisor = int(input())
+    divisor = int(input())
     boundary = int(input())
     
     result = (boundary // divisor) * divisor
-    print(result)`
+    print(result)
 
 
 5.	Orders
@@ -110,7 +110,7 @@ Both the price of a coffee and the total price must be formatted to the second d
 **code**
 
 
-    `total_price = 0
+    total_price = 0
     
     n = int(input())
     
@@ -128,7 +128,7 @@ Both the price of a coffee and the total price must be formatted to the second d
         total_price += order_price
         print(f"The price for the coffee is: ${order_price:.2f}")
     
-    print(f"Total: ${total_price:.2f}")`
+    print(f"Total: ${total_price:.2f}")
 
 
 6.	String Pureness
@@ -141,7 +141,7 @@ meaning that they do NOT consist of any of the characters: comma ",", period "."
 **code**  
 
 
-    `string_number = int(input())
+    string_number = int(input())
     special_chars = [',', '.', '_']
     contains_comma = False
     contains_dot = False
@@ -163,13 +163,13 @@ meaning that they do NOT consist of any of the characters: comma ",", period "."
         if contains_comma or contains_dot or contains_underscore:
             print(f"{my_string} is not pure!")
         else:
-            print(f"{my_string} is pure.")`
+            print(f"{my_string} is pure.")
 
 
  or 
 
 
-    `num_strings = int(input())
+    num_strings = int(input())
     
     for n in range(num_strings):
         my_string = input()
@@ -179,7 +179,7 @@ meaning that they do NOT consist of any of the characters: comma ",", period "."
         if contains_special_chars:
             print(f"{my_string} is not pure.")
         else:
-            print(f"{my_string} is pure.")`
+            print(f"{my_string} is pure.")
 
 
 | Input | Output|
@@ -201,10 +201,10 @@ Note that if you receive the string "SoftUni", you should NOT print it!
 **code**
 
 
-    `for string_input in iter(input,"End"):
+    for string_input in iter(input,"End"):
         if string_input != "SoftUni":
             doubled_string = ''.join(char * 2 for char in string_input)
-            print(doubled_string)`
+            print(doubled_string)
 
 
 |  Input: | Output: |
@@ -235,7 +235,7 @@ In the end, print the number of coffees you will need. If the count has exceeded
 **code**
 
 
-    `needed_coffee = 0
+    needed_coffee = 0
     
     for command in iter(input, "END"):
         if command == "coding" or command == "dog" or command == "cat" or command == "movie":
@@ -250,13 +250,13 @@ In the end, print the number of coffees you will need. If the count has exceeded
             break
     
     else:
-        print(needed_coffee)`
+        print(needed_coffee)
 
 
 or 
 
 
-    `keywords = ["coding", "dog", "cat", "movie"]
+    keywords = ["coding", "dog", "cat", "movie"]
     needed_coffee = 0
     
     for command in iter(input, "END"):
@@ -272,7 +272,7 @@ or
             break
     
     else:
-        print(needed_coffee)`
+        print(needed_coffee)
 
 
 |  Input: | Output: |
@@ -300,7 +300,7 @@ While receiving names, if you receive "Voldemort", print "You must not speak of 
 **code**
 
 
-    `voldemort_flag = False
+    voldemort_flag = False
     name = input()
     
     while name != "Welcome!":
@@ -321,7 +321,7 @@ While receiving names, if you receive "Voldemort", print "You must not speak of 
         name = input()
     
     if not voldemort_flag:
-        print("Welcome to Hogwarts.")`
+        print("Welcome to Hogwarts.")
 
 
 | Input:  | Output:  |
@@ -346,7 +346,7 @@ You will be given **two strings**.
     for index in range(len(first_text)):
         if first_text[index] != second_text[index]:
             first_text = second_text[:index + 1] + first_text[index + 1:]
-            print(first_text)`
+            print(first_text)
 
 
 |  Input: |  Output:  |
@@ -395,7 +395,7 @@ after receiving the usual 3 colored eggs for your bread.
  and the money formatted to the 2nd decimal place in the format described above.
 
 
-    `budget = float(input())
+    budget = float(input())
     price_flour = float(input())
     price_egg_one_pack = 0.75 * price_flour
     price_l_milk = 1.25 * price_flour
@@ -413,7 +413,7 @@ after receiving the usual 3 colored eggs for your bread.
         if current_bread_count % 3 == 0:
             colored_eggs -= (current_bread_count - 2)
     
-    print(f"You made {current_bread_count} loaves of Easter bread! Now you have {colored_eggs} eggs and {money_left:.2f}BGN left.")`
+    print(f"You made {current_bread_count} loaves of Easter bread! Now you have {colored_eggs} eggs and {money_left:.2f}BGN left.")
 
 
 | Input:  | Output:  |
@@ -460,7 +460,7 @@ In the end, print the **total cost** and the total gained **spirit** in the foll
   * "Total spirit: {totalSpirit}"
 
 
-    `quantity = int(input())
+    quantity = int(input())
     days = int(input())
     ornament_set = 2
     tree_skirt = 5
@@ -491,7 +491,7 @@ In the end, print the **total cost** and the total gained **spirit** in the foll
         gained_spirit -= 30
   
     print(f"Total cost: {total_cost}")
-    print(f"Total spirit: {gained_spirit}")`
+    print(f"Total spirit: {gained_spirit}")
 
 
 
