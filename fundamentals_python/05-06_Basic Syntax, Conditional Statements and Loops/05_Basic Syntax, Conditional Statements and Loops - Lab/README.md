@@ -55,7 +55,6 @@ print "{num} is odd!" and end the program. Otherwise, if all numbers given are e
 
 
                number = int(input())
-               
                for _ in range(number):
                    check_even = int(input())
                    if not check_even % 2 == 0:  #  if check_even % 2 != 0:
