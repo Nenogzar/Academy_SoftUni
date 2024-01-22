@@ -13,23 +13,23 @@ You may use a temporary variable to remember the old value of a, then assign the
 and then assign the value of the temporary variable to b.</br>
 **code**
 
-    `number_one = int(input())
+    number_one = int(input())
     number_two = int(input())
     
     print(f"Before:\na = {number_one}\nb = {number_two}")
-    print(f"After:\na = {number_two}\nb = {number_one}")`
+    print(f"After:\na = {number_two}\nb = {number_one}")
 
 
 or
 
-    `number_one = int(input())
+    number_one = int(input())
     number_two = int(input())
     
     print(f"Before:\na = {number_one}\nb = {number_two}")
     
     number_one, number_two = number_two, number_one
     
-    print(f"After:\na = {number_one}\nb = {number_two}")`
+    print(f"After:\na = {number_one}\nb = {number_two}")
 
 
 
@@ -51,7 +51,7 @@ Examples
 
 **code**
 
-    `n = int(input())
+    n = int(input())
     
     if n > 1:
         for i in range(2, n // 2):
@@ -59,11 +59,11 @@ Examples
                 print("False")
                 break
         else:
-            print("True")`
+            print("True")
 
 or 
 
-    `n = int(input())
+    n = int(input())
     
     # Check if n is a prime number
     if n > 1:
@@ -74,7 +74,7 @@ or
         else:
             print("True")
     else:
-        print("False")`
+        print("False")
 
 
 3.	Decrypting Messages
@@ -89,7 +89,7 @@ Examples
 
 **code**
 
-    `key = int(input())
+    key = int(input())
     line = int(input())
     
     word = list()
@@ -101,11 +101,11 @@ Examples
         word.append(chr(to_check))
     
     for letter in word:
-        print(letter, end="")`
+        print(letter, end="")
 
 or
 
-    `key = int(input())
+    key = int(input())
     line = int(input())
     
     word = list()
@@ -114,7 +114,7 @@ or
         letter = input()
         word.append(chr(ord(letter) + key))
     
-    print(*word, sep="")`
+    print(*word, sep="")
 
 4.	Balanced Brackets</br>
 On the first line, you will receive n – the number of lines, which will follow. 
@@ -136,7 +136,7 @@ Examples
 
 **code**
 
-    `number = int(input())
+    number = int(input())
     counter = 0
     for _ in range(number):
         check = input()
@@ -148,4 +148,4 @@ Examples
             print("UNBALANCED")
             break
     else:
-        print("BALANCED")`
+        print("BALANCED")
