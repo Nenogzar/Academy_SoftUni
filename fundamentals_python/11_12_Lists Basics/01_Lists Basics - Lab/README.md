@@ -21,14 +21,14 @@ You will receive 3 strings on separate lines, representing the tail, the body, a
 * Hints</br>
 We start by reading the three parts of the body:
 
-  * Code
+* Code
 
 
-    head = input()
-    body = input()
-    tail = input()
-    text = [tail, body, head]
-    print(text)
+      head = input()
+      body = input()
+      tail = input()
+      text = [tail, body, head]
+      print(text)
 
 or
 
