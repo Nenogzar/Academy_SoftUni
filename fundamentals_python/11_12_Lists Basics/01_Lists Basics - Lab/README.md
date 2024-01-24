@@ -93,3 +93,224 @@ or
     print(courses_list)
 
 
+3.	List Statistics
+On the first line, you will receive a number n. On the following n lines, you will receive integers. You should create and print two lists:
+•	One with all the positives (including 0) numbers
+•	One with all the negatives numbers
+Finally, print the following message:</br>
+**Count of positives: {count_positives}</br>
+Sum of negatives: {sum_of_negatives}**
+
+* Example
+
+| Input | Output |
+|-------|--------|
+|5</br>10</br>3</br>2</br>-15</br>-4|[10, 3, 2]</br>[-15, -4]</br>Count of positives: 3</br>Sum of negatives: -19|
+
+ | Input | Output                                                                             | 
+ |-------|------------------------------------------------------------------------------------|
+|6</br>11</br>2</br>35</br>599</br>31</br>20</br>| [11, 2, 35, 599, 31, 20]</br>[ ]</br>Count of positives: 6</br>Sum of negatives: 0 |
+
+* Code:
+
+
+    n = int(input())
+    
+    positive_numbers = []
+    negative_numbers = []
+    
+    for _ in range(n):
+        number = int(input())
+    
+        if number >= 0:
+            positive_numbers.append(number)
+        else:
+            negative_numbers.append(number)
+        
+        # or  positive_numbers.append(number) if number >= 0 else negative_numbers.append(number)
+        
+    print(positive_numbers)
+    print(negative_numbers)
+    print('Count of positives:', len(positive_numbers))
+    print('Sum of negatives:', sum(negative_numbers))
+
+
+or from  CEO
+
+    number_range = int(input())
+    
+    list_plus = list()
+    list_minus = list()
+    minus_count = 0
+    plus_count = 0
+    
+    for _ in range(number_range):
+        number = int(input())
+    
+        if number >= 0:
+            list_plus.append(number)
+            plus_count += 1
+    
+        else:
+            list_minus.append(number)
+            minus_count += number
+    
+    print(f"{list_plus}\n{list_minus}")
+    print(f"Count of positives: {plus_count}")
+    print(f"Sum of negatives: {minus_count}")
+
+
+4.	Search
+On the first line, you will receive a number n. On the second line, you will receive a word. On the following n lines, you will be given some strings. You should add them to a list and print them. After that, you should filter out only the strings that include the given word and print that list too.
+
+Example
+
+| Input | Oyput |
+|-------|-------|
+|3</br>SoftUni</br>I study at SoftUni</br>I walk to work</br>I learn Python at SoftUni|["I study at SoftUni", "I walk to work", "I learn Python at SoftUni"]</br>["I study at SoftUni", "I learn Python at SoftUni"]</br>|
+|4</br>tomatoes</br>I love tomatoes</br>I can eat tomatoes forever</br>I don't like apples</br>Yesterday I ate two tomatoes|["I love tomatoes", "I can eat tomatoes forever", "I don't like apples", "Yesterday I ate two tomatoes"]</br>["I love tomatoes", "I can eat tomatoes forever", "Yesterday I ate two tomatoes"]|
+
+
+5.	Numbers Filter
+On the first line, you will receive a single number n. On the following n lines, you will receive integers. After that, you will be given one of the following commands:
+
+•	even</br>
+•	odd</br>
+•	negative</br>
+•	positive</br>
+Filter all the numbers that fit in the category (0 counts as a positive and even). Finally, print the result.
+
+**Example**
+
+| Input                                          | Output        |
+|------------------------------------------------|---------------|
+| 5</br>33</br>19</br>-2</br>18</br>998</br>even | [-2, 18, 998] |
+|       3</br>111</br>-4</br>0</br>negative</br> | [-4]          |
+
+
+**Code:**
+
+
+    n = int(input())
+    exam_list = []
+    sorted_list = []
+    
+    for n in range(n):
+        input_num = int(input())
+        exam_list.append(int(input_num))
+    
+    command = input().lower()
+    
+    if command == "even":
+        sorted_list = [x for x in exam_list if x % 2 == 0]
+    
+    if command == "odd":
+        sorted_list = [x for x in exam_list if x % 2 != 0]
+    
+    if command == "negative":
+        sorted_list = [x for x in exam_list if x < 0]
+    
+    if command == "positive":
+        sorted_list = [x for x in exam_list if x >= 0]
+    
+    print(sorted_list)
+
+
+or  from CEO
+
+
+    numbers = [int(input()) for _ in range(int(input()))]
+    command = input()
+    print([x for x in numbers if any([command == "odd" and x % 2 != 0,
+                                      command == "even" and x % 2 ==0,
+                                      command == "positive" and x >= 0,
+                                      command == "negative" and x < 0])])
+    
+    
+    
+    
+    numbers = [int(input()) for _ in range(int(input()))]
+    data_ = {
+        "odd": [x for x in numbers if x % 2 != 0],
+        "even": [x for x in numbers if x % 2 == 0],
+        "positive": [x for x in numbers if x >= 0],
+        "negative": [x for x in numbers if x < 0]
+    }
+    print(data_[input()])
+
+
+or 
+
+
+    number_range = int(input())
+    
+    even = list()
+    negative = list()
+    positive = list()
+    odd = list()
+    
+    for _ in range(1, number_range + 2):
+        number = input()
+    
+        if number == "even":
+            break
+        elif number == "negative":
+            break
+    
+        elif number == "positive":
+            break
+    
+        elif number == "odd":
+            break
+    
+        if int(number) % 2 == 0:
+            even.append(int(number))
+    
+        if int(number) < 0:
+            negative.append(int(number))
+    
+        if int(number) >= 0:
+            positive.append(int(number))
+    
+        if int(number) % 2 != 0:
+            odd.append(int(number))
+    
+    if number == "even":
+        print(even)
+    
+    elif number == "negative":
+        print(negative)
+    
+    elif number == "positive":
+        print(positive)
+    
+    elif number == "odd":
+        print(odd)
+
+
+or from zahariev-webbersof
+
+    n = int(input())
+    COMMAND_EVEN = 'even'
+    COMMAND_ODD = 'odd'
+    COMMAND_NEGATIVE = 'negative'
+    COMMAND_POSITIVE = 'positive'
+    
+    numbers = [int(input()) for _ in range(n)]
+    filtered_numbers = []
+    
+    command = input()
+    
+    for num in numbers:
+        filtered_command = ((command == COMMAND_EVEN and num % 2 == 0) or
+                            (command == COMMAND_ODD and num % 2 != 0) or
+                            (command == COMMAND_POSITIVE and num >= 0) or
+                            (command == COMMAND_NEGATIVE and num < 0)
+        )
+    
+        if filtered_command:
+            filtered_numbers.append(num)
+    
+    print(filtered_numbers)
+
+

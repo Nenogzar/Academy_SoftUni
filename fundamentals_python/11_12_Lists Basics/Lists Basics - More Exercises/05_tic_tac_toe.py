@@ -6,6 +6,8 @@
 # Find out who the winner is. If the first player wins, print "First player won".
 # If the second player wins, print "Second player won". Otherwise, print "Draw!".
 
+""" 1 """
+
 matrix = []
 
 for run in range(3):
