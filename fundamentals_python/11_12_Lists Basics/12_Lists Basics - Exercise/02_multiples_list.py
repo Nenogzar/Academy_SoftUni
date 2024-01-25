@@ -10,16 +10,16 @@
 # for n in range(x, x*y+1, x):
 #     new_list.append(n)
 
-x, y = int(input()), int(input())
-new_list = [n for n in range(x, x*y+1, x)]
-print(new_list)
+# x, y = int(input()), int(input())
+# new_list = [n for n in range(x, x*y+1, x)]
+# print(new_list)
 
 ########################  From CEO #################################
 
-# numner_one = int(input())
-# numner_two = int(input())
-#
-# print([x * numner_one for x in range(1, numner_two + 1)])
+numner_one = int(input())
+numner_two = int(input())
+
+print([x * numner_one for x in range(1, numner_two + 1)])
 
 
 
@@ -27,10 +27,10 @@ print(new_list)
 # numner_two = int(input())
 #
 # print_text = list()
-#
-# for number in range(1, numner_two + 1):
-#     print_text.append(number * numner_one)
-#
-# print(print_text)
+
+for number in range(1, numner_two + 1):
+    print_text.append(number * numner_one)
+
+print(print_text)
 
 

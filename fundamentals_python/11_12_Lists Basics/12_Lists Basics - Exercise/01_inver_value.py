@@ -4,15 +4,17 @@
 
 # me_list = input()
 # input_parts = input().split()
-invert_list = [-int(x) for x in input().split()]
-print(invert_list)
+
+
+# invert_list = [-int(x) for x in input().split()]
+# print(invert_list)
 
 
 ########################  From CEO #################################
 
-# print([int(x) * - 1 for x in input().split()])
-
-
+print([int(x) * - 1 for x in input().split()])
+#
+#
 # numbers = input()
 #
 # lst = numbers.split(' ')
@@ -26,8 +28,9 @@ print(invert_list)
 #         new_list.append(new_number)
 #
 # print(new_list)
-
-
+#
+# """ or """
+#
 # numbers = input()
 #
 # lst = numbers.split(' ')

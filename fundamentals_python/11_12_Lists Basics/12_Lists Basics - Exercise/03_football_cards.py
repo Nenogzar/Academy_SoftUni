@@ -16,53 +16,53 @@
 # If the referee terminated the game, print an additional line: "Game was terminated".
 # Note for the random tests: If a player who has already been sent off receives another card - ignore it.
 
-letters = "AB"
-numbers = list(range(1, 12))
-combined_list = [f"{letter}-{num}" for letter in letters for num in numbers]
-remaining_a = 11
-remaining_b = 11
-
-user_input = input().split()
-
-for item in user_input:
-    if item in combined_list:
-        combined_list.remove(item)
-        if item.startswith("A"):
-            remaining_a -= 1
-        else:
-            remaining_b -= 1
-    if remaining_a <= 6 or remaining_b <= 6:
-        print(f"Team A - {remaining_a}; Team B - {remaining_b}")
-        print("Game was terminated")
-        break
-
-else:
-    print(f"Team A - {remaining_a}; Team B - {remaining_b}")
-
-################################################################################
+# letters = "AB"
+# numbers = list(range(1, 12))
+# combined_list = [f"{letter}-{num}" for letter in letters for num in numbers]
+# remaining_a = 11
+# remaining_b = 11
 #
-# team_a_players = set(range(1, 11+1))
-# team_b_players = set(range(1, 11+1))
-# cards = input().split()
+# user_input = input().split()
 #
-# for card in cards:
-#     team, player = card.split('-')
-#     player = int(player)
-#
-#     if team == 'A' and player in team_a_players:
-#         team_a_players.remove(player)
-#     elif team == 'B' and player in team_b_players:
-#         team_b_players.remove(player)
-#     remaining_team_a = len(team_a_players)
-#     remaining_team_b = len(team_b_players)
-#
-#     if len(team_a_players) < 7 or len(team_b_players) < 7:
-#         print(f"Team A - {remaining_team_a}; Team B - {remaining_team_b}")
+# for item in user_input:
+#     if item in combined_list:
+#         combined_list.remove(item)
+#         if item.startswith("A"):
+#             remaining_a -= 1
+#         else:
+#             remaining_b -= 1
+#     if remaining_a <= 6 or remaining_b <= 6:
+#         print(f"Team A - {remaining_a}; Team B - {remaining_b}")
 #         print("Game was terminated")
 #         break
 #
 # else:
-#     print(f"Team A - {remaining_team_a}; Team B - {remaining_team_b}")
+#     print(f"Team A - {remaining_a}; Team B - {remaining_b}")
+
+################################################################################
+#
+team_a_players = set(range(1, 11+1))
+team_b_players = set(range(1, 11+1))
+cards = input().split()
+
+for card in cards:
+    team, player = card.split('-')
+    player = int(player)
+
+    if team == 'A' and player in team_a_players:
+        team_a_players.remove(player)
+    elif team == 'B' and player in team_b_players:
+        team_b_players.remove(player)
+    remaining_team_a = len(team_a_players)
+    remaining_team_b = len(team_b_players)
+
+    if len(team_a_players) < 7 or len(team_b_players) < 7:
+        print(f"Team A - {remaining_team_a}; Team B - {remaining_team_b}")
+        print("Game was terminated")
+        break
+
+else:
+    print(f"Team A - {remaining_team_a}; Team B - {remaining_team_b}")
 
 
 ########################### FROM CIO ############################################
