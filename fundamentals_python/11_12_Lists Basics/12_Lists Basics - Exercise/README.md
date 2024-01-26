@@ -1,7 +1,7 @@
 # Exercie: Lists Basics
 
-[judge](https://judge.softuni.org/Contests/1725)
-
+[judge](https://judge.softuni.org/Contests/1725)</br>
+[pastebin](https://pastebin.com/PqwhU2km)
 
 1.	Invert Values</br>
 Write a program that receives a single string containing positive and negative numbers separated by a single space.</br>>
@@ -181,4 +181,64 @@ or
     
     else:
         print(f"Team A - {remaining_team_a}; Team B - {remaining_team_b}")
+
+4.	Number Beggars</br> 
+You will receive 2 lines of input. On the first line, you will receive a single string of integers, separated by a comma and a space ", ".</br> 
+On the second line, you will receive a count of beggars.</br> 
+Your job is to print a list with the sum of what each beggar brings home, assuming they all take regular turns, from the first to the last number in the list.</br>
+For example:</br> 
+[1, 2, 3, 4, 5] for 2 beggars will return a result of 9 and 6, as the first one takes [1, 3, 5], the second one collects [2, 4].</br> 
+The same list with 3 beggars would produce a better outcome for the second beggar: 5, 7 and 3, as they will respectively take [1, 4], [2, 5], and [3].</br>
+Also, note that not all beggars have to take the same amount of "offers", meaning that the length of the list is not necessarily a multiple of n. The list length could be even shorter - i.e., the last beggars will take nothing (0).
+
+Example
+
+| Input | Output |
+|-------|--------|
+|1, 2, 3, 4, 5</br>2|[9, 6]|
+|3, 4, 5, 1, 29, 4</br>6|[3, 4, 5, 1, 29, 4]|
+|100, 94, 24, 99</br>5|[100, 94, 24, 99, 0]|
+
+Code:
+
+
+      first_line = input()
+      second_line = int(input())
+      
+      first_line = first_line.split(",")
+      total_list = list()
+      old_list = list()
+      length_of_first = len(first_line)
+      
+      if length_of_first < second_line:
+          for number in first_line:
+              total_list.append(int(number))
+          for number in range(abs(length_of_first - second_line)):
+              total_list.append(0)
+      
+      
+      elif length_of_first == second_line:
+          for number in first_line:
+              total_list.append(int(number))
+      
+      else:
+          for number in first_line:
+              old_list.append(int(number))
+          for _ in range(0, second_line):
+              total_list.append(sum(old_list[_::second_line]))
+      
+      print(total_list)
+
+or whit index[]
+
+
+      beggars_list = input().split(",")
+      beggars_list = [int(num) for num in beggars_list]
+      range_beggars = int(input())
+      sum_parts = [0] * range_beggars
+      
+      for i, num in enumerate(beggars_list):
+          index = i % range_beggars
+          sum_parts[index] += num
+
 

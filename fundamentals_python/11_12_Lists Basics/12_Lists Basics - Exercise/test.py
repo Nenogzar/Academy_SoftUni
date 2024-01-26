@@ -1,139 +1,43 @@
-energy, money = 100, 100
-gained_energy = 0
+lst = [1, 2, 3, 4, 5, 9, 6]
 
-earned_coins = 0
-event_list = input().split("|")
-#print("event_list", event_list)
-for item_data in event_list:
-    event_type, event_value = item_data.split("-")
-    #print("item_data", item_data)
-    if event_type == "rest":
+# max and min
+max_number = max(lst)
+min_number = min(lst)
+print(f" In list {lst} the max nomber is: {max_number} and the min number is: {min_number}")
+sum_number = sum(lst)
+print(f"{sum_number = }")
 
-        if energy + int(event_value) > 100:
-            print(f"You gained {100 - energy} energy.")
-            energy = 100
+# list comprehension
+squarred_number = [x**2 for x in lst]
+print(f"{squarred_number = }")
 
-        else:
-            energy += int(event_value)
-            print(f"You gained {int(event_value)} energy.")
-        print(f"Current energy: {energy}.")
+# list Filter
 
-    elif event_type == "order":
+even_numbers = list(filter(lambda x: x % 2 ==0, lst))
+print(f"{even_numbers = }")
 
-        if energy >= 30:
-            energy -= 30
-            money += int(event_value)
-            print(f"You earned {int(event_value)} coins.")
-        else:
-            energy += 50
-            print("You had to rest!")
+# map function
 
-    else:
-        something = event_type
-        if int(event_value) <= money:
-            money -= int(event_value)
-            print(f"You bought {something}.")
-        else:
-            print(f"Closed! Cannot afford {something}.")
-            break
-else:
-    print("Day completed!")
-    print(f"Coins: {money}")
-    print(f"Energy: {energy}")
+double_number = list(map(lambda  x: x * 2, lst))
+print(f"{double_number = }")
 
+# Check is All elements in a List are True
 
+all_true = all(lst)
+print("yes" if all_true else "no")
 
-########################  FROM CEO #####################################
-# main_events = input().split("|")
-#
-# energy = 100
-# coins = 100
-#
-#
-# def rest_event(energy_number, energy):
-#     if energy + energy_number > 100:
-#         energy_number = abs(100 - energy)
-#
-#     energy += energy_number
-#     print(f"You gained {energy_number} energy.")
-#     print(f"Current energy: {energy}.")
-#     return energy
-#
-#
-# def order_event(coins_number, coins, energy):
-#     if energy - 30 >= 0:
-#         coins += coins_number
-#         energy -= 30
-#         print(f"You earned {coins_number} coins.")
-#     else:
-#         print("You had to rest!")
-#         energy += 50
-#     return energy, coins
-#
-#
-# def ingredient_event(name, price_item, coins):
-#     if price_item <= coins:
-#         print(f"You bought {name}.")
-#         coins -= price_item
-#         return coins
-#
-#     print(f"Closed! Cannot afford {name}.")
-#     exit()
-#
-#
-# for event_type in main_events:
-#     event_type = event_type.split("-")
-#     event_command = event_type[0]
-#     event_energy_coins = int(event_type[-1])
-#
-#     if event_command == "rest":
-#         energy = rest_event(event_energy_coins, energy)
-#     elif event_command == "order":
-#         energy, coins = order_event(event_energy_coins, coins, energy)
-#     else:
-#         coins = ingredient_event(event_command, event_energy_coins, coins)
-#
-# print(f"Day completed!\nCoins: {coins}\nEnergy: {energy}")
+# Count occurrences of an Emenet in a List
+element = 2
+count_element = lst.count(element)
+print(f"{count_element = }")
 
-#####################################################################################
+# STRING
+# reverse a string
 
-# commands_list = input().split("|")
-# gained_energy, current_energy, coins = 0, 100, 100
-#
-# for command in commands_list:
-#     current_event = []
-#     event_value = 0
-#     for element in command.split("-"):
-#         current_event.append(element)
-#     event_value = int(current_event[-1])
-#     if "rest" in current_event:
-#         if current_energy + event_value > 100:
-#             print(f"You gained {abs(100 - current_energy)} energy.")
-#             current_energy = 100
-#         else:
-#             current_energy += event_value
-#             print(f"You gained {event_value} energy.")
-#         print(f"Current energy: {current_energy}.")
-#
-#     elif "order" in current_event:
-#         if current_energy >= 30:
-#             current_energy -= 30
-#             coins += event_value
-#             print(f"You earned {event_value} coins.")
-#         else:
-#             current_energy += 50
-#             print("You had to rest!")
-#     else:
-#         ingredient = current_event[0]
-#         if coins >= event_value:
-#             coins -= event_value
-#             print(f"You bought {ingredient}.")
-#         else:
-#             cannot_afford_ingredient = True
-#             print(f"Closed! Cannot afford {ingredient}.")
-#             break
-#
-# else:
-#     print("Day completed!")
-#     print(f"Coins: {coins}")
-#     print(f"Energy: {current_energy}")
+me_str = "Clouding"
+reversed_str = me_str[::-1]
+print(f"{reversed_str = }")
+
+# read a file into a list of lines
+lines = [line.strip() for line in open('file.txt')]
+print(lines)
