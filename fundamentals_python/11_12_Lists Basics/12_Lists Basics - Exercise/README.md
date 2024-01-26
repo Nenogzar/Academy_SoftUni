@@ -1,9 +1,15 @@
 # Exercie: Lists Basics
 
 [judge](https://judge.softuni.org/Contests/1725)</br>
-[pastebin](https://pastebin.com/PqwhU2km) Ivan Shopov
 
-1.	Invert Values</br>
+[Pastebin Ivan Shopov](https://pastebin.com/PqwhU2km) </br>
+
+[Code from kumchovylcho](https://github.com/kumchovylcho/softuni/blob/master/Fundamentals%20-%20Python/Lists_Basics%20-%20exercise)</br>
+
+[Code from CEO](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Basics%20-%20Exercise)
+
+ 
+3. Invert Values</br>
 Write a program that receives a single string containing positive and negative numbers separated by a single space.</br>>
 Print a list containing the opposite of each number.
 
