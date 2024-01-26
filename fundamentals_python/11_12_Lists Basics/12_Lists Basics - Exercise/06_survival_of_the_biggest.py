@@ -4,22 +4,22 @@
 # Трябва да премахнете най-малките и след това да отпечатате всички числа,
 # които са останали в списъка, разделени със запетая и интервал ", ".
 
-numbers = [int(num) for num in input().split()]
-n = int(input())
-
-for _ in range(n):
-    numbers.remove(min(numbers))
-    result = ', '.join(map(str, numbers))
-#print(numbers)
-print(result)
+# numbers = [int(num) for num in input().split()]
+# n = int(input())
+#
+# for _ in range(n):
+#     numbers.remove(min(numbers))
+#     result = ', '.join(map(str, numbers))
+# #print(numbers)
+# print(result)
 
 
 
 ######################## FROM CEO ##################################
 
-# number = list(map(int, input().strip().split(" ")))
-# [number.remove(min(number)) for _ in range(int(input()))]
-# print(", ".join(str(x) for x in number))
+number = list(map(int, input().strip().split(" ")))
+[number.remove(min(number)) for _ in range(int(input()))]
+print(", ".join(str(x) for x in number))
 
 
 ######################## FROM CEO ##################################
@@ -39,12 +39,12 @@ print(result)
 # for n in range(how_many_numbers_to_remove):
 #     numbers.remove(min(numbers))
 # count = 1
-# for o in numbers:
+# for num in numbers:
 #     if count != (len(numbers)):
-#         print(f"{o},", end=" ")
+#         print(f"{num},", end=" ")
 #
 #     else:
-#         print(f"{o}")
+#         print(f"{num}")
 #     count += 1
 
 
