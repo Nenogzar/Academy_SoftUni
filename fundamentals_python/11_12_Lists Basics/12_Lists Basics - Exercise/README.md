@@ -371,7 +371,7 @@ separated by a comma and a space **", "**.
       numbers = list(map(int,input().strip().split(" ")))
       how_many_numbers_to_remove = int(input())
       
-      for _ in range(how_many_numbers_to_remove):
+      for n in range(how_many_numbers_to_remove):
           numbers.remove(min(numbers))
       count = 1
       for num in numbers:
@@ -408,7 +408,104 @@ separated by a comma and a space **", "**.
 
 **or** code from CEO
 
-
       number = list(map(int, input().strip().split(" ")))
       [number.remove(min(number)) for _ in range(int(input()))]
       print(", ".join(str(x) for x in number))
+
+
+7. '* Easter Gifts</br>
+_As a good friend, you decide to buy presents for your friends._</br>
+Create a program that helps you plan the gifts for your friends and family. 
+First, you are going to receive the gifts you plan on buying on a **single line**, **separated by space**, in the **following format**:</br>
+**"{gift1} {gift2} {gift3}… {giftn}"**</br>
+Then you will start receiving commands until you read the **"No Money"** message. There are **three** possible commands:</br>
+   * **"OutOfStock {gift}"**</br>
+     * **Find** the gifts with this name in your collection, if any, and change their values to "None".  </br>
+   * **"Required {gift} {index}"**</br>
+     * If the **index is valid**, replace the gift on the given index with the given gift. </br>
+   * **"JustInCase {gift}"**</br>
+     * **Replace** the value of your **last** gift with this one. </br>
+In the end, print the gifts on a single line, except the ones with value **"None"**,
+separated by a single space in the following format:</br>
+     **"{gift1} {gift2} {gift3} … {giftn}"**</br>
+
+**Input / Constraints**</br>
+•	On the 1st line,  you will receive the names of the gifts, separated by a single space.</br>
+•	On the following lines, until the "No Money" command is received, you will be receiving commands.</br>
+•	The input will always be valid.</br>
+
+**Output**</br>
+•	Print the gifts in the format described above.
+
+| Input                                  | Output                                     |
+|----------------------------------------|--------------------------------------------|
+| Eggs StuffedAnimal Cozonac Sweets</br>EasterBunny Eggs Clothes</br>OutOfStock Eggs</br>Required Spoon 2</br> JustInCase ChocolateEgg</br>No Money| StuffedAnimal Spoon Sweets EasterBunny<br>ChocolateEgg |
+
+**Comments**</br>
+First, we receive the command "**OutOfStock**", and we need to replace the values of "**Eggs**" with "**None**". 
+After this command, the list should look like this:</br>
+**None StuffedAnimal Cozonac Sweets EasterBunny None Clothes**</br>
+Afterward, we receive the "Required" command, and we need to replace the value on the 2nd index 
+of our list with the value "Spoon". The list should look like this:  </br>
+**None StuffedAnimal Spoon Sweets EasterBunny None Clothes**</br>
+After, we receive the "JustInCase" command, which means we need to replace the last value in 
+our list with "ChocolateEggs". The list should look like this:</br>
+**None StuffedAnimal Spoon Sweets EasterBunny None ChocolateEggs**</br> 
+In the end, we print all of the gifts, except the ones with values "**None**". </br>
+The final list: **StuffedAnimal Spoon Sweets EasterBunny ChocolateEggs**
+
+| Input                                                                                                                                                                                    | Output |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
+| Sweets Cozonac Clothes Flowers Wine</br> Clothes Eggs Clothes</br> Required Paper 8</br> OutOfStock Clothes</br> Required Chocolate 2</br> JustInCase Hat</br> OutOfStock Cable</br> No Money |Sweets Cozonac Chocolate Flowers Wine</br> Eggs Hat|
+
+**Code**
+
+      names_of_gifts = input().split(" ")
+      #print(names_of_gifts)
+      
+      command = input()
+      while command != "No Money":
+          command_type, *other_info = command.split()
+      
+          if "OutOfStock" in command_type:
+      
+              for i, name in enumerate(names_of_gifts):
+      
+                  if other_info[-1] == name:
+                      names_of_gifts[i] = "None"
+      
+          elif "Required" in command_type:
+              length = len(names_of_gifts)
+      
+              if length > int(other_info[-1]) >= 0:
+                  names_of_gifts[int(other_info[-1])] = other_info[0]
+      
+          elif "JustInCase" in command_type:
+      
+              names_of_gifts[-1] = other_info[-1]
+          command = input()
+      
+      print(" ".join(x for x in names_of_gifts if x != "None"))
+
+
+**Code from CEO**
+
+      names_of_gifts = input().split(" ")
+      
+      
+      command = input()
+      while command != "No Money":
+          command_type, *other_info = command.split()
+          if "OutOfStock" in command_type:
+              for i, name in enumerate(names_of_gifts):
+                  if other_info[-1] == name:
+                      names_of_gifts[i] = "None"
+          elif "Required" in command_type:
+              length = len(names_of_gifts)
+              if length > int(other_info[-1]) >= 0:
+                  names_of_gifts[int(other_info[-1])] = other_info[0]
+          elif "JustInCase" in command_type:
+              names_of_gifts[-1] = other_info[-1]
+          command = input()
+      
+      print(" ".join(x for x in names_of_gifts if x != "None"))

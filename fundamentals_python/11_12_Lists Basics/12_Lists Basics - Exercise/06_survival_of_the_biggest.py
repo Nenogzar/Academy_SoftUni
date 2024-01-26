@@ -33,19 +33,19 @@ print(", ".join(str(x) for x in number))
 
 ######################## FROM CEO ##################################
 
-# numbers = list(map(int,input().strip().split(" ")))
-# how_many_numbers_to_remove = int(input())
-#
-# for n in range(how_many_numbers_to_remove):
-#     numbers.remove(min(numbers))
-# count = 1
-# for num in numbers:
-#     if count != (len(numbers)):
-#         print(f"{num},", end=" ")
-#
-#     else:
-#         print(f"{num}")
-#     count += 1
+numbers = list(map(int,input().strip().split(" ")))
+how_many_numbers_to_remove = int(input())
+
+for n in range(how_many_numbers_to_remove):
+    numbers.remove(min(numbers))
+count = 1
+for num in numbers:
+    if count != (len(numbers)):
+        print(f"{num},", end=" ")
+
+    else:
+        print(f"{num}")
+    count += 1
 
 
 
