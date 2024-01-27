@@ -3,19 +3,19 @@
     my_letters_list = ["k", "a", "c", "m"]
 
 
-#--------------------------------- APPEND ---------------------------------------
+# APPEND #
 
     add element to the end of the list
     indexes = []
     for index, element in enumerate(my_numbers_list):
-        if int(element) == 2:                         # for every index with number 2
-            indexes.append(index)                     # add indexes in new list
+        if int(element) == 2:                     # for every index with number 2
+            indexes.append(index)                 # add indexes in new list
     print(indexes)
 Result:
 
 [1, 4, 5, 6, 7]
 
---------------------------------- EXTEND ----------------------------------------
+# EXTEND #
 
     my_numbers_list.extend([4, 5])
 Result:
@@ -23,11 +23,11 @@ Result:
 [1, 2, 3, 4, 2, 2, 2, 2, 4, 5]
 
 
---------------------------------- SORT ---------------------------------------
+# SORT #
 
     my_letters_list.sort()                # sort
-    my_letters_list.sort(reverse=True)     # sort and reverse
-    print(my_letters_list)
+    my_letters_list.sort(reverse=True)    # sort and reverse
+    
 Result:
 
 ['a', 'c', 'k', 'm']
@@ -36,10 +36,10 @@ Result:
 
 
 
----------------------------------- POP -----------------------------------------
+# POP #
 
-    char = my_list.pop(-5)                #removes specific index element and returns it
-    print(my_list)                        #if only () deletes last element and returns it
+    char = my_list.pop(-5)       #removes specific index element and returns it
+    print(my_list)               #if only () deletes last element and returns it
     print(char)
 Result:
 
@@ -47,7 +47,7 @@ Result:
 
 2
 
---------------------------------- REMOVE ----------------------------------------
+# REMOVE #
 
     while 2 in my_list:                   #removes specific element
         my_list.remove(2)
@@ -56,19 +56,19 @@ Result:
 
 [1, 3, 4, 'b', 'a', 'g']
 
-    while my_list.count(2) > 1:             #while in list there is only one number 2
+    while my_list.count(2) > 1:           #while in list there is only one number 2
         my_list.remove(2)
     print(my_list)
 Result:
 
 [1, 2, 3, 4, "b", "a", "g", 2]
 
-    my_list.remove(2)                       #removes first number 2
+    my_list.remove(2)                     #removes first number 2
     print(my_list)
 Result:
 
 [1, 3, 4, "b", "a", "g", 2, 2, 2, 2]
----------------------------------  INSERT ---------------------------------------
+#  INSERT #
 
     my_list.insert(5, "Pesho")            #on index 5 insert specific string
     print(my_list)
@@ -76,15 +76,15 @@ Result:
 
 [1, 2, 3, 4, 'b', 'Pesho', 'a', 'g', 2, 2, 2, 2]
 
----------------------------------- INDEX -----------------------------------------
+# INDEX #
 
-    number = my_list.index(2)               #first index where can find number 2 is index 1
+    number = my_list.index(2)             #first index where can find number 2 is index 1
     print(number)
 Result:
 
 1
 
----------------------------------- COUNT -----------------------------------------
+# COUNT #
 
     repetition = my_list.count(2)           #how many times there is repeated number 2
     print(repetition)
@@ -92,7 +92,7 @@ Result:
 
 5
 
----------------------------------- REVERSE -----------------------------------------
+# REVERSE #
 
     my_list.reverse()
 Result:
@@ -120,35 +120,35 @@ Result:
 [2, 2, 2, 2]
 
 
----------------------------------- DEL -----------------------------------------
+# DEL #
 
-    del my_numbers_list[0]                      #delete first index
+    del my_numbers_list[0]                    # delete first index
     print(my_numbers_list)
 Result:
 
 [2, 3, 4, 2, 2, 2, 2]
 
----------------------------------- COPY -----------------------------------------
+# COPY #
 
-    my_second_list = my_list.copy()             #because if it is not copy, two lists will
-    my_second_list.remove(2)                    #be modified simultaneously
+    my_second_list = my_list.copy()           # because if it is not copy, two lists will
+    my_second_list.remove(2)                  # be modified simultaneously
     print(my_list)
     print(my_second_list)
 
 
----------------------------------- MIN -----------------------------------------
+# MIN #
 
     min_number = min(my_numbers_list)
     print(min_number)
 
 
----------------------------------- MAX -----------------------------------------
+# MAX #
 
     max_number = min(my_numbers_list)
     print(max_number)
 
 
---------------------------------- FILTER ----------------------------------------
+# FILTER #
 
     filtered_numbers = filter(lambda x: x % 2 == 0, my_numbers_list)
     print(list(filtered_numbers))
@@ -156,14 +156,14 @@ Result:
 
 [2, 4, 2, 2, 2, 2]
 
------------------------------------ CLEAR ----------------------------------------
+# CLEAR #
 
     my_numbers_list.clear()
 Result:
 
 []
 
------------------------------------ SWAP ----------------------------------------
+# SWAP #
 
     lst = [1, 2, 3, 4]
     print("list before swapping:", lst)
@@ -172,7 +172,7 @@ Result:
     print("list after swapping:", lst)
 
 
------------------------------------ SET ----------------------------------------
+# SET #
 
     numbers = [1, 2, 2, 2, 3, 4, 5, 5, 6]
     unique_numbers = list(set(numbers))
