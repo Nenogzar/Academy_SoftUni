@@ -17,9 +17,9 @@
 
 ######################## FROM CEO ##################################
 
-number = list(map(int, input().strip().split(" ")))
-[number.remove(min(number)) for _ in range(int(input()))]
-print(", ".join(str(x) for x in number))
+# number = list(map(int, input().strip().split(" ")))
+# [number.remove(min(number)) for _ in range(int(input()))]
+# print(", ".join(str(x) for x in number))
 
 
 ######################## FROM CEO ##################################
