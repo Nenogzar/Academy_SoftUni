@@ -17,9 +17,10 @@
 
 ######################## FROM CEO ##################################
 
-# number = list(map(int, input().strip().split(" ")))
-# [number.remove(min(number)) for _ in range(int(input()))]
-# print(", ".join(str(x) for x in number))
+number = list(map(int, input().strip().split(" ")))         # make a list
+print(f"{number = }")
+[number.remove(min(number)) for _ in range(int(input()))]   # input number to remove and remove him
+print(", ".join(str(x) for x in number))                    # print string from result
 
 
 ######################## FROM CEO ##################################
@@ -33,19 +34,19 @@
 
 ######################## FROM CEO ##################################
 
-numbers = list(map(int,input().strip().split(" ")))
-how_many_numbers_to_remove = int(input())
-
-for n in range(how_many_numbers_to_remove):
-    numbers.remove(min(numbers))
-count = 1
-for num in numbers:
-    if count != (len(numbers)):
-        print(f"{num},", end=" ")
-
-    else:
-        print(f"{num}")
-    count += 1
+# numbers = list(map(int,input().strip().split(" ")))
+# how_many_numbers_to_remove = int(input())
+#
+# for n in range(how_many_numbers_to_remove):
+#     numbers.remove(min(numbers))
+# count = 1
+# for num in numbers:
+#     if count != (len(numbers)):
+#         print(f"{num},", end=" ")
+#
+#     else:
+#         print(f"{num}")
+#     count += 1
 
 
 

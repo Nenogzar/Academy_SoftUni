@@ -56,8 +56,8 @@ for item_data in collection_items:
 sold_item_prices = [item[1] * 1.4 for item in new_list if item[0] in sold_items]
 profit = sum(sold_item_prices) - sum(item[1] for item in new_list if item[0] in sold_items)
 
-new_dujet= old_budget + profit
-#print("new_dujet", new_dujet)
+new_dujet = old_budget + profit
+# print("new_dujet", new_dujet)
 
 print(" ".join([f"{price:.2f}" for price in sold_item_prices]))
 print(f"Profit: {profit:.2f}")
@@ -66,7 +66,6 @@ if 150 <= new_dujet:
     print("Hello, France!")
 else:
     print("Not enough money.")
-
 
 ############################### FROM CEO ####################################################
 
@@ -94,9 +93,6 @@ else:
 #     print(f"Hello, France!")
 # else:
 #     print("Not enough money.")
-
-
-
 
 
 # collection_of_items = input().split("|")
@@ -133,10 +129,6 @@ else:
 #     print('Hello, France!')
 # else:
 #     print('Not enough money.')
-
-
-
-
 
 
 # items_accessories = input().split("|")
