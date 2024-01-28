@@ -42,56 +42,82 @@ else:
 
 print(f"The winner is {winer} with total time: {winer_time:.1f}")
 ##########################################################################
-# numbers_input = input()
-# numbers_list = list(map(int, numbers_input.split()))
-# finish = len(numbers_list) // 2
-# left_list = numbers_list[:finish]
-# right_list = numbers_list[finish+1:][::-1]
-#
-# left_sum, right_sum = 0, 0
-# for l in left_list:
-#     left_sum += l
-#     if l == 0:
-#         left_sum *= 0.8
-#
-# for r in right_list:
-#     right_sum += r
-#     if r == 0:
-#         right_sum *= 0.8
-#
-# print(f"The winner is left with total time: {left_sum:.1f}" if left_sum < right_sum
-#       else f"The winner is right with total time: {right_sum:.1f}")
+time_index = [int(num) for num in input().split(" ")]
+left_car = 0
+right_car = 0
+
+middle_index = len(time_index) // 2
+middle_element = time_index[middle_index]
+
+for l_time in time_index[0:middle_index]:
+    if l_time == 0:
+        left_car *= 0.8
+    else:
+        left_car += l_time
+
+for r_time in time_index[-1:middle_index:-1]:
+    if r_time == 0:
+        right_car *= 0.8
+    else:
+        right_car += r_time
+
+if left_car < right_car:
+    print(f"The winner is left with total time: {left_car:.1f}")
+else:
+    print(f"The winner is right with total time: {right_car:.1f}")
+
+##########################################################################
+
+numbers_input = input()
+numbers_list = list(map(int, numbers_input.split()))
+finish = len(numbers_list) // 2
+left_list = numbers_list[:finish]
+right_list = numbers_list[finish+1:][::-1]
+
+left_sum, right_sum = 0, 0
+for l in left_list:
+    left_sum += l
+    if l == 0:
+        left_sum *= 0.8
+
+for r in right_list:
+    right_sum += r
+    if r == 0:
+        right_sum *= 0.8
+
+print(f"The winner is left with total time: {left_sum:.1f}" if left_sum < right_sum
+      else f"The winner is right with total time: {right_sum:.1f}")
 ########################################################################
-# numbers_list = list(map(int, input().split()))
-# finish = len(numbers_list) // 2
-# left_list = numbers_list[:finish]
-# right_list = numbers_list[finish+1:][::-1]
-# left_sum, right_sum = 0, 0
-# for l, r in zip(left_list, right_list):
-#     left_sum += l
-#     if l == 0:
-#         left_sum *= 0.8
-#     right_sum += r
-#     if r == 0:
-#         right_sum *= 0.8
-#
-# print(f"The winner is left with total time: {left_sum:.1f}" if left_sum < right_sum
-#       else f"The winner is right with total time: {right_sum:.1f}")
+numbers_list = list(map(int, input().split()))
+finish = len(numbers_list) // 2
+left_list = numbers_list[:finish]
+right_list = numbers_list[finish+1:][::-1]
+left_sum, right_sum = 0, 0
+for l, r in zip(left_list, right_list):
+    left_sum += l
+    if l == 0:
+        left_sum *= 0.8
+    right_sum += r
+    if r == 0:
+        right_sum *= 0.8
+
+print(f"The winner is left with total time: {left_sum:.1f}" if left_sum < right_sum
+      else f"The winner is right with total time: {right_sum:.1f}")
 
 ############################### FROM CEO####################################
-# sequence_of_numbers = [int(num) for num in input().split()]
-#
-# first_car = len(sequence_of_numbers) // 2
-#
-# first_car_score = sum([num if num != 0 else -sum(sequence_of_numbers[:first_car][:pos]) * 0.2 for pos, num in
-#                        enumerate(sequence_of_numbers[:first_car])])
-# second_car_score = sum([num if num != 0 else -sum(sequence_of_numbers[::-1][:first_car][:pos]) * 0.2 for pos, num in
-#                     enumerate(sequence_of_numbers[::-1][:first_car])])
-#
-# if first_car_score < second_car_score:
-#     print(f"The winner is left with total time: {first_car_score:.1f}")
-# else:
-#     print(f"The winner is right with total time: {second_car_score:.1f}")
+sequence_of_numbers = [int(num) for num in input().split()]
+
+first_car = len(sequence_of_numbers) // 2
+
+first_car_score = sum([num if num != 0 else -sum(sequence_of_numbers[:first_car][:pos]) * 0.2 for pos, num in
+                       enumerate(sequence_of_numbers[:first_car])])
+second_car_score = sum([num if num != 0 else -sum(sequence_of_numbers[::-1][:first_car][:pos]) * 0.2 for pos, num in
+                    enumerate(sequence_of_numbers[::-1][:first_car])])
+
+if first_car_score < second_car_score:
+    print(f"The winner is left with total time: {first_car_score:.1f}")
+else:
+    print(f"The winner is right with total time: {second_car_score:.1f}")
 ###########################################################################
 
 # sequence_of_timers = input().split()
@@ -120,31 +146,31 @@ print(f"The winner is {winer} with total time: {winer_time:.1f}")
 
 ###########################################################################
 #
-# sequence_of_numbers = input().split(" ")
-#
-# car_one_total = 0
-# car_two_total = 0
-# s_car = sequence_of_numbers
-# where_is_split = len(sequence_of_numbers) // 2
-#
-# for car_one, car_two in zip(sequence_of_numbers[:where_is_split], s_car[::-1]):
-#     car_one = int(car_one)
-#     car_two = int(car_two)
-#     if car_one == 0:
-#         car_one_total = car_one_total * 0.8
-#     else:
-#         car_one_total += car_one
-#
-#     if car_two == 0:
-#         car_two_total = car_two_total * 0.8
-#     else:
-#         car_two_total += car_two
-#
-# if car_one_total < car_two_total:
-#     print(f"The winner is left with total time: {car_one_total:.1f}")
-#
-# else:
-#     print(f"The winner is right with total time: {car_two_total:.1f}")
+sequence_of_numbers = input().split(" ")
+
+car_one_total = 0
+car_two_total = 0
+s_car = sequence_of_numbers
+where_is_split = len(sequence_of_numbers) // 2
+
+for car_one, car_two in zip(sequence_of_numbers[:where_is_split], s_car[::-1]):
+    car_one = int(car_one)
+    car_two = int(car_two)
+    if car_one == 0:
+        car_one_total = car_one_total * 0.8
+    else:
+        car_one_total += car_one
+
+    if car_two == 0:
+        car_two_total = car_two_total * 0.8
+    else:
+        car_two_total += car_two
+
+if car_one_total < car_two_total:
+    print(f"The winner is left with total time: {car_one_total:.1f}")
+
+else:
+    print(f"The winner is right with total time: {car_two_total:.1f}")
 #
 #
 ###########################################################################

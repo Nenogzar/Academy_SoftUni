@@ -51,20 +51,20 @@ print(output)
 
 ################## whit FOR LOOP ###########################
 
-# input_numbers = list(map(int, input().split()))
-# kill_step = int(input())
-# kill_step -= 1
-# n = len(input_numbers)
-# result, index = [], 0
-#
-# for _ in range(n):
-#     index = (index + kill_step) % n
-#     eliminated_number = input_numbers.pop(index)
-#     result.append(str(eliminated_number))
-#     n -= 1
-#
-# output = "[" + ",".join(result) + "]"
-# print(output)
+input_numbers = list(map(int, input().split()))
+kill_step = int(input())
+kill_step -= 1
+n = len(input_numbers)
+result, index = [], 0
+
+for _ in range(n):
+    index = (index + kill_step) % n
+    eliminated_number = input_numbers.pop(index)
+    result.append(str(eliminated_number))
+    n -= 1
+
+output = "[" + ",".join(result) + "]"
+print(output)
 
 #################FROM SimeonChifligarov #########################
 
@@ -74,47 +74,47 @@ print(output)
 # the list itself (string with elements separated by a single space) and a number k)
 # as if they were in a circle and counted out every k places until none remained.
 
-# the_list_itself = [int(el) for el in input().split()]
-# number_k = int(input())
-# result = []
-# current_list = the_list_itself.copy()
-#
-# for _ in range(len(the_list_itself)):
-#     new_number_k = number_k
-#     while new_number_k > len(current_list):
-#         new_number_k -= len(current_list)
-#     else:
-#         result.append(current_list[new_number_k - 1])
-#         current_list.pop(new_number_k - 1)
-#         current_left = current_list[:new_number_k - 1]
-#         current_right = current_list[new_number_k - 1:]
-#         current_list = current_right + current_left
-#
-# result = [str(el) for el in result]
-# print(f"[{','.join(result)}]")
+the_list_itself = [int(el) for el in input().split()]
+number_k = int(input())
+result = []
+current_list = the_list_itself.copy()
+
+for _ in range(len(the_list_itself)):
+    new_number_k = number_k
+    while new_number_k > len(current_list):
+        new_number_k -= len(current_list)
+    else:
+        result.append(current_list[new_number_k - 1])
+        current_list.pop(new_number_k - 1)
+        current_left = current_list[:new_number_k - 1]
+        current_right = current_list[new_number_k - 1:]
+        current_list = current_right + current_left
+
+result = [str(el) for el in result]
+print(f"[{','.join(result)}]")
 
 
 ###############################################################
 
-# people = input().split(' ')
-# k = int(input())
-#
-# counter = 0
-# i = 0
-# executed = list()
-# while len(people) > 0:
-#     counter += 1
-#
-#     if counter % k == 0:
-#         # print(people[i], end=' ')
-#         executed.append(people[i])
-#         people.pop(i)
-#     else:
-#
-#         i += 1
-#
-#     if i >= len(people):
-#         i = 0
-#
-# prt_str = ','.join([str(x) for x in executed.copy()])
-# print(f'[{prt_str}]')
+people = input().split(' ')
+k = int(input())
+
+counter = 0
+i = 0
+executed = list()
+while len(people) > 0:
+    counter += 1
+
+    if counter % k == 0:
+        # print(people[i], end=' ')
+        executed.append(people[i])
+        people.pop(i)
+    else:
+
+        i += 1
+
+    if i >= len(people):
+        i = 0
+
+prt_str = ','.join([str(x) for x in executed.copy()])
+print(f'[{prt_str}]')

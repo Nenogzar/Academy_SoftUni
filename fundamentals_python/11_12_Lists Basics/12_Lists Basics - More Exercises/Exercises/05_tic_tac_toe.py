@@ -55,125 +55,125 @@ else:
 
 ##############################################*-*AI*-*#############################################
 
-# lines = [input().split() for _ in range(3)]
-# first_player_win = None
-#
-# for player in ['1', '2']:
-#     if (any(all(cell == player for cell in line) for line in lines)
-#             or any(all(line[i] == player for line in lines) for i in range(3))):
-#         first_player_win = (player == '1')
-#         break
-#
-# # Check diagonals for both players
-# for player in ['1', '2']:
-#     if (all(lines[i][i] == player for i in range(3))
-#             or all(lines[i][2 - i] == player for i in range(3))):
-#         first_player_win = (player == '1')
-#         break
-#
-# if first_player_win is None:
-#     print("Draw!")
-# elif first_player_win:
-#     print("First player won")
-# else:
-#     print("Second player won")
+lines = [input().split() for _ in range(3)]
+first_player_win = None
+
+for player in ['1', '2']:
+    if (any(all(cell == player for cell in line) for line in lines)
+            or any(all(line[i] == player for line in lines) for i in range(3))):
+        first_player_win = (player == '1')
+        break
+
+# Check diagonals for both players
+for player in ['1', '2']:
+    if (all(lines[i][i] == player for i in range(3))
+            or all(lines[i][2 - i] == player for i in range(3))):
+        first_player_win = (player == '1')
+        break
+
+if first_player_win is None:
+    print("Draw!")
+elif first_player_win:
+    print("First player won")
+else:
+    print("Second player won")
 
 
 ###########################################*-*FROM*CEO*-*###########################################
 
-# first_line = input().split(" ")
-# second_line = input().split(" ")
-# third_line = input().split(" ")
-#
-# first_player_win = None
-#
-# if len(set(first_line)) == 1 and first_line[0] == "1":
-#     first_player_win = True
-#
-# elif len(set(second_line)) == 1 and second_line[0] == "1":
-#     first_player_win = True
-#
-# elif len(set(third_line)) == 1 and third_line[0] == "1":
-#     first_player_win = True
-#
-# elif first_line[0] == second_line[1] == third_line[2] and first_line[0] == "1":
-#     first_player_win = True
-#
-# elif first_line[1] == second_line[1] == third_line[1] and first_line[1] == "1":
-#     first_player_win = True
-#
-# elif first_line[2] == second_line[1] == third_line[0] and first_line[2] == "1":
-#     first_player_win = True
-#
-# elif first_line[2] == second_line[2] == third_line[2] and first_line[2] == "1":
-#     first_player_win = True
-#
-# elif first_line[0] == second_line[0] == third_line[0] and first_line[0] == "1":
-#     first_player_win = True
-#
-# elif len(set(first_line)) == 1 and first_line[0] == "2":
-#     first_player_win = False
-#
-# elif len(set(second_line)) == 1 and second_line[0] == "2":
-#     first_player_win = False
-#
-# elif len(set(third_line)) == 1 and third_line[0] == "2":
-#     first_player_win = False
-#
-# elif first_line[0] == second_line[1] == third_line[2] and first_line[0] == "2":
-#     first_player_win = False
-#
-# elif first_line[1] == second_line[1] == third_line[1] and first_line[1] == "2":
-#     first_player_win = False
-#
-# elif first_line[2] == second_line[1] == third_line[0] and first_line[2] == "2":
-#     first_player_win = False
-#
-# elif first_line[2] == second_line[2] == third_line[2] and first_line[2] == "2":
-#     first_player_win = False
-#
-# elif first_line[0] == second_line[0] == third_line[0] and first_line[0] == "2":
-#     first_player_win = False
-#
-#
-# if first_player_win is None:
-#     print("Draw!")
-#
-# elif first_player_win:
-#     print("First player won")
-#
-# else:
-#     print("Second player won")
+first_line = input().split(" ")
+second_line = input().split(" ")
+third_line = input().split(" ")
+
+first_player_win = None
+
+if len(set(first_line)) == 1 and first_line[0] == "1":
+    first_player_win = True
+
+elif len(set(second_line)) == 1 and second_line[0] == "1":
+    first_player_win = True
+
+elif len(set(third_line)) == 1 and third_line[0] == "1":
+    first_player_win = True
+
+elif first_line[0] == second_line[1] == third_line[2] and first_line[0] == "1":
+    first_player_win = True
+
+elif first_line[1] == second_line[1] == third_line[1] and first_line[1] == "1":
+    first_player_win = True
+
+elif first_line[2] == second_line[1] == third_line[0] and first_line[2] == "1":
+    first_player_win = True
+
+elif first_line[2] == second_line[2] == third_line[2] and first_line[2] == "1":
+    first_player_win = True
+
+elif first_line[0] == second_line[0] == third_line[0] and first_line[0] == "1":
+    first_player_win = True
+
+elif len(set(first_line)) == 1 and first_line[0] == "2":
+    first_player_win = False
+
+elif len(set(second_line)) == 1 and second_line[0] == "2":
+    first_player_win = False
+
+elif len(set(third_line)) == 1 and third_line[0] == "2":
+    first_player_win = False
+
+elif first_line[0] == second_line[1] == third_line[2] and first_line[0] == "2":
+    first_player_win = False
+
+elif first_line[1] == second_line[1] == third_line[1] and first_line[1] == "2":
+    first_player_win = False
+
+elif first_line[2] == second_line[1] == third_line[0] and first_line[2] == "2":
+    first_player_win = False
+
+elif first_line[2] == second_line[2] == third_line[2] and first_line[2] == "2":
+    first_player_win = False
+
+elif first_line[0] == second_line[0] == third_line[0] and first_line[0] == "2":
+    first_player_win = False
+
+
+if first_player_win is None:
+    print("Draw!")
+
+elif first_player_win:
+    print("First player won")
+
+else:
+    print("Second player won")
 
 
 ###########################################*-*FROM*CEO*-*###########################################
 
 
-# first_row = input().split()
-# second_row = input().split()
-# third_row = input().split()
-#
-# name_player = "First"
-# found = False
-#
-# for player in range(1, 3):
-#     player = str(player)
-#     line = [player, player, player]
-#     if line == first_row or second_row == line or third_row == line:  # преверка на редовете
-#         found = True
-#     for index in range(0, 3):
-#         if first_row[index] == player and second_row[index] == player and third_row[index] == player:  # проверка на колоните
-#             found = True
-#     if first_row[0] == player and second_row[1] == player and third_row[2] == player:  # ляв диагонал
-#         found = True
-#     elif first_row[2] == player and second_row[1] == player and third_row[0] == player:  # десен диагонал
-#         found = True
-#     if found:
-#         print(f"{name_player} player won")
-#         break
-#     name_player = "Second"
-# else:
-#     print("Draw!")
+first_row = input().split()
+second_row = input().split()
+third_row = input().split()
+
+name_player = "First"
+found = False
+
+for player in range(1, 3):
+    player = str(player)
+    line = [player, player, player]
+    if line == first_row or second_row == line or third_row == line:  # преверка на редовете
+        found = True
+    for index in range(0, 3):
+        if first_row[index] == player and second_row[index] == player and third_row[index] == player:  # проверка на колоните
+            found = True
+    if first_row[0] == player and second_row[1] == player and third_row[2] == player:  # ляв диагонал
+        found = True
+    elif first_row[2] == player and second_row[1] == player and third_row[0] == player:  # десен диагонал
+        found = True
+    if found:
+        print(f"{name_player} player won")
+        break
+    name_player = "Second"
+else:
+    print("Draw!")
 ###########################################*-*FROM*CEO*-*###########################################
 
 # field = []
