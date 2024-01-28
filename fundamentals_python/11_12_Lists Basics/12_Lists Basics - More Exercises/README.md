@@ -1,11 +1,6 @@
 # List Basic - More Exercise
-
-[judge](https://judge.softuni.org/Contests/1726)</br>
-
-[Code from kumchovylcho](https://github.com/kumchovylcho/softuni/tree/master/Fundamentals%20-%20Python/Lists_Basics%20-%20more%20exercises)</br>
-
-[Code from CEO](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Basics%20-%20More%20Exercises)</br>
-
+|[judge](https://judge.softuni.org/Contests/1726)|[Code from kumchovylcho](https://github.com/kumchovylcho/softuni/tree/master/Fundamentals%20-%20Python/Lists_Basics%20-%20more%20exercises)|[Code from CEO](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Basics%20-%20More%20Exercises)|
+|-|-|-|
 
 ## 1.	Zeros to Back</br>
 <details> <summary>Example</summary>
