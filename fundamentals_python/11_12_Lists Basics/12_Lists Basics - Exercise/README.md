@@ -21,59 +21,53 @@ Print a list containing the opposite of each number.
 |1 2 -3 -3 5|[-1, -2, 3, 3, -5]|-4 0 2 57 -101|[4, 0, -2, -57, 101]|
 
 * **Code**
-
-
-    numbers = input()
+```python
+numbers = input()
+lst = numbers.split(' ')
+new_list = list()
     
-    lst = numbers.split(' ')
-    new_list = list()
-    
-    for number in lst:
-        result = int(number) * -1
-        new_list.append(result)
-    
-    print(new_list)
-
+for number in lst:
+    result = int(number) * -1
+    new_list.append(result)   
+print(new_list)
+```
 
 **or**
-
-
-    lst = numbers.split(' ')
-    new_list = list()
-    for number in lst:
+```python
+lst = numbers.split(' ')
+new_list = list()
+for number in lst:
     
-        if number[0] == "-":
-            new_list.append(abs((int(number))))
-        else:
-            new_number = int(str("-" + number))
-            new_list.append(new_number)
-    
-    print(new_list)
-
+    if number[0] == "-":
+        new_list.append(abs((int(number))))
+    else:
+        new_number = int(str("-" + number))
+        new_list.append(new_number)  
+print(new_list)
+```
+**or**
+```python
+list_with_numbers = input().split()
+opposite_numbers = []
+for number in list_with_numbers:
+    opposite_number = -int(number)
+    opposite_numbers.append(opposite_number)
+print(opposite_numbers)
+```
 
 **or**
-
-    list_with_numbers = input().split()
-    opposite_numbers = []
-    for number in list_with_numbers:
-        opposite_number = -int(number)
-        opposite_numbers.append(opposite_number)
-    print(opposite_numbers)
-
-
+```python
+invert_list = [-int(x) for x in input().split()]
+print(invert_list)
+```
 **or**
-
-    invert_list = [-int(x) for x in input().split()]
-    print(invert_list)
-
+```python
+print([int(x) * - 1 for x in input().split()])
+```
 **or**
-
-    print([int(x) * - 1 for x in input().split()])
-
-**or**
-
-    print([-int(number) for number in input().split()])
-
+```python
+print([-int(number) for number in input().split()])
+```
 
 ### 2.	Multiples List
 Write a program that receives **two numbers** (factor and count). </br>
@@ -90,43 +84,37 @@ starting from the value of the factor.
 
 
 **Code**
-
-
-    numner_one = int(input())
-    numner_two = int(input())
+```python
+numner_one = int(input())
+numner_two = int(input())
     
-    print_text = list()
+print_text = list()
     
-    for number in range(1, numner_two + 1):
-        print_text.append(number * numner_one)
-
+for number in range(1, numner_two + 1):
+    print_text.append(number * numner_one)
+```
 
 **or**
-
-
-    x = int(input())
-    y = int(input())
-    new_list=[]
-    for n in range(x, x*y+1, x):
-        new_list.append(n)
-
+```python
+x = int(input())
+y = int(input())
+new_list=[]
+for n in range(x, x*y+1, x):
+    new_list.append(n)
+```
+**or** 
+```python
+x, y = int(input()), int(input())
+new_list = [n for n in range(x, x*y+1, x)]
+print(new_list)
+```
 
 **or** 
-
-
-    x, y = int(input()), int(input())
-    new_list = [n for n in range(x, x*y+1, x)]
-    print(new_list)
-
-
-**or** 
-
-
-    numner_one = int(input())
-    numner_two = int(input())
-    
-    print([x * numner_one for x in range(1, numner_two + 1)])
-
+```python
+numner_one = int(input())
+numner_two = int(input())  
+print([x * numner_one for x in range(1, numner_two + 1)])
+```
 
 ### 3. Football Cards</br>
 Most football fans love it for the goals and excitement. </br>
@@ -155,74 +143,72 @@ If the referee terminated the game, print an additional line: **"Game was termin
 |A-1 A-5 A-10 B-2|Team A - 8; Team B - 10|A-1 A-5 A-10 B-2 A-10 A-7 A-3| Team A - 6; Team B - 10 Game was terminated |
 
 **Code**
-
-    letters = "AB"
-    numbers = list(range(1, 12))
-    combined_list = [f"{letter}-{num}" for letter in letters for num in numbers]
-    remaining_a = 11
-    remaining_b = 11
+```python
+letters = "AB"
+numbers = list(range(1, 12))
+combined_list = [f"{letter}-{num}" for letter in letters for num in numbers]
+remaining_a = 11
+remaining_b = 11
     
-    user_input = input().split()
+user_input = input().split()
     
-    for item in user_input:
-        if item in combined_list:
-            combined_list.remove(item)
-            if item.startswith("A"):
-                remaining_a -= 1
-            else:
-                remaining_b -= 1
-        if remaining_a <= 6 or remaining_b <= 6:
-            print(f"Team A - {remaining_a}; Team B - {remaining_b}")
-            print("Game was terminated")
-            break
-    
-    else:
+for item in user_input:
+    if item in combined_list:
+        combined_list.remove(item)
+        if item.startswith("A"):
+            remaining_a -= 1
+        else:
+            remaining_b -= 1
+    if remaining_a <= 6 or remaining_b <= 6:
         print(f"Team A - {remaining_a}; Team B - {remaining_b}")
-
+        print("Game was terminated")
+         break   
+else:
+    print(f"Team A - {remaining_a}; Team B - {remaining_b}")
+```
 
 **or**
-
-    team_a_players = set(range(1, 11+1))
-    team_b_players = set(range(1, 11+1))
-    cards = input().split()
+```python
+team_a_players = set(range(1, 11+1))
+team_b_players = set(range(1, 11+1))
+cards = input().split()
     
-    for card in cards:
-        team, player = card.split('-')
-        player = int(player)
+for card in cards:
+    team, player = card.split('-')
+    player = int(player)
     
-        if team == 'A' and player in team_a_players:
-            team_a_players.remove(player)
-        elif team == 'B' and player in team_b_players:
-            team_b_players.remove(player)
-        remaining_team_a = len(team_a_players)
-        remaining_team_b = len(team_b_players)
+    if team == 'A' and player in team_a_players:
+        team_a_players.remove(player)
+    elif team == 'B' and player in team_b_players:
+        team_b_players.remove(player)
+    remaining_team_a = len(team_a_players)
+    remaining_team_b = len(team_b_players)
     
-        if len(team_a_players) < 7 or len(team_b_players) < 7:
-            print(f"Team A - {remaining_team_a}; Team B - {remaining_team_b}")
-            print("Game was terminated")
-            break
-    
-    else:
+    if len(team_a_players) < 7 or len(team_b_players) < 7:
         print(f"Team A - {remaining_team_a}; Team B - {remaining_team_b}")
-
-**from IvanShopov**
-
-    team_a = ['A-1', 'A-2', 'A-3', 'A-4', 'A-5', 'A-6', 'A-7', 'A-8', 'A-9', 'A-10', 'A-11']
-    team_b = ['B-1', 'B-2', 'B-3', 'B-4', 'B-5', 'B-6', 'B-7', 'B-8', 'B-9', 'B-10', 'B-11']
-    players = input().split()
-    game_was_terminated = False
-    for player in players:
-        if player in team_a:
-            team_a.remove(player)
-        elif player in team_b:
-            team_b.remove(player)
-        if len(team_a) < 7 or len(team_b) < 7:
-            game_was_terminated = True
-            break
-    print(f"Team A - {len(team_a)}; Team B - {len(team_b)}")
-    if game_was_terminated: #if game was terminated == True
         print("Game was terminated")
-
+        break   
+else:
+    print(f"Team A - {remaining_team_a}; Team B - {remaining_team_b}")
+```
+**from IvanShopov**
+```python
+team_a = ['A-1', 'A-2', 'A-3', 'A-4', 'A-5', 'A-6', 'A-7', 'A-8', 'A-9', 'A-10', 'A-11']
+team_b = ['B-1', 'B-2', 'B-3', 'B-4', 'B-5', 'B-6', 'B-7', 'B-8', 'B-9', 'B-10', 'B-11']
+players = input().split()
+game_was_terminated = False
+for player in players:
+    if player in team_a:
+        team_a.remove(player)
+    elif player in team_b:
+        team_b.remove(player)
+    if len(team_a) < 7 or len(team_b) < 7:
+        game_was_terminated = True
+        break
+print(f"Team A - {len(team_a)}; Team B - {len(team_b)}")
+if game_was_terminated: #if game was terminated == True
+    print("Game was terminated")
+```
 ### 4.Number Beggars</br> 
 You will receive 2 lines of input. On the first line, you will receive a single string of integers, 
 separated by a comma and a space ", ".</br> 
@@ -247,47 +233,44 @@ the last beggars will take nothing (0).
 |100, 94, 24, 99</br>5|[100, 94, 24, 99, 0]|
 
 **Code:**
-
-
-      first_line = input()
-      second_line = int(input())
+```python
+first_line = input()
+second_line = int(input())
       
-      first_line = first_line.split(",")
-      total_list = list()
-      old_list = list()
-      length_of_first = len(first_line)
+first_line = first_line.split(",")
+total_list = list()
+old_list = list()
+length_of_first = len(first_line)
       
-      if length_of_first < second_line:
-          for number in first_line:
-              total_list.append(int(number))
-          for number in range(abs(length_of_first - second_line)):
-              total_list.append(0)
+if length_of_first < second_line:
+    for number in first_line:
+        total_list.append(int(number))
+    for number in range(abs(length_of_first - second_line)):
+        total_list.append(0)
       
       
-      elif length_of_first == second_line:
-          for number in first_line:
-              total_list.append(int(number))
+elif length_of_first == second_line:
+    for number in first_line:
+        total_list.append(int(number))
       
-      else:
-          for number in first_line:
-              old_list.append(int(number))
-          for _ in range(0, second_line):
-              total_list.append(sum(old_list[_::second_line]))
+else:
+    for number in first_line:
+        old_list.append(int(number))
+    for _ in range(0, second_line):
+        total_list.append(sum(old_list[_::second_line]))     
+print(total_list)
+```
+ or whit index[]
+```python
+beggars_list = input().split(",")
+beggars_list = [int(num) for num in beggars_list]
+range_beggars = int(input())
+sum_parts = [0] * range_beggars
       
-      print(total_list)
-
-or whit index[]
-
-
-      beggars_list = input().split(",")
-      beggars_list = [int(num) for num in beggars_list]
-      range_beggars = int(input())
-      sum_parts = [0] * range_beggars
-      
-      for i, num in enumerate(beggars_list):
-          index = i % range_beggars
-          sum_parts[index] += num
-
+for i, num in enumerate(beggars_list):
+    index = i % range_beggars
+    sum_parts[index] += num
+```
 
 ### 5.	Faro Shuffle</br>
 A faro shuffle is a method for shuffling a deck of cards, in which the deck is split exactly in half.</br> 
@@ -309,88 +292,78 @@ Note: The length of the deck of cards will always be an even number.
 
 
 **Code**
-
-      input_list = input().split()
-      shuffles = int(input())
+```python
+input_list = input().split()
+shuffles = int(input())
       
-      for _ in range(shuffles):
-          middle = len(input_list) // 2
-          shuffled_list = []
+for _ in range(shuffles):
+    middle = len(input_list) // 2
+    shuffled_list = []
       
-          for i in range(middle):
-              shuffled_list.append(input_list[i])
-              shuffled_list.append(input_list[i + middle])
-              #  this is equal to:  shuffled_list.extend([input_list[i], input_list[i + middle]])
-          input_list = shuffled_list
-      
-      print(input_list)
-
-
+    for i in range(middle):
+        shuffled_list.append(input_list[i])
+        shuffled_list.append(input_list[i + middle])
+        #  this is equal to:  shuffled_list.extend([input_list[i], input_list[i + middle]])
+    input_list = shuffled_list    
+print(input_list)
+```
 **or**  Ivan Shopov code
-
-
-      deck_of_cards = input().split()
-      count_of_shuffles = int(input())
-      for shuffle in range(count_of_shuffles):
-          middle_of_the_deck = len(deck_of_cards) // 2
-          left_part = deck_of_cards[:middle_of_the_deck]
-          right_part = deck_of_cards[middle_of_the_deck:]
-          deck_after_shuffling = []
-          for card_index in range(len(left_part)):
-              deck_after_shuffling.append(left_part[card_index])
-              deck_after_shuffling.append(right_part[card_index])
-          deck_of_cards = deck_after_shuffling
-      print(deck_of_cards)
-
+```python
+deck_of_cards = input().split()
+count_of_shuffles = int(input())
+for shuffle in range(count_of_shuffles):
+    middle_of_the_deck = len(deck_of_cards) // 2
+    left_part = deck_of_cards[:middle_of_the_deck]
+    right_part = deck_of_cards[middle_of_the_deck:]
+    deck_after_shuffling = []
+    for card_index in range(len(left_part)):
+        deck_after_shuffling.append(left_part[card_index])
+        deck_after_shuffling.append(right_part[card_index])
+    deck_of_cards = deck_after_shuffling
+print(deck_of_cards)
+```
 **or** CEO code
-
-      cards = input().split()
-      shuffle = int(input())
+```python
+cards = input().split()
+shuffle = int(input())
       
-      lenght = len(cards)
-      mid = int(lenght / 2)
+lenght = len(cards)
+mid = int(lenght / 2)
       
-      for i in range(shuffle):
-          list = []
-          for p in range(0, mid):
-              list.append(cards[p])
-              list.append(cards[mid])
-              mid += 1
-          cards = list
-          mid = int(lenght / 2)
-      
-      print(list)
-
+for i in range(shuffle):
+    list = []
+    for p in range(0, mid):
+        list.append(cards[p])
+        list.append(cards[mid])
+        mid += 1
+    cards = list
+    mid = int(lenght / 2)     
+print(list)
+```
 **or** CEO code
-
-
-      cards = input().split()
-      shuffle = int(input())
-      middle_of_deck = len(cards) // 2
+```python
+cards = input().split()
+shuffle = int(input())
+middle_of_deck = len(cards) // 2
       
-      for number_of_shuffle in range(shuffle):
-          result_after_shuffle = []
-          for mid_card, front_card in enumerate(range(middle_of_deck), middle_of_deck):
-              result_after_shuffle.append(cards[front_card])
-              result_after_shuffle.append(cards[mid_card])
-          cards = result_after_shuffle.copy()
-      
-      print(cards)
-
-
+for number_of_shuffle in range(shuffle):
+    result_after_shuffle = []
+    for mid_card, front_card in enumerate(range(middle_of_deck), middle_of_deck):
+        result_after_shuffle.append(cards[front_card])
+        result_after_shuffle.append(cards[mid_card])
+    cards = result_after_shuffle.copy()     
+print(cards)
+```
 **or** CEO code
-
-
-      cards = input().split()
-      shuffle = int(input())
-      middle_of_deck = len(cards) // 2
+```python
+cards = input().split()
+shuffle = int(input())
+middle_of_deck = len(cards) // 2
       
-      for number_of_shuffle in range(shuffle):
-          cards = [c for pair in zip(cards[:middle_of_deck], cards[middle_of_deck:]) for c in pair]
-      
-      print(cards)
-
-
+for number_of_shuffle in range(shuffle):
+    cards = [c for pair in zip(cards[:middle_of_deck], cards[middle_of_deck:]) for c in pair]
+print(cards)
+```
 ### 6.	Survival of the Biggest</br>
 Write a program that receives a **list of integer** numbers (separated by a single space) and a number **n**.</br> 
 The number n represents the **count of numbers to remov**e from the list.</br> 
@@ -406,51 +379,47 @@ separated by a comma and a space **", "**.
 
 
 **Code**
-
-      numbers = list(map(int,input().strip().split(" ")))
-      how_many_numbers_to_remove = int(input())
+```python
+numbers = list(map(int,input().strip().split(" ")))
+how_many_numbers_to_remove = int(input())
       
-      for n in range(how_many_numbers_to_remove):
-          numbers.remove(min(numbers))
-      count = 1
-      for num in numbers:
-          if count != (len(numbers)):
-              print(f"{num},", end=" ")
+for n in range(how_many_numbers_to_remove):
+    numbers.remove(min(numbers))
+count = 1
+for num in numbers:
+    if count != (len(numbers)):
+        print(f"{num},", end=" ")
       
-          else:
-              print(f"{num}")
-          count += 1
+    else:
+        print(f"{num}")
+    count += 1
+```
+**or** code from CEO
+```python
+numbers = [int(num) for num in input().split()]
+n = int(input())
+      
+for _ in range(n):
+    numbers.remove(min(numbers))
+    result = ', '.join(map(str, numbers))
+print(result)
+```
+**or** code from CEO
+```python
+numbers = list(map(int,input().strip().split(" ")))
+how_many_numbers_to_remove = int(input())
+      
+for n in range(how_many_numbers_to_remove):
+    numbers.remove(min(numbers))
+print(", ".join(str(x) for x in numbers))
+```
 
 **or** code from CEO
-
-
-      numbers = [int(num) for num in input().split()]
-      n = int(input())
-      
-      for _ in range(n):
-          numbers.remove(min(numbers))
-          result = ', '.join(map(str, numbers))
-      #print(numbers)
-      print(result)
-
-
-**or** code from CEO
-
-
-      numbers = list(map(int,input().strip().split(" ")))
-      how_many_numbers_to_remove = int(input())
-      
-      for n in range(how_many_numbers_to_remove):
-          numbers.remove(min(numbers))
-      print(", ".join(str(x) for x in numbers))
-
-
-**or** code from CEO
-
-      number = list(map(int, input().strip().split(" ")))
-      [number.remove(min(number)) for _ in range(int(input()))]
-      print(", ".join(str(x) for x in number))
-
+```python
+number = list(map(int, input().strip().split(" ")))
+number.remove(min(number)) for _ in range(int(input()))]
+print(", ".join(str(x) for x in number))
+```
 
 ### 7. '* Easter Gifts</br>
 _As a good friend, you decide to buy presents for your friends._</br>
@@ -498,100 +467,80 @@ The final list: **StuffedAnimal Spoon Sweets EasterBunny ChocolateEggs**
 | Sweets Cozonac Clothes Flowers Wine</br> Clothes Eggs Clothes</br> Required Paper 8</br> OutOfStock Clothes</br> Required Chocolate 2</br> JustInCase Hat</br> OutOfStock Cable</br> No Money |Sweets Cozonac Chocolate Flowers Wine</br> Eggs Hat|
 
 **Code**
-
-      names_of_gifts = input().split(" ")
-      #print(names_of_gifts)
+```python
+names_of_gifts = input().split(" ")
+#print(names_of_gifts)
       
-      command = input()
-      while command != "No Money":
-          command_type, *other_info = command.split()
+command = input()
+while command != "No Money":
+    command_type, *other_info = command.split()
       
-          if "OutOfStock" in command_type:
+    if "OutOfStock" in command_type:
       
-              for i, name in enumerate(names_of_gifts):
+        for i, name in enumerate(names_of_gifts):
       
-                  if other_info[-1] == name:
-                      names_of_gifts[i] = "None"
+            if other_info[-1] == name:
+                names_of_gifts[i] = "None"
       
-          elif "Required" in command_type:
-              length = len(names_of_gifts)
+    elif "Required" in command_type:
+        length = len(names_of_gifts)
       
-              if length > int(other_info[-1]) >= 0:
-                  names_of_gifts[int(other_info[-1])] = other_info[0]
+        if length > int(other_info[-1]) >= 0:
+            names_of_gifts[int(other_info[-1])] = other_info[0]
       
-          elif "JustInCase" in command_type:
+    elif "JustInCase" in command_type:
       
-              names_of_gifts[-1] = other_info[-1]
-          command = input()
+        names_of_gifts[-1] = other_info[-1]
+    command = input()
       
-      print(" ".join(x for x in names_of_gifts if x != "None"))
-
+print(" ".join(x for x in names_of_gifts if x != "None"))
+```
 
 [Code from CEO](https://icode-example.ceo-py.eu/solution?desc=Python-Fundamentals-Lists-Basics-Exercise-07.-Easter-Gifts&id=658332b29f8515abe6963ae7)
+```python   
+names_of_gifts = input().split(" ")
+command = input()
+while command != "No Money":
+    command_type, *other_info = command.split()
+    if "OutOfStock" in command_type:
+        for i, name in enumerate(names_of_gifts):
+            if other_info[-1] == name:
+                names_of_gifts[i] = "None"
+    elif "Required" in command_type:
+        length = len(names_of_gifts)
+        if length > int(other_info[-1]) >= 0:
+            names_of_gifts[int(other_info[-1])] = other_info[0]
+    elif "JustInCase" in command_type:
+        names_of_gifts[-1] = other_info[-1]
+    command = input()
       
-
-      names_of_gifts = input().split(" ")
-         
-      command = input()
-      while command != "No Money":
-          command_type, *other_info = command.split()
-          if "OutOfStock" in command_type:
-              for i, name in enumerate(names_of_gifts):
-                  if other_info[-1] == name:
-                      names_of_gifts[i] = "None"
-          elif "Required" in command_type:
-              length = len(names_of_gifts)
-              if length > int(other_info[-1]) >= 0:
-                  names_of_gifts[int(other_info[-1])] = other_info[0]
-          elif "JustInCase" in command_type:
-              names_of_gifts[-1] = other_info[-1]
-          command = input()
-      
-      print(" ".join(x for x in names_of_gifts if x != "None"))
-
+print(" ".join(x for x in names_of_gifts if x != "None"))
+```
 
 [Code from kumchovylcho](https://github.com/kumchovylcho/softuni/blob/master/Fundamentals%20-%20Python/Lists_Basics%20-%20exercise/Easter_gifts.py)
+```python
+gifts = input().split()
+command = input()
+while command != "No Money":
+    command = command.split()
+    operation, current_gift = command[0], command[1]
+    if operation == "OutOfStock":
+        gifts = [None if gift == current_gift else gift for gift in gifts]
+    elif operation == "Required":
+        index = int(command[2])
+        if 0 <= index < len(gifts):
+            gifts[index] = current_gift
+    elif operation == "JustInCase":
+        gifts[-1] = current_gift
+    command = input()
+
+for gift in gifts:
+    if gift is not None:
+        print(f"{gift}", end=' ')
+```
 
 
-      gifts = input().split()
-      command = input()
-      while command != "No Money":
-          command = command.split()
-          operation, current_gift = command[0], command[1]
-          if operation == "OutOfStock":
-              gifts = [None if gift == current_gift else gift for gift in gifts]
-          elif operation == "Required":
-              index = int(command[2])
-              if 0 <= index < len(gifts):
-                  gifts[index] = current_gift
-          elif operation == "JustInCase":
-              gifts[-1] = current_gift
-          command = input()
-      
-      for gift in gifts:
-          if gift is not None:
-              print(f"{gift}", end=' ')
 
-
-
-      gifts = input().split()
-      command = input()
-      while command != "No Money":
-          list_with_commands = command.split()
-          if list_with_commands[0] == "OutOfStock":
-              for word in range(len(gifts)):
-                  if gifts[word] == list_with_commands[1]:
-                      gifts[word] = "None"
-          elif list_with_commands[0] == "Required":
-              for word in range(len(gifts)):
-                  if word == int(list_with_commands[2]):
-                      gifts[word] = list_with_commands[1]
-          elif list_with_commands[0] == "JustInCase":
-              gifts[-1] = list_with_commands[1]
-          command = input()
-      for words in gifts:
-          if words != "None":
-              print(words, end=" ")
 
 
 ### 8.	 Seize the Fire</br>
@@ -646,151 +595,147 @@ We will **add 89 to the total fire** we have put out.
 In the end, the **effort** is 54.22 and the **total fire**: 217
 
 ***Code***
+```python
+fire_input = input().split("#")
+water = int(input())
+total_fire, effort = 0, 0
 
-
-    fire_input = input().split("#")
-    water = int(input())
-    total_fire, effort = 0, 0
-    
-    print("Cells:")
-    for element in fire_input:
-        element_value = int(element.split("= ")[1])
-        if water >= element_value:
-            if element.startswith("High") and element_value in range(81, 126):
-                water -= element_value
-                total_fire += element_value
-                print(f" - {element_value}")
-    
-            elif element.startswith("Medium") and element_value in range(51, 81):
-                water -= element_value
-                total_fire += element_value
-                print(f" - {element_value}")
-    
-            elif element.startswith("Low") and element_value in range(1, 51):
-                water -= element_value
-                total_fire += element_value
-                print(f" - {element_value}")
-    
-    
-        effort = total_fire * 0.25
-    
-    print(f"Effort: {effort:.2f}")
-    print(f"Total Fire: {total_fire}")
-
-
-**or** from Ivan Shopov
-
-
-    cells = input().split("#")
-    amount_of_water = int(input())
-    total_fire = 0
-    total_effort = 0
-    fire_out_cells = []
-    high = range(81, 125 + 1)
-    medium = range(51, 80 + 1)
-    low = range(1, 50 + 1)
-    for cell in cells:
-        type_of_fire, cell_value = cell.split(" = ")
-        cell_value = int(cell_value)
-        cell_is_valid = False
-        if type_of_fire == "High":
-            if cell_value in high:
-                cell_is_valid = True
-        elif type_of_fire == "Medium":
-            if cell_value in medium:
-                cell_is_valid = True
-        elif type_of_fire == "Low":
-            if cell_value in low:
-                cell_is_valid = True
-        if cell_is_valid: #cell is valid == True
-            if amount_of_water >= cell_value:
-                amount_of_water -= cell_value
-                fire_out_cells.append(cell_value)
-                total_effort += cell_value * 0.25
-                total_fire += cell_value
-    print("Cells:")
-    for fire_cell in fire_out_cells:
-        print(f" - {fire_cell}")
-    print(f"Effort: {total_effort:.2f}")
-    print(f"Total Fire: {total_fire}")
-
-
-**or** from CEO
-
-
-    fire_levels = input().split("#")
-    water = int(input())
-    
-    put_out_cells = list()
-    effort, total_fire, water_left = 0, 0, water
-    
-    for clean_text in fire_levels:
-        type_of_fire, cell_value = [int(x) if x.isdigit() else x for x in clean_text.split(" = ")]
-        if water_left >= cell_value:
-            if any(["High" in type_of_fire and cell_value in range(81, 126),
-                    "Low" in type_of_fire and cell_value in range(1, 51),
-                    "Medium" in type_of_fire and cell_value in range(51, 81)]):
-                put_out_cells.append(cell_value)
-                effort += cell_value * 0.25
-                total_fire += cell_value
-                water_left -= cell_value
-    
-    print("Cells:")
-    for n in put_out_cells:
-        print(f" - {n}")
-    print(f"Effort: {effort:.2f}")
-    print(f"Total Fire: {total_fire}")
-
-**or** from kumchovylcho
-
-
-    fire_with_cells = input().split("#")
-    current_water = int(input())
-    putted_out_fire_cells = []
-    effort = 0
-    for cell in fire_with_cells:
-        is_valid = False
-        list_with_cells = cell.split()
-        water_needed = int(list_with_cells[2])
-        if current_water >= water_needed:
-            if "High" in list_with_cells and water_needed in range(81, 126) or \
-             "Medium" in list_with_cells and water_needed in range(51, 81) or \
-             "Low" in list_with_cells and water_needed in range(1, 51):
-                is_valid = True
-        if is_valid:
-            putted_out_fire_cells.append(water_needed)
-            effort += water_needed * 0.25
-            current_water -= water_needed
-    
-    print("Cells:")
-    for cell in putted_out_fire_cells:
-        print(f" - {cell}")
-    print(f"Effort: {effort:.2f}\nTotal Fire: {sum(putted_out_fire_cells)}")
-
-
-**or**
-
-
-    fire_input = input().split("#")
-    water = int(input())
-    total_fire, effort = 0, 0
-    
-    print("Cells:")
-    for element in fire_input:
-        element_value = int(element.split("= ")[1])
-    
-        if water >= element_value and any(element.startswith(fire_type)
-                                          and min_range <= element_value <= max_range
-                                          for fire_type, min_range, max_range
-                                          in [("High", 81, 125), ("Medium", 51, 80), ("Low", 1, 50)]):
+print("Cells:")
+for element in fire_input:
+    element_value = int(element.split("= ")[1])
+    if water >= element_value:
+        if element.startswith("High") and element_value in range(81, 126):
             water -= element_value
             total_fire += element_value
             print(f" - {element_value}")
-    
+
+        elif element.startswith("Medium") and element_value in range(51, 81):
+            water -= element_value
+            total_fire += element_value
+            print(f" - {element_value}")
+
+        elif element.startswith("Low") and element_value in range(1, 51):
+            water -= element_value
+            total_fire += element_value
+            print(f" - {element_value}")
+
     effort = total_fire * 0.25
-    
-    print(f"Effort: {effort:.2f}")
-    print(f"Total Fire: {total_fire}")
+
+print(f"Effort: {effort:.2f}")
+print(f"Total Fire: {total_fire}")
+```
+
+**or** from Ivan Shopov
+```python
+cells = input().split("#")
+amount_of_water = int(input())
+total_fire = 0
+total_effort = 0
+fire_out_cells = []
+high = range(81, 125 + 1)
+medium = range(51, 80 + 1)
+low = range(1, 50 + 1)
+for cell in cells:
+    type_of_fire, cell_value = cell.split(" = ")
+    cell_value = int(cell_value)
+    cell_is_valid = False
+    if type_of_fire == "High":
+        if cell_value in high:
+            cell_is_valid = True
+    elif type_of_fire == "Medium":
+        if cell_value in medium:
+            cell_is_valid = True
+    elif type_of_fire == "Low":
+        if cell_value in low:
+            cell_is_valid = True
+    if cell_is_valid:  #cell is valid == True
+        if amount_of_water >= cell_value:
+            amount_of_water -= cell_value
+            fire_out_cells.append(cell_value)
+            total_effort += cell_value * 0.25
+            total_fire += cell_value
+print("Cells:")
+for fire_cell in fire_out_cells:
+    print(f" - {fire_cell}")
+print(f"Effort: {total_effort:.2f}")
+print(f"Total Fire: {total_fire}")
+```
+
+**or** from CEO
+```python
+fire_levels = input().split("#")
+water = int(input())
+
+put_out_cells = list()
+effort, total_fire, water_left = 0, 0, water
+
+for clean_text in fire_levels:
+    type_of_fire, cell_value = [int(x) if x.isdigit() else x for x in clean_text.split(" = ")]
+    if water_left >= cell_value:
+        if any(["High" in type_of_fire and cell_value in range(81, 126),
+                "Low" in type_of_fire and cell_value in range(1, 51),
+                "Medium" in type_of_fire and cell_value in range(51, 81)]):
+            put_out_cells.append(cell_value)
+            effort += cell_value * 0.25
+            total_fire += cell_value
+            water_left -= cell_value
+
+print("Cells:")
+for n in put_out_cells:
+    print(f" - {n}")
+print(f"Effort: {effort:.2f}")
+print(f"Total Fire: {total_fire}")
+```
+**or** from kumchovylcho
+```python
+fire_with_cells = input().split("#")
+current_water = int(input())
+putted_out_fire_cells = []
+effort = 0
+for cell in fire_with_cells:
+    is_valid = False
+    list_with_cells = cell.split()
+    water_needed = int(list_with_cells[2])
+    if current_water >= water_needed:
+        if "High" in list_with_cells and water_needed in range(81, 126) or
+                "Medium" in list_with_cells and water_needed in range(51, 81) or
+                "Low" in list_with_cells and water_needed in range(1, 51):
+            is_valid = True
+    if is_valid:
+        putted_out_fire_cells.append(water_needed)
+        effort += water_needed * 0.25
+        current_water -= water_needed
+
+print("Cells:")
+for cell in putted_out_fire_cells:
+    print(f" - {cell}")
+print(f"Effort: {effort:.2f}\nTotal Fire: {sum(putted_out_fire_cells)}")
+```
+
+**or**
+```python
+fire_input = input().split("#")
+water = int(input())
+total_fire, effort = 0, 0
+
+print("Cells:")
+for element in fire_input:
+    element_value = int(element.split("= ")[1])
+
+    if water >= element_value and any(element.startswith(fire_type)
+                                      and min_range <= element_value <= max_range
+                                      for fire_type, min_range, max_range
+                                      in [("High", 81, 125), ("Medium", 51, 80), ("Low", 1, 50)]):
+        water -= element_value
+        total_fire += element_value
+        print(f" - {element_value}")
+
+effort = total_fire * 0.25
+
+print(f"Effort: {effort:.2f}")
+print(f"Total Fire: {total_fire}")
+```
+
 
 
 
