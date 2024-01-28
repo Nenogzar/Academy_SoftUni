@@ -735,7 +735,178 @@ effort = total_fire * 0.25
 print(f"Effort: {effort:.2f}")
 print(f"Total Fire: {total_fire}")
 ```
+### 9.	* Hello, France</br>
+You want to go to France by train, and the train ticket costs exactly **150$**. 
+You do not have enough money, so you decide to **buy some items** with your budget and 
+then sell them at a higher price – with a 40% markup.</br>
+You will receive a **collection of items** and a **budget** in the following format:</br>
+**{type->price|type->price|type->price……|type->price}</br>
+{budget}**</br>
+**The prices** for each of the types cannot exceed a **specific price**, which is given below:
+
+|Type| Maximum Price |
+|-|---------------|
+|Clothes| 50.00|
+|Shoes| 35.00|
+|Accessories| 20.50|
+
+**If a price** for a particular item is **higher** than the **maximum pric**e, don't buy it.</br> 
+**Every** time you buy an item, you have to **reduce the budget** with its price value. </br>
+**If you don't have enough money** for it, you can't buy it. 
+uy as many items as you can.
+Next, you should increase the price of each item you have successfully **bought by 40%** and **then sell it**.</br> 
+**Calculate if the budget after selling** all the items is enough for buying the train ticket.
+
+# Input / Constraints
+
+•	On the 1st line, you will receive the items with their prices in the format described above – **real numbers** in the range **[0.00……1000.00]**</br>
+•	On the 2nd line, you are going to be given the budget – a **real number** in the **range [0.0….1000.0]**
+
+# Output
+•	First, print the list with the bought item’s new prices, formatted to the second decimal point in the following format:</br> 
+**"{price1} {price2} {price3} … {priceN}"**</br>
+* Second, print the profit, formatted to the second decimal point in the following format:</br>
+  * **"Profit: {profit}"**</br>
+* Finally:</br>
+  * If the budget is enough for buying the train ticket, print: **"Hello, France!"** </br>
+* Otherwise, print: **"Not enough money."**</br>
 
 
+**Input**:</br>
+
+Clothes->43.30 |Shoes->25.25|Clothes->36.52|Clothes->20.90|Accessories->15.60</br>
+120
+
+**Output**:</br>
+60.62 35.35 51.13</br>
+Profit: 42.03</br>
+Hello, France!</br>
+
+**Input**:</br>
+Shoes->41.20|Clothes->20.30|Accessories->40|Shoes->15.60|Shoes->33.30|Clothes->48.60</br>
+90
+
+**Output**:</br>
+28.42 21.84 46.62</br>
+Profit: 27.68</br>
+Not enough money.</br>
 
 
+***Code***
+```python
+items_accessories = input().split("|")
+budget = int(input())
+
+items_price = list()
+budget_left = budget
+selling_items = list()
+train_ticket = 150
+
+for clean_text in items_accessories:
+    if "Clothes->" in clean_text:
+        text = float(clean_text.replace("Clothes->", ""))
+
+        if 0 < text <= 50 and budget_left >= text:
+            items_price.append(text)
+            budget_left -= text
+            selling_items.append(text + text * 0.40)
+
+    elif "Shoes->" in clean_text:
+        text = float(clean_text.replace("Shoes->", ""))
+
+        if 0 < text <= 35 and budget_left >= text:
+            items_price.append(text)
+            budget_left -= text
+            selling_items.append(text + text * 0.40)
+
+    elif "Accessories->" in clean_text:
+        text = float(clean_text.replace("Accessories->", ""))
+
+        if 0 < text < 20.50 and budget_left >= text:
+            items_price.append(text)
+            budget_left -= text
+            selling_items.append(text + text * 0.40)
+
+for n in selling_items:
+    print(f"{n:.2f}", end=" ")
+
+normal_price = sum(items_price)
+re_sale = sum(selling_items)
+difference = re_sale - normal_price
+
+print(f"\nProfit: {difference:.2f}")
+
+if budget + difference > train_ticket:
+    print(f"Hello, France!")
+else:
+    print("Not enough money.")
+```
+**or**
+```python
+items_accessories = input().split("|")
+budget = int(input())
+
+items_price, budget_left, train_ticket = 0, budget, 150
+
+for clean_text in items_accessories:
+    type_item, price = (float(x) if x[-1].isdigit() else x for x in clean_text.split('->'))
+    if budget_left < price:
+        continue
+    if any(("Clothes" in type_item and price <= 50,
+            "Shoes" in type_item and price <= 35,
+            "Accessories" in type_item and price <= 20.50)):
+            items_price += price
+            budget_left -= price
+            print(f'{price * 1.40:.2f}' , end=" ")
+
+difference =  items_price * 1.4 - items_price
+print(f"\nProfit: {difference:.2f}")
+
+if budget + difference > train_ticket:
+    print(f"Hello, France!")
+else:
+    print("Not enough money.")
+```
+
+**or - whit dictionary**
+```python
+train_ticket_cost = 150
+maximum_prices = {
+    "Clothes": 50.00,
+    "Shoes": 35.00,
+    "Accessories": 20.50
+}
+
+collection_items, budget = input().split("|"), float(input())
+old_budget = budget
+new_list = []
+sold_items = []
+
+for item_data in collection_items:
+    item_type, item_price = item_data.split("->")
+    item_price = float(item_price)
+
+    if item_type in maximum_prices and item_price <= maximum_prices[item_type] and budget >= item_price:
+        budget -= item_price
+        sold_items.append(item_type)
+        new_list.append((item_type, item_price))
+
+sold_item_prices = [item[1] * 1.4 for item in new_list if item[0] in sold_items]
+profit = sum(sold_item_prices) - sum(item[1] for item in new_list if item[0] in sold_items)
+
+new_dujet = old_budget + profit
+# print("new_dujet", new_dujet)
+
+print(" ".join([f"{price:.2f}" for price in sold_item_prices]))
+print(f"Profit: {profit:.2f}")
+
+if 150 <= new_dujet:
+    print("Hello, France!")
+else:
+    print("Not enough money.")
+```
+
+**or**
+```python
+
+```
