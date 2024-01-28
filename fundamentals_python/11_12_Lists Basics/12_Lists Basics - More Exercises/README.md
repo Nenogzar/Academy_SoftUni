@@ -9,6 +9,7 @@
 
 ## 1.	Zeros to Back</br>
 <details> <summary>Example</summary>
+
 Write a program that receives a **single string (integers separated by a comma and space ", ")**, **finds all the zeros**, 
 and **moves them to the back** without messing up the other elements. **Print** the resulting **integer list**.
 
@@ -18,8 +19,10 @@ and **moves them to the back** without messing up the other elements. **Print** 
 |-------|--------|
 |1, 0, 1, 2, 0, 1, 3|[1, 1, 2, 1, 3, 0, 0]|
 |0, 5, 0, 4, 0, 0, 5|[5, 4, 5, 0, 0, 0, 0]|
+
 </details>
 <details> <summary>Code</summary>
+
 ```Python
 list_input = input().split(", ")
 new_list = []
@@ -71,6 +74,7 @@ print(list_with_zeros_at_the_back)
 
 <details>
 <summary>Example</summary>
+
 On the **first line**, you will receive a sequence of numbers **separated by a single space**. 
 On the **second line**, you will receive a **string**.</br>
 Your task is to write a program that sends a message **only using chars** from the given string. 
