@@ -3,7 +3,7 @@
 |-|-|-|
 # Solutions to the Tasks
 ## 1.	Zeros to Back</br>
-<details> <summary>Example</summary>
+<details> <summary>Condition</summary>
 
 Write a program that receives a **single string (integers separated by a comma and space ", ")**, **finds all the zeros**, 
 and **moves them to the back** without messing up the other elements. **Print** the resulting **integer list**.
@@ -68,7 +68,7 @@ print(list_with_zeros_at_the_back)
 ## 2.	Messaging</br>
 
 <details>
-<summary>Example</summary>
+<summary>Condition</summary>
 
 On the **first line**, you will receive a sequence of numbers **separated by a single space**. 
 On the **second line**, you will receive a **string**.</br>
@@ -218,7 +218,7 @@ print(final_string)
 ## 3.	Car Race</br>
 
 <details>
-<summary>Example</summary>
+<summary>Condition</summary>
 
 Write a program that announces the winner of a car race. </br>
 You will **receive a sequence of numbers**. 
@@ -371,7 +371,7 @@ else:
 ## 4.	Josephus Permutation</br>
 
 <details>
-<summary>Example</summary>
+<summary>Condition</summary>
 
 This problem takes its name from arguably the most important event in the life of the ancient historian Josephus. </br>
 According to his tale, he and his 40 soldiers were trapped in a cave by the Romans during a siege. 
@@ -483,7 +483,7 @@ print(f'[{prt_str}]')
 ## 5.	Tic-Tac-Toe
 
 <details>
-<summary>Example</summary>
+<summary>Condition</summary>
 
 You will receive a field of a tic-tac-toe game in three lines containing numbers, separated by a single space.</br>
 Legend:</br>
@@ -646,7 +646,7 @@ else:
 ## 6.	List Manipulator
 
 <details>
-<summary>Example</summary>
+<summary>Condition</summary>
 
 Trifon has finally become a junior developer and has received his first task. It is about manipulating a list of integers. He is not quite happy about it since he hates manipulating lists. They will pay him a lot of money, though, and he is willing to give somebody half of it if to help him do his job. On the other hand, you love lists (and money), so you decide to try your luck.
 The list may be manipulated by one of the following commands:</br>
