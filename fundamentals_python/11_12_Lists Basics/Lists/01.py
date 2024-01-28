@@ -20,24 +20,30 @@ while repair_list.upper() != "N":
         break
 
 sum_lists = [num_list] + [sort_list]
+
+
+
 zip_from_lists = list(zip(num_list, sort_list))
 
 
 list1 = [item[0] for item in zip_from_lists]
 list2 = [item[1] for item in zip_from_lists]
-
 # Create a nested list
 nested_list = [list1, list2]
+
 
 # dict  от вложени списъци
 
 my_dict = {key: value for key, value in zip(nested_list[0], nested_list[1])}
 # Двата метода са с единтичен изход
-new_dict = dict(zip(nested_list[0], nested_list[1]))
+new_dict1 = dict(zip(nested_list[0], nested_list[1]))
 
-print("sum_lists ->", sum_lists)
-print("zip_from_lists -> ", zip_from_lists)
+print("[num_list] + [sort_list] = ", sum_lists)
 
-print("nested_list", nested_list)
-print("my_dict", my_dict)
-print("new_dict", new_dict)
+print()
+print("list(zip(num_list, sort_list)) = ", zip_from_lists)
+print("[list1, list2] = ", nested_list)
+print()
+
+print("{key: value for key, value in zip(nested_list[0], nested_list[1])} = ", my_dict)
+print("dict(zip(nested_list[0], nested_list[1])) = ", new_dict1)

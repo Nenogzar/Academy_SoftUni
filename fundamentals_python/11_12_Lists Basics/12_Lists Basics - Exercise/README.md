@@ -9,7 +9,7 @@
 [Code from CEO](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Basics%20-%20Exercise)
 
  
-3. Invert Values</br>
+1. Invert Values</br>
 Write a program that receives a single string containing positive and negative numbers separated by a single space.</br>>
 Print a list containing the opposite of each number.
 
@@ -18,7 +18,6 @@ Print a list containing the opposite of each number.
 | Input | Output | Input | Output |
 |-------|--------|-------|--------|
 |1 2 -3 -3 5|[-1, -2, 3, 3, -5]|-4 0 2 57 -101|[4, 0, -2, -57, 101]|
-
 
 * **Code**
 
@@ -50,6 +49,17 @@ Print a list containing the opposite of each number.
     
     print(new_list)
 
+
+**or**
+
+    list_with_numbers = input().split()
+    opposite_numbers = []
+    for number in list_with_numbers:
+        opposite_number = -int(number)
+        opposite_numbers.append(opposite_number)
+    print(opposite_numbers)
+
+
 **or**
 
     invert_list = [-int(x) for x in input().split()]
@@ -59,10 +69,14 @@ Print a list containing the opposite of each number.
 
     print([int(x) * - 1 for x in input().split()])
 
+**or**
+
+    print([-int(number) for number in input().split()])
+
 
 2.	Multiples List
-Write a program that receives two numbers (factor and count). </br>
-It should create a list with a length of the given count that contains only integer numbers, 
+Write a program that receives **two numbers** (factor and count). </br>
+It should **create a list** with a **length of the given count** that contains only integer numbers, 
 which are multiples of the given factor. </br>
 The numbers should be only positive, and they should be arranged in ascending order, 
 starting from the value of the factor.
@@ -140,6 +154,7 @@ If the referee terminated the game, print an additional line: **"Game was termin
 |A-1 A-5 A-10 B-2|Team A - 8; Team B - 10|A-1 A-5 A-10 B-2 A-10 A-7 A-3| Team A - 6; Team B - 10 Game was terminated |
 
 **Code**
+
     letters = "AB"
     numbers = list(range(1, 12))
     combined_list = [f"{letter}-{num}" for letter in letters for num in numbers]
@@ -166,7 +181,6 @@ If the referee terminated the game, print an additional line: **"Game was termin
 
 **or**
 
-
     team_a_players = set(range(1, 11+1))
     team_b_players = set(range(1, 11+1))
     cards = input().split()
@@ -189,6 +203,24 @@ If the referee terminated the game, print an additional line: **"Game was termin
     
     else:
         print(f"Team A - {remaining_team_a}; Team B - {remaining_team_b}")
+
+**from IvanShopov**
+
+    team_a = ['A-1', 'A-2', 'A-3', 'A-4', 'A-5', 'A-6', 'A-7', 'A-8', 'A-9', 'A-10', 'A-11']
+    team_b = ['B-1', 'B-2', 'B-3', 'B-4', 'B-5', 'B-6', 'B-7', 'B-8', 'B-9', 'B-10', 'B-11']
+    players = input().split()
+    game_was_terminated = False
+    for player in players:
+        if player in team_a:
+            team_a.remove(player)
+        elif player in team_b:
+            team_b.remove(player)
+        if len(team_a) < 7 or len(team_b) < 7:
+            game_was_terminated = True
+            break
+    print(f"Team A - {len(team_a)}; Team B - {len(team_b)}")
+    if game_was_terminated: #if game was terminated == True
+        print("Game was terminated")
 
 4.	Number Beggars</br> 
 You will receive 2 lines of input. On the first line, you will receive a single string of integers, 
