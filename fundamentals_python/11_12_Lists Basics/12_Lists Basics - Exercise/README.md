@@ -455,7 +455,7 @@ print(", ".join(str(x) for x in number))
 
 </details>
 
-### 7. '* Easter Gifts</br>
+### 7. * Easter Gifts</br>
 
 <details> <summary>Condition</summary>
 
@@ -580,7 +580,7 @@ for gift in gifts:
 
 </details>
 
-### 8.	 Seize the Fire</br>
+### 8.* Seize the Fire</br>
 
 <details> <summary>Condition</summary>
 
@@ -779,7 +779,7 @@ print(f"Total Fire: {total_fire}")
 ```
 </details>
 
-### 9.	* Hello, France</br>
+### 9.* Hello, France</br>
 
 <details> <summary>Condition</summary>
 
@@ -956,7 +956,7 @@ else:
 
 </details>
 
-## 10.	* Bread Factory</br>
+## 10.* Bread Factory</br>
 
 <details> <summary>Condition</summary>
 
