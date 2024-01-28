@@ -2,6 +2,7 @@
 
 [judge](https://judge.softuni.org/Contests/1724)
 
+
 ### 1. Strange Zoo
 
 <details> <summary>Condition</summary>
@@ -372,6 +373,6 @@ for num in numbers:
         filtered_numbers.append(num)
 
 print(filtered_numbers)
-
-]()
 ```
+
+</details>
