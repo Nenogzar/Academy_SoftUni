@@ -793,4 +793,4 @@ In the end, the **effort** is 54.22 and the **total fire**: 217
     print(f"Total Fire: {total_fire}")
 
 
-![](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/11_12_Lists%20Basics/12_Lists%20Basics%20-%20Exercise/09_hello_france.py)
+
