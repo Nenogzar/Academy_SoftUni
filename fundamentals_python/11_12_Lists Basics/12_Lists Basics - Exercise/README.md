@@ -10,6 +10,7 @@
 
  
 ### 1. Invert Values</br>
+<details> <summary>Condition</summary>
 
 Write a program that receives a single string containing positive and negative numbers separated by a single space.</br>>
 Print a list containing the opposite of each number.
@@ -20,7 +21,9 @@ Print a list containing the opposite of each number.
 |-------|--------|-------|--------|
 |1 2 -3 -3 5|[-1, -2, 3, 3, -5]|-4 0 2 57 -101|[4, 0, -2, -57, 101]|
 
-* **Code**
+</details>
+<details> <summary>Code</summary>
+
 ```python
 numbers = input()
 lst = numbers.split(' ')
@@ -68,8 +71,12 @@ print([int(x) * - 1 for x in input().split()])
 ```python
 print([-int(number) for number in input().split()])
 ```
+</details>
 
 ### 2.	Multiples List
+
+<details> <summary>Condition</summary>
+
 Write a program that receives **two numbers** (factor and count). </br>
 It should **create a list** with a **length of the given count** that contains only integer numbers, 
 which are multiples of the given factor. </br>
@@ -82,8 +89,8 @@ starting from the value of the factor.
 |-------|--------|----------|--------|
 |2</br>5|[2, 4, 6, 8, 10]| 1</br>10 |[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]|
 
+</details><details> <summary>Code</summary>
 
-**Code**
 ```python
 numner_one = int(input())
 numner_two = int(input())
@@ -116,7 +123,12 @@ numner_two = int(input())
 print([x * numner_one for x in range(1, numner_two + 1)])
 ```
 
+</details>
+
 ### 3. Football Cards</br>
+
+<details> <summary>Condition</summary>
+
 Most football fans love it for the goals and excitement. </br>
 Well, this problem does not. You are up to handle the referee's little notebook and 
 count the players who were sent off for fouls and misbehavior.
@@ -142,7 +154,9 @@ If the referee terminated the game, print an additional line: **"Game was termin
 |-------|-------|-------|---------------------------------------------|
 |A-1 A-5 A-10 B-2|Team A - 8; Team B - 10|A-1 A-5 A-10 B-2 A-10 A-7 A-3| Team A - 6; Team B - 10 Game was terminated |
 
-**Code**
+</details>
+<details> <summary>Code</summary>
+
 ```python
 letters = "AB"
 numbers = list(range(1, 12))
@@ -209,7 +223,12 @@ print(f"Team A - {len(team_a)}; Team B - {len(team_b)}")
 if game_was_terminated: #if game was terminated == True
     print("Game was terminated")
 ```
+</details>
+
 ### 4.Number Beggars</br> 
+
+<details> <summary>Condition</summary>
+
 You will receive 2 lines of input. On the first line, you will receive a single string of integers, 
 separated by a comma and a space ", ".</br> 
 On the second line, you will receive a count of beggars.</br> 
@@ -232,7 +251,9 @@ the last beggars will take nothing (0).
 |3, 4, 5, 1, 29, 4</br>6|[3, 4, 5, 1, 29, 4]|
 |100, 94, 24, 99</br>5|[100, 94, 24, 99, 0]|
 
-**Code:**
+</details>
+<details> <summary>Code</summary>
+
 ```python
 first_line = input()
 second_line = int(input())
@@ -271,8 +292,12 @@ for i, num in enumerate(beggars_list):
     index = i % range_beggars
     sum_parts[index] += num
 ```
+</details>
 
 ### 5.	Faro Shuffle</br>
+
+<details> <summary>Condition</summary>
+
 A faro shuffle is a method for shuffling a deck of cards, in which the deck is split exactly in half.</br> 
 Then the cards in the two halves are perfectly interleaved, such that the original bottom card is still on 
 the bottom and the original top card is still on top.</br>
@@ -290,8 +315,9 @@ Note: The length of the deck of cards will always be an even number.
 | a b c d e f g h</br>5    |['a', 'c', 'e', 'g', 'b', 'd', 'f', 'h']|
 | one two three four</br>3 |['one', 'three', 'two', 'four']|
 
+</details>
+<details> <summary>Code</summary>
 
-**Code**
 ```python
 input_list = input().split()
 shuffles = int(input())
@@ -364,7 +390,12 @@ for number_of_shuffle in range(shuffle):
     cards = [c for pair in zip(cards[:middle_of_deck], cards[middle_of_deck:]) for c in pair]
 print(cards)
 ```
+</details>
+
 ### 6.	Survival of the Biggest</br>
+
+<details> <summary>Condition</summary>
+
 Write a program that receives a **list of integer** numbers (separated by a single space) and a number **n**.</br> 
 The number n represents the **count of numbers to remov**e from the list.</br> 
 You should remove the **smallest ones**, and then, you should print all the numbers that are left in the list, 
@@ -377,8 +408,9 @@ separated by a comma and a space **", "**.
 | 10 9 8 7 6 5</br>3 |10, 9, 8|
 | 1 10 2 9 3 8</br>2 |10, 9, 3, 8|
 
+</details>
+<details> <summary>Code</summary>
 
-**Code**
 ```python
 numbers = list(map(int,input().strip().split(" ")))
 how_many_numbers_to_remove = int(input())
@@ -421,7 +453,12 @@ number.remove(min(number)) for _ in range(int(input()))]
 print(", ".join(str(x) for x in number))
 ```
 
+</details>
+
 ### 7. '* Easter Gifts</br>
+
+<details> <summary>Condition</summary>
+
 _As a good friend, you decide to buy presents for your friends._</br>
 Create a program that helps you plan the gifts for your friends and family. 
 First, you are going to receive the gifts you plan on buying on a **single line**, **separated by space**, in the **following format**:</br>
@@ -466,7 +503,9 @@ The final list: **StuffedAnimal Spoon Sweets EasterBunny ChocolateEggs**
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
 | Sweets Cozonac Clothes Flowers Wine</br> Clothes Eggs Clothes</br> Required Paper 8</br> OutOfStock Clothes</br> Required Chocolate 2</br> JustInCase Hat</br> OutOfStock Cable</br> No Money |Sweets Cozonac Chocolate Flowers Wine</br> Eggs Hat|
 
-**Code**
+</details>
+<details> <summary>Code</summary>
+
 ```python
 names_of_gifts = input().split(" ")
 #print(names_of_gifts)
@@ -539,11 +578,12 @@ for gift in gifts:
         print(f"{gift}", end=' ')
 ```
 
-
-
-
+</details>
 
 ### 8.	 Seize the Fire</br>
+
+<details> <summary>Condition</summary>
+
 The group of adventurists has gone on their first task. Now they should walk through fire - literally. 
 They should use all the water they have left. Your task is to help them survive.
 Create a program that calculates the water needed to put out a **"fire cell"**, 
@@ -594,7 +634,9 @@ We need to calculate the **effort**, which **is 25% of 89**.
 We will **add 89 to the total fire** we have put out. 
 In the end, the **effort** is 54.22 and the **total fire**: 217
 
-***Code***
+</details>
+<details> <summary>Code</summary>
+
 ```python
 fire_input = input().split("#")
 water = int(input())
@@ -735,7 +777,12 @@ effort = total_fire * 0.25
 print(f"Effort: {effort:.2f}")
 print(f"Total Fire: {total_fire}")
 ```
+</details>
+
 ### 9.	* Hello, France</br>
+
+<details> <summary>Condition</summary>
+
 You want to go to France by train, and the train ticket costs exactly **150$**. 
 You do not have enough money, so you decide to **buy some items** with your budget and 
 then sell them at a higher price – with a 40% markup.</br>
@@ -791,8 +838,9 @@ Shoes->41.20|Clothes->20.30|Accessories->40|Shoes->15.60|Shoes->33.30|Clothes->4
 Profit: 27.68</br>
 Not enough money.</br>
 
+</details>
+<details> <summary>Code</summary>
 
-***Code***
 ```python
 items_accessories = input().split("|")
 budget = int(input())
@@ -905,7 +953,13 @@ if 150 <= new_dujet:
 else:
     print("Not enough money.")
 ```
+
+</details>
+
 ## 10.	* Bread Factory</br>
+
+<details> <summary>Condition</summary>
+
 As a young baker, you are baking the bread out of the bakery. </br>
 You have initial **energy 100** and initial **coins 100**. 
 You will be given a **string representing the working day events**. 
@@ -948,7 +1002,9 @@ order-10|order-10|order-10|flour-100|order-100|oven-100|order-1000
 |You earned 10 coins.</br>You earned 10 coins.</br>You earned 10 coins.</br>You bought flour.</br>You had to rest!</br>Closed! Cannot afford oven.|
 |-|
 
-**Code**
+</details>
+<details> <summary>Code</summary>
+
 ```Python
 energy, money = 100, 100
 gained_energy = 0
@@ -1119,4 +1175,4 @@ else:
     print(f"Coins: {coins}")
     print(f"Energy: {current_energy}")
 ``` 
-
+</details>
