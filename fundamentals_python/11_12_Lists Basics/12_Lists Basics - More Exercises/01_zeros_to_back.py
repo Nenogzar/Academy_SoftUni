@@ -10,13 +10,13 @@ for num in event_list.split(", "):
         zero_list.append(number)
     else:
         number_list.append(number)
-output_list =number_list + zero_list
+output_list = number_list + zero_list
 print(output_list)
 
 ############## FROM CEO ##########################
 
-# numbers = list(map(int, input().strip().split(", ")))
-#
-# for _ in numbers:
-#     numbers.append(numbers.pop(numbers.index(0)))
-# print(numbers)
+numbers = list(map(int, input().strip().split(", ")))
+
+for _ in numbers:
+    numbers.append(numbers.pop(numbers.index(0)))
+print(numbers)

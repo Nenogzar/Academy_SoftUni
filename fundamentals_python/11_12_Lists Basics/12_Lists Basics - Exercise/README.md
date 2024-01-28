@@ -1119,3 +1119,4 @@ else:
     print(f"Coins: {coins}")
     print(f"Energy: {current_energy}")
 ``` 
+

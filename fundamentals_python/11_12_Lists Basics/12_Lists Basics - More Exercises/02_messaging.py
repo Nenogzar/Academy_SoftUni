@@ -20,6 +20,27 @@
 # This is some message for you
 # Output:
 # hey
+code_number = [int(num) for num in input().split(" ")]
+code_string = input()
+cod_list = []
+
+for code in code_number:
+    sum_digits = 0
+    for digit in str(code):
+        sum_digits += int(digit)
+    cod_list.append(sum_digits)
+
+decoded_message = ""
+for index in cod_list:
+    if len(code_string) == 0:
+        break
+    current_char = code_string[index % len(code_string)]
+    decoded_message += current_char
+    code_string = code_string.replace(current_char, "", 1)
+
+print(decoded_message)
+
+#####################################################################
 
 numbers_input = input()
 text_input = input()
@@ -83,35 +104,35 @@ print(message)
 # 9992 562 8933
 # This is some message for you
 ########################### FROM CEO ##################################
-# numbers = input().split()
-# string_text = input()
-# msg_show = ""
-#
-# for num in numbers:
-#     find_index = sum([int(s_num) for s_num in num])
-#     if find_index >= len(string_text):
-#         find_index = find_index - len(string_text)
-#     msg_show += string_text[find_index]
-#     string_text = string_text[:find_index] + string_text[find_index + 1:]
-#
-# print(msg_show)
+numbers = input().split()
+string_text = input()
+msg_show = ""
+
+for num in numbers:
+    find_index = sum([int(s_num) for s_num in num])
+    if find_index >= len(string_text):
+        find_index = find_index - len(string_text)
+    msg_show += string_text[find_index]
+    string_text = string_text[:find_index] + string_text[find_index + 1:]
+
+print(msg_show)
 
 ########################### FROM CEO ##################################
-# numbers = input().split()
-# string_text = input()
-#
-# msg_show = ""
-#
-# for num in numbers:
-#     find_index = 0
-#     for s_num in num:
-#         find_index += int(s_num)
-#     if find_index > len(string_text):
-#         find_index = find_index - len(string_text)
-#     msg_show += string_text[find_index]
-#     string_text = string_text[:find_index] + string_text[find_index + 1:]
-#
-# print(msg_show)
+numbers = input().split()
+string_text = input()
+
+msg_show = ""
+
+for num in numbers:
+    find_index = 0
+    for s_num in num:
+        find_index += int(s_num)
+    if find_index > len(string_text):
+        find_index = find_index - len(string_text)
+    msg_show += string_text[find_index]
+    string_text = string_text[:find_index] + string_text[find_index + 1:]
+
+print(msg_show)
 
 
 
