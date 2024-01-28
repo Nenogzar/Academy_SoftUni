@@ -9,7 +9,8 @@
 [Code from CEO](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Basics%20-%20Exercise)
 
  
-1. Invert Values</br>
+### 1. Invert Values</br>
+
 Write a program that receives a single string containing positive and negative numbers separated by a single space.</br>>
 Print a list containing the opposite of each number.
 
@@ -74,7 +75,7 @@ Print a list containing the opposite of each number.
     print([-int(number) for number in input().split()])
 
 
-2.	Multiples List
+### 2.	Multiples List
 Write a program that receives **two numbers** (factor and count). </br>
 It should **create a list** with a **length of the given count** that contains only integer numbers, 
 which are multiples of the given factor. </br>
@@ -127,7 +128,7 @@ starting from the value of the factor.
     print([x * numner_one for x in range(1, numner_two + 1)])
 
 
-3. Football Cards</br>
+### 3. Football Cards</br>
 Most football fans love it for the goals and excitement. </br>
 Well, this problem does not. You are up to handle the referee's little notebook and 
 count the players who were sent off for fouls and misbehavior.
@@ -222,7 +223,7 @@ If the referee terminated the game, print an additional line: **"Game was termin
     if game_was_terminated: #if game was terminated == True
         print("Game was terminated")
 
-4.	Number Beggars</br> 
+### 4.Number Beggars</br> 
 You will receive 2 lines of input. On the first line, you will receive a single string of integers, 
 separated by a comma and a space ", ".</br> 
 On the second line, you will receive a count of beggars.</br> 
@@ -288,7 +289,7 @@ or whit index[]
           sum_parts[index] += num
 
 
-5.	Faro Shuffle</br>
+### 5.	Faro Shuffle</br>
 A faro shuffle is a method for shuffling a deck of cards, in which the deck is split exactly in half.</br> 
 Then the cards in the two halves are perfectly interleaved, such that the original bottom card is still on 
 the bottom and the original top card is still on top.</br>
@@ -390,7 +391,7 @@ Note: The length of the deck of cards will always be an even number.
       print(cards)
 
 
-6.	Survival of the Biggest</br>
+### 6.	Survival of the Biggest</br>
 Write a program that receives a **list of integer** numbers (separated by a single space) and a number **n**.</br> 
 The number n represents the **count of numbers to remov**e from the list.</br> 
 You should remove the **smallest ones**, and then, you should print all the numbers that are left in the list, 
@@ -451,7 +452,7 @@ separated by a comma and a space **", "**.
       print(", ".join(str(x) for x in number))
 
 
-7. '* Easter Gifts</br>
+### 7. '* Easter Gifts</br>
 _As a good friend, you decide to buy presents for your friends._</br>
 Create a program that helps you plan the gifts for your friends and family. 
 First, you are going to receive the gifts you plan on buying on a **single line**, **separated by space**, in the **following format**:</br>
@@ -591,3 +592,204 @@ The final list: **StuffedAnimal Spoon Sweets EasterBunny ChocolateEggs**
       for words in gifts:
           if words != "None":
               print(words, end=" ")
+
+
+### 8.	 Seize the Fire</br>
+The group of adventurists has gone on their first task. Now they should walk through fire - literally. 
+They should use all the water they have left. Your task is to help them survive.
+Create a program that calculates the water needed to put out a **"fire cell"**, 
+based on the given information about its **"fire level"** and how much it gets affected by water.
+**First**, you will be given the **level of fire** inside the cell with the integer value of the cell,
+which represents the needed water to put out the fire.  They will be given in the following format:</br>
+**"{typeOfFire} = {valueOfCell}#{typeOfFire} = {valueOfCell}# … {typeOfFire} = {valueOfCell}"**</br>
+Afterward you will receive the amount of **water** you have for putting out the fires. 
+There is a **range** of fire for each fire type, and if a cell's value is **below or exceeds it**, it is invalid, 
+and you do not need to put it out.</br>
+Type of Fire	Range</br>
+High	81 - 125</br>
+Medium	51 - 80</br>
+Low	1 - 50</br>
+If a cell is valid, you should put it out by reducing the water with its value. 
+Putting out fire also takes effort, and you need to calculate it. 
+Its value is **equal to 25%** of the cell's value. 
+In the end, you will have to **print the total effort**. 
+**Keep** putting out cells until you run out of water. 
+**Skip** it and try the next one if you do not have enough water to put out a given cell. In the end, print the cells you have put out in the following format:</br>
+"Cells:
+ - {cell1}
+ - {cell2}
+ …
+ - {cellN}"</br>
+"Effort: {effort}"</br>
+The effort should be **formatted to the second decimal** place. 
+In the end, print the **total fire** you have put out from all the cells in the following format:</br> 
+**"Total Fire: {total_fire}"**</br>
+
+**Input / Constraints**</br>
+•	On the **1st line**, you will receive the fires with their cells in the format described above – integer numbers in the range [1…500].
+•	On the **2nd line**, you will receive the water – an integer number in the range [0….100000].
+
+**Output**</br>
+Print the output as described above.
+
+| Input                                                                   | Output |
+|-------------------------------------------------------------------------|--------|
+| High = 89#Low = 28#Medium = 77#Low = 23</br>1250                        |Cells:</br> - 89</br> - 28</br> - 77</br> - 23</br>Effort: 54.25</br>Total Fire: 217</br>|
+| High = 150#Low = 55#Medium = 86#Low = 40#High = 110#Medium = 77</br>220 |Cells:</br> - 40</br> - 110</br>Effort: 37.50</br>Total Fire: 150</br>|
+
+**Comments**: 
+After reading the output, we start **checking** the **level of the fire** and its validity. 
+The first is valid, so we **subtract the 89** from the amount of **water** – 1250, 
+and the water becomes **1161**. 
+We need to calculate the **effort**, which **is 25% of 89**. 
+We will **add 89 to the total fire** we have put out. 
+In the end, the **effort** is 54.22 and the **total fire**: 217
+
+***Code***
+
+
+    fire_input = input().split("#")
+    water = int(input())
+    total_fire, effort = 0, 0
+    
+    print("Cells:")
+    for element in fire_input:
+        element_value = int(element.split("= ")[1])
+        if water >= element_value:
+            if element.startswith("High") and element_value in range(81, 126):
+                water -= element_value
+                total_fire += element_value
+                print(f" - {element_value}")
+    
+            elif element.startswith("Medium") and element_value in range(51, 81):
+                water -= element_value
+                total_fire += element_value
+                print(f" - {element_value}")
+    
+            elif element.startswith("Low") and element_value in range(1, 51):
+                water -= element_value
+                total_fire += element_value
+                print(f" - {element_value}")
+    
+    
+        effort = total_fire * 0.25
+    
+    print(f"Effort: {effort:.2f}")
+    print(f"Total Fire: {total_fire}")
+
+
+**or** from Ivan Shopov
+
+
+    cells = input().split("#")
+    amount_of_water = int(input())
+    total_fire = 0
+    total_effort = 0
+    fire_out_cells = []
+    high = range(81, 125 + 1)
+    medium = range(51, 80 + 1)
+    low = range(1, 50 + 1)
+    for cell in cells:
+        type_of_fire, cell_value = cell.split(" = ")
+        cell_value = int(cell_value)
+        cell_is_valid = False
+        if type_of_fire == "High":
+            if cell_value in high:
+                cell_is_valid = True
+        elif type_of_fire == "Medium":
+            if cell_value in medium:
+                cell_is_valid = True
+        elif type_of_fire == "Low":
+            if cell_value in low:
+                cell_is_valid = True
+        if cell_is_valid: #cell is valid == True
+            if amount_of_water >= cell_value:
+                amount_of_water -= cell_value
+                fire_out_cells.append(cell_value)
+                total_effort += cell_value * 0.25
+                total_fire += cell_value
+    print("Cells:")
+    for fire_cell in fire_out_cells:
+        print(f" - {fire_cell}")
+    print(f"Effort: {total_effort:.2f}")
+    print(f"Total Fire: {total_fire}")
+
+
+**or** from CEO
+
+
+    fire_levels = input().split("#")
+    water = int(input())
+    
+    put_out_cells = list()
+    effort, total_fire, water_left = 0, 0, water
+    
+    for clean_text in fire_levels:
+        type_of_fire, cell_value = [int(x) if x.isdigit() else x for x in clean_text.split(" = ")]
+        if water_left >= cell_value:
+            if any(["High" in type_of_fire and cell_value in range(81, 126),
+                    "Low" in type_of_fire and cell_value in range(1, 51),
+                    "Medium" in type_of_fire and cell_value in range(51, 81)]):
+                put_out_cells.append(cell_value)
+                effort += cell_value * 0.25
+                total_fire += cell_value
+                water_left -= cell_value
+    
+    print("Cells:")
+    for n in put_out_cells:
+        print(f" - {n}")
+    print(f"Effort: {effort:.2f}")
+    print(f"Total Fire: {total_fire}")
+
+**or** from kumchovylcho
+
+
+    fire_with_cells = input().split("#")
+    current_water = int(input())
+    putted_out_fire_cells = []
+    effort = 0
+    for cell in fire_with_cells:
+        is_valid = False
+        list_with_cells = cell.split()
+        water_needed = int(list_with_cells[2])
+        if current_water >= water_needed:
+            if "High" in list_with_cells and water_needed in range(81, 126) or \
+             "Medium" in list_with_cells and water_needed in range(51, 81) or \
+             "Low" in list_with_cells and water_needed in range(1, 51):
+                is_valid = True
+        if is_valid:
+            putted_out_fire_cells.append(water_needed)
+            effort += water_needed * 0.25
+            current_water -= water_needed
+    
+    print("Cells:")
+    for cell in putted_out_fire_cells:
+        print(f" - {cell}")
+    print(f"Effort: {effort:.2f}\nTotal Fire: {sum(putted_out_fire_cells)}")
+
+
+**or**
+
+
+    fire_input = input().split("#")
+    water = int(input())
+    total_fire, effort = 0, 0
+    
+    print("Cells:")
+    for element in fire_input:
+        element_value = int(element.split("= ")[1])
+    
+        if water >= element_value and any(element.startswith(fire_type)
+                                          and min_range <= element_value <= max_range
+                                          for fire_type, min_range, max_range
+                                          in [("High", 81, 125), ("Medium", 51, 80), ("Low", 1, 50)]):
+            water -= element_value
+            total_fire += element_value
+            print(f" - {element_value}")
+    
+    effort = total_fire * 0.25
+    
+    print(f"Effort: {effort:.2f}")
+    print(f"Total Fire: {total_fire}")
+
+

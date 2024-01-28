@@ -71,51 +71,51 @@ print(f"Total Fire: {total_fire}")
 
 ########################## FROM CEO ########################
 
-# fire_levels = input().split("#")
-# water = int(input())
-#
-# put_out_cells = list()
-# effort, total_fire, water_left = 0, 0, water
-#
-# for clean_text in fire_levels:
-#     type_of_fire, cell_value = [int(x) if x.isdigit() else x for x in clean_text.split(" = ")]
-#     if water_left >= cell_value:
-#         if any(["High" in type_of_fire and cell_value in range(81, 126),
-#                 "Low" in type_of_fire and cell_value in range(1, 51),
-#                 "Medium" in type_of_fire and cell_value in range(51, 81)]):
-#             put_out_cells.append(cell_value)
-#             effort += cell_value * 0.25
-#             total_fire += cell_value
-#             water_left -= cell_value
-#
-# print("Cells:")
-# for n in put_out_cells:
-#     print(f" - {n}")
-# print(f"Effort: {effort:.2f}")
-# print(f"Total Fire: {total_fire}")
+fire_levels = input().split("#")
+water = int(input())
+
+put_out_cells = list()
+effort, total_fire, water_left = 0, 0, water
+
+for clean_text in fire_levels:
+    type_of_fire, cell_value = [int(x) if x.isdigit() else x for x in clean_text.split(" = ")]
+    if water_left >= cell_value:
+        if any(["High" in type_of_fire and cell_value in range(81, 126),
+                "Low" in type_of_fire and cell_value in range(1, 51),
+                "Medium" in type_of_fire and cell_value in range(51, 81)]):
+            put_out_cells.append(cell_value)
+            effort += cell_value * 0.25
+            total_fire += cell_value
+            water_left -= cell_value
+
+print("Cells:")
+for n in put_out_cells:
+    print(f" - {n}")
+print(f"Effort: {effort:.2f}")
+print(f"Total Fire: {total_fire}")
 
 
 ################################### OTHER Short ###############################################
 
-# fire_input = input().split("#")
-# water = int(input())
-# total_fire, effort = 0, 0
-#
-# print("Cells:")
-# for element in fire_input:
-#     element_value = int(element.split("= ")[1])
-#
-#     if water >= element_value and any(element.startswith(fire_type)
-#                                       and min_range <= element_value <= max_range
-#                                       for fire_type, min_range, max_range
-#                                       in [("High", 81, 125), ("Medium", 51, 80), ("Low", 1, 50)]):
-#         water -= element_value
-#         total_fire += element_value
-#         print(f" - {element_value}")
-#
-# effort = total_fire * 0.25
-#
-# print(f"Effort: {effort:.2f}")
-# print(f"Total Fire: {total_fire}")
+fire_input = input().split("#")
+water = int(input())
+total_fire, effort = 0, 0
+
+print("Cells:")
+for element in fire_input:
+    element_value = int(element.split("= ")[1])
+
+    if water >= element_value and any(element.startswith(fire_type)
+                                      and min_range <= element_value <= max_range
+                                      for fire_type, min_range, max_range
+                                      in [("High", 81, 125), ("Medium", 51, 80), ("Low", 1, 50)]):
+        water -= element_value
+        total_fire += element_value
+        print(f" - {element_value}")
+
+effort = total_fire * 0.25
+
+print(f"Effort: {effort:.2f}")
+print(f"Total Fire: {total_fire}")
 
 
