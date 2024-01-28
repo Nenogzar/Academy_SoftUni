@@ -8,6 +8,7 @@
 
 
 ## 1.	Zeros to Back</br>
+<details> <summary>Example</summary>
 Write a program that receives a **single string (integers separated by a comma and space ", ")**, **finds all the zeros**, 
 and **moves them to the back** without messing up the other elements. **Print** the resulting **integer list**.
 
@@ -17,8 +18,8 @@ and **moves them to the back** without messing up the other elements. **Print** 
 |-------|--------|
 |1, 0, 1, 2, 0, 1, 3|[1, 1, 2, 1, 3, 0, 0]|
 |0, 5, 0, 4, 0, 0, 5|[5, 4, 5, 0, 0, 0, 0]|
-
-### Code
+</details>
+<details> <summary>Code</summary>
 ```Python
 list_input = input().split(", ")
 new_list = []
@@ -64,8 +65,12 @@ list_with_zeros_at_the_back = numbers_without_zeros + finding_the_zeros
 
 print(list_with_zeros_at_the_back)
 ```
+</details>
 
 ## 2.	Messaging</br>
+
+<details>
+<summary>Example</summary>
 On the **first line**, you will receive a sequence of numbers **separated by a single space**. 
 On the **second line**, you will receive a **string**.</br>
 Your task is to write a program that sends a message **only using chars** from the given string. 
@@ -82,7 +87,11 @@ It means that for the following index, the text will contain one character less.
 | 9992 562 8933</br>This is some message for you |hey|
 | 2 122 1123 1321 9 17211</br>87j973u59dg37e725!|judge!|
 
-### Code
+</details>
+
+<details> 
+<summary>Code</summary>
+
 ```Python
 numbers_input = input()
 text_input = input()
@@ -205,8 +214,13 @@ for number in numbers:
 
 print(final_string)
 ```
+</details>
 
 ## 3.	Car Race</br>
+
+<details>
+<summary>Example</summary>
+
 Write a program that announces the winner of a car race. </br>
 You will **receive a sequence of numbers**. 
 **Each number** represents the time the car needs to pass through that **step (the index)**. 
@@ -225,7 +239,11 @@ The time should be **formatted** to the **first decimal point**.</br>
 |29 13 9 0 13 0 21 0 14 82 12|The winner is left with total time: 53.8|The time of the left racer is (29 + 13 + 9) * 0.8 (because of the zero) + 13 = 53.8.</br>The time of the right racer is (82 + 12 + 14) * 0.8 + 21 = 107.4.</br>The winner is the left racer, so we print it.|
 |123 20 4 0 13 0 0 5 5 14 0|The winner is right with total time: 19.2||
 
-### Code
+</details>
+
+<details> 
+<summary>Code</summary>
+
 ```Python
 time_index = [int(num) for num in input().split(" ")]
 left_car = 0
@@ -349,7 +367,13 @@ if car_one_total < car_two_total:
 else:
     print(f"The winner is right with total time: {car_two_total:.1f}")
 ```
+</details>
+
 ## 4.	Josephus Permutation</br>
+
+<details>
+<summary>Example</summary>
+
 This problem takes its name from arguably the most important event in the life of the ancient historian Josephus. </br>
 According to his tale, he and his 40 soldiers were trapped in a cave by the Romans during a siege. 
 Refusing to surrender to the enemy, they instead opted for mass suicide, with a twist:</br> 
@@ -370,7 +394,11 @@ Print the people by order of executions in the format: **"[{executed1},{executed
 | 1 2 3 4 5 6 7</br>3     |[3,6,2,7,5,1,4]|
 | 10 5 65 104 1 0 2</br>8 |[10,65,0,1,5,2,104]|
 
-### Code
+</details>
+
+<details> 
+<summary>Code</summary>
+
 ```Python
 input_numbers = list(map(int, input().split()))
 dead = len(input_numbers)
@@ -450,10 +478,14 @@ while len(people) > 0:
 prt_str = ','.join([str(x) for x in executed.copy()])
 print(f'[{prt_str}]')
 ```
-
+</details>
 
 
 ## 5.	Tic-Tac-Toe
+
+<details>
+<summary>Example</summary>
+
 You will receive a field of a tic-tac-toe game in three lines containing numbers, separated by a single space.</br>
 Legend:</br>
 * 0 - empty space</br>
@@ -469,7 +501,11 @@ If the **second player** wins, print **"Second player won"**. **Otherwise**, pri
 | 0 1 0</br>2 2 2</br>1 0 0 |Second player won|
 | 1 0 2</br>0 1 2</br>1 2 0 |Draw!|
 
-### Code
+</details>
+
+<details> 
+<summary>Code</summary>
+
 ```Python
 lines = [input().split() for _ in range(3)]
 first_player_win = None
@@ -606,8 +642,13 @@ elif second_player:
     print("Second player won")
 else:
 ```
+</details>
 
 ## 6.	List Manipulator
+
+<details>
+<summary>Example</summary>
+
 Trifon has finally become a junior developer and has received his first task. It is about manipulating a list of integers. He is not quite happy about it since he hates manipulating lists. They will pay him a lot of money, though, and he is willing to give somebody half of it if to help him do his job. On the other hand, you love lists (and money), so you decide to try your luck.
 The list may be manipulated by one of the following commands:</br>
 * "exchange {index}" – splits the list after the given index and exchanges the places of the two resulting sub-lists. E.g., [1, 2, 3, 4, 5] -> "exchange 2" -> result: [4, 5, 1, 2, 3]
@@ -647,7 +688,12 @@ The list may be manipulated by one of the following commands:</br>
 |1 3 5 7 9</br>exchange 1</br>max odd</br>min even</br>first 2 odd</br>last 2 even</br>exchange 3</br>end|2</br>No matches</br>[5, 7]</br>[]</br>[3, 5, 7, 9, 1]|
 |1 10 100 1000</br>max even</br>first 5 even</br>exchange 10</br>min odd</br>exchange 0</br>max even</br>min even</br>end|3</br>Invalid count</br>Invalid index</br>0</br>2</br>0</br>[10, 100, 1000, 1]|
 |1 10 100 1000</br>exchange 3</br>first 2 odd</br>last 4 odd</br>end|[1]</br>[1]</br>[1, 10, 100, 1000]|
-### Code
+
+</details>
+
+<details> 
+<summary>Code</summary>
+
 ```Python
 numbers = [int(i) for i in input().split()]
 command = input().split()
@@ -837,12 +883,4 @@ while command != "end":
 
 print(numbers)
 ```
-
-
-
-
-
-
-
-
-
+</details>
