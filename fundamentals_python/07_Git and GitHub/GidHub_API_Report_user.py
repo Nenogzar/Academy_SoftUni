@@ -10,7 +10,7 @@ def get_github_data(username):
             repo_name = repo["name"]
             repo_language = repo["language"]
             repo_stars = repo["stargazers_count"]
-            print(f"Repository: {repo_name}, Language: {repo_language}, Stars: {repo_stars}")
+            print(f"Repository: {repo_name}\n, Language: {repo_language}\n, Stars: {repo_stars}")
     else:
         print(f"Error: {response.status_code}, {response.text}")
 
