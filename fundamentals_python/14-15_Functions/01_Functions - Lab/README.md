@@ -206,7 +206,7 @@ repeat_range = int(input())
 result = repeat_string(string_input, repeat_range)
 print(result)
 ```
-solution of the task by CIO
+### solution of the task by CIO
 ```Python
 string_to_show = input()
 number_to_multi_string = int(input())
@@ -333,6 +333,35 @@ Write a program that rounds all the given numbers, separated by a single space, 
 <details> <summary>Code</summary>
 
 ```Python
+number = input()
+
+def round_func(string):
+    rounded_numbers = []
+    for num in string.split():
+        rounded_numbers.append(round(float(num)))
+    return rounded_numbers
+
+print(round_func(number))
+```
+
+```Python
+input_numbers = input()
+
+rounded_numbers = [round(float(num)) for num in input_numbers.split()]
+
+print(rounded_numbers)
+```
+### solution of the task by CIO
+```Python
+main_list = [float(n) for n in input().split()]
+
+
+def round_numbers(numbers):
+    result = [round(num) for num in numbers]
+    return result
+
+
+print(round_numbers(main_list))
 ```
 
 </details>
