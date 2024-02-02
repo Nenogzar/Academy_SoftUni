@@ -80,16 +80,21 @@ Example
 ```
 </details>
 
-## 4.	
+## 4. Odd and Even Sum
 <details><summary>Condition</summary>
+
+You will receive a **single number**. 
+You should write a function that returns the sum of all even and all odd digits in a given number. The result should be returned as a single string in the format: 
+**"Odd sum = {sum_of_odd_digits}**, **Even sum = {sum_of_even_digits}"**
+Print the result of the function on the console.
 
 
 Example
 
 | Input         | Output                 |
 |---------------|------------------------|
-|||
-|||
+|1000435|Odd sum = 9, Even sum = 4|
+|3495892137259234|Odd sum = 54, Even sum = 22|
 
 </details>
 <details> <summary>Code</summary>
@@ -100,16 +105,18 @@ Example
 ```
 </details>
 
-## 5.	
+## 5. Even Numbers
 <details><summary>Condition</summary>
 
+Write a program that receives a sequence of numbers (integers) separated by a single space. 
+It should print a list of only the even numbers. Use filter().
 
 Example
 
 | Input         | Output                 |
 |---------------|------------------------|
-|||
-|||
+|1 2 3 4|[2, 4]|
+|1 2 3 -1 -2 -3|[2, -2]|
 
 </details>
 <details> <summary>Code</summary>
@@ -120,16 +127,18 @@ Example
 ```
 </details>
 
-## 6.	
+## 6.	Sort
 <details><summary>Condition</summary>
 
+Write a program that receives a sequence of numbers (integers) separated by a single space. 
+It should print a sorted list of numbers in ascending order. Use sorted().
 
 Example
 
 | Input         | Output                 |
 |---------------|------------------------|
-|||
-|||
+|6 2 4|[2, 4, 6]|
+|12 52 11 53 2 8 45|[2, 8, 11, 12, 45, 52, 53]|
 
 </details>
 <details> <summary>Code</summary>
@@ -140,16 +149,22 @@ Example
 ```
 </details>
 
-## 7.	
+## 7.	Min Max and Sum
 <details><summary>Condition</summary>
+
+Write a program that receives a sequence of numbers (integers) separated by a single space. It should print the min and max values of the given numbers and the sum of all the numbers in the list. Use min(), max() and sum().
+The output should be as follows:
+* On the first line: **"The minimum number is {minimum number}"**
+* On the second line: **"The maximum number is {maximum number}"**
+* On the third line: **"The sum number is: {sum of all numbers}"**
 
 
 Example
 
-| Input         | Output                 |
-|---------------|------------------------|
-|||
-|||
+| Input | Output                 |
+|-------|------------------------|
+| 2 4 6 |The minimum number is 2</br>The maximum number is 6</br>The sum number is: 12|
+|12 52 11 53 2 8 45| The minimum number is 2</br>The maximum number is 53</br>The sum number is: 183|
 
 </details>
 <details> <summary>Code</summary>
@@ -160,16 +175,20 @@ Example
 ```
 </details>
 
-## 8.	
+## 8.	Palindrome integers
 <details><summary>Condition</summary>
+
+A palindrome is a number that reads the same **backward as forward**, such as 323 or 1001. 
+Write a function that receives a list of positive integers, separated by comma and space ", ". 
+The function should check if each integer is a **palindrome** - **True** or **False**. Print the result.
 
 
 Example
 
-| Input         | Output                 |
-|---------------|------------------------|
-|||
-|||
+| Input         | Output                            |
+|---------------|-----------------------------------|
+|123, 323, 421, 121| False</br>True</br>False</br>True |
+|32, 2, 232, 1010| False</br>True</br>True</br>False |
 
 </details>
 <details> <summary>Code</summary>
@@ -180,7 +199,7 @@ Example
 ```
 </details>
 
-## 9.	
+## 9. Password Validator
 <details><summary>Condition</summary>
 
 
