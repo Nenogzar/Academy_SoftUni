@@ -5,6 +5,7 @@ def operation_multiply(num1, num2):
 def operation_divide(num1, num2):
     if num2 == 0:
         print("Cannot divide by zero!")
+
     else:
         operation = num1 / num2
         return operation
