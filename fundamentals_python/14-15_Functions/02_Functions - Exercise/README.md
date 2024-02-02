@@ -47,3 +47,43 @@ Example
 
 ```
 </details>
+
+## 3.	
+<details><summary>Condition</summary>
+
+
+Example
+
+| Input         | Output                 |
+|---------------|------------------------|
+|||
+|||
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+</details>
+
+## 4.	
+<details><summary>Condition</summary>
+
+
+Example
+
+| Input         | Output                 |
+|---------------|------------------------|
+|||
+|||
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+</details>
