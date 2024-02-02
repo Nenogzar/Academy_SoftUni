@@ -87,3 +87,163 @@ Example
 
 ```
 </details>
+
+## 5.	
+<details><summary>Condition</summary>
+
+
+Example
+
+| Input         | Output                 |
+|---------------|------------------------|
+|||
+|||
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+</details>
+
+## 6.	
+<details><summary>Condition</summary>
+
+
+Example
+
+| Input         | Output                 |
+|---------------|------------------------|
+|||
+|||
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+</details>
+
+## 7.	
+<details><summary>Condition</summary>
+
+
+Example
+
+| Input         | Output                 |
+|---------------|------------------------|
+|||
+|||
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+</details>
+
+## 8.	
+<details><summary>Condition</summary>
+
+
+Example
+
+| Input         | Output                 |
+|---------------|------------------------|
+|||
+|||
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+</details>
+
+## 9.	
+<details><summary>Condition</summary>
+
+
+Example
+
+| Input         | Output                 |
+|---------------|------------------------|
+|||
+|||
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+</details>
+
+## 10.	
+<details><summary>Condition</summary>
+
+
+Example
+
+| Input         | Output                 |
+|---------------|------------------------|
+|||
+|||
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+</details>
+
+## 11.	
+<details><summary>Condition</summary>
+
+
+Example
+
+| Input         | Output                 |
+|---------------|------------------------|
+|||
+|||
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+</details>
+
+## 11.	
+<details><summary>Condition</summary>
+
+
+Example
+
+| Input         | Output                 |
+|---------------|------------------------|
+|||
+|||
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+</details>
