@@ -235,13 +235,20 @@ Example
 ## 10.	
 <details><summary>Condition</summary>
 
+A perfect number is a positive integer that is equal to the sum of its proper positive divisors. That is the sum of its positive divisors, excluding the number itself (also known as its aliquot sum).
+Write a function that receives an integer number and returns one of the following messages:
+* **"We have a perfect number!"** - if the number is perfect.
+* **"It's not so perfect."** - if the number is NOT perfect.
+Print the result on the console.
+
 
 Example
 
-| Input         | Output                 |
-|---------------|------------------------|
-|||
-|||
+| Input   | Output                 | Comments |
+|---------|------------------------|----------|
+| 6       |We have a perfect number!|1 + 2 + 3|
+| 28      |We have a perfect number!|1 + 2 + 4 + 7 + 14|
+| 1236498 |We have a perfect number!|          |
 
 </details>
 <details> <summary>Code</summary>
@@ -252,16 +259,21 @@ Example
 ```
 </details>
 
-## 11.	
+## 11.	Loading Bar
 <details><summary>Condition</summary>
 
+You will receive a single integer number between 0 and 100 (inclusive) 
+divisible by 10 without remainder (0, 10, 20, 30...). 
+Your task is to create a function that returns a loading bar depending on the number you have received in the input. 
+Print the result on the console. For more clarification, see the examples below.
 
 Example
 
-| Input         | Output                 |
-|---------------|------------------------|
-|||
-|||
+| Input | Output                |
+|-------|-----------------------|
+| 30    | 30% [%%%.......]</br>Still loading... |
+| 50    |50% [%%%%%.....]</br>Still loading...|
+| 100   |100% Complete!</br>[%%%%%%%%%%]|
 
 </details>
 <details> <summary>Code</summary>
@@ -272,16 +284,19 @@ Example
 ```
 </details>
 
-## 11.	
+## 12.	Factorial Division
 <details><summary>Condition</summary>
+
+Write a function that receives two integer numbers. Calculate the factorial of each number. 
+Divide the first result by the second and print the division formatted to the second decimal point.
 
 
 Example
 
-| Input         | Output                 |
-|---------------|------------------------|
-|||
-|||
+| Input   | Output                 |
+|---------|------------------------|
+| 5</br>2 |60.00|
+| 6</br2> |360.00|
 
 </details>
 <details> <summary>Code</summary>
