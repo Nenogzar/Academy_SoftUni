@@ -1,22 +1,19 @@
 def operation_multiply(num1, num2):
-    operation = num1 * num2
-    return operation
+    return num1 * num2
+
 
 def operation_divide(num1, num2):
-    if num2 == 0:
-        print("Cannot divide by zero!")
-
+    if num2 != 0:
+        return num1 / num2
     else:
-        operation = num1 / num2
-        return operation
+        print('Cannot divide by zero!')
+
 
 def operation_add(num1, num2):
-    operation = num1 + num2
-    return operation
+    return num1 + num2
 
 def operation_subtract(num1, num2):
-    operation = num1 - num2
-    return operation
+    return num1 - num2
 
 def calculation(operator, num1, num2):  # Подадени аргументи на функцията
     if operator.lower() == "multiply":
