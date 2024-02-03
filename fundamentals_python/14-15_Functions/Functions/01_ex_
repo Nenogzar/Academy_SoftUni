@@ -1,0 +1,11 @@
+1. Write a function vowel_count which takes in a list of strings (all lower case) and returns a dictionary,
+keyed on the five vowels a, e, i, o, and u.
+The value for each should be the total number of entries in the list which contain at least a single copy of that vowel.
+For example,
+
+vowel_count(Ptimel, 'is', 'the', 'end']' returns {'a': 0, 'e': 3, 'i': 2, 'o': 0, 'u': 0} 0
+vowel_count(Paardvarkil 'facetious', 'too', 'to', 'twoll) returns {a': 2, 'e': 1, 'i': 1, 'o': 4, 'u': 1}
+
+(note that we are not counting the total number of a's, or e's, but how many individual entries in the list contain at least one a)
+
+

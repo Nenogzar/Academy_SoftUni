@@ -1,0 +1,93 @@
+Lambdas, also known as anonymous functions or function literals, are a concise way to define small and simple functions in many programming languages. I'll explain various aspects of lambdas in Python, as it's a commonly used language for beginners.
+____________________
+Basic Lambda Syntax:
+
+A lambda function is defined using the lambda keyword, followed by parameters and an expression.
+Example:
+lambda x: x * 2
+This creates a function that takes one argument x and returns x * 2.
+____________________
+Assigning Lambdas to Variables:
+You can assign a lambda function to a variable for later use.
+Example:
+double = lambda x: x * 2
+Now, double(5) will return 10.
+____________________
+Using Lambdas as Arguments:
+Lambdas are often used as arguments for functions that accept functions, like map(), filter(), and sorted().
+Example:
+numbers = [1, 4, 2, 7]
+sorted(numbers, key=lambda x: x)
+sorted_numbers = sorted(numbers, key=lambda x: x)
+This sorts the list in ascending order.
+
+____________________
+Filtering with Lambdas:
+filter() can be used with a lambda to selectively include elements in a collection.
+Example:
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+This filters out only the even numbers from the list.
+____________________
+Mapping with Lambdas:
+map() applies a function to all items in an input list.
+
+Example:
+squared_numbers = list(map(lambda x: x*2, numbers))
+This squares each number in the list.
+____________________
+Lambda with Multiple Parameters:
+Lambdas can take multiple parameters separated by commas.
+Example:
+add = lambda x, y: x + y
+Now, add(3, 4) returns 7.
+____________________
+Using Lambdas in Key Functions:
+Lambdas are handy for defining key functions in sorting.
+Example:
+words = ['apple', 'banana', 'cherry']
+sorted_words = sorted(words, key=lambda x: len(x))
+This sorts the words by their length.
+____________________
+Conditional Lambda:
+You can use conditional expressions in lambdas for more complex logic.
+Example:
+is_even = lambda x: True if x % 2 == 0 else False
+This lambda checks if a number is even.
+____________________
+Lambdas in GUI Programming:
+Lambdas are often used in GUI programming for event handlers.
+Example:
+button = Button(text="Click me", command=lambda: print("Button clicked"))
+____________________
+Using Lambdas with reduce():
+reduce() from the functools module can be used with lambdas to accumulate values.
+
+Example:
+from functools import reduce
+sum_all = reduce(lambda x, y: x + y, numbers)
+
+This computes the sum of all elements in the list.
+____________________
+Higher-Order Functions:
+Lambdas are commonly used with higher-order functions that accept functions as arguments or return functions.
+
+Example:
+def multiplier(n):
+    return lambda x: x n
+____________________
+Closures:
+Lambdas can capture variables from their surrounding scope, creating closures.
+
+Example:
+def outer_func(x):
+    return lambda y: x + y
+____________________
+Recursion with Named Lambdas:
+Although less common, you can define recursive functions using named lambdas.
+
+Example:
+factorial = (lambda f: lambda x: x * f(f, x - 1) if x > 0 else 1)(lambda f, x: x * f(f, x - 1) if x > 0 else 1)
+
+if you want recursion with a named lambda you just, use the name of the function right in it:
+Example:
+f=lambda x:x*f(x-1) if x>0 else 1
