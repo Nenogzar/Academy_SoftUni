@@ -374,7 +374,7 @@ for num in input_string:
 
     print(command)
 ```
-whit function
+function whit list
 ```Python
 def palindrom_func(input):
     results = []
@@ -389,6 +389,26 @@ def palindrom_func(input):
 inp_string = list(map(int, input().split(", ")))
 palindrom = palindrom_func(inp_string)
 print("\n".join(palindrom))
+```
+task solution by mario zahariev
+```Python
+def is_palindrome(num):
+    return str(num) == str(num)[::-1]
+
+
+def palindrome_function(lst):
+    return '\n'.join(['True' if is_palindrome(num) else 'False' for num in lst])
+
+
+list_of_palindromes = list(map(int, input().split(', ')))
+print(palindrome_function(list_of_palindromes))
+```
+task solution by Ceo
+```Python
+def check_palindrome(numbers):
+    [print(n == n[::-1]) for n in numbers]
+
+check_palindrome(input().split(", "))
 ```
 ```Python
 input_string = list(map(int, input().split(", ")))
@@ -426,8 +446,105 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
+password = input()
+error_messages = []
+
+if not 6 <= len(password) <= 10:
+    error_messages.append("Password must be between 6 and 10 characters")
+if not password.isalnum():
+    error_messages.append("Password must consist only of letters and digits")
+if sum(1 for x in password if x.isdigit()) < 2:
+    error_messages.append("Password must have at least 2 digits")
+
+if error_messages:
+    print(*error_messages, sep='\n')
+else:
+    print("Password is valid")
+```
+```Python
+def is_valid_password(password):
+    if not 6 <= len(password) <= 10:
+        return "Password must be between 6 and 10 characters"
+    if not password.isalnum():
+        return "Password must consist only of letters and digits"
+    if sum(1 for c in password if c.isdigit()) < 2:
+        return "Password must have at least 2 digits"
+
+    return "Password is valid"
+
+user_password = input()
+result = is_valid_password(user_password)
+print(result)
+```
+task solution by mario zahariev
+```Python
+def password_validator(password):
+    errors = []
+
+    if not 6 <= len(password) <= 10:
+        errors.append("Password must be between 6 and 10 characters")
+
+    if not password.isalnum():
+        errors.append("Password must consist only of letters and digits")
+
+    if sum(char.isdigit() for char in password) < 2:
+        errors.append("Password must have at least 2 digits")
+
+    if errors:
+        for error in errors:
+            print(error)
+    else:
+        print("Password is valid")
 
 
+user_password = input()
+password_validator(user_password)
+```
+```Python
+```
+password_validator_oop From Mario Zahariev
+```Python
+import re
+
+
+class PasswordValidator:
+    def __init__(self, password):
+        self.password = password
+        self.errors = []
+
+    def is_valid(self):
+        self._check_length()
+        self._check_alphanumeric()
+        self._check_digit_count()
+
+        if self.errors:
+            return False
+        return True
+
+    def _check_length(self):
+        if not 6 <= len(self.password) <= 10:
+            self.errors.append("Password must be between 6 and 10 characters")
+
+    def _check_alphanumeric(self):
+        if not re.match("^[a-zA-Z0-9]+$", self.password):
+            self.errors.append("Password must consist only of letters and digits")
+
+    def _check_digit_count(self):
+        if sum(char.isdigit() for char in self.password) < 2:
+            self.errors.append("Password must have at least 2 digits")
+
+    def get_errors(self):
+        return self.errors
+
+
+user_password = input()
+validator = PasswordValidator(user_password)
+
+if validator.is_valid():
+    print("Password is valid")
+else:
+    for error in validator.get_errors():
+        print(error)
 ```
 </details>
 
