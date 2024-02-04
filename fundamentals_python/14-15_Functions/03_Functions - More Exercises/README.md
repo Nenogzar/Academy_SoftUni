@@ -6,7 +6,7 @@
 
 <details><summary>Condition</summary>
 
-Write a function that, depending on the **first line of the input**, 
+Write a function that, depending on the **first line of the input**,
 reads one of the following strings: **"int"**, **"real"**, or **"string"**.
 
 * If the data type is an int, multiply the number by 2.
@@ -38,7 +38,9 @@ elif command == "string":
 
 print(result)
 ```
+
 task solution by kumchovalcho
+
 ```Python
 command = input()
 to_process = input()
@@ -57,7 +59,9 @@ def calculate(command, calculation):
 
 print(calculate(command, to_process))
 ```
+
 task solution by Ceo
+
 ```Python
 def calc(arg1, arg2):
     if arg1 == "int":
@@ -76,24 +80,84 @@ print(calc(command, number))
 
 </details>
 
-## 2. Data Types
+## 2. Center Point
 
 <details><summary>Condition</summary>
 
+You will be given the coordinates of two points on a Cartesian coordinate system - X1, Y1, X2, and Y2 on separate lines.
+Write a **function** that prints the point which is closest to the center
+of the coordinate system (0, 0) in the format: **"({X}, {Y})"**</br>
+If the points are at the same distance from the center, print only the first one.
+The resulting coordinates must be **formatted** to the **lower integer.**
 
 Example
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+| Input                        | Output   |
+|------------------------------|----------|
+| 2</br>4</br>-1</br>2         | (-1, 2)  |
+| 10</br>14.5</br>-17.2</br>16 | (10, 14) |
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
+import math
 
+x1 = math.floor(float(input()))
+x2 = math.floor(float(input()))
+y1 = math.floor(float(input()))
+y2 = math.floor(float(input()))
+
+sum_x = math.floor(abs(x1) + abs(x2))
+sum_y = math.floor(abs(y1) + abs(y2))
+
+
+def whats_closer(arg1, arg2):
+    if arg1 <= arg2:
+        return f"({x1}, {x2})"
+
+    elif arg2 <= arg1:
+        return f"({y1}, {y2})"
+
+
+print(whats_closer(sum_x, sum_y))
+```
+
+```Python
+import math
+
+
+# Function to get coordinates from the user
+def get_coordinates():
+    x = math.floor(float(input()))
+    y = math.floor(float(input()))
+    return x, y
+
+
+# Function to calculate the distance from the center
+def calculate_distance(coord):
+    return math.floor(abs(coord[0]) + abs(coord[1]))
+
+
+# Function to determine which of two points is closer to the center
+def whats_closer(coord1, coord2):
+    distance1 = calculate_distance(coord1)
+    distance2 = calculate_distance(coord2)
+
+    if distance1 <= distance2:
+        return coord1
+    else:
+        return coord2
+
+
+# Get coordinates for points A and B
+point_a = get_coordinates()
+point_b = get_coordinates()
+
+# Determine which point is closer
+closer_point = whats_closer(point_a, point_b)
+
+print(f"{closer_point}")
 ```
 
 </details>
