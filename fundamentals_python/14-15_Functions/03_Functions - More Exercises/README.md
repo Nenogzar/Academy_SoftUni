@@ -219,13 +219,16 @@ def whats_closer(arg1, arg2, arg3, arg4):
 
 print(whats_closer(sum_x, sum_y, sum_z, sum_v))
 ```
+
 ```Python
 import math
+
 
 def get_input_values():
     x1, x2, y1, y2 = map(lambda x: math.floor(float(input())), range(4))
     z1, z2, v1, v2 = map(lambda x: math.floor(float(input())), range(4))
     return x1, x2, y1, y2, z1, z2, v1, v2
+
 
 def calculate_sums(x1, x2, y1, y2, z1, z2, v1, v2):
     sum_x = math.floor(abs(x1) + abs(x2))
@@ -233,6 +236,7 @@ def calculate_sums(x1, x2, y1, y2, z1, z2, v1, v2):
     sum_z = math.floor(abs(z1) + abs(z2))
     sum_v = math.floor(abs(v1) + abs(v2))
     return sum_x, sum_y, sum_z, sum_v
+
 
 def whats_closer(x1, x2, y1, y2, z1, z2, v1, v2):
     sum_x, sum_y, sum_z, sum_v = calculate_sums(x1, x2, y1, y2, z1, z2, v1, v2)
@@ -256,10 +260,12 @@ def whats_closer(x1, x2, y1, y2, z1, z2, v1, v2):
         else:
             return f"({z1}, {z2})({v1}, {v2})"
 
+
 def main():
     x1, x2, y1, y2, z1, z2, v1, v2 = get_input_values()
     result = whats_closer(x1, x2, y1, y2, z1, z2, v1, v2)
     print(result)
+
 
 if __name__ == "__main__":
     main()
@@ -267,46 +273,190 @@ if __name__ == "__main__":
 
 </details>
 
-## 4. Data Types
+## 4. Tribonacci Sequence
 
 <details><summary>Condition</summary>
 
+In the Tribonacci sequence, every number is formed by the **sum of the previous 3**.
+Write a function that prints numbers from the Tribonacci
+sequence on **one line** separated by a single space, starting from 1.
+You will receive a positive integer number as input.
 
 Example
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+| Input | Output             |
+|-------|--------------------|
+| 4     | 1 1 2 4            |
+| 8     | 1 1 2 4 7 13 24 44 |
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
+a, b, c = 1, 1, 2
+upper_limit = int(input())
 
+sequence = []
+
+while len(sequence) + 1 <= upper_limit:
+    sequence.append(a)
+    a, b, c = b, c, a + b + c
+
+print(' '.join(map(str, sequence)))
+```
+
+task solution by kumchovalcho
+
+```Python
+def tribonacci_sequence(number: int):
+    sequence = [1, 1, 2]
+
+    if 1 <= number <= 3:
+        return sequence[:number]
+
+    rotations = number - len(sequence)
+    for _ in range(rotations):
+        current_numbers = sequence[-3:]
+        sequence.append(sum(current_numbers))
+
+    return sequence
+
+
+tribonacci_number = int(input())
+result = tribonacci_sequence(tribonacci_number)
+print(*result, sep=" ")
+```
+
+task solution by Ceo
+
+```Python
+starting_number = int(input())
+
+last_three = [1, 1]
+
+
+def show_tribonacci(num):
+    for number in range(1, num + 1):
+        if number == 1 or number == 2:
+            print(last_three[number - 1], end=" ")
+            continue
+        else:
+            add_last_number = 0
+            if len(last_three) > 2:
+                add_last_number = last_three.pop(0)
+        print(sum(last_three) + add_last_number, end=" ")
+        last_three.append(sum(last_three) + add_last_number)
+
+
+show_tribonacci(starting_number)
+```
+
+task solution by Ceo
+
+```Python
+n = int(input())
+
+
+def tribonacci(n):
+    list = [1, 0, 0]
+    for i in range(n):
+        next_num = sum(list)
+        print(next_num, end=" ")
+        list.append(next_num)
+        list.pop(0)
+
+
+tribonacci(n)
 ```
 
 </details>
 
-## 5. Data Types
+## 5. Multiplication Sign
 
 <details><summary>Condition</summary>
 
+You will receive three integer numbers.
+Write a program that finds if their multiplication (the result) is **negative, positive, or zero**.
+Try to do this **WITHOUT** multiplying the 3 numbers.
 
 Example
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+| Input          | Output   |
+|----------------|----------|
+| 2</br>3</br>-1 | negative |
+| 2</br>3</br>1  | positive |
 
 </details>
 <details> <summary>Code</summary>
 
-```Python
+with multiplication
 
+```Python
+import math
+
+x, y, z = map(lambda r: math.floor(int(input())), range(3))
+sign = ''
+result = x * y * z
+
+if result < 0:
+    sign = 'negative'
+elif result > 0:
+    sign = 'positive'
+else:
+    sign = 'zero'
+
+print(sign)
+```
+
+without multiplication
+
+```Python
+import math
+
+x, y, z = map(lambda r: math.floor(int(input())), range(3))
+
+
+def check_numbers(one, two, three):
+    if (three > 0 and one < 0 and two < 0) or
+            (two > 0 and one < 0 and three < 0) or
+            (one > 0 and two < 0 and three < 0) or
+            (one > 0 and two > 0 and three > 0):
+        return "positive"
+    elif one == 0 or two == 0 or three == 0:
+        return "zero"
+    elif one < 0 or two < 0 or three < 0:
+        return "negative"
+
+
+print(check_numbers(x, y, z))
+```
+
+task solution by kumchovalcho
+
+```Python
+def check_numbers(first, second, third):
+    if any(x == 0 for x in (first, second, third)):
+        return "zero"
+
+    if all(x > 0 for x in (first, second, third)) or
+            sum(1 for x in (first, second, third) if x < 0) == 2:
+        return "positive"
+
+    return "negative"
+
+
+first_number = int(input())
+second_number = int(input())
+third_number = int(input())
+
+print(check_numbers(first_number,
+                    second_number,
+                    third_number
+                    )
+      )
+```
+
+```Python
 ```
 
 </details>
