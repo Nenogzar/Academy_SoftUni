@@ -19,12 +19,25 @@ Example
 </details>
 <details> <summary>Code</summary>
 
-basic
 ```Python
-
+n1, n2, n3 = int(input()), int(input()), int(input())
+min_num = min(n1,n2,n3)
+print(min_num)
 ```
-function
+whit function
+```Python
+def find_smallest(num1, num2, num3):
+    return min(num1, num2, num3)
 
+
+num1, num2, num3 = int(input()), int(input()), int(input())
+
+print(find_smallest(num1, num2, num3))
+```
+
+```Python
+print(min(int(input()), int(input()), int(input())))
+```
 </details>
 
 
@@ -50,11 +63,36 @@ Example
 
 </details>
 <details> <summary>Code</summary>
+basic
 
 ```Python
-
-
+sum_numbers = int(input()) + int(input())
+subtract = sum_numbers - int(input())
+print(subtract)
 ```
+
+```Python
+print((int(input()) + int(input())) - int(input()))
+```
+whit function
+```Python
+def substract_number(num1, num2, num3):
+    sub = (num1 + num2) - num3
+    return sub
+
+
+a, b, c = int(input()), int(input()), int(input())
+print(substract_number(a, b, c))
+```
+task solution by mario zahariev whit lambda()
+```Python
+sum_numbers = lambda num1, num2: num1 + num2
+subtract = lambda result, num3: result - num3
+add_and_subtract = lambda num1, num2, num3: subtract(sum_numbers(num1, num2), num3)
+num1, num2, num3 = int(input()), int(input()), int(input())
+print(add_and_subtract(num1, num2, num3))
+```
+
 </details>
 
 ## 3.Characters in Range
@@ -75,8 +113,33 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
+start_char = ord(input())
+end_char = ord(input())
+char_string = [chr(ch) for ch in range(start_char + 1, end_char)]
+# print(char_string)
+new_chars = ' '.join(char_string)
+print(new_chars)
+```
+whit function
+```Python
+def characters_in_between(char1, char2):
+    start = ord(char1)
+    end = ord(char2)
+    char_list = [chr(i) for i in range(start + 1, end)]
+    return ' '.join(char_list)
 
 
+char1, char2 = input(), input()
+
+result = characters_in_between(char1, char2)
+print(result)
+```
+task solution by mario zahariev whit lambda()
+```Python
+chars_range = lambda first_char, second_char: ' '.join(map(chr, range(ord(first_char) + 1, ord(second_char))))
+char1 = input()
+char2 = input()
+print(chars_range(char1, char2))
 ```
 </details>
 
@@ -100,9 +163,46 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
+number = int(input())
+even_sum = 0
+odd_sum = 0
 
+# Convert the number to a string to iterate through each character
+for digit in str(number):
+    num = int(digit)
+    if num % 2 == 0:
+        even_sum += num
+    else:
+        odd_sum += num
 
+print(f"Odd sum = {odd_sum}, Even sum = {even_sum}")
 ```
+whit function
+```Python
+def odd_even_sum(number):
+    odd_sum = 0
+    even_sum = 0
+
+    for digit in str(number):
+
+        if int(digit) % 2 == 0:
+            even_sum += int(digit)
+        else:
+            odd_sum += int(digit)
+
+    return f"Odd sum = {odd_sum}, Even sum = {even_sum}"
+
+
+number = int(input())
+print(odd_even_sum(number))
+```
+
+```Python
+number = int(input())
+odd_sum = sum(int(digit) for digit in str(number) if int(digit) % 2 != 0)
+even_sum = sum(int(digit) for digit in str(number) if int(digit) % 2 == 0)
+```
+
 </details>
 
 ## 5. Even Numbers
@@ -122,8 +222,35 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
+num_string = input().split()
+even_list_str = []
 
+for num in num_string:
+    if num.lstrip('-').isdigit() and int(num) % 2 == 0:
+        even_list_str.append(int(num))
 
+print(even_list_str)
+```
+whit function
+```Python
+def extract_even_numbers(input_string):
+    even_list = []
+
+    for num in input_string.split():
+        if num.lstrip('-').isdigit() and int(num) % 2 == 0:
+            even_list.append(int(num))
+
+    return even_list
+
+# Taking input from the user
+input_numbers = input()
+result = extract_even_numbers(input_numbers)
+print(result)
+```
+```Python
+num_string = input()
+even_list = [int(num) for num in num_string.split() if num.lstrip('-').isdigit() and int(num) % 2 == 0]
+print(even_list)
 ```
 </details>
 
