@@ -84,12 +84,11 @@ command_list = input().split()
 
 while command_list[0] != "End":
 
-    if command_list[0].lower() == "add":
+    if "add" in command_list:
         train_wagon_index[-1] += int(command_list[1])
-    elif command_list[0].lower() == "insert":
-
+    elif "insert" in command_list:
         train_wagon_index[int(command_list[1])] += int(command_list[2])
-    elif command_list[0].lower() == "leave":
+    elif "leave" in command_list:
         train_wagon_index[int(command_list[1])] -= int(command_list[2])
     command_list = input().split()
 
@@ -98,7 +97,7 @@ print(train_wagon_index)
 whit function
 ```Python
 train_wagons = int(input())
-train = list()
+train = []
 command = input()
 
 for n in range(train_wagons):
