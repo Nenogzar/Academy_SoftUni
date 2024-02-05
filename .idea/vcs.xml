@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../Project/LearningPython" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../Softuni_MySQL" vcs="Git" />
   </component>
 </project>
