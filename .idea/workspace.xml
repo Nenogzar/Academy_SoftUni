@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74c1f22e-78d1-484e-8bb8-388d8a637e4c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/fundamentals_python/05-06_Basic Syntax, Conditional Statements and Loops/06_Basic Syntax, Conditional Statements and Loops - More Exercises/find_the_capitals.py" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals_python/05-06_Basic Syntax, Conditional Statements and Loops/06_Basic Syntax, Conditional Statements and Loops - More Exercises/02_find_the_capitals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals_python/05-06_Basic Syntax, Conditional Statements and Loops/06_Basic Syntax, Conditional Statements and Loops - More Exercises/sum_of_a_beach.py" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals_python/05-06_Basic Syntax, Conditional Statements and Loops/06_Basic Syntax, Conditional Statements and Loops - More Exercises/04_sum_of_a_beach.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals_python/05-06_Basic Syntax, Conditional Statements and Loops/06_Basic Syntax, Conditional Statements and Loops - More Exercises/wolf_in_sheeps_clothing.py" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals_python/05-06_Basic Syntax, Conditional Statements and Loops/06_Basic Syntax, Conditional Statements and Loops - More Exercises/03_wolf_in_sheeps_clothing.py" afterDir="false" />
+    <list default="true" id="74c1f22e-78d1-484e-8bb8-388d8a637e4c" name="Changes" comment="Update">
+      <change beforePath="$PROJECT_DIR$/fundamentals_python/16_Software Development Concepts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals_python/16_Software Development Concepts/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +15,11 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2bMwkVmvrwFba8QsHvkBlSCpL0m" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,13 +28,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "F:/Python/Academy_SoftUni/Academy_SoftUni"
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "F:/Python/Softuni_MySQL"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
@@ -48,6 +48,19 @@
       <option name="presentableId" value="Default" />
       <updated>1706038398215</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <option name="closed" value="true" />
+      <created>1707115022701</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707115022701</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>
