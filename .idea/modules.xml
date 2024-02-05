@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Academy_SoftUni.iml" filepath="$PROJECT_DIR$/.idea/Academy_SoftUni.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Project/.idea/Project.iml" filepath="$PROJECT_DIR$/../../Project/.idea/Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Softuni_MySQL/.idea/Softuni_MySQL.iml" filepath="$PROJECT_DIR$/../../Softuni_MySQL/.idea/Softuni_MySQL.iml" />
     </modules>
   </component>
 </project>
