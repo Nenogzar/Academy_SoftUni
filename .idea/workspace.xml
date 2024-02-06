@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74c1f22e-78d1-484e-8bb8-388d8a637e4c" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/fundamentals_python/17-18_Lists Advanced/01_Lists Advanced - Lab/Exercise/1_no_vowels.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundamentals_python/17-18_Lists Advanced/01_Lists Advanced - Lab/Exercise/2_trains.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals_python/17-18_Lists Advanced/01_Lists Advanced - Lab/Exercise/1_which_are_in.py" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals_python/17-18_Lists Advanced/02_Lists Advanced - Exercise/Exercise/1_which_are_in.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fundamentals_python/17-18_Lists Advanced/01_Lists Advanced - Lab/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/fundamentals_python/17-18_Lists Advanced/01_Lists Advanced - Lab/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +36,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.1_no_vowels.executor": "Run",
-    "Python.2_trains.executor": "Run",
-    "Python.input_in_list.executor": "Run",
-    "Python.title.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/Python/Academy_SoftUni/Academy_SoftUni/fundamentals_python/31-32_Regular Expressions/03_Regular Expressions - More Exercises"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.1_no_vowels.executor&quot;: &quot;Run&quot;,
+    &quot;Python.2_trains.executor&quot;: &quot;Run&quot;,
+    &quot;Python.input_in_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.title.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Python/Academy_SoftUni/Academy_SoftUni/fundamentals_python/31-32_Regular Expressions/03_Regular Expressions - More Exercises&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Python\Academy_SoftUni\Academy_SoftUni\fundamentals_python\31-32_Regular Expressions\03_Regular Expressions - More Exercises" />
@@ -244,7 +240,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707168060566</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update">
+      <option name="closed" value="true" />
+      <created>1707168827173</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707168827173</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update">
+      <option name="closed" value="true" />
+      <created>1707168836055</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707168836055</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
