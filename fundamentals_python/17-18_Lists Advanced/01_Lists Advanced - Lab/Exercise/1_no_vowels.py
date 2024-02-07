@@ -1,12 +1,27 @@
-def remove_vowels(text):
-    # Create a list of vowels to be removed
-    vowels = ['a', 'o', 'u', 'e', 'i']
+# def remove_vowels(text):
+#
+#     vowels = ['a', 'o', 'u', 'e', 'i']
+#
+#     new_text = [char for char in text if char.lower() not in vowels]
+#
+#     return ''.join(new_text)
+#
+#
+# input_string = input()
+#
+# print(remove_vowels(input_string))
 
-    new_text = [char for char in text if char.lower() not in vowels]
-
-    return ''.join(new_text)
-
+""" Zahariev """
 
 input_string = input()
+vowels = ['a', 'o', 'u', 'e', 'i']
+new_test = list()
 
-print(remove_vowels(input_string))
+for char in input_string:
+    if char.lower() not in vowels:
+        new_test.append(char)
+
+print(new_test)
+
+
+
