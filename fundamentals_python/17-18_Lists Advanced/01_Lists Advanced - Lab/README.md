@@ -20,6 +20,18 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
+input_string = input()
+vowels = ['a', 'o', 'u', 'e', 'i']
+new_test = list()
+
+for char in input_string:
+    if char.lower() not in vowels:
+        new_test.append(char)
+
+print(new_test)
+```
+whit Function
+```Python
 original_text = input()
 
 skip_letters = ['a', 'o', 'u', 'e', 'i', 'A', 'O', 'U', 'E', 'I']
@@ -35,7 +47,7 @@ def change_text(arg1):
 
 print(change_text(original_text))
 ```
-comprehension
+in comprehension list
 ```Python
 def remove_vowels(text):
     # Create a list of vowels to be removed
