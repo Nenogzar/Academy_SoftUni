@@ -281,9 +281,20 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
- 
+ leter_list = list(map(str, input().split(", ")))
+
+sorted_lst = sorted(leter_list, key=len, reverse=True)
+print(f"{sorted_lst}")
 
 ```
+```Python
+leter_list = list(map(str, input().split(", ")))
+
+sorted_lst = sorted(leter_list, key=lambda x: len(x), reverse=True)
+print(f"{sorted_lst = }")
+```
+
+
 </details>
 
 ## 6.	Even Numbers

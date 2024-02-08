@@ -1,7 +1,7 @@
 while True:
     input_string = input("Input String : ")
 
-    formatted_string = input_string.replace('.	', '_').replace(' ', '_').lower()
+    formatted_string = input_string.replace('. ', '_').replace(' ', '_').lower()
 
     print(formatted_string)
 
