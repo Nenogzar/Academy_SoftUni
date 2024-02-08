@@ -286,8 +286,9 @@ leter_list = list(map(str, input().split(", ")))
 sorted_lst = sorted(leter_list, key=lambda x: (-len(x), x))
 print(f"{sorted_lst}")
 ```
-
-
+```Python
+print(sorted(input().split(", "), key= lambda x: (-len(x), x)))
+```
 
 </details>
 
@@ -309,9 +310,22 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
- 
+input_list = list(map(int, input().split(", ")))
+
+even_indices = []
+
+for index, num in enumerate(input_list):
+    if num % 2 == 0:
+        even_indices.append(index)
+
+print(even_indices)
+```
+```Python
+even_indices = [index for index, num in enumerate(map(int, input().split(", ")) if num % 2 == 0]
+print(even_indices)
 
 ```
+
 </details>
 
 ## 7.	The Office
