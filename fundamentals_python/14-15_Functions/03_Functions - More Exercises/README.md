@@ -392,6 +392,7 @@ Example
 
 with multiplication
 
+### 1
 ```Python
 import math
 
@@ -408,8 +409,33 @@ else:
 
 print(sign)
 ```
+### 2 without multiplication
+```Python
+def multiplication_sign(n1, n2, n3):
+    positive_count = 0
+    negative_count = 0
+    zero_condition = False
 
-without multiplication
+    if n1 > 0 or n2 > 0 or n3 > 0:
+        positive_count += 1
+    if n1 < 0 or n2 < 0 or n3 < 0:
+        negative_count += 1
+    if not positive_count and not negative_count:
+        zero_condition = True
+
+    if not zero_condition:
+        if negative_count % 2 == 0:
+            print('positive')
+        else:
+            print('negative')
+    else:
+        print('zero')
+
+
+num1, num2, num3 = map(lambda _: int(input()), range(3))
+multiplication_sign(num1, num2, num3)
+```
+### 3 without multiplication
 
 ```Python
 import math
@@ -431,7 +457,7 @@ def check_numbers(one, two, three):
 print(check_numbers(x, y, z))
 ```
 
-task solution by kumchovalcho
+### 4 task solution by kumchovalcho
 
 ```Python
 def check_numbers(first, second, third):
@@ -449,12 +475,7 @@ first_number = int(input())
 second_number = int(input())
 third_number = int(input())
 
-print(check_numbers(first_number,
-                    second_number,
-                    third_number
-                    )
-      )
-      )
+print(check_numbers(first_number,second_number,third_number))
 ```
 
 ```Python
