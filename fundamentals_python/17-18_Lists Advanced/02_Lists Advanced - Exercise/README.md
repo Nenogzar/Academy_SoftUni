@@ -1,7 +1,8 @@
 # Exercise: Lists Advanced
 
-[judge](https://judge.softuni.org/Contests/1731/Lists-Advanced-Exercise) and
-[icode-example](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Advanced%20-%20Exercise)
+[judge](https://judge.softuni.org/Contests/1731/Lists-Advanced-Exercise) </br>
+[icode-example](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Advanced%20-%20Exercise) </br>
+[pastebin Ivan Shopov](https://pastebin.com/4TgF7d7s) </br>
 
 ## 1. Which Are In?
 
