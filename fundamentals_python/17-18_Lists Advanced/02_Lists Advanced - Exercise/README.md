@@ -66,7 +66,6 @@ result_list = list(dict.fromkeys(result_list))
 print(result_list)
 ```
 
-
 </details>
 
 ## 2. Next Version
@@ -86,7 +85,6 @@ Example
 | 1.2.3 | 1.2.4  |
 | 1.3.9 | 1.4.0  |
 | 3.9.9 | 4.0.0  |
-    
 
 </details>
 
@@ -132,25 +130,47 @@ print(f"{new_version[0]}.{new_version[1]}.{new_version[2]}")
 
 ## 3. Word Filter
 
-
 <details><summary>Condition</summary>
+
+Using **comprehension**, write a program that receives some **text**, separated by **space**, 
+and takes only those words whose length is **even**. Print each word on a new line.
 
 Example
 
-| Input | Output |
-|-------|--------|
-| 1.2.3 | 1.2.4  |
-| 1.3.9 | 1.4.0  |
-| 3.9.9 | 4.0.0  |
-    
+| Input                    | Output                     |
+|--------------------------|----------------------------|
+| kiwi orange banana apple | kiwi</br>orange</br>banana |
+| pizza cake pasta chips   | cake                       |
 
 </details>
 
 <details> <summary>Code</summary>
 
 ```Python
- 
+word_input = input().split(" ")
+word_filter = [word for word in word_input if len(word) % 2 == 0]
+""" print to new line whit for loop"""
+# for w in word_filter:
+#     print(w)
+""" print to new line whit join method"""
+print("\n".join(word_filter))
+```
+solution of the task by kumchovylcho
+```Python
+words = input().split()
 
+
+def even_length(text):
+    for word in text:
+        if len(word) % 2 == 0:
+            print(word)
+
+
+even_length(words)
+```
+solution of the task by Ceo
+```Python
+[print(text) for text in input().split() if len(text) % 2 == 0]
 ```
 </details>
 
