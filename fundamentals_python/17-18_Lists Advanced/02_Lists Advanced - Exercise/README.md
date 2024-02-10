@@ -14,22 +14,58 @@ You will be given two sequences of strings, separated by ", ".
 which are **substrings** of **any string** in the **second input line**.
 Example
 
-| Input                                                        | Output                   |
-|--------------------------------------------------------------|--------------------------|
-| arp, live, strong</br>>lively, alive, harp, sharp, armstrong | ['arp', 'live', 'strong' |
-| tarp, mice, bull</br>lively, alive, harp, sharp, armstron    | [ ]                      |
-
-|
-    
+| Input                                                       | Output                   |
+|-------------------------------------------------------------|--------------------------|
+| arp, live, strong</br>lively, alive, harp, sharp, armstrong | ['arp', 'live', 'strong' |
+| tarp, mice, bull</br>lively, alive, harp, sharp, armstron   | [ ]                      |
+   
 
 </details>
 
 <details> <summary>Code</summary>
 
 ```Python
- 
+list_one = input().split(", ")
+list_two = input().split(", ")
 
+result_list = list()
+
+for n in list_one:
+    for i in list_two:
+        if n in i:
+            result_list.append(n)
+result_list = list(dict.fromkeys(result_list))
+print(result_list)
 ```
+whit function
+```Python
+words = input().split(", ")
+check_if_words_are_in = input().split(", ")
+list_with_checked_words = []
+
+
+def which_are_in(string, check_strings):
+    for word in string:
+        for check_word in check_strings:
+            if word in check_word:
+                list_with_checked_words.append(word)
+                break
+    return list_with_checked_words
+
+
+print(which_are_in(words, check_if_words_are_in))
+```
+solution of the task by Ivan Shopov
+```Python
+list_one, list_two = input().split(", "), input().split(", ")
+
+result_list = list()
+[result_list.append(n) for n in list_one for i in list_two if n in i]
+result_list = list(dict.fromkeys(result_list))
+print(result_list)
+```
+
+
 </details>
 
 ## 2. Next Version
@@ -51,7 +87,6 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
- 
 
 ```
 </details>
