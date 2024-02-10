@@ -276,23 +276,66 @@ print(*odd, sep = ", ")
 
 <details><summary>Condition</summary>
 
+_You are a facility manager at a large business center. One of your responsibilities is to check 
+if each conference room in the center has enough chairs for the visitors._
+
+On the first line, you will be given an integer n representing **the number of rooms** in the business center. 
+On the following **n lines** for each room, you will receive information about the chairs in the room and 
+the number of **visitors**. Each **chair** will be presented with the char **"X"**. 
+Next, there will be a **single space** and the number of visitors at the end. 
+For example: **"XXXXX 4"** (**5 chairs** and **4 visitors**). 
+Keep track of the free chairs:
+* If there are not enough chairs in a specific room, print the following message: "{needed_chairs_in_room} more chairs needed in room {number_of_room}". The rooms start from 1.
+* Otherwise, print: "Game On, {total_free_chairs} free chairs left".
+
+
 Example
 
-| Input | Output |
-|-------|--------|
-| 1.2.3 | 1.2.4  |
-| 1.3.9 | 1.4.0  |
-| 3.9.9 | 4.0.0  |
-    
+| Input                                        | Output                                                             |
+|----------------------------------------------|--------------------------------------------------------------------|
+| 4</br>XXXX 4</br>XX 1</br>XXXXXX 3</br>XXX 3 | Game On, 4 free chairs left                                        |
+| 3</br>XXXXXXX 5</br>XXXX 5</br>XXXXXX 8</br> | 1 more chairs needed in room 2</br> 2 more chairs needed in room 3 |
 
 </details>
 
 <details> <summary>Code</summary>
 
 ```Python
- 
+rooms_number = int(input())
+free_chairs = 0
 
+for room in range(1, rooms_number + 1):
+    chairs, visitors = input().split()
+    chairs = len(chairs)  # брой на столовете
+    visitors = int(visitors)  # брой на посетителите
+    if chairs >= visitors:
+        free_chairs += (chairs - visitors)
+    else:
+        need_chairs = visitors - chairs
+        print(f"{need_chairs} more chairs needed in room {room}")
+        free_chairs += (chairs - visitors)
+
+if free_chairs >= 0:
+    print(f"Game On, {free_chairs} free chairs left")
 ```
+
+```Python
+def check_the_rooms(number_of_rooms):
+    free_chairs = 0
+    for number_of_room in range(1, number_of_rooms + 1):
+        free_chairs_in_current_room, visitors = input().split()
+        difference = len(free_chairs_in_current_room) - int(visitors)
+        if difference < 0:
+            print(f"{abs(difference)} more chairs needed in room {number_of_room}")
+        free_chairs += difference
+    return free_chairs
+ 
+count_of_rooms = int(input())
+total_free_chairs = check_the_rooms(count_of_rooms)
+if total_free_chairs >= 0:
+    print(f"Game On, {total_free_chairs} free chairs left")
+```
+
 </details>
 
 ## 6. Electron Distribution
