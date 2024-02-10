@@ -352,22 +352,90 @@ if enough_chairs:
 
 <details><summary>Condition</summary>
 
+_You are a mad scientist, and you have decided to play with electron distribution among atom shells. 
+The basic idea of electron distribution is that electrons should fill a shell until it holds the maximum number of electrons._
+
+You will receive a single integer - the **number of electrons**. 
+our task is to **fill shells until there are no more electrons left**. 
+The rules for electron distribution are as follows:
+
+* The maximum number of electrons in a shell can be 2n**2, where n is the **position** of a shell (starting from 1). 
+For example, the maximum number of electrons in the 3rd shield can be 2\*3\**2 = 18.
+* You should start **filling** the shells from the **first one** at the first position.
+* If the electrons are enough to **fill** the first shell, the left **unoccupied electrons** should fill the following shell and so on.
+
+In the end, **print a list with the filled shells.**
+
 Example
 
-| Input | Output |
-|-------|--------|
-| 1.2.3 | 1.2.4  |
-| 1.3.9 | 1.4.0  |
-| 3.9.9 | 4.0.0  |
-    
+| Input | Output         |
+|-------|----------------|
+| 10    | [2, 8]         |
+| 44    | [2, 8, 18, 16] |
 
 </details>
 
 <details> <summary>Code</summary>
 
 ```Python
- 
+num = int(input())
+shells = []
+count = 1
 
+while num > 0:
+    fill_shells = min(2 * count ** 2, num) # uses the min() function to select the smaller value between 2 * count ** 2 and num.
+    shells.append(fill_shells)
+    num -= fill_shells
+    count += 1
+
+print(shells)
+```
+solution of the task by Ivan Shopov
+```Python
+number_of_electrons = int(input())
+shells = []
+for shell in range(1, number_of_electrons + 1):
+    max_electrons_in_current_shell = 2 * shell ** 2
+    if number_of_electrons >= max_electrons_in_current_shell:
+        shells.append(max_electrons_in_current_shell)
+        number_of_electrons -= max_electrons_in_current_shell
+        if number_of_electrons == 0 :
+            break
+    else:
+        shells.append(number_of_electrons)
+        break
+print(shells)
+```
+solution of the task by Ceo
+```Python
+number = int(input())
+new_list = []
+i = 0
+
+while 0 < number:
+
+    i += 1
+    shell = 2 * i ** 2
+
+    if number >= shell:
+        new_list.append(shell)
+        number -= shell
+    else:
+        new_list.append(number)
+        number = 0
+
+print(new_list)
+```
+solution of the task by Kumchovalcho
+```Python
+number = int(input())
+n = 1
+lst = []
+while number > 0:
+    electron = 2*n**2
+    lst.append(min(number, electron))
+    number -= lst[-1]
+    n += 1
 ```
 </details>
 
