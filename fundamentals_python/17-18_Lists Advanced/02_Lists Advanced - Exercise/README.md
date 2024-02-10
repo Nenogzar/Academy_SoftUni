@@ -695,6 +695,7 @@ while commands != "3:1":
 
 print(" ".join(main_string))
 ```
+solution of the task by Ceo
 ```Python
 words = input().split()
 
