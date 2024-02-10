@@ -518,13 +518,18 @@ for number in range(1, 10 + 1):
 
 <details><summary>Condition</summary>
 
+You are given a **secret message** you should **decipher**. 
+To do that, you need to know that **in each word**:
+* the second and the **last letter** are **switched** (e.g., Holle means Hello)
+* the first letter is **replaced** by its **character code** (e.g., 72 means H)
+
 Example
 
-| Input | Output |
-|-------|--------|
-| 1.2.3 | 1.2.4  |
-| 1.3.9 | 1.4.0  |
-| 3.9.9 | 4.0.0  |
+| Input               | Output         |
+|---------------------|----------------|
+| 72olle 103doo 100ya | Hello good day |
+| 82yade 115te 103o   | Ready set go   |
+
     
 
 </details>
@@ -532,12 +537,75 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
- 
+message = input().split()
+words, numbers = [], []
 
+# Обхождаме всяка дума във входните данни
+for word in message:
+    # Инициализираме празни низове за числата и буквите
+    num, let = "", ""
+
+    for symbol in word:
+        # Проверяваме дали символът е цифра или буква
+        if symbol.isdigit():
+            # Ако е цифра, добавяме я към низа за числата
+            num += symbol
+        else:
+            # Ако е буква, добавяме я към низа за буквите
+            let += symbol
+
+    # Конвертираме числата в цяло число и ги добавяме към списъка с числата
+    numbers.append(int(num))
+
+    # Проверяваме дължината на низа за буквите и го променяме, ако не е с дължина 1
+    if len(let) != 1:
+        let = f"{let[-1]}{let[1:-1]}{let[0]}"
+
+    # Добавяме променения низ за буквите към списъка с думите
+    words.append(let)
+
+# Обхождаме списъците с числа и думи паралелно и генерираме изхода
+for numer, word in zip(numbers, words):
+    print(f"{chr(numer)}{word}", end=" ")
 ```
+solution of the task by Ceo
 ```Python
+message = input().split()
 
+words = []
+for word in message:
+    num, let = "", ""
+    for symbol in word:
+        if symbol.isdigit():
+            num += symbol
+        else:
+            let += symbol
+    if len(let) != 1:
+        let = f"{let[-1]}{let[1:-1]}{let[0]}"
+    words.append(f"{chr(int(num))}{let}")
+
+print(*words, end=' ')
 ```
+solution of the task by kumchovalcho
+```Python
+words = input().split()
+result = []
+
+for word in words:
+    cur_word = list(word)
+
+    char_code = []
+    while cur_word[0].isdigit():
+        char_code.append(cur_word.pop(0))
+
+    cur_word.insert(0, chr(int("".join(char_code))))
+    cur_word[1], cur_word[-1] = cur_word[-1], cur_word[1]
+
+    result.append("".join(cur_word))
+
+print(" ".join(result))
+```
+
 </details>
 
 ## 9. *Anonymous Threat
@@ -545,13 +613,46 @@ Example
 
 <details><summary>Condition</summary>
 
+Anonymous has created a hyper cyber virus, which steals data from the CIA. The virus is known for its innovative and unbelievably clever merging and dividing data into partitions. As the lead security developer in the CIA, you have been tasked to analyze the software of the virus and observe its actions on the data. 
+You will receive a single input line containing strings, separated by spaces. The strings may contain any ASCII character except whitespace. Then you will begin receiving commands in one of the following formats:
+
+* merge {startIndex} {endIndex}
+* divide {index} {partitions}
+
+Every time you receive the merge command, you must merge all elements from the startIndex to the endIndex. In other words, you should concatenate them. 
+
+**Example: {abc, def, ghi} -> merge 0 1 -> {abcdef, ghi}**
+
+If any of the given indexes is out of the array, you must take only the range that is inside the array and merge it.
+Every time you receive the divide command, you must divide the element at the given index into several small substrings with equal length. The count of the substrings should be equal to the given partitions. 
+
+**Example: {abcdef, ghi, jkl} -> divide 0 3 -> {ab, cd, ef, ghi, jkl}**
+
+If the string cannot be exactly divided into the given partitions, make all partitions except the last with equal lengths and make the last one - the longest. 
+
+**Example: {abcd, efgh, ijkl} -> divide 0 3 -> {a, b, cd, efgh, ijkl}**
+
+The input ends when you receive the command "3:1". At that point, you must print the resulting elements, joined by a space.
+
+Input
+
+* The first input line will contain the array of data.
+* On the next several input lines, you will receive commands in the format specified above.
+* The input ends when you receive the command "3:1".
+
+Output
+
+* As output, you must print a single line containing the elements of the array, joined by a space.
+
+
+
 Example
 
-| Input | Output |
-|-------|--------|
-| 1.2.3 | 1.2.4  |
-| 1.3.9 | 1.4.0  |
-| 3.9.9 | 4.0.0  |
+| Input                                                                       | Output                             |
+|-----------------------------------------------------------------------------|------------------------------------|
+| Ivo Johny Tony Bony Mony</br>merge 0 3</br>merge 3 4</br>merge 0 3</br>3:1  | IvoJohnyTonyBonyMony               |
+| abcd efgh ijkl mnop qrst uvwx yz</br>merge 4 10</br>divide 4 5</br>3:1</br> | abcd efgh ijkl mnop qr st uv wx yz |
+
     
 
 </details>
@@ -559,7 +660,41 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
- 
+main_string = input().split()
+commands = input()
+
+while commands != "3:1":
+    command, start_index, end_index = [int(x) if x[-1].isdigit() else x for x in commands.split()]
+    
+    if command == "merge":
+        if start_index < 0:
+            start_index = 0
+        if start_index < end_index:
+            how_long = len(main_string)
+            if end_index >= how_long:
+                end_index = how_long - 1
+            for num in range(start_index, end_index):
+                main_string[start_index] += f"{main_string.pop(start_index + 1)}"
+    
+    elif command == "divide":
+        index_ = start_index
+        partitions = end_index
+        if 0 <= index_ < len(main_string):
+            how_long = len(main_string[index_])
+            space_between = how_long // partitions
+            string_to_change = main_string.pop(index_)
+            result_ = []
+            for x in range(partitions - 1):
+                result_.append(string_to_change[:space_between])
+                string_to_change = string_to_change[space_between:]
+            result_.append(string_to_change)
+            for x in result_[::-1]:
+                main_string.insert(index_, x)
+    
+    commands = input()
+
+print(" ".join(main_string))
+
 
 ```
 </details>
