@@ -176,16 +176,19 @@ solution of the task by Ceo
 
 ## 4. Number Classification
 
-
 <details><summary>Condition</summary>
+
+Using a **list comprehension**, write a program that receives **numbers**, separated by comma and space **", "**, and prints all the **positive**, **negative**, **even**, and **odd** numbers on separate lines as shown below.
+
+_Note: Zero is counted as a positive number_
+
 
 Example
 
-| Input | Output |
-|-------|--------|
-| 1.2.3 | 1.2.4  |
-| 1.3.9 | 1.4.0  |
-| 3.9.9 | 4.0.0  |
+| Input                                     | Output                                                                                                                       |
+|-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| 1, -2, 0, 5, 3, 4, -100, -20, 12, 19, -33 | Positive: 1, 0, 5, 3, 4, 12, 19</br>Negative: -2, -100, -20, -33</br>Even: -2, 0, 4, -100, -20, 12</br>Odd: 1, 5, 3, 19, -33 |
+| 1, 2, 53, 2, 21	                          | Positive: 1, 2, 53, 2, 21</br>Negative:</br>Even: 2, 2</br>Odd: 1, 53, 21                                                    | 
     
 
 </details>
@@ -193,9 +196,79 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
- 
+def positive_numbers(positive):
+    positive_num = [pos for pos in positive if pos >= 0]
+    return positive_num
 
+
+def negative_numbers(negative):
+    negativ_num = [neg for neg in negative if neg < 0]
+    return negativ_num
+
+
+def even_numbers(even):
+    even_num = [ev for ev in even if ev % 2 == 0]
+    return even_num
+
+
+def odd_numbers(odd):
+    odd_list = [od for od in odd if od % 2 != 0]
+    return odd_list
+
+
+def number_classification(check_list):
+
+    print(f"Positive: {', '.join(map(str, positive_numbers(check_list)))}")
+    print(f"Negative: {', '.join(map(str, negative_numbers(check_list)))}")
+    print(f"Even: {', '.join(map(str, even_numbers(check_list)))}")
+    print(f"Odd: {', '.join(map(str, odd_numbers(check_list)))}")
+
+
+check_list = list(map(int, input().split(", ")))
+number_classification(check_list)
 ```
+```Python
+def positive_numbers(list_of_numbers):
+    return ", ".join([number for number in list_of_numbers if int(number) >= 0])
+ 
+ 
+def negative_numbers(list_of_numbers):
+    return ", ".join([number for number in list_of_numbers if int(number) < 0])
+ 
+ 
+def even_numbers(list_of_numbers):
+    return ", ".join([number for number in list_of_numbers if int(number) % 2 == 0])
+ 
+ 
+def odd_numbers(list_of_numbers):
+    return ", ".join([number for number in list_of_numbers if int(number) % 2 != 0])
+ 
+ 
+numbers = input().split(", ")
+print(f"Positive: {positive_numbers(numbers)}")
+print(f"Negative: {negative_numbers(numbers)}")
+print(f"Even: {even_numbers(numbers)}")
+print(f"Odd: {odd_numbers(numbers)}")
+```
+```Python
+number_list = [int(n) for n in input().split(", ")]
+
+negative = [number for number in number_list if number < 0]
+positive = [number for number in number_list if number >= 0]
+
+odd = [number for number in number_list if number % 2 != 0]
+even = [number for number in number_list if number % 2 == 0]
+
+print("Positive:", end=" ")
+print(*positive, sep = ", ")
+print("Negative:", end=" ")
+print(*negative, sep = ", ")
+print("Even:", end=" ")
+print(*even, sep = ", ")
+print("Odd:", end=" ")
+print(*odd, sep = ", ")
+```
+
 </details>
 
 ## 5. Office Chairs
