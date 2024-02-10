@@ -46,3 +46,61 @@ for number_of_room in range(1, count_of_rooms + 1):
     total_free_chairs += difference
 if total_free_chairs >= 0:
     print(f"Game On, {total_free_chairs} free chairs left")
+
+
+"""  kumchovalcho"""
+
+number_of_rooms = int(input())
+free_chairs = 0
+enough_chairs = False
+
+
+def free_chair(chair, visitor):
+    result = abs(chair - visitor)
+    print(f"{result} more chairs needed in room {room}")
+
+
+def not_enough_chairs(chair, visitor):
+    result = chair - visitor
+    return result
+
+
+for room in range(1, number_of_rooms + 1):
+    current_room = input().split()
+    chairs = len(current_room[0])
+    visitors = int(current_room[1])
+    if chairs - visitors < 0:
+        free_chair(chairs, visitors)
+        enough_chairs = True
+    elif chairs - visitors > 0:
+        free_chairs += not_enough_chairs(chairs, visitors)
+
+if not enough_chairs:
+    print(f"Game On, {free_chairs} free chairs left")
+
+
+""" CEO  """
+
+number_rooms = int(input())
+
+enough_chairs = True
+chairs_left = 0
+
+
+def check_chairs(chairs, people, room_floor):
+    if chairs < people:
+        result = people - chairs
+        global enough_chairs
+        enough_chairs = False
+        return print(f"{result} more chairs needed in room {room_floor}")
+    else:
+        global chairs_left
+        chairs_left += chairs - people
+
+
+for room in range(1, number_rooms + 1):
+    room_input, chairs = input().split()
+    check_chairs(len(room_input), int(chairs), room)
+
+if enough_chairs:
+    print(f"Game On, {chairs_left} free chairs left")
