@@ -1,6 +1,7 @@
 # Functions - More Exercise
 
-[judge](https://judge.softuni.org/Contests/1729/Functions-More-Exercises)
+[judge](https://judge.softuni.org/Contests/1729/Functions-More-Exercises)</br>
+[link problems](https://judge.softuni.org/Contests/Practice/DownloadResource/40498)
 
 ## 1. Data Types
 
