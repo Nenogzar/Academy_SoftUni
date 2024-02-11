@@ -1,6 +1,7 @@
 # Lab: Lists Basics
 
-[judge](https://judge.softuni.org/Contests/1724)
+[judge](https://judge.softuni.org/Contests/1724)</br>
+[link problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40493)
 
 
 ### 1. Strange Zoo
