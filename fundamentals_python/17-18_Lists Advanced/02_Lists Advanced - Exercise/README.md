@@ -741,7 +741,7 @@ while command != "3:1":
 
 print(*words)
 ```
-solution of the task by Bilyana 
+solution of the task by Bilyana Panova 
 ```Python
 def valid_index(start, end):
     if start < 0:
