@@ -884,13 +884,29 @@ print(sum(result_))
 
 <details><summary>Condition</summary>
 
+Help plan the next Programming Fundamentals course by keeping track of the lessons that will be included in the course and all the exercises for the lessons. 
+Before the course starts, there are some changes to be made. 
+On the first input line, you will receive the initial schedule of lessons and exercises that will be part of the next course, separated by a comma and a space ", ". 
+Until you receive the "course start" command, you will be given some commands to modify the course schedule. 
+
+The possible commands are:
+* "**Add:{lessonTitle}" - add the lesson to the end** of the schedule if it does not exist.
+* "**Insert:{lessonTitle}:{index}" - insert the lesson to the given inde**x, if it does not exist.
+* "**Remove:{lessonTitle}" - remove the lesson**, if it exists.
+* "**Swap:{lessonTitle}:{lessonTitle}" - swap the position** of the two lessons if they exist.
+* "**Exercise:{lessonTitle}" - add Exercise in the schedule right after the lesson index**, if the lesson exists and there is no exercise already, in the following format "{lessonTitle}-Exercise". 
+ 
+If the lesson doesn't exist, add the lesson at the end of the course schedule, followed by the Exercise.
+ 
+**Note: Each time you Swap or Remove a lesson, you should do the same with the Exercises, if there are any following the lessons.**
+
+
 Example
 
 | Input | Output |
 |-------|--------|
-| 1.2.3 | 1.2.4  |
-| 1.3.9 | 1.4.0  |
-| 3.9.9 | 4.0.0  |
+| Data Types, Objects, Lists</br>Add:Databases</br>Insert:Arrays:0</br>Remove:Lists</br>course start | 1.Arrays</br>2.Data Types</br>3.Objects</br>4.Databases</br>|
+| Arrays, Lists, Methods</br>Swap:Arrays:Methods</br>Exercise:Databases</br>Swap:Lists:Databases</br>Insert:Arrays:0</br>course start</br>|1.Methods</br>2.Databases</br>3.Databases-Exercise</br>4.Arrays</br>5.Lists|
     
 
 </details>
