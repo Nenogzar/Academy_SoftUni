@@ -1,6 +1,7 @@
 # Exercie: Lists Basics
 
 [judge](https://judge.softuni.org/Contests/1725)</br>
+[link problem](https://judge.softuni.org/Contests/Compete/DownloadResource/42588)
 
 [Pastebin Ivan Shopov](https://pastebin.com/PqwhU2km) </br>
 
