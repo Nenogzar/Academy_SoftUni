@@ -965,8 +965,7 @@ while command != "course start":
 for count, lesson in enumerate(new_schedule, 1):
     print(f"{count}.{lesson}")
 ```
-
-
+same with Function
 ```Python
 input_schedule = input().split(", ")
 new_schedule = input_schedule.copy()
