@@ -749,31 +749,39 @@ print(*words)
 
 <details><summary>Condition</summary>
 
-Ely likes to play Pokemon Go a lot. But Pokemon Go bankrupted… So the developers made Pokemon Don't Go out of depression. And so Ely now plays Pokemon Don't Go. In Pokemon Don't Go, when you walk to a certain pokemon, those closest to you naturally get further, and those further from you, get closer.
-You will receive a sequence of integers, separated by spaces - the distances to the pokemon. Then you will begin receiving integers, which will correspond to indexes in that sequence.
-When you receive an index, you must remove the element at that index from the sequence (as if you've captured the pokemon).
-•	You must increase the value of all elements in the sequence that are less or equal to the removed element with the value of the removed element.
-•	You must decrease the value of all elements in the sequence that are greater than the removed element with the value of the removed element.
-If the given index is less than 0, remove the first element of the sequence, and copy the last element to its place.
-If the given index is greater than the last index of the sequence, remove the last element from the sequence, and copy the first element to its place.
-The increasing and decreasing elements should also be done in these cases. The element whose value you should use is the removed element.
+_Ely likes to play Pokemon Go a lot. But Pokemon Go bankrupted… So the developers made Pokemon Don't Go out of depression. 
+And so Ely now plays Pokemon Don't Go. In Pokemon Don't Go, when you walk to a certain pokemon, 
+those closest to you naturally get further, and those further from you, get closer._
+
+You will receive a **sequence of integers**, separated by **spaces** - the distances to the pokemon. 
+Then you will begin **receiving integers**, which will **correspond** to **indexes** in **that sequence**.
+
+When you **receive** an **index**, you must **remove** the **element** at that index from the **sequence** (as if you've captured the pokemon).
+* You must **increase** the **value of all elements** in the sequence that are **less** or **equal** to the removed element with the value of the removed element.
+* You must **decrease** the **value of all elements** in the sequence that are **greater** than the removed element with the value of the removed element.
+If the **given index is less than 0, remove the first element of the sequence**, and **copy** the last element to its place.
+If the **given index is greater than the last index of the sequence**, _remove the last element from the sequence,_ and **copy the first element to its place**.
+
+The **increasing** and **decreasing** elements should also be done in these cases. The **element** whose value you should use is the removed element.
 The program ends when the sequence has no elements (there are no pokemon left for Ely to catch).
+
 Input
-•	On the first line of input, you will receive a sequence of integers, separated by spaces.
-•	On the next several lines, you will receive integers - the indexes.
+* On the **first line** of input, you will receive a **sequence of integers, separated by spaces**.
+* On the **next several** lines, you will receive **integers** - the **indexes**.
+
 Output
-•	When the program ends, you must print the summed value of all removed elements.
+* When the program ends, you must print the **summed value** of **all removed elements**.
+
 Constraints
-•	The input data will consist only of valid integers in the range [-2.147.483.648…2.147.483.647].
+* •	The input data will consist **only** of **valid integers** in **the range [-2.147.483.648…2.147.483.647]**.
 
 
 Example
 
-| Input | Output |
-|-------|--------|
-| 1.2.3 | 1.2.4  |
-| 1.3.9 | 1.4.0  |
-| 3.9.9 | 4.0.0  |
+| Input                                                | Output |
+|------------------------------------------------------|--------|
+| 4 5 3</br>1</br>1</br>0                              | 14     |
+| 5 10 6 3 5</br>2</br>4</br>1</br>1</br>3</br>0</br>0 | 51     |
     
 
 </details>
@@ -781,8 +789,93 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
- 
+pokemons = [int(n) for n in input().split()]
+sum_of_captures_pokemons = []
 
+
+def capture_pokemons(index, pokemons):
+    first_element = int(pokemons[0])
+    last_element = int(pokemons[-1])
+    if index < 0:
+        sum_of_captures_pokemons.append(first_element)  # appends the first element
+        del pokemons[0]                     # deletes element at current_index 0
+        pokemons.insert(0, last_element)    # puts last element to current_index 0
+
+    elif index > len(pokemons) - 1:
+        sum_of_captures_pokemons.append(last_element)  # appends the last element
+        del pokemons[-1]                    # deletes element at current_index -1
+        pokemons.insert(len(pokemons), first_element)  # puts first element at current_index -1
+
+    if 0 <= index < len(pokemons):
+        if index == len(pokemons):
+            sum_of_captures_pokemons.append(pokemons[index - 1])
+            del pokemons[index - 1]
+        else:
+            sum_of_captures_pokemons.append(pokemons[index])
+            del pokemons[index]
+
+    for counter, number in enumerate(pokemons):
+        if number <= sum_of_captures_pokemons[-1]:
+            pokemons[counter] = number + sum_of_captures_pokemons[-1]
+        elif number > sum_of_captures_pokemons[-1]:
+            pokemons[counter] = number - sum_of_captures_pokemons[-1]
+
+
+while len(pokemons) > 0:
+    current_position = int(input())
+    capture_pokemons(current_position, pokemons)
+
+print(sum(sum_of_captures_pokemons))
+```
+solution of the task by Ivan Shopov
+```Python
+distance = [int(number) for number in input().split()]
+sum_of_removed_elements = 0
+while distance: # while len(distance) > 0
+    index = int(input())
+    removed_element = 0
+    if index < 0:
+        removed_element = distance[0]
+        distance[0] = distance[-1]
+    elif index >= len(distance):
+        removed_element = distance[-1]
+        distance[-1] = distance[0]
+    else:  # Index is valid
+        removed_element = distance.pop(index)
+    sum_of_removed_elements += removed_element
+    for manipulating_index in range(len(distance)):
+        if distance[manipulating_index] <= removed_element:
+            distance[manipulating_index] += removed_element
+        else:  # distance_list[manipulating_index] > removed_element
+            distance[manipulating_index] -= removed_element
+print(sum_of_removed_elements)
+```
+solution of the task by Ceo
+```Python
+distance_to_pokemon = [int(x) for x in input().split()]
+
+result_ = []
+
+
+while distance_to_pokemon:
+    index_ = int(input())
+    captured_pokemon = ""
+    if index_ < 0:
+        captured_pokemon = distance_to_pokemon.pop(0)
+        distance_to_pokemon.insert(0, distance_to_pokemon[-1])
+    elif index_ >= len(distance_to_pokemon):
+        captured_pokemon = distance_to_pokemon.pop(-1)
+        distance_to_pokemon.append(distance_to_pokemon[0])
+    if not captured_pokemon:
+        captured_pokemon = distance_to_pokemon.pop(index_)
+    result_.append(captured_pokemon)
+    for pos, pokemon in enumerate(distance_to_pokemon):
+        if pokemon <= captured_pokemon:
+            distance_to_pokemon[pos] += captured_pokemon
+        else:
+            distance_to_pokemon[pos] -= captured_pokemon
+
+print(sum(result_))
 ```
 </details>
 
