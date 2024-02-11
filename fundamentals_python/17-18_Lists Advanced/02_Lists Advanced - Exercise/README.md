@@ -1,6 +1,7 @@
 # Exercise: Lists Advanced
 
 [judge](https://judge.softuni.org/Contests/1731/Lists-Advanced-Exercise) </br>
+[link problems](https://judge.softuni.org/Contests/Compete/DownloadResource/40500)</br>
 [icode-example](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Advanced%20-%20Exercise) </br>
 [pastebin Ivan Shopov](https://pastebin.com/4TgF7d7s) </br>
 
