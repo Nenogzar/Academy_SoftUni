@@ -1,6 +1,8 @@
 # Functions - Exercise
 
-[judge](https://judge.softuni.org/Contests/1728/Functions-Exercise)
+[judge](https://judge.softuni.org/Contests/1728/Functions-Exercise)</br>
+[link problems](https://judge.softuni.org/Contests/Compete/DownloadResource/40497)
+
 
 ## 1. Smallest of Three Numbers
 
