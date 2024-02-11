@@ -1,5 +1,6 @@
 # Functions - lab
-[judge](https://judge.softuni.org/Contests/1727/Functions-Lab)
+[judge](https://judge.softuni.org/Contests/1727/Functions-Lab)</br>
+[link problems](https://judge.softuni.org/Contests/Practice/DownloadResource/40496)
 * Functions Overview;
 * Declaring and Invoking Functions;
 * Return Values;
