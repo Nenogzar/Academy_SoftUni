@@ -608,6 +608,189 @@ print(" ".join(result))
 
 </details>
 
+
+## 8. ** Feed the Animals
+
+
+<details><summary>Condition</summary>
+
+
+
+The sanctuary needs to provide food for the animals and feed them, so your task is to help with the process
+
+Create a program that organizes the daily feeding of animals. You need to keep information about animals, their daily food limit and the areas of the Wildlife Refuge they live in. You will be receiving lines with commands until you receive the "Last Info" message. There are two possible commands:
+
+* "Add:{animalName}:{dailyFoodLimit}:{area}":
+
+  * Add the animal and its daily food limit to your records. It is guaranteed that the names of the animals are unique and there will never be animals with the same name. If it already exists, just increase the value of the daily food limit with the current one that is given.
+
+* "Feed:{animalName}:{food}:{area}":
+
+  * Check if the animal exists and if it does, reduce its daily food limit with the given food for feeding. If its limit reaches 0 or less, the animal is considered successfully fed and you need to remove it from your records and print the following message:
+
+    * **"{animalName} was successfully fed"**
+
+You need to know the count of hungry animals there are left in each area in the end. If an animal has daily food limit above 0, it is considered hungry.
+In the end, you have to print each animal with its daily food limit sorted in descending order by the daily food limit and then by its name in ascending order in the following format:
+
+**Animals:**</br>
+**{animalName} -> {dailyFoodLimit}g**</br>
+**{animalName} -> {dailyFoodLimit}g**
+
+Afterwards, print the areas with the count of animals, which are not fed in descending order by the count of animals. If an area has 0 hungry animals in it, don't print it. The output must be in the following format:
+
+**Areas with hungry animals:**</br>
+**{areaName} : {countOfUnfedAnimals}**</br>
+
+**{areaName} : {countOfUnfedAnimals}**</br>
+
+### Input / Constraints
+
+* You will be receiving lines until you receive the "Last Info" command.
+* The food comes in grams and is an integer number in the range [1...100000].
+* The input will always be valid.
+* There will never be a case, in which an animal is in two or more areas at the same time.
+
+### Output
+
+* Print the appropriate message after the "Feed" command, if an animal is fed.
+* Print the animals with their daily food limit in the format described above.
+* Print the areas with the count of unfed animals in them in the format described above.
+
+Example
+
+| Input | Output |
+|-------|--------|
+|  Add:Maya:7600:WaterfallArea</br>Add:Bobbie:6570:DeepWoodsArea</br>Add:Adam:4500:ByTheCreek</br>Add:Jamie:1290:RiverArea</br>Add:Gem:8730:WaterfallArea</br>Add:Maya:1230:WaterfallArea</br>Add:Jamie:560:RiverArea</br>Feed:Bobbie:6300:DeepWoodsArea</br>Feed:Adam:4650:ByTheCreek</br>Feed:Jamie:2000:RiverArea</br>Last Info|Adam was successfully fed</br>Jamie was successfully fed</br>Animals:</br>Maya -> 8830g</br>Gem -> 8730g</br>Bobbie -> 270g</br>Areas with hungry animals:</br>WaterfallArea : 2</br>DeepWoodsArea : 1|
+|Add:Bonie:3490:RiverArea</br>Add:Sam:5430:DeepWoodsArea</br>Add:Bonie:200:RiverArea</br>Add:Maya:4560:ByTheCreek</br>Feed:Maya:2390:ByTheCreek</br>Feed:Bonie:3500:RiverArea</br>Feed:Johny:3400:WaterFall</br>Feed:Sam:5500:DeepWoodsArea</br>Last Info|Sam was succesfully fed</br>Animals:</br>Maya -> 2170g</br>Bonie -> 190g</br>Areas with hungry animals:</br>RiverArea : 1</br>ByTheCreek : 1|
+
+
+</details>
+
+<details> <summary>Code</summary>
+
+```Python
+command_names_food_area = input().split(":")
+animals = []
+daily_feed = []
+area = []
+while command_names_food_area[0] != "Last Info":
+    if command_names_food_area[0] == "Add":
+        if command_names_food_area[1] in animals:
+            index = animals.index(command_names_food_area[1])
+            daily_feed[index] += int(command_names_food_area[2])
+        else:
+            animals.append(command_names_food_area[1])
+            daily_feed.append(int(command_names_food_area[2]))
+            area.append(command_names_food_area[3])
+    elif command_names_food_area[0] == "Feed":
+        animal_index = animals.index(command_names_food_area[1])
+        feed = int(command_names_food_area[2])
+        daily_feed[animal_index] -= feed
+        if daily_feed[animal_index] <= 0:
+            print(f'{animals[animal_index]} was successfully fed')
+            animals.pop(animal_index)
+            daily_feed.pop(animal_index)
+            area.pop(animal_index)
+    command_names_food_area = input().split(":")
+print("Animals:")
+food_need_sorted = {}
+for index, value in enumerate(daily_feed):
+    if value in food_need_sorted:
+        food_need_sorted[value] += [animals[index]]
+    else:
+        food_need_sorted[value] = [animals[index]]
+if len(food_need_sorted) != 0:
+    for index in sorted(food_need_sorted.keys(), reverse=True):
+        for i in sorted(food_need_sorted[index]):
+            print(f'{i} -> {index}g')
+still_hungry_area = {}
+for value in area:
+    if value in still_hungry_area:
+        still_hungry_area[value] += 1
+    else:
+        still_hungry_area[value] = 1
+still_hungry_area = sorted(still_hungry_area.items(), key=lambda x: x[1], reverse=True)
+print('Areas with hungry animals:')
+if len(still_hungry_area) != 0:
+    for value in still_hungry_area:
+        print(f'{value[0]} : {value[1]}')
+```
+
+```Python
+def add_animal(command, animals, daily_feed, area):
+    if command[1] in animals:
+        index = animals.index(command[1])
+        daily_feed[index] += int(command[2])
+    else:
+        animals.append(command[1])
+        daily_feed.append(int(command[2]))
+        area.append(command[3])
+
+def feed_animal(command, animals, daily_feed, area):
+    animal_index = animals.index(command[1])
+    feed = int(command[2])
+    daily_feed[animal_index] -= feed
+    if daily_feed[animal_index] <= 0:
+        print(f'{animals[animal_index]} was successfully fed')
+        animals.pop(animal_index)
+        daily_feed.pop(animal_index)
+        area.pop(animal_index)
+
+def print_animals(animals, daily_feed):
+    print("Animals:")
+    food_need_sorted = {}
+    for index, value in enumerate(daily_feed):
+        if value in food_need_sorted:
+            food_need_sorted[value] += [animals[index]]
+        else:
+            food_need_sorted[value] = [animals[index]]
+    if len(food_need_sorted) != 0:
+        for index in sorted(food_need_sorted.keys(), reverse=True):
+            for i in sorted(food_need_sorted[index]):
+                print(f'{i} -> {index}g')
+
+def print_hungry_areas(area):
+    still_hungry_area = {}
+    for value in area:
+        if value in still_hungry_area:
+            still_hungry_area[value] += 1
+        else:
+            still_hungry_area[value] = 1
+    still_hungry_area = sorted(still_hungry_area.items(), key=lambda x: x[1], reverse=True)
+    print('Areas with hungry animals:')
+    if len(still_hungry_area) != 0:
+        for value in still_hungry_area:
+            print(f'{value[0]} : {value[1]}')
+
+def main():
+    animals = []
+    daily_feed = []
+    area = []
+    
+    command_names_food_area = input().split(":")
+    while command_names_food_area[0] != "Last Info":
+        if command_names_food_area[0] == "Add":
+            add_animal(command_names_food_area, animals, daily_feed, area)
+        elif command_names_food_area[0] == "Feed":
+            feed_animal(command_names_food_area, animals, daily_feed, area)
+        command_names_food_area = input().split(":")
+    
+    print_animals(animals, daily_feed)
+    print_hungry_areas(area)
+
+if __name__ == "__main__":
+    main()
+
+```
+
+```Python
+```
+
+</details>
+
+
+
 ## 9. *Anonymous Threat
 
 
