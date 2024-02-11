@@ -1,6 +1,7 @@
 # Exercise: Lists Advanced
 
 [judge](https://judge.softuni.org/Contests/1732/Lists-Advanced-More-Exercises) </br>
+[link problems](https://judge.softuni.org/Contests/Practice/DownloadResource/40501)</br>
 [icode-example](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Advanced%20-%20More%20Exercises) </br>
 
 ## 1.Social Distribution
