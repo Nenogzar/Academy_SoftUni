@@ -1,7 +1,8 @@
 # Exercise: Lists Advanced
 
-[judge](https://judge.softuni.org/Contests/1730/Lists-Advanced-Lab) and
-[icode-example](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Advanced%20-%20Lab)
+[judge](https://judge.softuni.org/Contests/1730/Lists-Advanced-Lab)</br>
+[link problems](https://judge.softuni.org/Contests/Practice/DownloadResource/40499)</br>
+[icode-example](https://icode-example.ceo-py.eu/menu?language=Python&course=Fundamentals&module=Lists%20Advanced%20-%20Lab)</br>
 
 ## 1.	No Vowels
 
