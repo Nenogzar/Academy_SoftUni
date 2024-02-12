@@ -1,4 +1,4 @@
-# Exercise: Lists Advanced
+# Exercise: Lists Advanced - More Exercises
 
 [judge](https://judge.softuni.org/Contests/1732/Lists-Advanced-More-Exercises) </br>
 [link problems](https://judge.softuni.org/Contests/Practice/DownloadResource/40501)</br>
@@ -124,15 +124,28 @@ Example
 
 <details><summary>Condition</summary>
 
+Kate is stuck in a maze. You should help her to find her way out.
+On the **first line**, you will be given how many rows there are in the maze. 
+On the following **n lines**, you will be given the maze itself. 
+
+Here is a legend for the maze:
+* **"#" - means a wall**; Kate cannot go through there
+* **" " - means empty space**; Kate can go through there
+* **"k" - the initial position of Kate**; start looking for a way out from there
+There are **two options**: Kate either gets out or not:
+* If Kate can get out, print the following: 
+**"Kate got out in {number_of_moves} moves"**. 
+* Note: If there are **two or more ways out**, she always chooses the **longest one**.
+Otherwise, print: **"Kate cannot get out".**
 
 
 
 Example
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
+| Input                                                    | Output                  |
+|----------------------------------------------------------|-------------------------|
+| 4</br>######</br>##  k#</br>## ###</br>## ###            | Kate got out in 5 moves |
+| 5</br>######</br>##  k#</br>## ###</br>######</br>## ### | Kate cannot get out     |
 
 
 </details>
