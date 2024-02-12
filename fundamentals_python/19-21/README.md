@@ -98,9 +98,57 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
+targets = [int(x) for x in input().split()]
+shoot = input()
+targets_len = len(targets)
 
+
+while shoot != "End":
+    shoot = int(shoot)
+
+    if 0 <= shoot < targets_len:
+        target = targets[shoot]
+        targets[shoot] = -1
+        for i in range(targets_len):
+
+            if targets[i] == -1:
+                continue
+
+            if targets[i] > target:
+                targets[i] -= target
+            else:
+                targets[i] += target
+
+    shoot = input()
+
+print(f"Shot targets: {sum(1 for x in targets if x == -1)} ->", *targets)
 ```
+```Python
+main_target = [int(n) for n in input().split()]
 
+made_shots = 0
+command = input()
+targets_number = len(main_target) - 1
+
+while command != "End":
+    command = int(command)
+    if targets_number >= command >= 0 and main_target[command] != -1:
+        made_shots += 1
+        target_value = main_target[command]
+        for index, value in enumerate(main_target):
+            if value != -1:
+                if value <= target_value:
+                    result_between_targets = value + target_value
+                    main_target[index] = result_between_targets
+                else:
+                    result_between_targets = value - target_value
+                    main_target[index] = result_between_targets
+        main_target[command] = -1
+
+    command = input()
+
+print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
+```
 </details>
 
 ## 3.	Heart Delivery
@@ -123,7 +171,63 @@ Example
 <details> <summary>Code</summary>
 
 ```Python
+neighborhood = [int(x) for x in input().split("@")]
+jump_data = input()
+neighborhood_len = len(neighborhood)
+length = 0
 
+while jump_data != "Love!":
+    length += int(jump_data.split()[-1])
+    if length >= neighborhood_len:
+        length = 0
+
+    if neighborhood[length] > 2:
+        neighborhood[length] -= 2
+    else:
+        if neighborhood[length] != 0:
+            neighborhood[length] -= 2
+            text = "has"
+        else:
+            text = "already had"
+        print(f"Place {length} {text} Valentine's day.")
+    jump_data = input()
+
+print(f"Cupid's last position was {length}.")
+
+failed_houses = sum(1 for x in neighborhood if x != 0)
+
+if failed_houses:
+    print(f"Cupid has failed {failed_houses} places.")
+else:
+    print("Mission was successful.")
+```
+```Python
+def jump_neighborhood(length_d):
+    global jump_position
+    jump_position += length_d
+    if jump_position >= len(neighborhood):
+        jump_position = 0
+    if neighborhood[jump_position] == 0:
+        print(f"Place {jump_position} already had Valentine's day.")
+    else:
+        neighborhood[jump_position] -= 2
+        if neighborhood[jump_position] == 0:
+            print(f"Place {jump_position} has Valentine's day.")
+
+
+while jump_command != "Love!":
+    jump_command = jump_command.split()
+    jump_neighborhood(int(jump_command[1]))
+
+    jump_command = input()
+
+print(f"Cupid's last position was {jump_position}.")
+
+if sum(neighborhood) == 0:
+    print("Mission was successful.")
+else:
+    fail_count = neighborhood.count(0)
+    print(f"Cupid has failed {len(neighborhood) - fail_count} places.")
 ```
 
 </details>
