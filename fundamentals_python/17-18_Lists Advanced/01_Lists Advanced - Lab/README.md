@@ -336,10 +336,10 @@ print(even_indices)
 
 Example
 
-| Input             | Output                               |
-|-------------------|--------------------------------------|
-| 1 2 3 4 2 1</br>3 | Score: 2/6. Employees are not happy! |
-| 2 3 2 1 3 3</br>4 | Score: 3/6. Employees are happy!     |
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
 
     
 
@@ -350,5 +350,17 @@ Example
 
 
 ```Python
+employees = input().split(" ")
+happiness_factor = int(input())
+
+employees = list(map(lambda x: int(x) * happiness_factor, employees))
+filtered = list(filter(lambda x: x >= sum(employees) / len(employees), employees))
+
+if len(filtered) >= len(employees) / 2:
+    print(f"Score: {len(filtered)}/{len(employees)}. Employees are happy!")
+
+else:
+    print(f"Score: {len(filtered)}/{len(employees)}. Employees are not happy!")
+
 ```
 </details>
