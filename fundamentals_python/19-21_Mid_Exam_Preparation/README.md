@@ -1,11 +1,12 @@
 <details><summary> Mid-Exam-Preparation-1 </summary>
 
-## 1.	Computer Store
+####
+<details> <summary>1.	Computer Store</summary>
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2517#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40358)
 
-<details><summary>Example</summary>
+<details> <summary>Example</summary>
 
 | Input                                                                                                                                                                | Output                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -14,6 +15,7 @@
 | regular                                                                                                                                                              | Invalid order!                                                                                                                                    |
 
 </details>
+
 <details> <summary>Code</summary>
 
 ```Python
@@ -50,8 +52,10 @@ else:
 ```
 
 </details>
+</details>
 
-## 2.	Shoot for the Win
+####
+<details><summary>2.	Shoot for the Win</summary>
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
@@ -65,6 +69,7 @@ else:
 |       |        |
 
 </details>
+
 <details> <summary>Code</summary>
 
 ```Python
@@ -120,8 +125,10 @@ while command != "End":
 print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
 ```
 </details>
+</details>
 
-## 3.	Heart Delivery
+####
+<details><summary>3.	Heart Delivery </summary>
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
 [Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
@@ -136,6 +143,7 @@ print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
 |       |        |
 
 </details>
+
 <details> <summary>Code</summary>
 
 ```Python
@@ -199,8 +207,11 @@ else:
 ```
 
 </details>
+</details>
 
 </details>
+
+
 
 ######
 <details><summary> Mid-Exam-Preparation-2 </summary>
@@ -209,10 +220,8 @@ else:
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2305#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370)
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -234,10 +243,8 @@ Example
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40365)
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -259,10 +266,8 @@ Example
 [judge](https://judge.softuni.org/Contests/Practice/Index/2028#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40384)   
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -292,10 +297,8 @@ Example
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40376)
 
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -318,10 +321,8 @@ Example
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
 
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -344,10 +345,8 @@ Example
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40382)
 
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -371,10 +370,8 @@ Example
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40359)
 
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -397,10 +394,8 @@ Example
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40377)
 
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -423,10 +418,8 @@ Example
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40383)
 
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -442,8 +435,6 @@ Example
 ```
 
 </details>
-
-
 
 
 ## 03. Moving Target
@@ -451,10 +442,8 @@ Example
 [judge](https://judge.softuni.org/Contests/Practice/Index/2305#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40372)
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -472,16 +461,13 @@ Example
 </details>
 
 
-
 ## 03. Memory Game
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2517#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40360)
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -504,10 +490,8 @@ Example
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40366)
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
@@ -523,4 +507,5 @@ Example
 
 ```
 
+</details>
 </details>
