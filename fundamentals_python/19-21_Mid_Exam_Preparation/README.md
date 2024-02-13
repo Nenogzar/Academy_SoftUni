@@ -228,20 +228,102 @@ else:
 [judge](https://judge.softuni.org/Contests/Practice/Index/2305#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370)
 <details> <summary> Example & Code</summary>
+^
 <details><summary>Example</summary>
 
+| Input                                                    | Output                                                       |
+|----------------------------------------------------------|--------------------------------------------------------------|
+| 100</br>10</br>10</br>10</br>1</br>2</br>3</br>73</br>10 | Not enough energy! Game ends with 7 won battles and 0 energy |
+| 200</br>54</br>14</br>28</br>13</br>End of battle        | Won battles: 4. Energy left: 94                              |
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
+energy = int(input())
+distance_to_enemy = input()
+win_counter = 0
 
+while distance_to_enemy != "End of battle":
+
+    distance_to_enemy = int(distance_to_enemy)
+
+    if distance_to_enemy <= energy:
+        energy -= distance_to_enemy
+        win_counter += 1
+    else:
+        print(f"Not enough energy! Game ends with {win_counter} won battles and {energy} energy")
+        break
+
+    if win_counter % 3 == 0:
+        energy += win_counter
+
+    distance_to_enemy = input()
+
+if distance_to_enemy == "End of battle":
+    print(f"Won battles: {win_counter}. Energy left: {energy}")
+```
+
+```Python
+def check_win_counter(energy, distance_to_enemy, win_counter):
+    if distance_to_enemy <= energy:
+        energy -= distance_to_enemy
+        win_counter += 1
+    else:
+        print(f"Not enough energy! Game ends with {win_counter} won battles and {energy} energy")
+        return False  # We return False to indicate that the game is over
+
+    if win_counter % 3 == 0:
+        energy += win_counter
+
+    return win_counter, energy
+
+
+energy = int(input())
+distance_to_enemy = input()
+win_counter = 0
+
+while distance_to_enemy != "End of battle":
+    distance_to_enemy = int(distance_to_enemy)
+
+    result = check_win_counter(energy, distance_to_enemy, win_counter)
+    if not result:
+        break  # exit the loop if the game ends
+
+    win_counter, energy = result
+
+    distance_to_enemy = input()
+
+if distance_to_enemy == "End of battle":
+    print(f"Won battles: {win_counter}. Energy left: {energy}")
+```
+```Python
+def check_win_counter(energy, distance_to_enemy, win_counter):
+    if distance_to_enemy <= energy:
+        energy -= distance_to_enemy
+        win_counter += 1
+    else:
+        print(f"Not enough energy! Game ends with {win_counter} won battles and {energy} energy")
+        exit()  #  exit from program. enegy == 0
+
+    if win_counter % 3 == 0:
+        energy += win_counter
+
+    return win_counter, energy
+
+energy = int(input())
+distance_to_enemy = input()
+win_counter = 0
+
+while distance_to_enemy != "End of battle":
+    distance_to_enemy = int(distance_to_enemy)
+
+    win_counter, energy = check_win_counter(energy, distance_to_enemy, win_counter)
+
+    distance_to_enemy = input()
+
+print(f"Won battles: {win_counter}. Energy left: {energy}")
 ```
 
 </details>
