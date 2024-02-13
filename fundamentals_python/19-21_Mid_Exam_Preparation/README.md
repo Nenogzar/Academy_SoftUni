@@ -1,12 +1,24 @@
-<details><summary> Mid-Exam-Preparation-1 </summary>
+<style>
+  summary {
+    font-size: 18px;
+    font-weight: bold;
+  }
+</style>
+
+
+
+<details><summary> Mid-Exam-Preparation-1 </summary> 
 
 ####
-<details> <summary>1.	Computer Store</summary>
 
+
+### 1.	Computer Store </br>
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2517#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40358)
 
 <details> <summary>Example</summary>
+
+
 
 | Input                                                                                                                                                                | Output                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -52,10 +64,9 @@ else:
 ```
 
 </details>
-</details>
 
-####
-<details><summary>2.	Shoot for the Win</summary>
+
+### 2.	Shoot for the Win
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
@@ -125,10 +136,11 @@ while command != "End":
 print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
 ```
 </details>
-</details>
+
 
 ####
-<details><summary>3.	Heart Delivery </summary>
+
+### 3.	Heart Delivery
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
 [Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
@@ -209,7 +221,6 @@ else:
 </details>
 </details>
 
-</details>
 
 
 
