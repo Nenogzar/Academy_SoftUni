@@ -4,11 +4,10 @@
 
 > 1.	Computer Store
 
-<details> <summary></summary>
-
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2517#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40358)
 
+<details> <summary> Example & Code</summary>
 <details> <summary>Example</summary>
 
 
@@ -62,11 +61,11 @@ else:
 
 >  2.	Shoot for the Win
 
-<details> <summary></summary>
+
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 | Input | Output |
@@ -136,11 +135,11 @@ print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
 
 
 > 3.	Heart Delivery
-<details> <summary></summary>
+
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
 [Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -228,6 +227,7 @@ else:
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2305#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370)
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -244,13 +244,14 @@ else:
 
 ```
 
+</details>
 </details>
 
 > 2.	Array Modifier
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40365)
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -267,13 +268,14 @@ else:
 
 ```
 
+</details>
 </details>
 
 > 3.	Inventory
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2028#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40384)   
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -293,7 +295,7 @@ else:
 </details>
 
 </details>
-
+</details>
 
 ######
 
@@ -304,7 +306,7 @@ else:
 [judge](https://judge.softuni.org/Contests/Practice/Index/2031#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40376)
 
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -315,6 +317,7 @@ else:
 |       |        |
 
 </details>
+
 <details> <summary>Code</summary>
 
 ```Python
@@ -322,13 +325,17 @@ else:
 ```
 
 </details>
+</details>
+
+
+
 
 >  01. SoftUni Reception
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
 
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -344,7 +351,7 @@ else:
 ```Python
 
 ```
-
+</details>
 </details>
 
 > 01. Bonus Scoring System
@@ -352,7 +359,7 @@ else:
 [judge](https://judge.softuni.org/Contests/Practice/Index/2028#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40382)
 
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -370,14 +377,14 @@ else:
 ```
 
 </details>
-
+</details>
 
 > 02. The Lift
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2517#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40359)
 
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -394,6 +401,7 @@ else:
 
 ```
 
+</details>
 </details>
 
 > 02. Shopping List
@@ -401,7 +409,7 @@ else:
 [judge](https://judge.softuni.org/Contests/Practice/Index/2031#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40377)
 
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -418,6 +426,7 @@ else:
 
 ```
 
+</details>
 </details>
 
 > 02. MuOnline
@@ -425,7 +434,7 @@ else:
 [judge](https://judge.softuni.org/Contests/Practice/Index/2028#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40383)
 
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -443,13 +452,13 @@ else:
 ```
 
 </details>
-
+</details>
 
 > 03. Moving Target
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2305#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40372)
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -467,13 +476,13 @@ else:
 ```
 
 </details>
-
+</details>
 
 > 03. Memory Game
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2517#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40360)
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -491,13 +500,14 @@ else:
 
 ```
 
+</details>
 </details>
 
 > 03. Numbers
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40366)
-
+<details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
 
@@ -515,5 +525,6 @@ else:
 
 ```
 
+</details>
 </details>
 </details>
