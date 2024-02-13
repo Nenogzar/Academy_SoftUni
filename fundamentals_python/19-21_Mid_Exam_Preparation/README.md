@@ -11,8 +11,8 @@
 
 ####
 
+> 1.	Computer Store
 
-### 1.	Computer Store </br>
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2517#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40358)
 
@@ -66,7 +66,7 @@ else:
 </details>
 
 
-### 2.	Shoot for the Win
+>  2.	Shoot for the Win
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
@@ -138,9 +138,7 @@ print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
 </details>
 
 
-####
-
-### 3.	Heart Delivery
+> 3.	Heart Delivery
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
 [Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
@@ -224,10 +222,11 @@ else:
 
 
 
+
 ######
 <details><summary> Mid-Exam-Preparation-2 </summary>
 
-## 1.	Counter-Strike
+> 1.	Counter-Strike
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2305#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370)
@@ -249,7 +248,7 @@ else:
 
 </details>
 
-## 2.	Array Modifier
+> 2.	Array Modifier
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40365)
@@ -272,7 +271,7 @@ else:
 
 </details>
 
-## 3.	Inventory
+> 3.	Inventory
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2028#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40384)   
@@ -302,7 +301,7 @@ else:
 
 <details><summary> Mid-Exam-Preparation-more and more </summary>
 
-## 01. Guinea Pig
+> 01. Guinea Pig
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2031#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40376)
@@ -326,7 +325,7 @@ else:
 
 </details>
 
-## 01. SoftUni Reception
+>  01. SoftUni Reception
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
@@ -350,7 +349,7 @@ else:
 
 </details>
 
-## 01. Bonus Scoring System
+> 01. Bonus Scoring System
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2028#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40382)
@@ -375,7 +374,7 @@ else:
 </details>
 
 
-## 02. The Lift
+> 02. The Lift
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2517#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40359)
@@ -399,7 +398,7 @@ else:
 
 </details>
 
-## 02. Shopping List
+> 02. Shopping List
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2031#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40377)
@@ -423,7 +422,7 @@ else:
 
 </details>
 
-## 02. MuOnline
+> 02. MuOnline
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2028#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40383)
@@ -448,7 +447,7 @@ else:
 </details>
 
 
-## 03. Moving Target
+> 03. Moving Target
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2305#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40372)
@@ -472,7 +471,7 @@ else:
 </details>
 
 
-## 03. Memory Game
+> 03. Memory Game
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2517#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40360)
@@ -496,7 +495,7 @@ else:
 
 </details>
 
-## 03. Numbers
+> 03. Numbers
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40366)
