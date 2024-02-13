@@ -336,18 +336,70 @@ print(f"Won battles: {win_counter}. Energy left: {energy}")
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
-
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+| Input                                                                                                                 | Output                              |
+|-----------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| 23 -2 321 87 42 90 -123</br>swap 1 3</br>swap 3 6</br>swap 1 0</br>multiply 1 2</br>multiply 2 1</br>decrease</br>end | 86, 7382, 2369942, -124, 41, 89, -3 |
+| 1 2 3 4</br>swap 0 1</br>swap 1 2</br>swap 2 3</br>multiply 1 2</br>decrease</br>end                                  | 1, 11, 3, 0                         |
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
+def swap_element(list_mod, index1, index2):
+    list_copy = list(list_mod)
+    temp = list_copy[index1]
+    list_copy[index1] = list_copy[index2]
+    list_copy[index2] = temp
+    return list_copy
 
+
+def multiply_element(list_mod, index1, index2):
+    list_copy = list(list_mod)
+    list_copy[index1] = list_copy[index1] * list_copy[index2]
+    return list_copy
+
+
+list_to_modifier = list(map(int, input().split()))
+command = input()
+
+while command != "end":
+
+    comman_list = list(map(str, command.split(" ")))
+    if len(comman_list) > 1:
+        firs, second = int(comman_list[1]), int(comman_list[2])
+
+    if comman_list[0] == "swap":
+        list_to_modifier = swap_element(list_to_modifier, firs, second)
+    elif comman_list[0] == "multiply":
+        list_to_modifier = multiply_element(list_to_modifier, firs, second)
+    elif comman_list[0] == "decrease":
+        list_to_modifier = [x - 1 for x in list_to_modifier]
+
+    command = input()
+
+result_string = ', '.join(map(str, list_to_modifier))
+print(result_string)
+```
+```Python
+elements = [int(x) for x in input().split()]
+data_info = input()
+while data_info != "end":
+    if "decrease" in data_info:
+        elements = [x - 1 for x in elements]
+        data_info = input()
+        continue
+
+    command, index_one, index_two = [x if x.isalpha() else int(x) for x in data_info.split()]
+
+    if command == "swap":
+        elements[index_one], elements[index_two] = elements[index_two], elements[index_one]
+
+    elif command == "multiply":
+        elements[index_one] *= elements[index_two]
+
+    data_info = input()
+
+print(*elements, sep=", ")
 ```
 
 </details>
@@ -363,9 +415,9 @@ print(f"Won battles: {win_counter}. Energy left: {energy}")
 
 | Input | Output |
 |-------|--------|
-|       |        |
-|       |        |
-|       |        |
+|Iron, Wood, Sword</br>Collect - Gold</br>Drop - Wood</br>Craft!|Iron, Sword, Gold |
+|Iron, Sword</br>Drop - Bronze</br>Combine Items - Sword:Bow</br>Renew - Iron</br>Craft!|Sword, Bow, Iron|
+
 
 </details>
 <details> <summary>Code</summary>
