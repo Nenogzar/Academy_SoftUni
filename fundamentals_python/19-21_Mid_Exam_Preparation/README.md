@@ -61,7 +61,9 @@ else:
 
 
 >  2.	Shoot for the Win
+
 <details> <summary></summary>
+
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
 
