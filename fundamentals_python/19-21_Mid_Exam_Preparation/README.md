@@ -5,34 +5,7 @@
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2517#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40358)
 
-<details><summary>Condition</summary>
-
-_Write a program that prints you a receipt for your new computer. You will receive the parts' prices (without tax) until you receive what type of customer this is - special or regular. Once you receive the type of customer you should print the receipt._
-
-**The taxes are 20%** of each part's price you receive.
-
-If the customer is **special**, he has a 10% discount on the total price with taxes.
-If a given price is not a positive number, you should print **"Invalid price!"** on the console and continue with the next price.
-If the total price is equal to zero, you should print **"Invalid order!"** on the console.
-
-### Input
-
-•	You will receive numbers representing prices (without tax) until the command **"special"** or "regular":
-
-### Output
-
-•	The receipt should be in the following format: 
-
-"Congratulations you've just bought a new computer!</br>
-Price without taxes: {total price without taxes}$</br>
-Taxes: {total amount of taxes}$</br>
------------</br>
-Total price: {total price with taxes}$"
-
-Note: All prices should be displayed to the second digit after the decimal point! The discount is applied only on the total price. Discount is only applicable to the final price!
-
-
-Example
+<details><summary>Example</summary>
 
 | Input                                                                                                                                                                | Output                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -83,10 +56,7 @@ else:
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
 
-<details><summary>Condition</summary>
-
-
-Example
+<details><summary>Example</summary>
 
 | Input | Output |
 |-------|--------|
@@ -156,10 +126,8 @@ print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
 [Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
 
-<details><summary>Condition</summary>
+<details><summary>Example</summary>
 
-
-Example
 
 | Input | Output |
 |-------|--------|
