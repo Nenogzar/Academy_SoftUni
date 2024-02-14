@@ -98,7 +98,6 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 <table>
   <tr>
     <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/9.jpg" alt="List Advance" width="300"></a></th>
-    <th></th>
   </tr>
   <tr>
     <td>
@@ -108,15 +107,13 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   | 
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/03_Lists%20Advanced%20-%20More%20Exercises">More</a>
     </td>
-    <td>
-    </td>
   </tr>
 </table>
 
 <table>
   <tr>
     <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10.jpg" alt="Mid Exam" width="300"></a></th>
-    <th></th>
+ 
   </tr>
   <tr>
     <td>
@@ -126,8 +123,7 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   | 
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation">More</a>
     </td>
-    <td>
-    </td>
+
   </tr>
 </table>
 
