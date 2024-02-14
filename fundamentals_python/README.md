@@ -9,7 +9,7 @@
 
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
-# Programming Fundamentals with Python - January 2024
+## Programming Fundamentals with Python - January 2024
 
 This is my collection of solutions to the tasks included in the SoftUni Fundamentals programming whit Python
 
