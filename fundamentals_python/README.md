@@ -34,9 +34,12 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 
 [<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/3.jpg" alt="Data type" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables)
 
+>  ![Lab](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables/08_Data%20Types%20and%20Variables%20-%20Lab)
+> Exercise
+> More Exercise
 
-| > Lab | > Exercise | > More Exercise |
-|-------|------------|-----------------|
+| Lab | Exercise | More Exercise |
+|-----|----------|---------------|
 
 
 [<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/4.jpg" alt="HTTP" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/10_HTTP%20Basics)
