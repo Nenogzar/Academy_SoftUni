@@ -22,7 +22,7 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   |  
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops/06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops%20-%20Exercise">Exercise</a>
   | 
-  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops/06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops%20-%20More%20Exercises">More Exercise</a>
+  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops/06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops%20-%20More%20Exercises">More</a>
     </td>
     <td>   
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/07_Git%20and%20GitHub">Lecture</a>
@@ -45,7 +45,7 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   |  
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables/09_Data%20Types%20and%20Variables%20-%20Exercise">Exercise</a>
   | 
-  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables/09_Data%20Types%20and%20Variables%20-%20More%20Exercises">More Exercise</a>
+  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables/09_Data%20Types%20and%20Variables%20-%20More%20Exercises">More</a>
     </td>
     <td>   
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/10_HTTP%20Basics">Lecture</a>
@@ -66,7 +66,7 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   |  
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/11_12_Lists%20Basics/12_Lists%20Basics%20-%20Exercise">Exercise</a>
   | 
-  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/11_12_Lists%20Basics/12_Lists%20Basics%20-%20More%20Exercises">More Exercise</a>
+  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/11_12_Lists%20Basics/12_Lists%20Basics%20-%20More%20Exercises">More</a>
     </td>
     <td>   
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/13_HTML%20%26%20CSS%20Basics">Lecture</a>
@@ -88,7 +88,7 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   |  
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/11_12_Lists%20Basics/12_Lists%20Basics%20-%20Exercise">Exercise</a>
   | 
-  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/11_12_Lists%20Basics/12_Lists%20Basics%20-%20More%20Exercises">More Exercise</a>
+  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/11_12_Lists%20Basics/12_Lists%20Basics%20-%20More%20Exercises">More</a>
     </td>
     <td>   
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/13_HTML%20%26%20CSS%20Basics">Lecture</a>
@@ -108,7 +108,7 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   |  
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/14-15_Functions/02_Functions%20-%20Exercise">Exercise</a>
   | 
-  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/14-15_Functions/03_Functions%20-%20More%20Exercises">More Exercise</a>
+  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/14-15_Functions/03_Functions%20-%20More%20Exercises">More</a>
     </td>
     <td>   
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/16_Software%20Development%20Concepts">Lecture</a>
@@ -117,18 +117,43 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 </table>
 
 
+<table>
+  <tr>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/9.jpg" alt="Data type" width="300"></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/01_Lists%20Advanced%20-%20Lab">Lab</a>
+  |  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/02_Lists%20Advanced%20-%20Exercise">Exercise</a>
+  | 
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/03_Lists%20Advanced%20-%20More%20Exercises">More</a>
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
 
-[<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/9.jpg" alt="List Advance" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced)
 
-> [Lab](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/01_Lists%20Advanced%20-%20Lab)
-> [Exercise](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/02_Lists%20Advanced%20-%20Exercise)
-> [More Exercise](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/03_Lists%20Advanced%20-%20More%20Exercises)
+<table>
+  <tr>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10.jpg" alt="Data type" width="300"></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation">mid 1</a>
+  |  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation">mid 2</a>
+  | 
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation">More</a>
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
 
-[<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10.jpg" alt="Mid_Exam" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation)
-
-> [Mid-Exam-Preparation-1](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation)
-> [Mid-Exam-Preparation-2](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation)
-> [Mid-Exam-Preparation-more and more](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation)
 
 
 
