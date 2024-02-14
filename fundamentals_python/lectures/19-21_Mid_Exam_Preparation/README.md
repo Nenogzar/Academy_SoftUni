@@ -226,7 +226,8 @@ else:
 > 1.	Counter-Strike
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2305#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370)
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370)</br>
+[pastebin Ivan Shopov](https://pastebin.com/vrxNF4bB)
 <details> <summary> Example & Code</summary>
 ^
 <details><summary>Example</summary>
