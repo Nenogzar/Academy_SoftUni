@@ -11,6 +11,7 @@
 
 This is my collection of solutions to the tasks included in the SoftUni Fundamentals programming whit Python
 
+<div class="section">
 
 [<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="Data type" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops)
 
@@ -18,11 +19,15 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 > [Exercise](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops/06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops%20-%20Exercise)
 > [More Exercise](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops/06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops%20-%20More%20Exercises)
 
+</div>
+
+<div class="section">
 
 [<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/2.jpg" alt="GIT" width="300">]("https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/07_Git%20and%20GitHub")
 
 > [Lecture](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/07_Git%20and%20GitHub)
 
+</div>
 
 [<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/3.jpg" alt="Data type" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables)
 
