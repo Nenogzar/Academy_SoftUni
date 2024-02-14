@@ -6,40 +6,34 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops">
     <img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="syntax" width="300">
   </a>
-  
-  <table>
-    <tr>
-      <th>Lab</th>
-      <th>Exercise</th>
-      <th>More Exercise</th>
-    </tr>
-  </table>
 </div>
+
+> [Lab]()
+> [Exercise]()
+> [More Exercise]()
+
 
 
 <div align="center">
   <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/07_Git%20and%20GitHub">
     <img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/2.jpg" alt="GIT" width="300">
   </a>
-  
-  <table>
-    <tr>
-      <th>Lectures</th>
-    </tr>
-  </table>
-</div>
+</div>  
+
+> [Lab]()
+> [Exercise]()
+> [More Exercise]()
+
 
 
 
 
 [<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/3.jpg" alt="Data type" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables)
 
->  ![Lab](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables/08_Data%20Types%20and%20Variables%20-%20Lab)
-> Exercise
-> More Exercise
+> [Lab](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables/08_Data%20Types%20and%20Variables%20-%20Lab)
+> [Exercise]()
+> [More Exercise]()
 
-| Lab | Exercise | More Exercise |
-|-----|----------|---------------|
 
 
 [<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/4.jpg" alt="HTTP" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/10_HTTP%20Basics)
