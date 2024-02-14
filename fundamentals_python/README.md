@@ -40,3 +40,20 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 
 | Lectures | 
 |----------|
+
+
+
+
+<div align="center">
+  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops">
+    <img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="syntax" width="300">
+  </a>
+  
+  <table>
+    <tr>
+      <th>Lab</th>
+      <th>Exercise</th>
+      <th>More Exercise</th>
+    </tr>
+  </table>
+</div>
