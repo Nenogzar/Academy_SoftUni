@@ -19,3 +19,19 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 |-----|----------|---------------|
 
 
+[<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/4.jpg" alt="Data type" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables) |
+
+| Lab | Exercise | More Exercise |
+|-----|----------|---------------|
+
+
+[<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/5.jpg" alt="Data type" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables) |
+
+| Lab | Exercise | More Exercise |
+|-----|----------|---------------|
+
+
+[<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/6.jpg" alt="Data type" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables) |
+
+| Lab | Exercise | More Exercise |
+|-----|----------|---------------|
