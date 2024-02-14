@@ -15,8 +15,9 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="BS" width="300"></th>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/2.jpg" alt="GIT" width="300"></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="BS" width="300"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/07_Git%20and%20GitHub"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/2.jpg" alt="GIT" width="300"></a>
+</th>
   </tr>
   <tr>
     <td>
@@ -34,8 +35,8 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/3.jpg" alt="Data type" width="300"></th>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/4.jpg" alt="HTTP" width="300"></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/08-09_Data%20Types%20and%20Variables"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/3.jpg" alt="Data type" width="300"></a</th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/10_HTTP%20Basics"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/4.jpg" alt="HTTP" width="300"></a></th>
   </tr>
   <tr>
     <td>
@@ -51,10 +52,12 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   </tr>
 </table>
 
+
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/5.jpg" alt="List basic" width="300"></th>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/6.jpg" alt="HTML basic" width="300"></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/11_12_Lists%20Basics/11_Lists%20Basics%20-%20Lab"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/5.jpg" alt="List basic" width="300"></a>
+    </th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/13_HTML%20%26%20CSS%20Basics"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/6.jpg" alt="HTML basic" width="300"></a></th>
   </tr>
   <tr>
     <td>
@@ -70,10 +73,13 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   </tr>
 </table>
 
+
+
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/7.jpg" alt="Function" width="300"></th>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/8.jpg" alt="SDC" width="300"></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/14-15_Functions/01_Functions%20-%20Lab"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/7.jpg" alt="Function" width="300"></a>
+</th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/16_Software%20Development%20Concepts"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/8.jpg" alt="SDC" width="300"></a></th>
   </tr>
   <tr>
     <td>
