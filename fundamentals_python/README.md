@@ -79,26 +79,6 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/5.jpg" alt="Data type" width="300"></th>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/6.jpg" alt="GIT" width="300"></th>
-  </tr>
-  <tr>
-    <td>
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/11_12_Lists%20Basics/11_Lists%20Basics%20-%20Lab">Lab</a>
-  |  
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/11_12_Lists%20Basics/12_Lists%20Basics%20-%20Exercise">Exercise</a>
-  | 
-  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/11_12_Lists%20Basics/12_Lists%20Basics%20-%20More%20Exercises">More</a>
-    </td>
-    <td>   
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/13_HTML%20%26%20CSS%20Basics">Lecture</a>
-    </td>
-  </tr>
-</table>
-
-
-<table>
-  <tr>
     <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/7.jpg" alt="Data type" width="300"></th>
     <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/8.jpg" alt="GIT" width="300"></th>
   </tr>
