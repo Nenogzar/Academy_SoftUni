@@ -1,7 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #0d1117;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
 # Programming Fundamentals with Python - January 2024
 
-![](https://github.com/Nenogzar/LearningPython/blob/main/softuni/fundamentals_python/SU.jpg)
 This is my collection of solutions to the tasks included in the SoftUni Fundamentals programming whit Python
+
 
 [<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="Data type" width="300">](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops)
 
@@ -40,5 +55,9 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 > [Lecture]()
 
 
+
+
+</body>
+</html>
 
 
