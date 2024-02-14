@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
 # Programming Fundamentals with Python - January 2024
@@ -13,7 +15,7 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="Data type" width="300"></th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="BS" width="300"></th>
     <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/2.jpg" alt="GIT" width="300"></th>
   </tr>
   <tr>
@@ -30,14 +32,10 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   </tr>
 </table>
 
-</body>
-</html>
-
-
 <table>
   <tr>
     <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/3.jpg" alt="Data type" width="300"></th>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/4.jpg" alt="GIT" width="300"></th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/4.jpg" alt="HTTP" width="300"></th>
   </tr>
   <tr>
     <td>
@@ -53,12 +51,10 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   </tr>
 </table>
 
-
-
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/5.jpg" alt="Data type" width="300"></th>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/6.jpg" alt="GIT" width="300"></th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/5.jpg" alt="List basic" width="300"></th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/6.jpg" alt="HTML basic" width="300"></th>
   </tr>
   <tr>
     <td>
@@ -74,13 +70,10 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   </tr>
 </table>
 
-
-
-
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/7.jpg" alt="Data type" width="300"></th>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/8.jpg" alt="GIT" width="300"></th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/7.jpg" alt="Function" width="300"></th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/8.jpg" alt="SDC" width="300"></th>
   </tr>
   <tr>
     <td>
@@ -96,10 +89,9 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   </tr>
 </table>
 
-
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/9.jpg" alt="Data type" width="300"></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/9.jpg" alt="List Advance" width="300"></a></th>
     <th></th>
   </tr>
   <tr>
@@ -115,10 +107,9 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   </tr>
 </table>
 
-
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10.jpg" alt="Data type" width="300"></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10.jpg" alt="Mid Exam" width="300"></a></th>
     <th></th>
   </tr>
   <tr>
@@ -135,10 +126,10 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 </table>
 
 
-
-
-
 </body>
 </html>
+
+
+
 
 
