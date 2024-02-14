@@ -9,6 +9,26 @@
 
 # Programming Fundamentals with Python - January 2024
 
+<table>
+  <tr>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="Data type" width="300"></th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/2.jpg" alt="GIT" width="300"></th>
+  </tr>
+  <tr>
+    <td>Ред 1, Колона 1</td>
+    <td>Ред 1, Колона 2</td>
+  </tr>
+  <tr>
+    <td>Ред 2, Колона 1</td>
+    <td>Ред 2, Колона 2</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+
 This is my collection of solutions to the tasks included in the SoftUni Fundamentals programming whit Python
 
 <div class="section">
