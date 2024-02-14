@@ -15,12 +15,16 @@
     <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/2.jpg" alt="GIT" width="300"></th>
   </tr>
   <tr>
-    <td>Ред 1, Колона 1</td>
-    <td>Ред 1, Колона 2</td>
-  </tr>
-  <tr>
-    <td>Ред 2, Колона 1</td>
-    <td>Ред 2, Колона 2</td>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops/05_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops%20-%20Lab">Lab</a>
+  |  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops/06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops%20-%20Exercise">Exercise</a>
+  | 
+  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops/06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops%20-%20More%20Exercises">More Exercise</a>
+    </td>
+    <td>   
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/07_Git%20and%20GitHub">Lecture</a>
+    </td>
   </tr>
 </table>
 
