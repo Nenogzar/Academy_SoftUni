@@ -90,10 +90,7 @@ else:
 </details>
 </details>
 
-
 >  2.	Shoot for the Win
-
-
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
@@ -165,21 +162,48 @@ print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
 </details>
 </details>
 
-
 > 3.	Heart Delivery
-
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
 [Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
+Valentine's day is coming, and Cupid has minimal time to spread some love across the neighborhood. Help him with his mission!
+You will receive a string with even integers, separated by a "@" - this is our neighborhood.
+After that, a series of Jump commands will follow until you receive "Love!".
+Every house in the neighborhood needs a certain number of hearts delivered by Cupid so it can celebrate Valentine's day.
+The integers in the neighborhood indicate those needed hearts.
+Cupid starts at the position of the first house (index 0) and must jump by a given length.
+The jump commands will be in this format: "Jump {length}". 
+Every time he jumps from one house to another, the needed hearts for the visited house are decreased by 2: 
+* •	If the needed hearts for a certain house become equal to 0, print on the console "Place {house_index} has Valentine's day." 
+* •	If Cupid jumps to a house where the needed hearts are already 0, print on the console "Place {house_index} already had Valentine's day."
+* •	Keep in mind that Cupid can have a larger jump length than the size of the neighborhood, 
+and if he does jump outside of it, he should start from the first house again (index 0)
+For example, we are given this neighborhood: 6@6@6. Cupid is at the start and jumps with a length of 2.
+He will end up at index 2 and decrease the needed hearts by 2: [6, 6, 4]. Next,
+he jumps again with a length of 2 and goes outside the neighborhood, so he goes back to the first house (index 0)
+and again decreases the needed hearts there: [4, 6, 4].
+Input
+* •	On the first line, you will receive a string with even integers separated by "@" – the neighborhood and the number of hearts for each house.
+* •	On the next lines, until "Love!" is received, you will be getting jump commands in this format: "Jump {length}".
+Output
+In the end, print Cupid's last position and whether his mission was successful or not:
+* •	"Cupid's last position was {last_position_index}."
+* •	If each house has had Valentine's day, print: 
+  * o	"Mission was successful."
+* •	If not, print the count of all houses that didn't celebrate Valentine's Day:
+  * o	"Cupid has failed {houseCount} places."
+  Constraints
+* •	The neighborhood's size will be in the range [1…20]
+* •	Each house will need an even number of hearts in the range [2 … 10]
+* •	Each jump length will be an integer in the range [1 … 20]
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+| Input                                                                  | Output                                                                                                                                                                                                          |
+|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 10@10@10@2</br>Jump 1</br>Jump 2</br>Love!                             | Place 3 has Valentine's day.</br>Cupid's last position was 3.</br>Cupid has failed 3 places.                                                                                                                    |
+| 2@4@2</br>Jump 2</br>Jump 2</br>Jump 8</br>Jump 3</br>Jump 1</br>Love! | Place 2 has Valentine's day.</br>Place 0 has Valentine's day.</br>Place 0 already had Valentine's day.</br>Place 0 already had Valentine's day.</br>Cupid's last position was 1.</br>Cupid has failed 1 places. |
 
 </details>
 
@@ -244,7 +268,37 @@ else:
     fail_count = neighborhood.count(0)
     print(f"Cupid has failed {len(neighborhood) - fail_count} places.")
 ```
+```Python
+houses = list(map(int, input().split('@')))
+index = 0
+while True:
+    command = input()
+    if command == 'Love!':
+        break
+    jumping = command.split(' ')
+    index += int(jumping[1])
+    if index >= len(houses) or index < 0:
+        index = 0
+    if houses[index] - 2 >= 0:
+        houses[index] -= 2
+        if houses[index] == 0:
+            print(f"Place {index} has Valentine's day.")
+    elif houses[index] == 0:
+        print(f"Place {index} already had Valentine's day.")
+print(f"Cupid's last position was {index}.")
 
+is_sucsessful = True
+failed_houses = 0
+for heart in houses:
+    if heart != 0:
+        failed_houses += 1
+        is_sucsessful = False
+
+if is_sucsessful:
+    print("Mission was successful.")
+else:
+    print(f"Cupid has failed {failed_houses} places.")
+```
 </details>
 </details>
 </details>
@@ -464,6 +518,19 @@ print(*initial_array, sep=', ')
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
+As a young traveler, you gather items and craft new items.
+Input / Constraints
+You will receive a journal with some collecting items, separated with a comma and a space (", ").
+ After that, until receiving "Craft!" you will be receiving different commands split by " - ":
+* •	"Collect - {item}" - you should add the given item to your inventory. 
+If the item already exists, you should skip this line.
+* •	"Drop - {item}" - you should remove the item from your inventory if it exists.
+* •	"Combine Items - {old_item}:{new_item}" - you should check if the old item exists. 
+If so, add the new item after the old one. Otherwise, ignore the command.
+* •	"Renew – {item}" – if the given item exists, you should change its position and put it last in your inventory.
+Output
+After receiving "Craft!" print the items in your inventory, separated by ", ".
+Examples
 
 | Input | Output |
 |-------|--------|
@@ -610,16 +677,6 @@ print(*items, sep=", ")
 
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
-
-
-| Input          | Output |
-|----------------|--------|
-| 15</br>0 0 0 0 |The lift has empty spots!</br>4 4 4 3|
-| 20</br>  0 2 0 |There isn't enough space! 10 people in a queue!</br>4 4 4|
-
-</details>
-<details> <summary>Code</summary>
-
 Merry has a guinea pig named Puppy, that she loves very much.
 Every month she goes to the nearest pet store and buys him everything he needs – food, hay, and cover.
 On the first three lines, you will receive the quantity of food, hay, and cover, 
@@ -645,9 +702,9 @@ Output
 * o	"Merry must go to the pet store!"
 * The output values must be formatted to the second decimal place!
 
-```Python
+</details>
+<details> <summary>Code</summary>
 
-```
 ```Python
 food, hay, cover_i, guinea_weight = float(input()), float(input()), float(input()), float(input())
 food_kg = food * 1000
@@ -724,18 +781,56 @@ print(f"Time needed: {hours}h.")
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
+Create a program that calculates bonus points for each student enrolled in a course.
+On the first line, you are going to receive the number of the students. On the second line,
+you will receive the total number of lectures in the course. The course has an additional bonus,
+which you will receive on the third line. On the following lines,
+you will be receiving the count of attendances for each student.
+The bonus is calculated with the following formula:
+{total bonus} = {student attendances} / {course lectures} * (5 + {additional bonus})
+Find the student with the maximum bonus and print them, along with his attendances,
+in the following format:
+"Max Bonus: {max bonus points}."
+"The student has attended {student attendances} lectures."
+Round the bonus points at the end to the nearest larger number.
+Input / Constrains
+* •	On the first line, you are going to receive the number of the students – an integer in the range [0…50]
+* •	On the second line, you will receive the number of the lectures – an integer number in the range [0...50].
+* •	On the third line, you will receive the additional bonus – an integer number in the range [0….100].
+* •	On the following lines, you will be receiving the attendance of each student.
+* •	There will never be students with equal bonuses.
+Output
+* •	Print the maximum bonus points and the attendances of the given student,
+rounded to the nearest larger number, scored by a student in this course in the format described above.
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+| Input                                                                                | Output                                                    |
+|--------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| 5</br>25</br>30</br>12</br>19</br>24</br>16</br>20                                   | Max Bonus: 34.</br> The student has attended 24 lectures. |
+| 10</br>30</br>14</br>8</br>23</br>27</br>28</br>15</br>17</br>25</br>26</br>5</br>18 | Max Bonus: 18.</br>The student has attended 28 lectures.  |
+
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
+from math import ceil
 
+number_of_students = int(input())
+lectures = int(input())
+additional_bonus = int(input())
+
+max_bonus = 0
+student_attended = 0
+
+for student in range(1, number_of_students + 1):
+    attendance = int(input())
+    current_bonus = attendance / lectures * (5 + additional_bonus)
+    if max_bonus < current_bonus:
+        max_bonus = current_bonus
+        student_attended = attendance
+
+print(f"Max Bonus: {ceil(max_bonus)}.")
+print(f"The student has attended {student_attended} lectures.")
 ```
 
 </details>
@@ -798,18 +893,61 @@ else:
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
+It's the end of the week, and it is time for you to go shopping, so you need to create a shopping list first.
+Input
+You will receive an initial list with groceries separated by an exclamation mark "!".
+After that, you will be receiving 4 types of commands until you receive "Go Shopping!".
+* •	"Urgent {item}" - add the item at the start of the list. 
+If the item already exists, skip this command.
+* •	"Unnecessary {item}" - remove the item with the given name, only if it exists in the list.
+Otherwise, skip this command.
+* •	"Correct {oldItem} {newItem}" - if the item with the given old name exists,
+change its name with the new one. Otherwise, skip this command.
+* •	"Rearrange {item}" - if the grocery exists in the list, remove it from its current
+position and add it at the end of the list. Otherwise, skip this command.
+Constraints
+* •	There won't be any duplicate items in the initial list
+Output
+* •	Print the list with all the groceries, joined by ", ":
+
+"{firstGrocery}, {secondGrocery}, … {nthGrocery}"
 
 | Input | Output |
 |-------|--------|
-|       |        |
-|       |        |
-|       |        |
+|Tomatoes!Potatoes!Bread</br>Unnecessary Milk</br>Urgent Tomatoes</br>Go Shopping!|Tomatoes, Potatoes, Bread|
+|Milk!Pepper!Salt!Water!Banana</br>
+Urgent Salt</br>Unnecessary Grapes </br>Correct Pepper Onion</br>Rearrange Grapes</br>Correct Tomatoes Potatoes</br>Go Shopping!|Milk, Onion, Salt, Water, Banana|
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
+initial_list = input().split('!')
 
+while True:
+    command = input()
+    if command == "Go Shopping!":
+        break
+    current_input = command.split()
+    order = current_input[0]
+    product = current_input[1]
+    if order == 'Urgent':
+        if product  not in initial_list:
+            initial_list.insert(0, product)
+    elif order == 'Unnecessary':
+        if product  in initial_list:
+            initial_list.remove(product)
+    elif order == 'Correct':
+        if product in initial_list:
+            new_product = current_input[2]
+            index = initial_list.index(product)
+            initial_list[index] = new_product
+    elif order== 'Rearrange':
+        if product  in initial_list:
+            initial_list.remove(product)
+            initial_list.append(product)
+
+print(*initial_list,sep=', ')
 ```
 
 </details>
@@ -823,78 +961,88 @@ else:
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
-Merry has a guinea pig named Puppy, that she loves very much.
-Every month she goes to the nearest pet store and buys him everything he needs – food, hay, and cover.
-On the first three lines, you will receive the quantity of food, hay, and cover, 
-which Merry buys for a month (30 days). On the fourth line, you will receive the guinea pig's weight.
-Every day Puppy eats 300 gr of food. Every second day Merry first feeds the pet, 
-then gives it a certain amount of hay equal to 5% of the rest of the food. On every third day, 
-Merry puts Puppy cover with a quantity of 1/3 of its weight.
-Calculate whether the quantity of food, hay, and cover, will be enough for a month.
-If Merry runs out of food, hay, or cover, stop the program!
+You have initial health 100 and initial bitcoins 0. You will be given a string
+ representing the dungeon's rooms. Each room is separated with '|' (vertical bar): "room1|room2|room3…"
+Each room contains a command and a number, separated by space. The command can be:
+•	"potion"
+* 	You are healed with the number in the second part. But your health cannot exceed your initial health (100).
+* o	First print: "You healed for {amount} hp."
+* o	After that, print your current health: "Current health: {health} hp."
+  * •	"chest"
+* o	You've found some bitcoins, the number in the second part.
+* o	Print: "You found {amount} bitcoins."
+  * •	In any other case, you are facing a monster, which you will fight. 
+  The second part of the room contains the attack of the monster. You should remove the monster's attack from your health. 
+* o	If you are not dead (health <= 0), you've slain the monster, and you should print: "You slayed {monster}."
+* o	If you've died, print "You died! Killed by {monster}." and your quest is over. 
+Print the best room you've manage to reach: "Best room: {room}"
+If you managed to go through all the rooms in the dungeon, print on the following three lines: 
 
-Input
+"You've made it!"</br>
+"Bitcoins: {bitcoins}"</br>
+"Health: {health}"</br>
 
-* On the first line – quantity food in kilograms - a floating-point number in the range [0.0 – 10000.0]
-* On the second line – quantity hay in kilograms - a floating-point number in the range [0.0 – 10000.0]
-* On the third line – quantity cover in kilograms - a floating-point number in the range [0.0 – 10000.0]
-* On the fourth line – guinea's weight in kilograms - a floating-point number in the range [0.0 – 10000.0]
+Input / Constraints
+
+You receive a string representing the dungeon's rooms, separated with '|' (vertical bar): "room1|room2|room3…".
 
 Output
 
-* If the food, the hay, and the cover are enough, print:
-  * "Everything is fine! Puppy is happy! Food: {excessFood}, Hay: {excessHay}, Cover: {excessCover}."
-* If one of the things is not enough, print:
-  * "Merry must go to the pet store!"
+Print the corresponding messages described above.
 
-The output values must be formatted to the second decimal place!
+### Input
 
-| Input                  | Output |
-|------------------------|--------|
-| 10</br>5</br>5.2</br>1 |Everything is fine! Puppy is happy! Food: 1.00, Hay: 1.10, Cover: 1.87|
-| 1 1.5 3 1.5            |Merry must go to the pet store!|
-| 9 5 5.2 1              |Merry must go to the pet store!|
+rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000	You slayed rat.
+
+### Output
+You slayed bat.</br>You healed for 10 hp.</br>Current health: 80 hp.</br>You slayed rat.</br>You found 100 bitcoins.</br>You died! Killed by boss.</br>Best room: 6
+
+### Input
+
+cat 10|potion 30|orc 10|chest 10|snake 25|chest 110	You slayed cat.
+
+### Output
+
+You healed for 10 hp.</br>Current health: 100 hp.</br>You slayed orc.</br>You found 10 bitcoins.</br>You slayed snake.</br>You found 110 bitcoins.</br>You've made it!</br>Bitcoins: 120</br>Health: 65
+
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
-food_in_grams = float(input()) * 1000
-hay_in_grams = float(input()) * 1000
-cover_in_grams = float(input()) * 1000
-weight_in_grams = float(input()) * 1000
-dayly_food = 300
+dungeon = input().split('|')
 
-enough = True
+health = 100
+bitcoin = 0
+room = 0
 
-for day in range(1, 30 + 1):
-    if food_in_grams - dayly_food > 0:
-        food_in_grams -= dayly_food
+dead = False
+for command in dungeon:
+    room += 1
+    order, amount = command.split(' ')
+    if order == 'potion':
+        if health + int(amount) > 100:
+            diff = 100 - health
+            print(f"You healed for {diff} hp.")
+            health = 100
+        else:
+            health += int(amount)
+            print(f"You healed for {amount} hp.")
+        print(f"Current health: {health} hp.")
+    elif order == 'chest':
+        bitcoin += int(amount)
+        print(f"You found {amount} bitcoins.")
     else:
-        enough = False
-        break
-    if day % 2 == 0:
-        hay_dose = food_in_grams * 0.05
-        if hay_in_grams - hay_dose > 0:
-            hay_in_grams -= hay_dose
-        else:
-            enough = False
+        if health - int(amount) <= 0:
+            print(f"You died! Killed by {order}.")
+            print(f"Best room: {room}")
+            dead = True
             break
-    if day % 3 == 0:
-        cover_dose = weight_in_grams / 3
-        if cover_in_grams - cover_dose > 0:
-            cover_in_grams -= cover_dose
         else:
-            enough = False
-            break
-
-if enough:
-    food_in_KG = food_in_grams / 1000
-    hay_in_KG = hay_in_grams / 1000
-    cover_in_KG = cover_in_grams / 1000
-    print(f"Everything is fine! Puppy is happy! Food: {food_in_KG:.2f}, Hay: {hay_in_KG:.2f}, Cover: {cover_in_KG:.2f}.")
-else:
-    print("Merry must go to the pet store!")
+            health -= int(amount)
+            print(f"You slayed {order}.")
+if dead is not True:
+    print(f"You've made it!\nBitcoins: {bitcoin}\nHealth: {health}")
 ```
 
 </details>
@@ -1070,4 +1218,325 @@ else:
 
 </details>
 </details>
+</details>
+
+######
+
+<details><summary> Mid Exam Retake </summary> 
+
+
+>  01. Black Flag
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
+
+<details> <summary> Example & Code</summary>
+<details><summary>Example</summary>
+
+Pirates are invading the sea, and you're tasked to help them plunder
+Create a program that checks if target plunder is reached. 
+First, you will receive how many days the pirating lasts.
+
+ Then you will receive how much the pirates plunder for a day. 
+ Last you will receive the expected plunder at the end.
+
+Calculate how much plunder the pirates manage to gather. Each day they gather the plunder. 
+Keep in mind that they attack more ships every third day and 
+add additional plunder to their total gain, which is 50% of the daily plunder.
+ Every fifth day the pirates encounter a warship, and after the battle, they lose 30% of their total plunder.
+If the gained plunder is more or equal to the target, print the following:
+"Ahoy! {totalPlunder} plunder gained."
+If the gained plunder is less than the target. Calculate the percentage left and print the following:
+"Collected only {percentage}% of the plunder."
+Both numbers should be formatted to the 2nd decimal place.
+Input
+* •	On the 1st line, you will receive the days of the plunder – an integer number in the range [0…100000]
+* •	On the 2nd line, you will receive the daily plunder – an integer number in the range [0…50]
+* •	On the 3rd line, you will receive the expected plunder – a real number in the range [0.0…10000.0]
+Output
+* •	 In the end, print whether the plunder was successful or not, following the format described above.
+
+| Input     | Output |
+|-----------|--------|
+| 5 40 100  |Ahoy! 154.00 plunder gained.|
+| 10 20 380 |Collected only 36.29% of the plunder.|
+|           |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+days = int(input())
+daily_plunder = int(input())
+expected_plunder = int(input())
+
+gained_plunder = 0
+
+for day in range(1, days + 1):
+    if day % 3 == 0:
+        gained_plunder += daily_plunder * 1.5
+    else:
+        gained_plunder += daily_plunder
+    if day % 5 == 0:
+        gained_plunder *= 0.7
+
+if gained_plunder >= expected_plunder:
+    print(f"Ahoy! {gained_plunder:.2f} plunder gained.")
+else:
+    percentage = gained_plunder / expected_plunder * 100
+    print(f"Collected only {percentage:.2f}% of the plunder.")
+```
+</details>
+</details>
+
+> 2. Treasure Hunt
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
+
+<details> <summary> Example & Code</summary>
+<details><summary>Example</summary>
+
+The pirates need to carry a treasure chest safely back to the ship, looting along the way.
+Create a program that manages the state of the treasure chest along the way. 
+On the first line, you will receive the initial loot of the treasure chest,
+ which is a string of items separated by a "|".
+"{loot1}|{loot2}|{loot3} … {lootn}"
+The following lines represent commands until "Yohoho!" which ends the treasure hunt:
+
+"Loot {item1} {item2}…{itemn}":
+
+* o	Pick up treasure loot along the way. Insert the items at the beginning of the chest. 
+* o	If an item is already contained, don't insert it.
+
+* "Drop {index}":
+
+* o	Remove the loot at the given position and add it at the end of the treasure chest. 
+* o	If the index is invalid, skip the command.
+
+"Steal {count}":
+
+* o	Someone steals the last count loot items. If there are fewer items than the given count, 
+remove as much as there are. 
+* o	Print the stolen items separated by ", ":
+
+"{item1}, {item2}, {item3} … {itemn}"
+
+In the end, output the average treasure gain, which is the sum of all treasure items 
+length divided by the count of all items inside the chest formatted to the second decimal point:
+"Average treasure gain: {averageGain} pirate credits."
+If the chest is empty, print the following message:
+"Failed treasure hunt."
+
+### Input
+
+* •	On the 1st line, you are going to receive the initial treasure chest (loot separated by "|")
+* •	On the following lines, until "Yohoho!", you will be receiving commands.
+
+### Output
+
+* •	Print the output in the format described above.
+Constraints
+* •	The loot items will be strings containing any ASCII code.
+* •	The indexes will be integers in the range [-200…200]
+* •	The count will be an integer in the range [1….100]
+
+### Input
+Gold|Silver|Bronze|Medallion|Cup
+Loot Wood Gold Coins
+Loot Silver Pistol
+Drop 3
+Steal 3
+Yohoho!
+
+### Output
+Medallion, Cup, Gold
+Average treasure gain: 5.40 pirate credits.
+
+
+### Input
+Diamonds|Silver|Shotgun|Gold
+Loot Silver Medals Coal
+Drop -1
+Drop 1
+Steal 6
+Yohoho!
+
+
+### Output
+Coal, Diamonds, Silver, Shotgun, Gold, Medals
+Failed treasure hunt.
+
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+treasure = input().split('|')
+
+empty_treasure = False
+
+while True:
+    command = input()
+    if command == "Yohoho!":
+        break
+    input_data = command.split()
+    order = input_data[0]
+    if order == 'Loot':
+        for item_index in range(1, len(input_data)):
+            new_item = input_data[item_index]
+            if new_item not in treasure:
+                treasure.insert(0, new_item)
+    elif order == 'Drop':
+        index = int(input_data[1])
+        if index < 0 or index >= len(treasure):
+            continue
+        item = treasure.pop(index)
+        treasure.append(item)
+    elif order == 'Steal':
+        count = int(input_data[1])
+        if count >= len(treasure):
+            print(*treasure, sep=', ')
+            empty_treasure = True
+            break
+        else:
+            stolen_items = treasure[len(treasure) - count:len(treasure) + 1]
+            print(*stolen_items, sep=', ')
+            del treasure[len(treasure) - count:len(treasure) + 1]
+
+
+if empty_treasure:
+    print('Failed treasure hunt.')
+else:
+    lenght = 0
+    for word in treasure:
+        lenght += len(word)
+    avverage_gain = lenght / len(treasure)
+
+    print(f"Average treasure gain: {avverage_gain:.2f} pirate credits.")
+
+```
+</details>
+</details>
+
+> 3. Man O War
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
+
+<details> <summary> Example & Code</summary>
+<details><summary>Example</summary>
+
+The pirates encounter a huge Man-O-War at sea. 
+Create a program that tracks the battle and either chooses a winner or prints a stalemate.
+ On the first line, you will receive the status of the pirate ship, 
+ which is a string representing integer sections separated by ">".
+  On the second line, you will receive the same type of status, but for the warship: 
+
+"{section1}>{section2}>{section3}… {sectionn}"
+
+On the third line, you will receive the maximum health capacity a section of the ship can reach. 
+The following lines represent commands until "Retire":
+
+* •	"Fire {index} {damage}" - the pirate ship attacks the warship with the given damage at that section.
+ Check if the index is valid and if not, skip the command. If the section breaks (health <= 0) the warship sinks,
+  print the following and stop the program: "You won! The enemy ship has sunken."
+* •	"Defend {startIndex} {endIndex} {damage}" - the warship attacks the pirate ship 
+with the given damage at that range (indexes are inclusive). Check if both indexes are valid and if not,
+ skip the command. If the section breaks (health <= 0) the pirate ship sinks, print the following and stop the program:
+"You lost! The pirate ship has sunken."
+* •	"Repair {index} {health}" - the crew repairs a section of the pirate ship with the given health. 
+Check if the index is valid and if not, skip the command. 
+The health of the section cannot exceed the maximum health capacity.
+* •	"Status" - prints the count of all sections of the pirate ship that need repair soon, 
+which are all sections that are lower than 20% of the maximum health capacity. Print the following:
+"{count} sections need repair."
+In the end, if a stalemate occurs, print the status of both ships, which is the sum of their individual sections, 
+in the following format:
+
+"Pirate ship status: {pirateShipSum}
+
+Warship status: {warshipSum}"
+
+### Input
+* •	On the 1st line, you are going to receive the status of the pirate ship (integers separated by '>')
+* •	On the 2nd line, you are going to receive the status of the warship
+* •	On the 3rd line, you will receive the maximum health a section of a ship can reach.
+* •	On the following lines, until "Retire", you will be receiving commands.
+### Output
+* •	Print the output in the format described above.
+### Constraints
+* •	The section numbers will be integers in the range [1….1000]
+* •	The indexes will be integers [-200….200]
+* •	The damage will be an integer in the range [1….1000]
+* •	The health will be an integer in the range [1….1000]
+
+| Input | Output |
+|-------|--------|
+|12>13>11>20>66</br>
+12>22>33>44>55>32>18</br>70</br>Fire 2 11</br>Fire 8 100</br>Defend 3 6 11</br>Defend 0 3 5</br>Repair 1 33</br>Status</br>Retire|2 sections need repair.</br>Pirate ship status: 135</br>Warship status: 205|
+|2>3>4>5>2</br>6>7>8>9>10>11</br>20</br>Status</br>Fire 2 3</br>Defend 0 4 11</br>Repair 3 18</br>Retire|3 sections need repair.</br>You lost! The pirate ship has sunken.|
+
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+pirate_ship = list(map(int, input().split('>')))
+war_ship = list(map(int, input().split('>')))
+max_health = int(input())
+
+finished_battle = False
+destroyed = False
+
+while destroyed is not True:
+    input_line = input()
+    if input_line == 'Retire':
+        finished_battle = True
+        break
+    input_data = input_line.split()
+    command = input_data[0]
+    if command == 'Fire':
+        index = int(input_data[1])  # warship index
+        if index >= 0 and index < len(war_ship):
+            damage = int(input_data[2])
+            if war_ship[index] - damage <= 0:
+                print("You won! The enemy ship has sunken.")
+                break
+            war_ship[index] -= damage
+    elif command == 'Defend':
+        start_index = int(input_data[1])  # start_index of pirate ship
+        end_index = int(input_data[2])  # end_index of pirate ship
+        if start_index >= 0 and start_index < len(pirate_ship):
+            if end_index >= 0 and end_index < len(pirate_ship):
+                damage = int(input_data[3])
+                for ship_block in range(start_index, end_index + 1):
+                    if pirate_ship[ship_block] - damage <= 0:
+                        print(f"You lost! The pirate ship has sunken.")
+                        destroyed=True
+                        break
+                    pirate_ship[ship_block] -= damage
+    elif command == 'Repair':
+        block_index = int(input_data[1])  # index of Pirate ship block for repair
+        if block_index >= 0 and block_index < len(pirate_ship):
+            health = int(input_data[2])
+            if pirate_ship[block_index] + health > max_health:
+                pirate_ship[block_index] = max_health
+            else:
+                pirate_ship[block_index] += health
+    elif command == 'Status':
+        block_for_repair = 0
+        for block in pirate_ship:
+            if block < (max_health * 0.2):
+                block_for_repair += 1
+        print(f"{block_for_repair} sections need repair.")
+
+if finished_battle:
+    print(f"Pirate ship status: {sum(pirate_ship)}")
+    print(f'Warship status: {sum(war_ship)}')
+```
+</details>
+</details>
+
+
 </details>
