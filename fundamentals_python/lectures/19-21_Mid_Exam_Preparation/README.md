@@ -1227,8 +1227,8 @@ else:
 
 >  01. Black Flag
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
+[judge](https://judge.softuni.org/Contests/Practice/Index/1773#0)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40388)
 
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
@@ -1291,8 +1291,8 @@ else:
 
 > 2. Treasure Hunt
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
+[judge](https://judge.softuni.org/Contests/Practice/Index/1773#1)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40389)
 
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
@@ -1421,8 +1421,8 @@ else:
 
 > 3. Man O War
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
+[judge](https://judge.softuni.org/Contests/Practice/Index/1773#2)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40390)
 
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
