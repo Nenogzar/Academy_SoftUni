@@ -612,25 +612,72 @@ print(*items, sep=", ")
 <details><summary>Example</summary>
 
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+| Input          | Output |
+|----------------|--------|
+| 15</br>0 0 0 0 |The lift has empty spots!</br>4 4 4 3|
+| 20</br>  0 2 0 |There isn't enough space! 10 people in a queue!</br>4 4 4|
 
 </details>
-
 <details> <summary>Code</summary>
+
+Merry has a guinea pig named Puppy, that she loves very much.
+Every month she goes to the nearest pet store and buys him everything he needs – food, hay, and cover.
+On the first three lines, you will receive the quantity of food, hay, and cover, 
+which Merry buys for a month (30 days). On the fourth line, you will receive the guinea pig's weight.
+Every day Puppy eats 300 gr of food. Every second day Merry first feeds the pet, 
+then gives it a certain amount of hay equal to 5% of the rest of the food. On every third day, 
+Merry puts Puppy cover with a quantity of 1/3 of its weight.
+Calculate whether the quantity of food, hay, and cover, will be enough for a month.
+If Merry runs out of food, hay, or cover, stop the program!
+
+Input
+
+* •	On the first line – quantity food in kilograms - a floating-point number in the range [0.0 – 10000.0]
+* •	On the second line – quantity hay in kilograms - a floating-point number in the range [0.0 – 10000.0]
+* •	On the third line – quantity cover in kilograms - a floating-point number in the range [0.0 – 10000.0]
+* •	On the fourth line – guinea's weight in kilograms - a floating-point number in the range [0.0 – 10000.0]
+
+Output
+
+* •	If the food, the hay, and the cover are enough, print:
+* o	"Everything is fine! Puppy is happy! Food: {excessFood}, Hay: {excessHay}, Cover: {excessCover}."
+* •	If one of the things is not enough, print:
+* o	"Merry must go to the pet store!"
+* The output values must be formatted to the second decimal place!
 
 ```Python
 
 ```
+```Python
+food, hay, cover_i, guinea_weight = float(input()), float(input()), float(input()), float(input())
+food_kg = food * 1000
+hay_kg = hay * 1000
+cover_kg = cover_i * 1000
+guinea_weight_kg = guinea_weight * 1000
+
+cover = guinea_weight_kg / 3
+feed_eaten = 0
+
+for day in range(1, 31):
+    feed_eaten += 300
+    food_kg -= 300
+    if day % 2 == 0:
+        hay = food_kg * 0.05
+        hay_kg -= hay
+        feed_eaten += hay
+
+    if day % 3 == 0:
+        cover_kg -= cover
+
+if food_kg > 0 and hay_kg > 0 and cover_kg > 0:
+    print(f"Everything is fine! Puppy is happy! Food: {food_kg / 1000:.2f}, Hay: {hay_kg / 1000:.2f}, Cover: {cover_kg / 1000:.2f}.")
+
+else:
+    print("Merry must go to the pet store!")
+```
 
 </details>
 </details>
-
-
-
 
 >  01. SoftUni Reception
 
@@ -702,11 +749,10 @@ print(f"Time needed: {hours}h.")
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
-
-| Input          | Output |
-|----------------|--------|
-| 15</br>0 0 0 0 |The lift has empty spots!</br>4 4 4 3|
-| 20</br>  0 2 0 |There isn't enough space! 10 people in a queue!</br>4 4 4|
+| Input           | Output                                                     |
+|-----------------|------------------------------------------------------------|
+| 15</br> 0 0 0 0 | The lift has empty spots!</br> 4 4 4 3                     |
+| 20 </br> 0 2 0  | There isn't enough space! 10 people in a queue!</br> 4 4 4 |
 
 </details>
 <details> <summary>Code</summary>
@@ -777,18 +823,78 @@ else:
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
+Merry has a guinea pig named Puppy, that she loves very much.
+Every month she goes to the nearest pet store and buys him everything he needs – food, hay, and cover.
+On the first three lines, you will receive the quantity of food, hay, and cover, 
+which Merry buys for a month (30 days). On the fourth line, you will receive the guinea pig's weight.
+Every day Puppy eats 300 gr of food. Every second day Merry first feeds the pet, 
+then gives it a certain amount of hay equal to 5% of the rest of the food. On every third day, 
+Merry puts Puppy cover with a quantity of 1/3 of its weight.
+Calculate whether the quantity of food, hay, and cover, will be enough for a month.
+If Merry runs out of food, hay, or cover, stop the program!
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+Input
+
+* On the first line – quantity food in kilograms - a floating-point number in the range [0.0 – 10000.0]
+* On the second line – quantity hay in kilograms - a floating-point number in the range [0.0 – 10000.0]
+* On the third line – quantity cover in kilograms - a floating-point number in the range [0.0 – 10000.0]
+* On the fourth line – guinea's weight in kilograms - a floating-point number in the range [0.0 – 10000.0]
+
+Output
+
+* If the food, the hay, and the cover are enough, print:
+  * "Everything is fine! Puppy is happy! Food: {excessFood}, Hay: {excessHay}, Cover: {excessCover}."
+* If one of the things is not enough, print:
+  * "Merry must go to the pet store!"
+
+The output values must be formatted to the second decimal place!
+
+| Input                  | Output |
+|------------------------|--------|
+| 10</br>5</br>5.2</br>1 |Everything is fine! Puppy is happy! Food: 1.00, Hay: 1.10, Cover: 1.87|
+| 1 1.5 3 1.5            |Merry must go to the pet store!|
+| 9 5 5.2 1              |Merry must go to the pet store!|
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
+food_in_grams = float(input()) * 1000
+hay_in_grams = float(input()) * 1000
+cover_in_grams = float(input()) * 1000
+weight_in_grams = float(input()) * 1000
+dayly_food = 300
 
+enough = True
+
+for day in range(1, 30 + 1):
+    if food_in_grams - dayly_food > 0:
+        food_in_grams -= dayly_food
+    else:
+        enough = False
+        break
+    if day % 2 == 0:
+        hay_dose = food_in_grams * 0.05
+        if hay_in_grams - hay_dose > 0:
+            hay_in_grams -= hay_dose
+        else:
+            enough = False
+            break
+    if day % 3 == 0:
+        cover_dose = weight_in_grams / 3
+        if cover_in_grams - cover_dose > 0:
+            cover_in_grams -= cover_dose
+        else:
+            enough = False
+            break
+
+if enough:
+    food_in_KG = food_in_grams / 1000
+    hay_in_KG = hay_in_grams / 1000
+    cover_in_KG = cover_in_grams / 1000
+    print(f"Everything is fine! Puppy is happy! Food: {food_in_KG:.2f}, Hay: {hay_in_KG:.2f}, Cover: {cover_in_KG:.2f}.")
+else:
+    print("Merry must go to the pet store!")
 ```
 
 </details>
@@ -801,18 +907,77 @@ else:
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
+You are at the shooting gallery again, and you need a program that helps you keep track of moving targets.
+On the first line, you will receive a sequence of targets with their integer values, split by a single space. 
+Then, you will start receiving commands for manipulating the targets until the "End" command. 
+The commands are the following:
+* "Shoot {index} {power}"
+  * Shoot the target at the index if it exists by reducing its value by the given power (integer value). 
+  * Remove the target if it is shot. A target is considered shot when its value reaches 0.
+* "Add {index} {value}"
+*	Insert a target with the received value at the received index if it exists. 
+*	If not, print: "Invalid placement!"
+  *	"Strike {index} {radius}"
+*	Remove the target at the given index and the ones before and after it depending on the radius.
+*	If any of the indices in the range is invalid, print: "Strike missed!" and skip this command.
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+   Example:  "Strike 2 2"
+      {radius}	{radius}	{strikeIndex}	{radius}	{radius}		
+
+* "End"
+  * Print the sequence with targets in the following format and end the program:
+
+  "{target1}|{target2}…|{targetn}"
+
+  Input / Constraints
+
+* On the first line, you will receive the sequence of targets – integer values [1-10000].
+* On the following lines, until the "End" will be receiving the command described above – strings.
+* There will never be a case when the "Strike" command would empty the whole sequence.
+  Output
+* Print the appropriate message in case of any command if necessary.
+* In the end, print the sequence of targets in the format described above.
+
+| Input                                                                                | Output                        |
+|--------------------------------------------------------------------------------------|-------------------------------|
+| 52 74 23 44 96 110</br>Shoot 5 10</br>Shoot 1 80</br>Strike 2 1</br>Add 22 3</br>End | Invalid placement!</br>52/100 |
+| 1 2 3 4 5</br>Strike 0 1</br>End                                                     | Strike missed!</br>1/2/3/4/5  |
+
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
+targets = list(map(int, input().split()))
 
+while True:
+    command = input()
+    if command == 'End':
+        break
+    order = command.split()
+    action = order[0]
+    index = int(order[1])
+    number = int(order[2])
+    if action == 'Shoot' and 0 <= index < len(targets):
+        power = number
+        if targets[index] - power > 0:
+            targets[index] -= power
+        else:
+            del targets[index]
+    elif action == 'Add':
+        value = number
+        if index < 0 or index >= len(targets):
+            print("Invalid placement!")
+        else:
+            targets.insert(index,value)
+    elif action == 'Strike':
+        radius = number
+        if index - radius < 0 or index + radius >= len(targets):
+            print("Strike missed!")
+        else:
+            del targets[index - radius:index + radius + 1:]
+
+print(*targets, sep='|')
 ```
 
 </details>
@@ -825,19 +990,47 @@ else:
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
-
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+| Input                                                                    | Output                                                                                                                                                                                                                                                                                                     |
+|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1 1 2 2 3 3 4 4 5 5 </br>1 0</br>-1 0</br>1 0 </br>1 0 </br>1 0 </br>end | Congrats! You have found matching elements - 1!</br>Invalid input! Adding additional elements to the board</br>Congrats! You have found matching elements - 2!</br>Congrats! You have found matching elements - 3!</br>Congrats! You have found matching elements - -2a!</br>Sorry you lose :(</br>4 4 5 5 |
+| a 2 4 a 2 4 </br>0 3 </br>0 2</br>0 1</br>0 1 </br>end                   | Congrats! You have found matching elements - a!</br>Congrats! You have found matching elements - 2!</br>Congrats! You have found matching elements - 4!</br>You have won in 3 turns!                                                                                                                       |
+| a 2 4 a 2 4 </br>4 0 </br>0 2</br>0 1</br>0 1 </br>end                   | Try again!</br>Try again!</br>Try again!</br>Try again!</br>Sorry you lose :(</br>a 2 4 a 2 4                                                                                                                                                                                                              |
 
 </details>
 
 <details> <summary>Code</summary>
 
 ```Python
+elements = input().split()
 
+moves = 0
+
+while True:
+    input_command = input()
+    if len(elements) < 1:
+        print(f"You have won in {moves} turns!")
+        break
+    if input_command == 'end':
+        print("Sorry you lose :(")
+        print(*elements)
+        break
+
+    indeces = input_command.split(' ')
+    moves += 1
+    index_01 = int(indeces[0])
+    index_02 = int(indeces[1])
+    middle = int(len(elements) / 2)
+    if index_02 == index_01 or index_01 < 0 or index_01 >= len(elements) or index_02 < 0 or index_02 >= len(elements):
+        elements.insert(middle, f'-{moves}a')
+        elements.insert(middle, f'-{moves}a')
+        print("Invalid input! Adding additional elements to the board")
+    elif elements[index_01] == elements[index_02]:
+        element = elements[index_01]
+        print(f"Congrats! You have found matching elements - {element}!")
+        elements.remove(element)
+        elements.remove(element)
+    else:
+        print('Try again!')
 ```
 
 </details>
