@@ -54,6 +54,38 @@ else:
     print("-----------")
     print(f"Total price: {total_price:.2f}$")
 ```
+```Python
+input_command = input()
+
+no_tax_price = 0
+special = False
+while True:
+    if input_command.isalpha():
+        if input_command == 'special':
+            special = True
+            break
+        elif input_command == 'regular':
+            break
+    else:
+        price = float(input_command)
+        if price >= 0:
+            no_tax_price += float(input_command)
+        else:
+            print("Invalid price!")
+    input_command=input()
+
+if no_tax_price == 0:
+    print("Invalid order!")
+else:
+    total_price = no_tax_price * 1.2
+    taxes = total_price - no_tax_price
+    if special:
+        total_price *= 0.9
+    print("Congratulations you've just bought a new computer!")
+    print(f'Price without taxes: {no_tax_price:.2f}$')
+    print(f'Taxes: {taxes:.2f}$')
+    print(f"-----------\nTotal price: {total_price:.2f}$")
+```
 
 </details>
 </details>
@@ -671,17 +703,42 @@ print(f"Time needed: {hours}h.")
 <details><summary>Example</summary>
 
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+| Input          | Output |
+|----------------|--------|
+| 15</br>0 0 0 0 |The lift has empty spots!</br>4 4 4 3|
+| 20</br>  0 2 0 |There isn't enough space! 10 people in a queue!</br>4 4 4|
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
+people = int(input())
+lift = list(map(int, input().split()))
 
+for wagon, spaces in enumerate(lift):
+    if spaces < 4:
+        available = 4 - spaces
+        if people - available >= 0:
+            people -= available
+            lift[wagon] += available
+        else:
+            lift[wagon] += people
+            people -= people
+
+not_balance = True
+
+for count in range(len(lift)):
+    if lift[count] < 4:
+        not_balance = False
+
+if not_balance and people == 0:
+    print(*lift)
+elif people == 0:
+    print('The lift has empty spots!')
+    print(*lift)
+else:
+    print(f"There isn't enough space! {people} people in a queue!")
+    print(*lift)
 ```
 
 </details>
@@ -793,19 +850,29 @@ print(f"Time needed: {hours}h.")
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
-
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+| Input                               | Output         |
+|-------------------------------------|----------------|
+| 10 20 30 40 50                      | 50 40          |
+| 5 2 3 4 -10 30 40 50 20 50 60 60 51 | 60 60 51 50 50 |
+| 1                                   | No             |
+| -1 -2 -3 -4 -5 -6                   | -1 -2 -3       |
 
 </details>
 
 <details> <summary>Code</summary>
 
 ```Python
+initital_list = list(map(int, input().split()))
 
+averrage_list = [number for number in initital_list if number > sum(initital_list) / len(initital_list)]
+
+if len(averrage_list) < 1:
+    print('No')
+else:
+    for index, value in enumerate(sorted(averrage_list,reverse=True)):
+        if index == 5:
+            break
+        print(value,end=' ')
 ```
 
 </details>
