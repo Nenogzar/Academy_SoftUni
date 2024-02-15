@@ -402,6 +402,25 @@ while data_info != "end":
 
 print(*elements, sep=", ")
 ```
+```Python
+initial_array = list(map(int, input().split(' ')))
+
+while True:
+    command = input()
+    if command == 'end':
+        break
+    order = command.split()
+    if len(order) > 1:
+        index_01 = int(order[1])
+        index_02 = int(order[2])
+    if 'swap' in order:
+        initial_array[index_01], initial_array[index_02] = initial_array[index_02], initial_array[index_01]
+    elif 'multiply' in order:
+        initial_array[index_01] = initial_array[index_01] * initial_array[index_02]
+    elif 'decrease' in order:
+        initial_array = [i - 1 for i in initial_array]
+print(*initial_array, sep=', ')
+```
 
 </details>
 </details>
