@@ -26,5 +26,13 @@
   </tr>
 </table>
 
+* What is Data Type?;
+* Strings;
+* Int, Float;
+* Booleans;
+* Additional Data Types.
+
+
+
 </body>
 </html>

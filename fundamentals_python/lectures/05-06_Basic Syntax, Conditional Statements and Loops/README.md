@@ -28,3 +28,7 @@
 
 </body>
 </html>
+
+* Basic Syntax and First Steps;
+* Conditional Statements (if, elif, else, indentation, and, or);
+* Loops.
