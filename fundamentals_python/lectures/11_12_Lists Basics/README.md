@@ -11,7 +11,7 @@
 
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/4.jpg" alt="list" width="400"></th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/5.jpg" alt="list" width="400"></th>
  
   </tr>
   <tr>
@@ -25,6 +25,16 @@
 
   </tr>
 </table>
+
+* List Definition and Usage;
+* Storing Data;
+* Creating Lists;
+* Accessing Elements;
+* List Manipulations;
+* Looping Through Lists;
+* Searching in Lists.
+
+
 
 </body>
 </html>
