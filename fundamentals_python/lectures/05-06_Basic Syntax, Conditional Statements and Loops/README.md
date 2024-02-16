@@ -9,9 +9,6 @@
 
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
-# Basic Syntax, Conditional Statements and Loops
-This is my collection of solutions to the tasks included in the SoftUni Fundamentals programming whit Python
-
 <table>
   <tr>
     <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="BS" width="400"></a></th>
@@ -28,3 +25,8 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 
   </tr>
 </table>
+
+<p>This is my collection of solutions to the tasks included in the SoftUni Fundamentals programming whit Python</p>
+
+</body>
+</html>
