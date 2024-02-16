@@ -11,8 +11,10 @@
 
 <img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/2.jpg" alt="Git" width="400"></a>
 
-
-<p>This is my collection of solutions to the tasks included in the SoftUni Fundamentals programming whit Python</p>
+* Object-Oriented Programming (OOP);
+* Classes;
+* Objects;
+* Class Attributes and Instance Methods.
 
 </body>
 </html>
