@@ -25,7 +25,7 @@
     <td>
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/01_Lists%20Advanced%20-%20Lab">Lab</a>
   |  
-    <a href=" https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/02_Lists%20Advanced%20-%20Exercise">Exercise</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/02_Lists%20Advanced%20-%20Exercise">Exercise</a>
   | 
   <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/03_Lists%20Advanced%20-%20More%20Exercises">More</a>
     </td>
