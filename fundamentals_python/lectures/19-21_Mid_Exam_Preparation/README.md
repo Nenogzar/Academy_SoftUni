@@ -1,3 +1,6 @@
+
+<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10.jpg" alt="ME" width="150">
+
 <details><summary> Mid-Exam-Preparation-1 </summary> 
 
 ####
