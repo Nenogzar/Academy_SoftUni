@@ -14,7 +14,7 @@
 <table>
   <tr>
     <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/11_12_Lists%20Basics/Pythin_list_small.png" alt="List Advance" width="150"></a></th>
-    <th>* List Comprehension;</br>* List Methods;</br>* Advanced Methods;</br>* Advanced List Manipulations;</br>* The set() Method. </th>
+    <th>* List Comprehension;</br>* List Methods;</br>* Advanced Methods;</br>* Advanced List Manipulations;</br>* The set() Method.</th>
   </tr>
   <tr>
     <th> </th>
