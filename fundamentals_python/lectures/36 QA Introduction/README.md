@@ -9,7 +9,7 @@
 
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
-<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/20.jpg" alt="DB" width="400"></a>
+<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/20.jpg" alt="QA" width="400"></a>
 
 * Software Quality Assurance;
 * QA Engineers and Resposibilities;
