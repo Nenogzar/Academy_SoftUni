@@ -4,13 +4,46 @@
 
 > 1.	Computer Store
 
-[Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2517#0)</br>
+[Judge](https://judge.softuni.org/Contests/Practice/Index/2517#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40358)
 
 <details> <summary> Example & Code</summary>
+
+####
 <details> <summary>Example</summary>
 
 
+NB! Link for judge system works only if you are registered in Software University Sofia !!!!!!!!!!!!!!
+
+Write a program that prints you a receipt for your new computer.
+You will receive the parts' prices (without tax) until you receive what type of customer this is - special or regular.
+Once you receive the type of customer you should print the receipt.
+The taxes are 20% of each part's price you receive. 
+If the customer is special, he has a 10% discount on the total price with taxes.
+If a given price is not a positive number, you should print "Invalid price!" on the console and continue with the next price.
+If the total price is equal to zero, you should print "Invalid order!" on the console.
+
+Input
+
+•	You will receive numbers representing prices (without tax) until command "special" or "regular":
+
+Output
+
+* •	The receipt should be in the following format: 
+
+"Congratulations you've just bought a new computer!
+
+Price without taxes: {total price without taxes}$
+
+Taxes: {total amount of taxes}$
+
+-----------
+
+Total price: {total price with taxes}$"
+
+
+Note: All prices should be displayed to the second digit after the decimal point!
+The discount is applied only on the total price. Discount is only applicable to the final price!
 
 | Input                                                                                                                                                                | Output                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -90,18 +123,580 @@ else:
 </details>
 </details>
 
+> 02. The Lift
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2517#1)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40359)
+
+<details> <summary> Example & Code</summary>
+
+####
+<details><summary>Example</summary>
+
+NB! Link for judge system works only if you are registered in Software University Sofia !!!!!!!!!!!!!!
+
+Write a program that finds a place for the tourist on a lift. 
+Every wagon should have a maximum of 4 people on it. If a wagon is full, you should direct the people to the next one with space available.
+
+Input
+
+•	On the first line, you will receive how many people are waiting to get on the lift
+
+•	On the second line, you will receive the current state of the lift separated by a single space: " ".
+
+Output
+
+When there is no more available space left on the lift, or there are no more people in the queue, 
+you should print on the console the final state of the lift's wagons separated by " " and one of the following messages:
+
+•	If there are no more people and the lift have empty spots, you should print:
+
+"The lift has empty spots!</br>{wagons separated by ' '}"
+
+•	If there are still people in the queue and no more available space, you should print:
+
+"There isn't enough space! {people} people in a queue! </br>{wagons separated by ' '}"
+
+•	If the lift is full and there are no more people in the queue, you should print only the wagons separated by " "
+
+
+
+| Input           | Output                                                     |
+|-----------------|------------------------------------------------------------|
+| 15</br> 0 0 0 0 | The lift has empty spots!</br> 4 4 4 3                     |
+| 20 </br> 0 2 0  | There isn't enough space! 10 people in a queue!</br> 4 4 4 |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+people = int(input())
+lift = list(map(int, input().split()))
+
+for wagon, spaces in enumerate(lift):
+    if spaces < 4:
+        available = 4 - spaces
+        if people - available >= 0:
+            people -= available
+            lift[wagon] += available
+        else:
+            lift[wagon] += people
+            people -= people
+
+not_balance = True
+
+for count in range(len(lift)):
+    if lift[count] < 4:
+        not_balance = False
+
+if not_balance and people == 0:
+    print(*lift)
+elif people == 0:
+    print('The lift has empty spots!')
+    print(*lift)
+else:
+    print(f"There isn't enough space! {people} people in a queue!")
+    print(*lift)
+```
+
+</details>
+</details>
+
+> 03. Memory Game
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2517#2)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40360)
+<details> <summary> Example & Code</summary>
+
+####
+<details><summary>Example</summary>
+
+Write a program that recreates the Memory game.</br>
+On the first line, you will receive a sequence of elements.</br>
+Each element in the sequence will have a twin. Until the player receives "end" from the console,
+you will receive strings with two integers separated by a space, representing the indexes of elements in the sequence.</br>
+If the player tries to cheat and enters two equal indexes or indexes which are out of bounds of the sequence
+, you should add two matching elements at the middle of the sequence in the following format:</br>
+"-{number of moves until now}a" </br>
+Then print this message on the console:</br>
+"Invalid input! Adding additional elements to the board"</br>
+
+Input
+
+•	On the first line, you will receive a sequence of elements</br>
+•	On the following lines, you will receive integers until the command "end"</br>
+
+Output
+
+•	Every time the player hit two matching elements, you should remove them from the sequence and print on the console the following message:
+"Congrats! You have found matching elements - ${element}!"</br>
+•	If the player hit two different elements, you should print on the console the following message:
+"Try again!"</br>
+•	If the player hit all matching elements before he receives "end" from the console, you should print on the console the following message: 
+"You have won in {number of moves until now} turns!"</br>
+•	If the player receives "end" before he hits all matching elements, you should print on the console the following message:
+"Sorry you lose :(</br>
+{the current sequence's state}"</br>
+
+Constraints
+
+•	All elements in the sequence will always have a matching element.
+
+| Input                                                                    | Output                                                                                                                                                                                                                                                                                                     |
+|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1 1 2 2 3 3 4 4 5 5 </br>1 0</br>-1 0</br>1 0 </br>1 0 </br>1 0 </br>end | Congrats! You have found matching elements - 1!</br>Invalid input! Adding additional elements to the board</br>Congrats! You have found matching elements - 2!</br>Congrats! You have found matching elements - 3!</br>Congrats! You have found matching elements - -2a!</br>Sorry you lose :(</br>4 4 5 5 |
+| a 2 4 a 2 4 </br>0 3 </br>0 2</br>0 1</br>0 1 </br>end                   | Congrats! You have found matching elements - a!</br>Congrats! You have found matching elements - 2!</br>Congrats! You have found matching elements - 4!</br>You have won in 3 turns!                                                                                                                       |
+| a 2 4 a 2 4 </br>4 0 </br>0 2</br>0 1</br>0 1 </br>end                   | Try again!</br>Try again!</br>Try again!</br>Try again!</br>Sorry you lose :(</br>a 2 4 a 2 4                                                                                                                                                                                                              |
+
+</details>
+
+<details> <summary>Code</summary>
+
+```Python
+elements = input().split()
+
+moves = 0
+
+while True:
+    input_command = input()
+    if len(elements) < 1:
+        print(f"You have won in {moves} turns!")
+        break
+    if input_command == 'end':
+        print("Sorry you lose :(")
+        print(*elements)
+        break
+
+    indeces = input_command.split(' ')
+    moves += 1
+    index_01 = int(indeces[0])
+    index_02 = int(indeces[1])
+    middle = int(len(elements) / 2)
+    if index_02 == index_01 or index_01 < 0 or index_01 >= len(elements) or index_02 < 0 or index_02 >= len(elements):
+        elements.insert(middle, f'-{moves}a')
+        elements.insert(middle, f'-{moves}a')
+        print("Invalid input! Adding additional elements to the board")
+    elif elements[index_01] == elements[index_02]:
+        element = elements[index_01]
+        print(f"Congrats! You have found matching elements - {element}!")
+        elements.remove(element)
+        elements.remove(element)
+    else:
+        print('Try again!')
+```
+
+</details>
+</details>
+</details>
+
+######
+<details><summary> Mid-Exam-Preparation-2 </summary>
+
+>  01. SoftUni Reception
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
+
+<details> <summary> Example & Code</summary>
+
+####
+<details><summary>Example</summary>
+
+Every day, thousands of students pass by the reception at SoftUni with different questions to ask.
+The employees have to help everyone by providing all the information and answering all of the questions.
+Three employees are working on the reception all day. Each of them can handle a different number of students per hour. 
+Your task is to calculate how much time it will take to answer all the questions of a given number of students.
+First, you will receive 3 lines with integers, representing the number of students that each employee can help per hour.
+On the following line, you will receive students count as a single integer. 
+Every fourth hour, all employees have a break, so they don't work for an hour. It is the only break for the employees, 
+because they don't need rest, nor have a personal life. Calculate the time needed to answer all the student's
+questions and print it in the following format: "Time needed: {time}h."
+
+Input / Constraints
+
+* •	On the first three lines -  each employee efficiency -  integer in the range [1 - 100]
+* •	On the fourth line - students count – integer in the range [0 – 10000]
+* •	Input will always be valid and in the range specified
+
+Output
+
+* •	Print a single line: "Time needed: {time}h."
+* •	Allowed working time / memory: 100ms / 16MB
+
+| Input                 | Output |
+|-----------------------|--------|
+| 5</br> 6</br>4</br>20 |Time needed: 2h.|
+| 1</br>2</br>3</br>45  |       Time needed: 10h. |
+
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+first_employee = int(input())
+second_employee = int(input())
+third_employee = int(input())
+students_number = int(input())
+students_per_hour = first_employee + second_employee + third_employee
+
+hours = 0
+while students_number > 0:
+    hours += 1
+    if hours % 4 == 0:
+        continue
+    else:
+        students_number-=students_per_hour
+print(f"Time needed: {hours}h.")
+```
+</details>
+</details>
+
+> 2.	Array Modifier
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2474#1)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40365)
+<details> <summary> Example & Code</summary>
+
+####
+<details><summary>Example</summary>
+
+
+You are given an array with integers. Write a program to modify the elements after receiving the following commands:
+* •	"swap {index1} {index2}" takes two elements and swap their places.
+* •	"multiply {index1} {index2}" takes element at the 1st index and multiply 
+* it with the element at 2nd index. Save the product at the 1st index.
+* •	"decrease" decreases all elements in the array with 1.
+
+Input
+
+On the first input line, you will be given the initial array values separated by a single space.
+On the next lines you will receive commands until you receive the command "end". The commands are as follow: 
+* •	"swap {index1} {index2}"
+* •	"multiply {index1} {index2}"
+* •	"decrease"
+
+Output
+
+The output should be printed on the console and consist of elements of the modified array – separated by a comma and a single space ", ".
+Constraints
+
+* •	Elements of the array will be integer numbers in the range [-231...231]
+* •	Count of the array elements will be in the range [2...100]
+* •	Indexes will be always in the range of the array
+
+| Input                                                                                                                 | Output                              |
+|-----------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| 23 -2 321 87 42 90 -123</br>swap 1 3</br>swap 3 6</br>swap 1 0</br>multiply 1 2</br>multiply 2 1</br>decrease</br>end | 86, 7382, 2369942, -124, 41, 89, -3 |
+| 1 2 3 4</br>swap 0 1</br>swap 1 2</br>swap 2 3</br>multiply 1 2</br>decrease</br>end                                  | 1, 11, 3, 0                         |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+def swap_element(list_mod, index1, index2):
+    list_copy = list(list_mod)
+    temp = list_copy[index1]
+    list_copy[index1] = list_copy[index2]
+    list_copy[index2] = temp
+    return list_copy
+
+
+def multiply_element(list_mod, index1, index2):
+    list_copy = list(list_mod)
+    list_copy[index1] = list_copy[index1] * list_copy[index2]
+    return list_copy
+
+
+list_to_modifier = list(map(int, input().split()))
+command = input()
+
+while command != "end":
+
+    comman_list = list(map(str, command.split(" ")))
+    if len(comman_list) > 1:
+        firs, second = int(comman_list[1]), int(comman_list[2])
+
+    if comman_list[0] == "swap":
+        list_to_modifier = swap_element(list_to_modifier, firs, second)
+    elif comman_list[0] == "multiply":
+        list_to_modifier = multiply_element(list_to_modifier, firs, second)
+    elif comman_list[0] == "decrease":
+        list_to_modifier = [x - 1 for x in list_to_modifier]
+
+    command = input()
+
+result_string = ', '.join(map(str, list_to_modifier))
+print(result_string)
+```
+```Python
+elements = [int(x) for x in input().split()]
+data_info = input()
+while data_info != "end":
+    if "decrease" in data_info:
+        elements = [x - 1 for x in elements]
+        data_info = input()
+        continue
+
+    command, index_one, index_two = [x if x.isalpha() else int(x) for x in data_info.split()]
+
+    if command == "swap":
+        elements[index_one], elements[index_two] = elements[index_two], elements[index_one]
+
+    elif command == "multiply":
+        elements[index_one] *= elements[index_two]
+
+    data_info = input()
+
+print(*elements, sep=", ")
+```
+```Python
+initial_array = list(map(int, input().split(' ')))
+
+while True:
+    command = input()
+    if command == 'end':
+        break
+    order = command.split()
+    if len(order) > 1:
+        index_01 = int(order[1])
+        index_02 = int(order[2])
+    if 'swap' in order:
+        initial_array[index_01], initial_array[index_02] = initial_array[index_02], initial_array[index_01]
+    elif 'multiply' in order:
+        initial_array[index_01] = initial_array[index_01] * initial_array[index_02]
+    elif 'decrease' in order:
+        initial_array = [i - 1 for i in initial_array]
+print(*initial_array, sep=', ')
+```
+</details>
+</details>
+
+> 03. Numbers
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2474#2)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40366)
+<details> <summary> Example & Code</summary>
+
+####
+<details><summary>Example</summary>
+
+Write a program to read a sequence of integers and find and print the top 5 numbers
+greater than the average value in the sequence, sorted in descending order.
+Input
+•	Read from the console a single line holding space-separated integers.
+Output
+•	Print the above-described numbers on a single line, space-separated. 
+•	If less than 5 numbers hold the property mentioned above, print less than 5 numbers. 
+•	Print "No" if no numbers hold the above property.
+Constraints
+•	All input numbers are integers in the range [-1 000 000 … 1 000 000]. 
+•	The count of numbers is in the range [1…10 000].
+
+| Input                               | Output         |
+|-------------------------------------|----------------|
+| 10 20 30 40 50                      | 50 40          |
+| 5 2 3 4 -10 30 40 50 20 50 60 60 51 | 60 60 51 50 50 |
+| 1                                   | No             |
+| -1 -2 -3 -4 -5 -6                   | -1 -2 -3       |
+
+</details>
+
+<details> <summary>Code</summary>
+
+```Python
+initital_list = list(map(int, input().split()))
+
+averrage_list = [number for number in initital_list if number > sum(initital_list) / len(initital_list)]
+
+if len(averrage_list) < 1:
+    print('No')
+else:
+    for index, value in enumerate(sorted(averrage_list,reverse=True)):
+        if index == 5:
+            break
+        print(value,end=' ')
+```
+
+</details>
+</details>
+
+
+</details>
+
+
+
+######
+<details><summary> Mid-Exam-Preparation-3 </summary>
+
+> 1.	Counter-Strike
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2305#0)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370)</br>
+[pastebin Ivan Shopov](https://pastebin.com/vrxNF4bB)
+<details> <summary> Example & Code</summary>
+
+####
+<details><summary>Example</summary>
+
+Write a program that keeps track of every won battle against an enemy.</br>
+You will receive initial energy. Afterward, you will start receiving
+the distance you need to reach an enemy until the "End of battle" command is given, or you run out of energy.</br>
+The energy you need for reaching an enemy is equal to the distance you receive.</br>
+Each time you reach an enemy, you win a battle, and your energy is reduced. </br>
+Otherwise, if you don't have enough energy to reach an enemy, end the program and print:</br>
+"Not enough energy! Game ends with {count} won battles and {energy} energy".</br>
+Every third won battle increases your energy with the value of your current count of won battles.</br>
+Upon receiving the "End of battle" command, print the count of won battles in the following format:</br>
+"Won battles: {count}. Energy left: {energy}" 
+
+Input / Constraints
+
+•	On the first line, you will receive initial energy – an integer [1-10000].</br>
+•	On the following lines, you will be receiving the distance of an enemy – an integer [1-10000]</br>
+
+Output
+
+•	The description contains the proper output messages for each case and the format they should be printed.
+
+
+| Input                                                    | Output                                                       |
+|----------------------------------------------------------|--------------------------------------------------------------|
+| 100</br>10</br>10</br>10</br>1</br>2</br>3</br>73</br>10 | Not enough energy! Game ends with 7 won battles and 0 energy |
+| 200</br>54</br>14</br>28</br>13</br>End of battle        | Won battles: 4. Energy left: 94                              |
+
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+energy = int(input())
+distance_to_enemy = input()
+win_counter = 0
+
+while distance_to_enemy != "End of battle":
+
+    distance_to_enemy = int(distance_to_enemy)
+
+    if distance_to_enemy <= energy:
+        energy -= distance_to_enemy
+        win_counter += 1
+    else:
+        print(f"Not enough energy! Game ends with {win_counter} won battles and {energy} energy")
+        break
+
+    if win_counter % 3 == 0:
+        energy += win_counter
+
+    distance_to_enemy = input()
+
+if distance_to_enemy == "End of battle":
+    print(f"Won battles: {win_counter}. Energy left: {energy}")
+```
+
+```Python
+def check_win_counter(energy, distance_to_enemy, win_counter):
+    if distance_to_enemy <= energy:
+        energy -= distance_to_enemy
+        win_counter += 1
+    else:
+        print(f"Not enough energy! Game ends with {win_counter} won battles and {energy} energy")
+        return False  # We return False to indicate that the game is over
+
+    if win_counter % 3 == 0:
+        energy += win_counter
+
+    return win_counter, energy
+
+
+energy = int(input())
+distance_to_enemy = input()
+win_counter = 0
+
+while distance_to_enemy != "End of battle":
+    distance_to_enemy = int(distance_to_enemy)
+
+    result = check_win_counter(energy, distance_to_enemy, win_counter)
+    if not result:
+        break  # exit the loop if the game ends
+
+    win_counter, energy = result
+
+    distance_to_enemy = input()
+
+if distance_to_enemy == "End of battle":
+    print(f"Won battles: {win_counter}. Energy left: {energy}")
+```
+```Python
+def check_win_counter(energy, distance_to_enemy, win_counter):
+    if distance_to_enemy <= energy:
+        energy -= distance_to_enemy
+        win_counter += 1
+    else:
+        print(f"Not enough energy! Game ends with {win_counter} won battles and {energy} energy")
+        exit()  #  exit from program. enegy == 0
+
+    if win_counter % 3 == 0:
+        energy += win_counter
+
+    return win_counter, energy
+
+energy = int(input())
+distance_to_enemy = input()
+win_counter = 0
+
+while distance_to_enemy != "End of battle":
+    distance_to_enemy = int(distance_to_enemy)
+
+    win_counter, energy = check_win_counter(energy, distance_to_enemy, win_counter)
+
+    distance_to_enemy = input()
+
+print(f"Won battles: {win_counter}. Energy left: {energy}")
+```
+
+</details>
+</details>
+
+
 >  2.	Shoot for the Win
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
 <details> <summary> Example & Code</summary>
+
+####
 <details><summary>Example</summary>
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
+Write a program that helps you keep track of your shot targets. </br>
+You will receive a sequence with integers, separated by a single space, 
+representing targets and their value. Afterward, you will be receiving 
+indices until the "End" command is given, and you need to print the targets and the count of shot targets.</br>
+Every time you receive an index, you need to shoot the target on that index, if it is possible. </br>
+Every time you shoot a target, its value becomes -1, and it is considered shot. </br>
+
+Along with that, you also need to:</br>
+•	Reduce all the other targets, which have greater values than your current target, with its value.</br> 
+•	Increase all the other targets, which have less than or equal value to the shot target, with its value.</br>
+Keep in mind that you can't shoot a target, which is already shot. You also can't increase or reduce a target, which is considered shot.
+When you receive the "End" command, print the targets in their current state and the count of shot targets in the following format:</br>
+"Shot targets: {count} -> {target1} {target2}… {targetn}"
+
+Input / Constraints
+
+•	On the first line of input, you will receive a sequence of integers, separated by a single space – the targets sequence.</br>
+•	On the following lines, until the "End" command, you be receiving integers each on a single line – the index of the target to be shot.</br>
+
+Output
+
+•	The format of the output is described above in the problem description.
+
+
+
+| Input                                         | Output |
+|-----------------------------------------------|--------|
+| 24 50 36 70<br>0 <br>4 <br>3 <br>1<br>End     |   Shot targets 3 -> -1 -1 130 -1	  |
+| 30 30 12 60 54 66 <br>5<br>2<br>4<br>0<br>End |    Shot targets: 4 -> -1 120 -1 66 -1 -1    |
+|                                               |        |
 
 </details>
 
@@ -162,11 +757,250 @@ print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
 </details>
 </details>
 
+> 03. Moving Target
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2305#2)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40372)
+<details> <summary> Example & Code</summary>
+
+####
+<details><summary>Example</summary>
+
+You are at the shooting gallery again, and you need a program that helps you keep track of moving targets.
+On the first line, you will receive a sequence of targets with their integer values, split by a single space. 
+Then, you will start receiving commands for manipulating the targets until the "End" command. 
+The commands are the following:
+* "Shoot {index} {power}"
+  * Shoot the target at the index if it exists by reducing its value by the given power (integer value). 
+  * Remove the target if it is shot. A target is considered shot when its value reaches 0.
+* "Add {index} {value}"
+*	Insert a target with the received value at the received index if it exists. 
+*	If not, print: "Invalid placement!"
+  *	"Strike {index} {radius}"
+*	Remove the target at the given index and the ones before and after it depending on the radius.
+*	If any of the indices in the range is invalid, print: "Strike missed!" and skip this command.
+
+   Example:  "Strike 2 2"
+      {radius}	{radius}	{strikeIndex}	{radius}	{radius}		
+
+* "End"
+  * Print the sequence with targets in the following format and end the program:
+
+  "{target1}|{target2}…|{targetn}"
+
+  Input / Constraints
+
+* On the first line, you will receive the sequence of targets – integer values [1-10000].
+* On the following lines, until the "End" will be receiving the command described above – strings.
+* There will never be a case when the "Strike" command would empty the whole sequence.
+  Output
+* Print the appropriate message in case of any command if necessary.
+* In the end, print the sequence of targets in the format described above.
+
+| Input                                                                                | Output                        |
+|--------------------------------------------------------------------------------------|-------------------------------|
+| 52 74 23 44 96 110</br>Shoot 5 10</br>Shoot 1 80</br>Strike 2 1</br>Add 22 3</br>End | Invalid placement!</br>52/100 |
+| 1 2 3 4 5</br>Strike 0 1</br>End                                                     | Strike missed!</br>1/2/3/4/5  |
+
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+targets = list(map(int, input().split()))
+
+while True:
+    command = input()
+    if command == 'End':
+        break
+    order = command.split()
+    action = order[0]
+    index = int(order[1])
+    number = int(order[2])
+    if action == 'Shoot' and 0 <= index < len(targets):
+        power = number
+        if targets[index] - power > 0:
+            targets[index] -= power
+        else:
+            del targets[index]
+    elif action == 'Add':
+        value = number
+        if index < 0 or index >= len(targets):
+            print("Invalid placement!")
+        else:
+            targets.insert(index,value)
+    elif action == 'Strike':
+        radius = number
+        if index - radius < 0 or index + radius >= len(targets):
+            print("Strike missed!")
+        else:
+            del targets[index - radius:index + radius + 1:]
+
+print(*targets, sep='|')
+```
+
+</details>
+</details>
+
+
+
+
+</details>
+
+
+######
+<details><summary> Mid-Exam-Preparation-4 </summary>
+
+> 01. Guinea Pig
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2031#0)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40376)
+
+<details> <summary> Example & Code</summary>
+
+####
+<details><summary>Example</summary>
+Merry has a guinea pig named Puppy, that she loves very much.
+Every month she goes to the nearest pet store and buys him everything he needs – food, hay, and cover.
+On the first three lines, you will receive the quantity of food, hay, and cover, 
+which Merry buys for a month (30 days). On the fourth line, you will receive the guinea pig's weight.
+Every day Puppy eats 300 gr of food. Every second day Merry first feeds the pet, 
+then gives it a certain amount of hay equal to 5% of the rest of the food. On every third day, 
+Merry puts Puppy cover with a quantity of 1/3 of its weight.
+Calculate whether the quantity of food, hay, and cover, will be enough for a month.
+If Merry runs out of food, hay, or cover, stop the program!
+
+Input
+
+* •	On the first line – quantity food in kilograms - a floating-point number in the range [0.0 – 10000.0]
+* •	On the second line – quantity hay in kilograms - a floating-point number in the range [0.0 – 10000.0]
+* •	On the third line – quantity cover in kilograms - a floating-point number in the range [0.0 – 10000.0]
+* •	On the fourth line – guinea's weight in kilograms - a floating-point number in the range [0.0 – 10000.0]
+
+Output
+
+* •	If the food, the hay, and the cover are enough, print:
+* o	"Everything is fine! Puppy is happy! Food: {excessFood}, Hay: {excessHay}, Cover: {excessCover}."
+* •	If one of the things is not enough, print:
+* o	"Merry must go to the pet store!"
+* The output values must be formatted to the second decimal place!
+
+|Input|Output|
+|-|-|
+|10</br>5</br>5.2</br>1|Everything is fine! Puppy is happy! Food: 1.00, Hay: 1.10, Cover: 1.87.|
+|1</br>1.5</br>3</br>1.5|Merry must go to the pet store!|
+
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+food, hay, cover_i, guinea_weight = float(input()), float(input()), float(input()), float(input())
+food_kg = food * 1000
+hay_kg = hay * 1000
+cover_kg = cover_i * 1000
+guinea_weight_kg = guinea_weight * 1000
+
+cover = guinea_weight_kg / 3
+feed_eaten = 0
+
+for day in range(1, 31):
+    feed_eaten += 300
+    food_kg -= 300
+    if day % 2 == 0:
+        hay = food_kg * 0.05
+        hay_kg -= hay
+        feed_eaten += hay
+
+    if day % 3 == 0:
+        cover_kg -= cover
+
+if food_kg > 0 and hay_kg > 0 and cover_kg > 0:
+    print(f"Everything is fine! Puppy is happy! Food: {food_kg / 1000:.2f}, Hay: {hay_kg / 1000:.2f}, Cover: {cover_kg / 1000:.2f}.")
+
+else:
+    print("Merry must go to the pet store!")
+```
+</details>
+</details>
+
+> 02. Shopping List
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/2031#1)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40377)
+
+<details> <summary> Example & Code</summary>
+
+####
+<details><summary>Example</summary>
+
+It's the end of the week, and it is time for you to go shopping, so you need to create a shopping list first.
+Input
+You will receive an initial list with groceries separated by an exclamation mark "!".
+After that, you will be receiving 4 types of commands until you receive "Go Shopping!".
+* •	"Urgent {item}" - add the item at the start of the list. 
+If the item already exists, skip this command.
+* •	"Unnecessary {item}" - remove the item with the given name, only if it exists in the list.
+Otherwise, skip this command.
+* •	"Correct {oldItem} {newItem}" - if the item with the given old name exists,
+change its name with the new one. Otherwise, skip this command.
+* •	"Rearrange {item}" - if the grocery exists in the list, remove it from its current
+position and add it at the end of the list. Otherwise, skip this command.
+Constraints
+* •	There won't be any duplicate items in the initial list
+Output
+* •	Print the list with all the groceries, joined by ", ":
+
+"{firstGrocery}, {secondGrocery}, … {nthGrocery}"
+
+| Input | Output |
+|-------|--------|
+|Tomatoes!Potatoes!Bread</br>Unnecessary Milk</br>Urgent Tomatoes</br>Go Shopping!|Tomatoes, Potatoes, Bread|
+|Milk!Pepper!Salt!Water!Banana</br>
+Urgent Salt</br>Unnecessary Grapes </br>Correct Pepper Onion</br>Rearrange Grapes</br>Correct Tomatoes Potatoes</br>Go Shopping!|Milk, Onion, Salt, Water, Banana|
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+initial_list = input().split('!')
+
+while True:
+    command = input()
+    if command == "Go Shopping!":
+        break
+    current_input = command.split()
+    order = current_input[0]
+    product = current_input[1]
+    if order == 'Urgent':
+        if product  not in initial_list:
+            initial_list.insert(0, product)
+    elif order == 'Unnecessary':
+        if product  in initial_list:
+            initial_list.remove(product)
+    elif order == 'Correct':
+        if product in initial_list:
+            new_product = current_input[2]
+            index = initial_list.index(product)
+            initial_list[index] = new_product
+    elif order== 'Rearrange':
+        if product  in initial_list:
+            initial_list.remove(product)
+            initial_list.append(product)
+
+print(*initial_list,sep=', ')
+```
+
+</details>
+</details>
+
 > 3.	Heart Delivery
 
 [Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
 [Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
 <details> <summary> Example & Code</summary>
+
+####
 <details><summary>Example</summary>
 
 Valentine's day is coming, and Cupid has minimal time to spread some love across the neighborhood. Help him with his mission!
@@ -301,211 +1135,171 @@ else:
 ```
 </details>
 </details>
+
+
+
 </details>
-
-
-
 
 ######
-<details><summary> Mid-Exam-Preparation-2 </summary>
+<details><summary> Mid-Exam-Preparation-5 </summary>
 
-> 1.	Counter-Strike
+> 01. Bonus Scoring System
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/2305#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370)</br>
-[pastebin Ivan Shopov](https://pastebin.com/vrxNF4bB)
+[judge](https://judge.softuni.org/Contests/Practice/Index/2028#0)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40382)
+
 <details> <summary> Example & Code</summary>
-^
+
+####
 <details><summary>Example</summary>
 
-| Input                                                    | Output                                                       |
-|----------------------------------------------------------|--------------------------------------------------------------|
-| 100</br>10</br>10</br>10</br>1</br>2</br>3</br>73</br>10 | Not enough energy! Game ends with 7 won battles and 0 energy |
-| 200</br>54</br>14</br>28</br>13</br>End of battle        | Won battles: 4. Energy left: 94                              |
+Create a program that calculates bonus points for each student enrolled in a course.
+On the first line, you are going to receive the number of the students. On the second line,
+you will receive the total number of lectures in the course. The course has an additional bonus,
+which you will receive on the third line. On the following lines,
+you will be receiving the count of attendances for each student.
+The bonus is calculated with the following formula:
+{total bonus} = {student attendances} / {course lectures} * (5 + {additional bonus})
+Find the student with the maximum bonus and print them, along with his attendances,
+in the following format:
+"Max Bonus: {max bonus points}."
+"The student has attended {student attendances} lectures."
+Round the bonus points at the end to the nearest larger number.
+Input / Constrains
+* •	On the first line, you are going to receive the number of the students – an integer in the range [0…50]
+* •	On the second line, you will receive the number of the lectures – an integer number in the range [0...50].
+* •	On the third line, you will receive the additional bonus – an integer number in the range [0….100].
+* •	On the following lines, you will be receiving the attendance of each student.
+* •	There will never be students with equal bonuses.
+Output
+* •	Print the maximum bonus points and the attendances of the given student,
+rounded to the nearest larger number, scored by a student in this course in the format described above.
+
+| Input                                                                                | Output                                                    |
+|--------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| 5</br>25</br>30</br>12</br>19</br>24</br>16</br>20                                   | Max Bonus: 34.</br> The student has attended 24 lectures. |
+| 10</br>30</br>14</br>8</br>23</br>27</br>28</br>15</br>17</br>25</br>26</br>5</br>18 | Max Bonus: 18.</br>The student has attended 28 lectures.  |
 
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
-energy = int(input())
-distance_to_enemy = input()
-win_counter = 0
+from math import ceil
 
-while distance_to_enemy != "End of battle":
+number_of_students = int(input())
+lectures = int(input())
+additional_bonus = int(input())
 
-    distance_to_enemy = int(distance_to_enemy)
+max_bonus = 0
+student_attended = 0
 
-    if distance_to_enemy <= energy:
-        energy -= distance_to_enemy
-        win_counter += 1
-    else:
-        print(f"Not enough energy! Game ends with {win_counter} won battles and {energy} energy")
-        break
+for student in range(1, number_of_students + 1):
+    attendance = int(input())
+    current_bonus = attendance / lectures * (5 + additional_bonus)
+    if max_bonus < current_bonus:
+        max_bonus = current_bonus
+        student_attended = attendance
 
-    if win_counter % 3 == 0:
-        energy += win_counter
-
-    distance_to_enemy = input()
-
-if distance_to_enemy == "End of battle":
-    print(f"Won battles: {win_counter}. Energy left: {energy}")
-```
-
-```Python
-def check_win_counter(energy, distance_to_enemy, win_counter):
-    if distance_to_enemy <= energy:
-        energy -= distance_to_enemy
-        win_counter += 1
-    else:
-        print(f"Not enough energy! Game ends with {win_counter} won battles and {energy} energy")
-        return False  # We return False to indicate that the game is over
-
-    if win_counter % 3 == 0:
-        energy += win_counter
-
-    return win_counter, energy
-
-
-energy = int(input())
-distance_to_enemy = input()
-win_counter = 0
-
-while distance_to_enemy != "End of battle":
-    distance_to_enemy = int(distance_to_enemy)
-
-    result = check_win_counter(energy, distance_to_enemy, win_counter)
-    if not result:
-        break  # exit the loop if the game ends
-
-    win_counter, energy = result
-
-    distance_to_enemy = input()
-
-if distance_to_enemy == "End of battle":
-    print(f"Won battles: {win_counter}. Energy left: {energy}")
-```
-```Python
-def check_win_counter(energy, distance_to_enemy, win_counter):
-    if distance_to_enemy <= energy:
-        energy -= distance_to_enemy
-        win_counter += 1
-    else:
-        print(f"Not enough energy! Game ends with {win_counter} won battles and {energy} energy")
-        exit()  #  exit from program. enegy == 0
-
-    if win_counter % 3 == 0:
-        energy += win_counter
-
-    return win_counter, energy
-
-energy = int(input())
-distance_to_enemy = input()
-win_counter = 0
-
-while distance_to_enemy != "End of battle":
-    distance_to_enemy = int(distance_to_enemy)
-
-    win_counter, energy = check_win_counter(energy, distance_to_enemy, win_counter)
-
-    distance_to_enemy = input()
-
-print(f"Won battles: {win_counter}. Energy left: {energy}")
+print(f"Max Bonus: {ceil(max_bonus)}.")
+print(f"The student has attended {student_attended} lectures.")
 ```
 
 </details>
 </details>
 
-> 2.	Array Modifier
+> 02. MuOnline
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/2474#1)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40365)
+[judge](https://judge.softuni.org/Contests/Practice/Index/2028#1)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40383)
+
 <details> <summary> Example & Code</summary>
+
+####
 <details><summary>Example</summary>
 
-| Input                                                                                                                 | Output                              |
-|-----------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| 23 -2 321 87 42 90 -123</br>swap 1 3</br>swap 3 6</br>swap 1 0</br>multiply 1 2</br>multiply 2 1</br>decrease</br>end | 86, 7382, 2369942, -124, 41, 89, -3 |
-| 1 2 3 4</br>swap 0 1</br>swap 1 2</br>swap 2 3</br>multiply 1 2</br>decrease</br>end                                  | 1, 11, 3, 0                         |
+You have initial health 100 and initial bitcoins 0. You will be given a string
+ representing the dungeon's rooms. Each room is separated with '|' (vertical bar): "room1|room2|room3…"
+Each room contains a command and a number, separated by space. The command can be:
+•	"potion"
+* 	You are healed with the number in the second part. But your health cannot exceed your initial health (100).
+* o	First print: "You healed for {amount} hp."
+* o	After that, print your current health: "Current health: {health} hp."
+  * •	"chest"
+* o	You've found some bitcoins, the number in the second part.
+* o	Print: "You found {amount} bitcoins."
+  * •	In any other case, you are facing a monster, which you will fight. 
+  The second part of the room contains the attack of the monster. You should remove the monster's attack from your health. 
+* o	If you are not dead (health <= 0), you've slain the monster, and you should print: "You slayed {monster}."
+* o	If you've died, print "You died! Killed by {monster}." and your quest is over. 
+Print the best room you've manage to reach: "Best room: {room}"
+If you managed to go through all the rooms in the dungeon, print on the following three lines: 
+
+"You've made it!"</br>
+"Bitcoins: {bitcoins}"</br>
+"Health: {health}"</br>
+
+Input / Constraints
+
+You receive a string representing the dungeon's rooms, separated with '|' (vertical bar): "room1|room2|room3…".
+
+Output
+
+Print the corresponding messages described above.
+
+### Input
+
+rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000	You slayed rat.
+
+### Output
+You slayed bat.</br>You healed for 10 hp.</br>Current health: 80 hp.</br>You slayed rat.</br>You found 100 bitcoins.</br>You died! Killed by boss.</br>Best room: 6
+
+### Input
+
+cat 10|potion 30|orc 10|chest 10|snake 25|chest 110	You slayed cat.
+
+### Output
+
+You healed for 10 hp.</br>Current health: 100 hp.</br>You slayed orc.</br>You found 10 bitcoins.</br>You slayed snake.</br>You found 110 bitcoins.</br>You've made it!</br>Bitcoins: 120</br>Health: 65
+
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
-def swap_element(list_mod, index1, index2):
-    list_copy = list(list_mod)
-    temp = list_copy[index1]
-    list_copy[index1] = list_copy[index2]
-    list_copy[index2] = temp
-    return list_copy
+dungeon = input().split('|')
 
+health = 100
+bitcoin = 0
+room = 0
 
-def multiply_element(list_mod, index1, index2):
-    list_copy = list(list_mod)
-    list_copy[index1] = list_copy[index1] * list_copy[index2]
-    return list_copy
-
-
-list_to_modifier = list(map(int, input().split()))
-command = input()
-
-while command != "end":
-
-    comman_list = list(map(str, command.split(" ")))
-    if len(comman_list) > 1:
-        firs, second = int(comman_list[1]), int(comman_list[2])
-
-    if comman_list[0] == "swap":
-        list_to_modifier = swap_element(list_to_modifier, firs, second)
-    elif comman_list[0] == "multiply":
-        list_to_modifier = multiply_element(list_to_modifier, firs, second)
-    elif comman_list[0] == "decrease":
-        list_to_modifier = [x - 1 for x in list_to_modifier]
-
-    command = input()
-
-result_string = ', '.join(map(str, list_to_modifier))
-print(result_string)
-```
-```Python
-elements = [int(x) for x in input().split()]
-data_info = input()
-while data_info != "end":
-    if "decrease" in data_info:
-        elements = [x - 1 for x in elements]
-        data_info = input()
-        continue
-
-    command, index_one, index_two = [x if x.isalpha() else int(x) for x in data_info.split()]
-
-    if command == "swap":
-        elements[index_one], elements[index_two] = elements[index_two], elements[index_one]
-
-    elif command == "multiply":
-        elements[index_one] *= elements[index_two]
-
-    data_info = input()
-
-print(*elements, sep=", ")
-```
-```Python
-initial_array = list(map(int, input().split(' ')))
-
-while True:
-    command = input()
-    if command == 'end':
-        break
-    order = command.split()
-    if len(order) > 1:
-        index_01 = int(order[1])
-        index_02 = int(order[2])
-    if 'swap' in order:
-        initial_array[index_01], initial_array[index_02] = initial_array[index_02], initial_array[index_01]
-    elif 'multiply' in order:
-        initial_array[index_01] = initial_array[index_01] * initial_array[index_02]
-    elif 'decrease' in order:
-        initial_array = [i - 1 for i in initial_array]
-print(*initial_array, sep=', ')
+dead = False
+for command in dungeon:
+    room += 1
+    order, amount = command.split(' ')
+    if order == 'potion':
+        if health + int(amount) > 100:
+            diff = 100 - health
+            print(f"You healed for {diff} hp.")
+            health = 100
+        else:
+            health += int(amount)
+            print(f"You healed for {amount} hp.")
+        print(f"Current health: {health} hp.")
+    elif order == 'chest':
+        bitcoin += int(amount)
+        print(f"You found {amount} bitcoins.")
+    else:
+        if health - int(amount) <= 0:
+            print(f"You died! Killed by {order}.")
+            print(f"Best room: {room}")
+            dead = True
+            break
+        else:
+            health -= int(amount)
+            print(f"You slayed {order}.")
+if dead is not True:
+    print(f"You've made it!\nBitcoins: {bitcoin}\nHealth: {health}")
 ```
 
 </details>
@@ -664,566 +1458,14 @@ print(*items, sep=", ")
 </details>
 
 </details>
+
 </details>
+
+
+
 
 ######
-
-<details><summary> Mid-Exam-Preparation-more and more </summary>
-
-> 01. Guinea Pig
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2031#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40376)
-
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
-Merry has a guinea pig named Puppy, that she loves very much.
-Every month she goes to the nearest pet store and buys him everything he needs – food, hay, and cover.
-On the first three lines, you will receive the quantity of food, hay, and cover, 
-which Merry buys for a month (30 days). On the fourth line, you will receive the guinea pig's weight.
-Every day Puppy eats 300 gr of food. Every second day Merry first feeds the pet, 
-then gives it a certain amount of hay equal to 5% of the rest of the food. On every third day, 
-Merry puts Puppy cover with a quantity of 1/3 of its weight.
-Calculate whether the quantity of food, hay, and cover, will be enough for a month.
-If Merry runs out of food, hay, or cover, stop the program!
-
-Input
-
-* •	On the first line – quantity food in kilograms - a floating-point number in the range [0.0 – 10000.0]
-* •	On the second line – quantity hay in kilograms - a floating-point number in the range [0.0 – 10000.0]
-* •	On the third line – quantity cover in kilograms - a floating-point number in the range [0.0 – 10000.0]
-* •	On the fourth line – guinea's weight in kilograms - a floating-point number in the range [0.0 – 10000.0]
-
-Output
-
-* •	If the food, the hay, and the cover are enough, print:
-* o	"Everything is fine! Puppy is happy! Food: {excessFood}, Hay: {excessHay}, Cover: {excessCover}."
-* •	If one of the things is not enough, print:
-* o	"Merry must go to the pet store!"
-* The output values must be formatted to the second decimal place!
-
-</details>
-<details> <summary>Code</summary>
-
-```Python
-food, hay, cover_i, guinea_weight = float(input()), float(input()), float(input()), float(input())
-food_kg = food * 1000
-hay_kg = hay * 1000
-cover_kg = cover_i * 1000
-guinea_weight_kg = guinea_weight * 1000
-
-cover = guinea_weight_kg / 3
-feed_eaten = 0
-
-for day in range(1, 31):
-    feed_eaten += 300
-    food_kg -= 300
-    if day % 2 == 0:
-        hay = food_kg * 0.05
-        hay_kg -= hay
-        feed_eaten += hay
-
-    if day % 3 == 0:
-        cover_kg -= cover
-
-if food_kg > 0 and hay_kg > 0 and cover_kg > 0:
-    print(f"Everything is fine! Puppy is happy! Food: {food_kg / 1000:.2f}, Hay: {hay_kg / 1000:.2f}, Cover: {cover_kg / 1000:.2f}.")
-
-else:
-    print("Merry must go to the pet store!")
-```
-
-</details>
-</details>
-
->  01. SoftUni Reception
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
-
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
-
-
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-|       |        |
-
-</details>
-<details> <summary>Code</summary>
-
-```Python
-first_employee = int(input())
-second_employee = int(input())
-third_employee = int(input())
-students_number = int(input())
-students_per_hour = first_employee + second_employee + third_employee
-
-hours = 0
-while students_number > 0:
-    hours += 1
-    if hours % 4 == 0:
-        continue
-    else:
-        students_number-=students_per_hour
-print(f"Time needed: {hours}h.")
-```
-</details>
-</details>
-
-> 01. Bonus Scoring System
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2028#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40382)
-
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
-
-Create a program that calculates bonus points for each student enrolled in a course.
-On the first line, you are going to receive the number of the students. On the second line,
-you will receive the total number of lectures in the course. The course has an additional bonus,
-which you will receive on the third line. On the following lines,
-you will be receiving the count of attendances for each student.
-The bonus is calculated with the following formula:
-{total bonus} = {student attendances} / {course lectures} * (5 + {additional bonus})
-Find the student with the maximum bonus and print them, along with his attendances,
-in the following format:
-"Max Bonus: {max bonus points}."
-"The student has attended {student attendances} lectures."
-Round the bonus points at the end to the nearest larger number.
-Input / Constrains
-* •	On the first line, you are going to receive the number of the students – an integer in the range [0…50]
-* •	On the second line, you will receive the number of the lectures – an integer number in the range [0...50].
-* •	On the third line, you will receive the additional bonus – an integer number in the range [0….100].
-* •	On the following lines, you will be receiving the attendance of each student.
-* •	There will never be students with equal bonuses.
-Output
-* •	Print the maximum bonus points and the attendances of the given student,
-rounded to the nearest larger number, scored by a student in this course in the format described above.
-
-| Input                                                                                | Output                                                    |
-|--------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| 5</br>25</br>30</br>12</br>19</br>24</br>16</br>20                                   | Max Bonus: 34.</br> The student has attended 24 lectures. |
-| 10</br>30</br>14</br>8</br>23</br>27</br>28</br>15</br>17</br>25</br>26</br>5</br>18 | Max Bonus: 18.</br>The student has attended 28 lectures.  |
-
-
-</details>
-<details> <summary>Code</summary>
-
-```Python
-from math import ceil
-
-number_of_students = int(input())
-lectures = int(input())
-additional_bonus = int(input())
-
-max_bonus = 0
-student_attended = 0
-
-for student in range(1, number_of_students + 1):
-    attendance = int(input())
-    current_bonus = attendance / lectures * (5 + additional_bonus)
-    if max_bonus < current_bonus:
-        max_bonus = current_bonus
-        student_attended = attendance
-
-print(f"Max Bonus: {ceil(max_bonus)}.")
-print(f"The student has attended {student_attended} lectures.")
-```
-
-</details>
-</details>
-
-> 02. The Lift
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2517#1)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40359)
-
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
-
-| Input           | Output                                                     |
-|-----------------|------------------------------------------------------------|
-| 15</br> 0 0 0 0 | The lift has empty spots!</br> 4 4 4 3                     |
-| 20 </br> 0 2 0  | There isn't enough space! 10 people in a queue!</br> 4 4 4 |
-
-</details>
-<details> <summary>Code</summary>
-
-```Python
-people = int(input())
-lift = list(map(int, input().split()))
-
-for wagon, spaces in enumerate(lift):
-    if spaces < 4:
-        available = 4 - spaces
-        if people - available >= 0:
-            people -= available
-            lift[wagon] += available
-        else:
-            lift[wagon] += people
-            people -= people
-
-not_balance = True
-
-for count in range(len(lift)):
-    if lift[count] < 4:
-        not_balance = False
-
-if not_balance and people == 0:
-    print(*lift)
-elif people == 0:
-    print('The lift has empty spots!')
-    print(*lift)
-else:
-    print(f"There isn't enough space! {people} people in a queue!")
-    print(*lift)
-```
-
-</details>
-</details>
-
-> 02. Shopping List
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2031#1)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40377)
-
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
-
-It's the end of the week, and it is time for you to go shopping, so you need to create a shopping list first.
-Input
-You will receive an initial list with groceries separated by an exclamation mark "!".
-After that, you will be receiving 4 types of commands until you receive "Go Shopping!".
-* •	"Urgent {item}" - add the item at the start of the list. 
-If the item already exists, skip this command.
-* •	"Unnecessary {item}" - remove the item with the given name, only if it exists in the list.
-Otherwise, skip this command.
-* •	"Correct {oldItem} {newItem}" - if the item with the given old name exists,
-change its name with the new one. Otherwise, skip this command.
-* •	"Rearrange {item}" - if the grocery exists in the list, remove it from its current
-position and add it at the end of the list. Otherwise, skip this command.
-Constraints
-* •	There won't be any duplicate items in the initial list
-Output
-* •	Print the list with all the groceries, joined by ", ":
-
-"{firstGrocery}, {secondGrocery}, … {nthGrocery}"
-
-| Input | Output |
-|-------|--------|
-|Tomatoes!Potatoes!Bread</br>Unnecessary Milk</br>Urgent Tomatoes</br>Go Shopping!|Tomatoes, Potatoes, Bread|
-|Milk!Pepper!Salt!Water!Banana</br>
-Urgent Salt</br>Unnecessary Grapes </br>Correct Pepper Onion</br>Rearrange Grapes</br>Correct Tomatoes Potatoes</br>Go Shopping!|Milk, Onion, Salt, Water, Banana|
-
-</details>
-<details> <summary>Code</summary>
-
-```Python
-initial_list = input().split('!')
-
-while True:
-    command = input()
-    if command == "Go Shopping!":
-        break
-    current_input = command.split()
-    order = current_input[0]
-    product = current_input[1]
-    if order == 'Urgent':
-        if product  not in initial_list:
-            initial_list.insert(0, product)
-    elif order == 'Unnecessary':
-        if product  in initial_list:
-            initial_list.remove(product)
-    elif order == 'Correct':
-        if product in initial_list:
-            new_product = current_input[2]
-            index = initial_list.index(product)
-            initial_list[index] = new_product
-    elif order== 'Rearrange':
-        if product  in initial_list:
-            initial_list.remove(product)
-            initial_list.append(product)
-
-print(*initial_list,sep=', ')
-```
-
-</details>
-</details>
-
-> 02. MuOnline
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2028#1)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40383)
-
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
-
-You have initial health 100 and initial bitcoins 0. You will be given a string
- representing the dungeon's rooms. Each room is separated with '|' (vertical bar): "room1|room2|room3…"
-Each room contains a command and a number, separated by space. The command can be:
-•	"potion"
-* 	You are healed with the number in the second part. But your health cannot exceed your initial health (100).
-* o	First print: "You healed for {amount} hp."
-* o	After that, print your current health: "Current health: {health} hp."
-  * •	"chest"
-* o	You've found some bitcoins, the number in the second part.
-* o	Print: "You found {amount} bitcoins."
-  * •	In any other case, you are facing a monster, which you will fight. 
-  The second part of the room contains the attack of the monster. You should remove the monster's attack from your health. 
-* o	If you are not dead (health <= 0), you've slain the monster, and you should print: "You slayed {monster}."
-* o	If you've died, print "You died! Killed by {monster}." and your quest is over. 
-Print the best room you've manage to reach: "Best room: {room}"
-If you managed to go through all the rooms in the dungeon, print on the following three lines: 
-
-"You've made it!"</br>
-"Bitcoins: {bitcoins}"</br>
-"Health: {health}"</br>
-
-Input / Constraints
-
-You receive a string representing the dungeon's rooms, separated with '|' (vertical bar): "room1|room2|room3…".
-
-Output
-
-Print the corresponding messages described above.
-
-### Input
-
-rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000	You slayed rat.
-
-### Output
-You slayed bat.</br>You healed for 10 hp.</br>Current health: 80 hp.</br>You slayed rat.</br>You found 100 bitcoins.</br>You died! Killed by boss.</br>Best room: 6
-
-### Input
-
-cat 10|potion 30|orc 10|chest 10|snake 25|chest 110	You slayed cat.
-
-### Output
-
-You healed for 10 hp.</br>Current health: 100 hp.</br>You slayed orc.</br>You found 10 bitcoins.</br>You slayed snake.</br>You found 110 bitcoins.</br>You've made it!</br>Bitcoins: 120</br>Health: 65
-
-
-</details>
-<details> <summary>Code</summary>
-
-```Python
-dungeon = input().split('|')
-
-health = 100
-bitcoin = 0
-room = 0
-
-dead = False
-for command in dungeon:
-    room += 1
-    order, amount = command.split(' ')
-    if order == 'potion':
-        if health + int(amount) > 100:
-            diff = 100 - health
-            print(f"You healed for {diff} hp.")
-            health = 100
-        else:
-            health += int(amount)
-            print(f"You healed for {amount} hp.")
-        print(f"Current health: {health} hp.")
-    elif order == 'chest':
-        bitcoin += int(amount)
-        print(f"You found {amount} bitcoins.")
-    else:
-        if health - int(amount) <= 0:
-            print(f"You died! Killed by {order}.")
-            print(f"Best room: {room}")
-            dead = True
-            break
-        else:
-            health -= int(amount)
-            print(f"You slayed {order}.")
-if dead is not True:
-    print(f"You've made it!\nBitcoins: {bitcoin}\nHealth: {health}")
-```
-
-</details>
-</details>
-
-> 03. Moving Target
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2305#2)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40372)
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
-
-You are at the shooting gallery again, and you need a program that helps you keep track of moving targets.
-On the first line, you will receive a sequence of targets with their integer values, split by a single space. 
-Then, you will start receiving commands for manipulating the targets until the "End" command. 
-The commands are the following:
-* "Shoot {index} {power}"
-  * Shoot the target at the index if it exists by reducing its value by the given power (integer value). 
-  * Remove the target if it is shot. A target is considered shot when its value reaches 0.
-* "Add {index} {value}"
-*	Insert a target with the received value at the received index if it exists. 
-*	If not, print: "Invalid placement!"
-  *	"Strike {index} {radius}"
-*	Remove the target at the given index and the ones before and after it depending on the radius.
-*	If any of the indices in the range is invalid, print: "Strike missed!" and skip this command.
-
-   Example:  "Strike 2 2"
-      {radius}	{radius}	{strikeIndex}	{radius}	{radius}		
-
-* "End"
-  * Print the sequence with targets in the following format and end the program:
-
-  "{target1}|{target2}…|{targetn}"
-
-  Input / Constraints
-
-* On the first line, you will receive the sequence of targets – integer values [1-10000].
-* On the following lines, until the "End" will be receiving the command described above – strings.
-* There will never be a case when the "Strike" command would empty the whole sequence.
-  Output
-* Print the appropriate message in case of any command if necessary.
-* In the end, print the sequence of targets in the format described above.
-
-| Input                                                                                | Output                        |
-|--------------------------------------------------------------------------------------|-------------------------------|
-| 52 74 23 44 96 110</br>Shoot 5 10</br>Shoot 1 80</br>Strike 2 1</br>Add 22 3</br>End | Invalid placement!</br>52/100 |
-| 1 2 3 4 5</br>Strike 0 1</br>End                                                     | Strike missed!</br>1/2/3/4/5  |
-
-
-</details>
-<details> <summary>Code</summary>
-
-```Python
-targets = list(map(int, input().split()))
-
-while True:
-    command = input()
-    if command == 'End':
-        break
-    order = command.split()
-    action = order[0]
-    index = int(order[1])
-    number = int(order[2])
-    if action == 'Shoot' and 0 <= index < len(targets):
-        power = number
-        if targets[index] - power > 0:
-            targets[index] -= power
-        else:
-            del targets[index]
-    elif action == 'Add':
-        value = number
-        if index < 0 or index >= len(targets):
-            print("Invalid placement!")
-        else:
-            targets.insert(index,value)
-    elif action == 'Strike':
-        radius = number
-        if index - radius < 0 or index + radius >= len(targets):
-            print("Strike missed!")
-        else:
-            del targets[index - radius:index + radius + 1:]
-
-print(*targets, sep='|')
-```
-
-</details>
-</details>
-
-> 03. Memory Game
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2517#2)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40360)
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
-
-| Input                                                                    | Output                                                                                                                                                                                                                                                                                                     |
-|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 1 2 2 3 3 4 4 5 5 </br>1 0</br>-1 0</br>1 0 </br>1 0 </br>1 0 </br>end | Congrats! You have found matching elements - 1!</br>Invalid input! Adding additional elements to the board</br>Congrats! You have found matching elements - 2!</br>Congrats! You have found matching elements - 3!</br>Congrats! You have found matching elements - -2a!</br>Sorry you lose :(</br>4 4 5 5 |
-| a 2 4 a 2 4 </br>0 3 </br>0 2</br>0 1</br>0 1 </br>end                   | Congrats! You have found matching elements - a!</br>Congrats! You have found matching elements - 2!</br>Congrats! You have found matching elements - 4!</br>You have won in 3 turns!                                                                                                                       |
-| a 2 4 a 2 4 </br>4 0 </br>0 2</br>0 1</br>0 1 </br>end                   | Try again!</br>Try again!</br>Try again!</br>Try again!</br>Sorry you lose :(</br>a 2 4 a 2 4                                                                                                                                                                                                              |
-
-</details>
-
-<details> <summary>Code</summary>
-
-```Python
-elements = input().split()
-
-moves = 0
-
-while True:
-    input_command = input()
-    if len(elements) < 1:
-        print(f"You have won in {moves} turns!")
-        break
-    if input_command == 'end':
-        print("Sorry you lose :(")
-        print(*elements)
-        break
-
-    indeces = input_command.split(' ')
-    moves += 1
-    index_01 = int(indeces[0])
-    index_02 = int(indeces[1])
-    middle = int(len(elements) / 2)
-    if index_02 == index_01 or index_01 < 0 or index_01 >= len(elements) or index_02 < 0 or index_02 >= len(elements):
-        elements.insert(middle, f'-{moves}a')
-        elements.insert(middle, f'-{moves}a')
-        print("Invalid input! Adding additional elements to the board")
-    elif elements[index_01] == elements[index_02]:
-        element = elements[index_01]
-        print(f"Congrats! You have found matching elements - {element}!")
-        elements.remove(element)
-        elements.remove(element)
-    else:
-        print('Try again!')
-```
-
-</details>
-</details>
-
-> 03. Numbers
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2474#2)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40366)
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
-
-| Input                               | Output         |
-|-------------------------------------|----------------|
-| 10 20 30 40 50                      | 50 40          |
-| 5 2 3 4 -10 30 40 50 20 50 60 60 51 | 60 60 51 50 50 |
-| 1                                   | No             |
-| -1 -2 -3 -4 -5 -6                   | -1 -2 -3       |
-
-</details>
-
-<details> <summary>Code</summary>
-
-```Python
-initital_list = list(map(int, input().split()))
-
-averrage_list = [number for number in initital_list if number > sum(initital_list) / len(initital_list)]
-
-if len(averrage_list) < 1:
-    print('No')
-else:
-    for index, value in enumerate(sorted(averrage_list,reverse=True)):
-        if index == 5:
-            break
-        print(value,end=' ')
-```
-
-</details>
-</details>
-</details>
-
-######
-
-<details><summary> Mid Exam Retake </summary> 
-
+<details><summary> Mid-Exam-Preparation-6 </summary>
 
 >  01. Black Flag
 
@@ -1538,5 +1780,9 @@ if finished_battle:
 </details>
 </details>
 
-
 </details>
+
+
+
+
+
