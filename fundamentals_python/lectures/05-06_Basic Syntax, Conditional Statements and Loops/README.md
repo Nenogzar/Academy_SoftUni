@@ -11,7 +11,7 @@
 
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="BS" width="400"></a></th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/1.jpg" alt="BS" width="400"></th>
  
   </tr>
   <tr>
@@ -25,8 +25,6 @@
 
   </tr>
 </table>
-
-<p>This is my collection of solutions to the tasks included in the SoftUni Fundamentals programming whit Python</p>
 
 </body>
 </html>
