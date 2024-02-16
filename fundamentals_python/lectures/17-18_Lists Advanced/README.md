@@ -9,15 +9,11 @@
 
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
-# Lists Advanced
-
 <table>
   <tr>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/11_12_Lists%20Basics/Pythin_list_small.png" alt="List Advance" width="150"></a></th>
-    <th>* List Comprehension;</br>* List Methods;</br>* Advanced Methods;</br>* Advanced List Manipulations;</br>* The set() Method.</th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/9.jpg" alt="List Advance" width="150"></th>
   </tr>
   <tr>
-    <th> </th>
     <td>
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/17-18_Lists%20Advanced/01_Lists%20Advanced%20-%20Lab">Lab</a>
   |  
@@ -27,5 +23,12 @@
     </td>
   </tr>
 </table>
+
+* List Comprehension;
+* List Methods;
+* Advanced Methods;
+* Advanced List Manipulations;
+* The set() Method.
+
 </body>
 </html>
