@@ -29,7 +29,7 @@
 * Functions Overview;
 * Declaring and Invoking Functions;
 * Return Values;
-* Lambda Functions;
+* [Lambda Functions](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/14-15_Functions/Functions/lembda)
 * Parameters vs Arguments.
 
 <p>
