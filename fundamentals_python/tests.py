@@ -1,17 +1,20 @@
-message = input().split()
+A = list(k for k in range(1, 21) if k % 3 != 0)
 
-words, numbers = [], []
-for word in message:
-    num, let = "", ""
-    for symbol in word:
-        if symbol.isdigit():
-            num += symbol
-        else:
-            let += symbol
-    numbers.append(int(num))
-    if len(let) != 1:
-        let = f"{let[-1]}{let[1:-1]}{let[0]}"
-    words.append(let)
+B = [2 ** (k // 2) if k % 2 == 0 else 3 ** (k // 2) for k in range(15)]
 
-for n, w in zip(numbers, words):
-    print(f"{chr(n)}{w}", end=" ")
+C = [0 if k==0 or k==1 else k**2 for k in range(13) if not k in [2, 5, 7]]
+
+alpha = A[::-1]
+bravo = B[::2]
+charly = B[1::2]
+
+
+
+
+print(f"{A = }")
+print(f"{B = }")
+print(f"{C = }")
+print(f"{alpha = }")
+print(f"{bravo = }")
+print(f"{charly = }")
+
