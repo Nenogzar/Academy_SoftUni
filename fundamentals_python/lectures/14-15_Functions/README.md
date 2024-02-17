@@ -26,11 +26,13 @@
   </tr>
 </table>
 
-* Functions Overview;
+* Functions Overview
 * Declaring and Invoking Functions;
 * Return Values;
 * [Lambda Functions](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/14-15_Functions/Functions/lembda)
 * Parameters vs Arguments.
+
+> [w3schools](https://www.w3schools.com/python/python_functions.asp) 
 
 <p>
 <a>
