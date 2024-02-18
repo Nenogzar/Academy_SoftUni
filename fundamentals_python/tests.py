@@ -95,3 +95,40 @@ cleaned_text = list(map(remove_symbols_and_spaces_from_list, original_text))
 
 print(cleaned_text)
 
+
+''''''''''''''''''''''''
+
+def rotate_chr(c):
+    rot_by = 3
+    c = c.lower()
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    # Keep punctuation and whitespace
+    if c not in alphabet:
+        return c
+    rotated_pos = ord(c) + rot_by
+    # If the rotation is inside the alphabet
+    if rotated_pos <= ord(alphabet[-1]):
+        return chr(rotated_pos)
+    # If the rotation goes beyond the alphabet
+    return chr(rotated_pos - len(alphabet))
+message = "My secret message goes here."
+secret = "".join(map(rotate_chr, message))
+print(secret)
+
+def rotate_back(c):
+    rot_by = 3
+    c = c.lower()
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    # Keep punctuation and whitespace
+    if c not in alphabet:
+        return c
+    rotated_pos = ord(c) - rot_by
+    # If the rotation is inside the alphabet
+    if rotated_pos >= ord(alphabet[0]):
+        return chr(rotated_pos)
+    # If the rotation goes beyond the alphabet
+    return chr(rotated_pos + len(alphabet))
+
+encoded_message = secret
+decoded = "".join(map(rotate_back, encoded_message))
+print(decoded)
