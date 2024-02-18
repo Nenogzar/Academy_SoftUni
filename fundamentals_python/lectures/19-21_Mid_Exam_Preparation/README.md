@@ -2339,7 +2339,7 @@ else:
 
 
 ####
-<details><summary> Mid-Exam-4  - Missing 1 Condition </summary>
+<details><summary> Mid-Exam-4  - Missing 1 Condition /  2 and 3 to solve the task </summary>
 
 > 01. Experience Gaining  - Missing Condition
 
@@ -2465,7 +2465,7 @@ After receiving the "End" command, print the phones in your storage, separated b
 
 
 ####
-<details><summary> Mid-Exam-5  - Missing 2 Condition</summary>
+<details><summary> Mid-Exam-5  - Missing 1 and 2 Condition</summary>
 
 > 01. The Hunting Games - Missing Condition
 
