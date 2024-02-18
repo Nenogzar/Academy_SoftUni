@@ -1792,7 +1792,7 @@ if finished_battle:
 > 01. The Biscuit Factory - tsolve the task
 
 [judge]()</br>
-[problem]()
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_The_Biscuit_Factory.pdf)
 
 <details> <summary> Example & Code</summary>
 
@@ -1930,10 +1930,10 @@ if type_of_items == "expensive":
 
 <details><summary> Mid-Exam-2 - twdecisions await / 1 and 3/</summary>
 
-> 01. Burger Bus
+> 01. Burger Bus - to solve the task
 
 [judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01.%20Burger_Bus.pdf)
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_Burger_Bus.pdf)
 
 <details> <summary> Example & Code</summary>
 
@@ -1984,7 +1984,7 @@ NOTE: The profit and the total profit should be formatted tthe 2nd decimal place
 > 2. Numbers
 
 [judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/02.%20Numbers.pdf)
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/02_Numbers.pdf)
 
 <details> <summary> Example & Code</summary>
 
@@ -2153,7 +2153,7 @@ while True:
 > 3. Deck of Cards - tsolve the task
 
 [judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03.%20Deck_of_Cards.pdf)
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03_Deck_of_Cards.pdf)
 
 <details> <summary> Example & Code</summary>
 
@@ -2211,7 +2211,7 @@ You will **receive a list** of Cards on a single line **separated by ", "**. On 
 > 01. Cooking Masterclass	
 
 [judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01.%20Cooking_Masterclass.pdf)
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_Cooking_Masterclass.pdf)
 
 <details> <summary> Example & Code</summary>
 
@@ -2452,7 +2452,7 @@ else:
 > 2. Tax Calculator - tsolve the task
 
 [judge]()</br>
-[problem]()
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/02_Tax_Calculator.pdf)
 
 <details> <summary> Example & Code</summary>
 
@@ -2497,7 +2497,7 @@ You receive a string representing the vehicles, separated with ">>": **"vehicle1
 > 3. Phone Shop  - tsolve the task
 
 [judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03.%20Phone_Shop.pdf)
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03_Phone_Shop.pdf)
 
 <details> <summary> Example & Code</summary>
 
