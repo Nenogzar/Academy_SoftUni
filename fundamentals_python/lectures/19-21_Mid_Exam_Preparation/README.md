@@ -2336,92 +2336,10 @@ else:
 </details>
 </details>
 
-####
-<details><summary> Mid-Exam-4  - Missing 2 Condition </summary>
 
-> 01. Cooking Masterclass  - Missing Condition
-
-[judge]()</br>
-[problem]()
-
-<details> <summary> Example & Code</summary>
 
 ####
-
-<details><summary>Example</summary>
-
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-
-</details>
-<details> <summary>Code</summary>
-
-```Python
-
-```
-
-</details>
-</details>
-
-> 2. Friend List Maintenance  - Missing Condition
-
-[judge]()</br>
-[problem]()
-
-<details> <summary> Example & Code</summary>
-
-####
-
-<details><summary>Example</summary>
-
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-
-</details>
-<details> <summary>Code</summary>
-
-```Python
-
-
-```
-
-</details>
-</details>
-
-> 3. Chat Logger  - Missing Condition
-
-[judge]()</br>
-[problem]()
-
-<details> <summary> Example & Code</summary>
-
-####
-
-<details><summary>Example</summary>
-
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
-
-</details>
-
-<details> <summary>Code</summary>
-
-```Python
-
-```
-
-</details>
-</details>
-</details>
-
-####
-<details><summary> Mid-Exam-5  - Missing Condition </summary>
+<details><summary> Mid-Exam-4  - Missing 1 Condition </summary>
 
 > 01. Experience Gaining  - Missing Condition
 
@@ -2547,7 +2465,7 @@ After receiving the "End" command, print the phones in your storage, separated b
 
 
 ####
-<details><summary> Mid-Exam-6  - Missing 2 Condition</summary>
+<details><summary> Mid-Exam-5  - Missing 2 Condition</summary>
 
 > 01. The Hunting Games - Missing Condition
 
