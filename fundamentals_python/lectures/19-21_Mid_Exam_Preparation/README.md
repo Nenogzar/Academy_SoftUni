@@ -1791,8 +1791,8 @@ if finished_battle:
 
 > 01. The Biscuit Factory  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -1817,8 +1817,8 @@ if finished_battle:
 
 > 2. Coffee Lover  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -1844,8 +1844,8 @@ if finished_battle:
 
 > 3. The Angry Cat  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
