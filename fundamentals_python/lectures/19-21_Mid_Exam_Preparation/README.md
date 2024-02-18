@@ -1789,7 +1789,7 @@ if finished_battle:
 
 <details><summary> Mid-Exam-1   - Missing Condition 2,3 </summary>
 
-> 01. The Biscuit Factory - tsolve the task
+> 01. The Biscuit Factory - to solve the task
 
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_The_Biscuit_Factory.pdf)
@@ -1928,7 +1928,7 @@ if type_of_items == "expensive":
 
 ######
 
-<details><summary> Mid-Exam-2 - twdecisions await / 1 and 3/</summary>
+<details><summary> Mid-Exam-2 - 1 and 3 to solve the task </summary>
 
 > 01. Burger Bus - to solve the task
 
@@ -2150,7 +2150,7 @@ while True:
 </details>
 </details>
 
-> 3. Deck of Cards - tsolve the task
+> 3. Deck of Cards - to solve the task
 
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03_Deck_of_Cards.pdf)
@@ -2449,7 +2449,7 @@ else:
 </details>
 </details>
 
-> 2. Tax Calculator - tsolve the task
+> 2. Tax Calculator - to solve the task
 
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/02_Tax_Calculator.pdf)
@@ -2494,7 +2494,7 @@ You receive a string representing the vehicles, separated with ">>": **"vehicle1
 </details>
 </details>
 
-> 3. Phone Shop  - tsolve the task
+> 3. Phone Shop  - to solve the task
 
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03_Phone_Shop.pdf)
