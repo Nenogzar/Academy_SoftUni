@@ -2497,7 +2497,7 @@ You receive a string representing the vehicles, separated with ">>": **"vehicle1
 > 3. Phone Shop  - tsolve the task
 
 [judge]()</br>
-[problem]()
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03.%20Phone_Shop.pdf)
 
 <details> <summary> Example & Code</summary>
 
