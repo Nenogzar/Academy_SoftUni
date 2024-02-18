@@ -2254,8 +2254,8 @@ else:
 
 > 2. Friend List Maintenance  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -2281,8 +2281,8 @@ else:
 
 > 3. Chat Logger  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -2312,8 +2312,8 @@ else:
 
 > 01. Cooking Masterclass  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -2338,8 +2338,8 @@ else:
 
 > 2. Friend List Maintenance  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -2365,8 +2365,8 @@ else:
 
 > 3. Chat Logger  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -2396,8 +2396,8 @@ else:
 
 > 01. Experience Gaining  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -2422,8 +2422,8 @@ else:
 
 > 2. Tax Calculator  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -2449,8 +2449,8 @@ else:
 
 > 3. Phone Shop  - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -2481,8 +2481,8 @@ else:
 
 > 01. The Hunting Games - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -2540,8 +2540,8 @@ else:
 
 > 2. Space Travel	 - Missing Condition
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem]()
 
 <details> <summary> Example & Code</summary>
 
@@ -2567,8 +2567,8 @@ else:
 
 > 3. School Library	
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03.%20School_Library.pdf)
 
 <details> <summary> Example & Code</summary>
 
