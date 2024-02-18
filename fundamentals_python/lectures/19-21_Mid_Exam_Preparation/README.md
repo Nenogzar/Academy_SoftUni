@@ -24,7 +24,7 @@ Once you receive the type of customer you should print the receipt.
 The taxes are 20% of each part's price you receive. 
 If the customer is special, he has a 10% discount on the total price with taxes.
 If a given price is not a positive number, you should print "Invalid price!" on the console and continue with the next price.
-If the total price is equal to zero, you should print "Invalid order!" on the console.
+If the total price is equal tzero, you should print "Invalid order!" on the console.
 
 Input
 
@@ -45,8 +45,8 @@ Taxes: {total amount of taxes}$
 Total price: {total price with taxes}$"
 
 
-Note: All prices should be displayed to the second digit after the decimal point!
-The discount is applied only on the total price. Discount is only applicable to the final price!
+Note: All prices should be displayed tthe second digit after the decimal point!
+The discount is applied only on the total price. Discount is only applicable tthe final price!
 
 | Input                                                                                                                                                                | Output                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -139,28 +139,28 @@ else:
 NB! Link for judge system works only if you are registered in Software University Sofia !!!!!!!!!!!!!!
 
 Write a program that finds a place for the tourist on a lift. 
-Every wagon should have a maximum of 4 people on it. If a wagon is full, you should direct the people to the next one with space available.
+Every wagon should have a maximum of 4 people on it. If a wagon is full, you should direct the people tthe next one with space available.
 
 Input
 
-On the first line, you will receive how many people are waiting to get on the lift
+On the first line, you will receive how many people are waiting tget on the lift
 
 On the second line, you will receive the current state of the lift separated by a single space: " ".
 
 Output
 
-When there is no more available space left on the lift, or there are no more people in the queue, 
+When there is nmore available space left on the lift, or there are nmore people in the queue, 
 you should print on the console the final state of the lift's wagons separated by " " and one of the following messages:
 
-If there are no more people and the lift have empty spots, you should print:
+If there are nmore people and the lift have empty spots, you should print:
 
 "The lift has empty spots!</br>{wagons separated by ' '}"
 
-If there are still people in the queue and no more available space, you should print:
+If there are still people in the queue and nmore available space, you should print:
 
 "There isn't enough space! {people} people in a queue! </br>{wagons separated by ' '}"
 
-If the lift is full and there are no more people in the queue, you should print only the wagons separated by " "
+If the lift is full and there are nmore people in the queue, you should print only the wagons separated by " "
 
 
 
@@ -217,12 +217,12 @@ else:
 Write a program that recreates the Memory game.</br>
 On the first line, you will receive a sequence of elements.</br>
 Each element in the sequence will have a twin. Until the player receives "end" from the console,
-you will receive strings with two integers separated by a space, representing the indexes of elements in the sequence.</br>
-If the player tries to cheat and enters two equal indexes or indexes which are out of bounds of the sequence
-, you should add two matching elements at the middle of the sequence in the following format:</br>
+you will receive strings with twintegers separated by a space, representing the indexes of elements in the sequence.</br>
+If the player tries tcheat and enters twequal indexes or indexes which are out of bounds of the sequence
+, you should add twmatching elements at the middle of the sequence in the following format:</br>
 "-{number of moves until now}a" </br>
 Then print this message on the console:</br>
-"Invalid input! Adding additional elements to the board"</br>
+"Invalid input! Adding additional elements tthe board"</br>
 
 Input
 
@@ -231,9 +231,9 @@ On the following lines, you will receive integers until the command "end"</br>
 
 Output
 
-Every time the player hit two matching elements, you should remove them from the sequence and print on the console the following message:
+Every time the player hit twmatching elements, you should remove them from the sequence and print on the console the following message:
 "Congrats! You have found matching elements - ${element}!"</br>
-If the player hit two different elements, you should print on the console the following message:
+If the player hit twdifferent elements, you should print on the console the following message:
 "Try again!"</br>
 If the player hit all matching elements before he receives "end" from the console, you should print on the console the following message: 
 "You have won in {number of moves until now} turns!"</br>
@@ -247,7 +247,7 @@ All elements in the sequence will always have a matching element.
 
 | Input                                                                    | Output                                                                                                                                                                                                                                                                                                     |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 1 2 2 3 3 4 4 5 5 </br>1 0</br>-1 0</br>1 0 </br>1 0 </br>1 0 </br>end | Congrats! You have found matching elements - 1!</br>Invalid input! Adding additional elements to the board</br>Congrats! You have found matching elements - 2!</br>Congrats! You have found matching elements - 3!</br>Congrats! You have found matching elements - -2a!</br>Sorry you lose :(</br>4 4 5 5 |
+| 1 1 2 2 3 3 4 4 5 5 </br>1 0</br>-1 0</br>1 0 </br>1 0 </br>1 0 </br>end | Congrats! You have found matching elements - 1!</br>Invalid input! Adding additional elements tthe board</br>Congrats! You have found matching elements - 2!</br>Congrats! You have found matching elements - 3!</br>Congrats! You have found matching elements - -2a!</br>Sorry you lose :(</br>4 4 5 5 |
 | a 2 4 a 2 4 </br>0 3 </br>0 2</br>0 1</br>0 1 </br>end                   | Congrats! You have found matching elements - a!</br>Congrats! You have found matching elements - 2!</br>Congrats! You have found matching elements - 4!</br>You have won in 3 turns!                                                                                                                       |
 | a 2 4 a 2 4 </br>4 0 </br>0 2</br>0 1</br>0 1 </br>end                   | Try again!</br>Try again!</br>Try again!</br>Try again!</br>Sorry you lose :(</br>a 2 4 a 2 4                                                                                                                                                                                                              |
 
@@ -278,7 +278,7 @@ while True:
     if index_02 == index_01 or index_01 < 0 or index_01 >= len(elements) or index_02 < 0 or index_02 >= len(elements):
         elements.insert(middle, f'-{moves}a')
         elements.insert(middle, f'-{moves}a')
-        print("Invalid input! Adding additional elements to the board")
+        print("Invalid input! Adding additional elements tthe board")
     elif elements[index_01] == elements[index_02]:
         element = elements[index_01]
         print(f"Congrats! You have found matching elements - {element}!")
@@ -305,14 +305,14 @@ while True:
 ####
 <details><summary>Example</summary>
 
-Every day, thousands of students pass by the reception at SoftUni with different questions to ask.
-The employees have to help everyone by providing all the information and answering all of the questions.
+Every day, thousands of students pass by the reception at SoftUni with different questions task.
+The employees have thelp everyone by providing all the information and answering all of the questions.
 Three employees are working on the reception all day. Each of them can handle a different number of students per hour. 
-Your task is to calculate how much time it will take to answer all the questions of a given number of students.
+Your task is tcalculate how much time it will take tanswer all the questions of a given number of students.
 First, you will receive 3 lines with integers, representing the number of students that each employee can help per hour.
 On the following line, you will receive students count as a single integer. 
-Every fourth hour, all employees have a break, so they don't work for an hour. It is the only break for the employees, 
-because they don't need rest, nor have a personal life. Calculate the time needed to answer all the student's
+Every fourth hour, all employees have a break, sthey don't work for an hour. It is the only break for the employees, 
+because they don't need rest, nor have a personal life. Calculate the time needed tanswer all the student's
 questions and print it in the following format: "Time needed: {time}h."
 
 Input / Constraints
@@ -364,8 +364,8 @@ print(f"Time needed: {hours}h.")
 <details><summary>Example</summary>
 
 
-You are given an array with integers. Write a program to modify the elements after receiving the following commands:
-* "swap {index1} {index2}" takes two elements and swap their places.
+You are given an array with integers. Write a program tmodify the elements after receiving the following commands:
+* "swap {index1} {index2}" takes twelements and swap their places.
 * "multiply {index1} {index2}" takes element at the 1st index and multiply 
 * it with the element at 2nd index. Save the product at the 1st index.
 * "decrease" decreases all elements in the array with 1.
@@ -433,14 +433,14 @@ print(result_string)
 ```
 ```Python
 elements = [int(x) for x in input().split()]
-data_info = input()
-while data_info != "end":
+data_inf= input()
+while data_inf!= "end":
     if "decrease" in data_info:
         elements = [x - 1 for x in elements]
-        data_info = input()
+        data_inf= input()
         continue
 
-    command, index_one, index_two = [x if x.isalpha() else int(x) for x in data_info.split()]
+    command, index_one, index_tw= [x if x.isalpha() else int(x) for x in data_info.split()]
 
     if command == "swap":
         elements[index_one], elements[index_two] = elements[index_two], elements[index_one]
@@ -448,7 +448,7 @@ while data_info != "end":
     elif command == "multiply":
         elements[index_one] *= elements[index_two]
 
-    data_info = input()
+    data_inf= input()
 
 print(*elements, sep=", ")
 ```
@@ -483,14 +483,14 @@ print(*initial_array, sep=', ')
 ####
 <details><summary>Example</summary>
 
-Write a program to read a sequence of integers and find and print the top 5 numbers
+Write a program tread a sequence of integers and find and print the top 5 numbers
 greater than the average value in the sequence, sorted in descending order.
 Input
 Read from the console a single line holding space-separated integers.
 Output
 Print the above-described numbers on a single line, space-separated. 
 If less than 5 numbers hold the property mentioned above, print less than 5 numbers. 
-Print "No" if no numbers hold the above property.
+Print "No" if nnumbers hold the above property.
 Constraints
 All input numbers are integers in the range [-1 000 000 … 1 000 000]. 
 The count of numbers is in the range [1…10 000].
@@ -499,7 +499,7 @@ The count of numbers is in the range [1…10 000].
 |-------------------------------------|----------------|
 | 10 20 30 40 50                      | 50 40          |
 | 5 2 3 4 -10 30 40 50 20 50 60 60 51 | 60 60 51 50 50 |
-| 1                                   | No             |
+| 1                                   | N            |
 | -1 -2 -3 -4 -5 -6                   | -1 -2 -3       |
 
 </details>
@@ -543,10 +543,10 @@ else:
 
 Write a program that keeps track of every won battle against an enemy.</br>
 You will receive initial energy. Afterward, you will start receiving
-the distance you need to reach an enemy until the "End of battle" command is given, or you run out of energy.</br>
-The energy you need for reaching an enemy is equal to the distance you receive.</br>
+the distance you need treach an enemy until the "End of battle" command is given, or you run out of energy.</br>
+The energy you need for reaching an enemy is equal tthe distance you receive.</br>
 Each time you reach an enemy, you win a battle, and your energy is reduced. </br>
-Otherwise, if you don't have enough energy to reach an enemy, end the program and print:</br>
+Otherwise, if you don't have enough energy treach an enemy, end the program and print:</br>
 "Not enough energy! Game ends with {count} won battles and {energy} energy".</br>
 Every third won battle increases your energy with the value of your current count of won battles.</br>
 Upon receiving the "End of battle" command, print the count of won battles in the following format:</br>
@@ -603,7 +603,7 @@ def check_win_counter(energy, distance_to_enemy, win_counter):
         win_counter += 1
     else:
         print(f"Not enough energy! Game ends with {win_counter} won battles and {energy} energy")
-        return False  # We return False to indicate that the game is over
+        return False  # We return False tindicate that the game is over
 
     if win_counter % 3 == 0:
         energy += win_counter
@@ -663,7 +663,7 @@ print(f"Won battles: {win_counter}. Energy left: {energy}")
 
 >  2.	Shoot for the Win
 
-[Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
+[Link tJudge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
 <details> <summary> Example & Code</summary>
 
@@ -673,21 +673,21 @@ print(f"Won battles: {win_counter}. Energy left: {energy}")
 Write a program that helps you keep track of your shot targets. </br>
 You will receive a sequence with integers, separated by a single space, 
 representing targets and their value. Afterward, you will be receiving 
-indices until the "End" command is given, and you need to print the targets and the count of shot targets.</br>
-Every time you receive an index, you need to shoot the target on that index, if it is possible. </br>
+indices until the "End" command is given, and you need tprint the targets and the count of shot targets.</br>
+Every time you receive an index, you need tshoot the target on that index, if it is possible. </br>
 Every time you shoot a target, its value becomes -1, and it is considered shot. </br>
 
-Along with that, you also need to:</br>
+Along with that, you alsneed to:</br>
 Reduce all the other targets, which have greater values than your current target, with its value.</br> 
-Increase all the other targets, which have less than or equal value to the shot target, with its value.</br>
-Keep in mind that you can't shoot a target, which is already shot. You also can't increase or reduce a target, which is considered shot.
+Increase all the other targets, which have less than or equal value tthe shot target, with its value.</br>
+Keep in mind that you can't shoot a target, which is already shot. You alscan't increase or reduce a target, which is considered shot.
 When you receive the "End" command, print the targets in their current state and the count of shot targets in the following format:</br>
 "Shot targets: {count} -> {target1} {target2}… {targetn}"
 
 Input / Constraints
 
 On the first line of input, you will receive a sequence of integers, separated by a single space – the targets sequence.</br>
-On the following lines, until the "End" command, you be receiving integers each on a single line – the index of the target to be shot.</br>
+On the following lines, until the "End" command, you be receiving integers each on a single line – the index of the target tbe shot.</br>
 
 Output
 
@@ -864,11 +864,11 @@ print(*targets, sep='|')
 ####
 <details><summary>Example</summary>
 Merry has a guinea pig named Puppy, that she loves very much.
-Every month she goes to the nearest pet store and buys him everything he needs – food, hay, and cover.
+Every month she goes tthe nearest pet store and buys him everything he needs – food, hay, and cover.
 On the first three lines, you will receive the quantity of food, hay, and cover, 
 which Merry buys for a month (30 days). On the fourth line, you will receive the guinea pig's weight.
 Every day Puppy eats 300 gr of food. Every second day Merry first feeds the pet, 
-then gives it a certain amount of hay equal to 5% of the rest of the food. On every third day, 
+then gives it a certain amount of hay equal t5% of the rest of the food. On every third day, 
 Merry puts Puppy cover with a quantity of 1/3 of its weight.
 Calculate whether the quantity of food, hay, and cover, will be enough for a month.
 If Merry runs out of food, hay, or cover, stop the program!
@@ -885,13 +885,13 @@ Output
 * If the food, the hay, and the cover are enough, print:
 * "Everything is fine! Puppy is happy! Food: {excessFood}, Hay: {excessHay}, Cover: {excessCover}."
 * If one of the things is not enough, print:
-* "Merry must go to the pet store!"
-* The output values must be formatted to the second decimal place!
+* "Merry must gtthe pet store!"
+* The output values must be formatted tthe second decimal place!
 
 |Input|Output|
 |-|-|
 |10</br>5</br>5.2</br>1|Everything is fine! Puppy is happy! Food: 1.00, Hay: 1.10, Cover: 1.87.|
-|1</br>1.5</br>3</br>1.5|Merry must go to the pet store!|
+|1</br>1.5</br>3</br>1.5|Merry must gtthe pet store!|
 
 
 </details>
@@ -922,7 +922,7 @@ if food_kg > 0 and hay_kg > 0 and cover_kg > 0:
     print(f"Everything is fine! Puppy is happy! Food: {food_kg / 1000:.2f}, Hay: {hay_kg / 1000:.2f}, Cover: {cover_kg / 1000:.2f}.")
 
 else:
-    print("Merry must go to the pet store!")
+    print("Merry must gtthe pet store!")
 ```
 </details>
 </details>
@@ -937,10 +937,10 @@ else:
 ####
 <details><summary>Example</summary>
 
-It's the end of the week, and it is time for you to go shopping, so you need to create a shopping list first.
+It's the end of the week, and it is time for you tgshopping, syou need tcreate a shopping list first.
 Input
 You will receive an initial list with groceries separated by an exclamation mark "!".
-After that, you will be receiving 4 types of commands until you receive "Go Shopping!".
+After that, you will be receiving 4 types of commands until you receive "GShopping!".
 * "Urgent {item}" - add the item at the start of the list. 
 If the item already exists, skip this command.
 * "Unnecessary {item}" - remove the item with the given name, only if it exists in the list.
@@ -958,9 +958,9 @@ Output
 
 | Input | Output |
 |-------|--------|
-|Tomatoes!Potatoes!Bread</br>Unnecessary Milk</br>Urgent Tomatoes</br>Go Shopping!|Tomatoes, Potatoes, Bread|
+|Tomatoes!Potatoes!Bread</br>Unnecessary Milk</br>Urgent Tomatoes</br>GShopping!|Tomatoes, Potatoes, Bread|
 |Milk!Pepper!Salt!Water!Banana</br>
-Urgent Salt</br>Unnecessary Grapes </br>Correct Pepper Onion</br>Rearrange Grapes</br>Correct Tomatoes Potatoes</br>Go Shopping!|Milk, Onion, Salt, Water, Banana|
+Urgent Salt</br>Unnecessary Grapes </br>Correct Pepper Onion</br>Rearrange Grapes</br>Correct Tomatoes Potatoes</br>GShopping!|Milk, Onion, Salt, Water, Banana|
 
 </details>
 <details> <summary>Code</summary>
@@ -970,7 +970,7 @@ initial_list = input().split('!')
 
 while True:
     command = input()
-    if command == "Go Shopping!":
+    if command == "GShopping!":
         break
     current_input = command.split()
     order = current_input[0]
@@ -999,28 +999,28 @@ print(*initial_list,sep=', ')
 
 > 3.	Heart Delivery
 
-[Link to Judge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
+[Link tJudge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
 [Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
 <details> <summary> Example & Code</summary>
 
 ####
 <details><summary>Example</summary>
 
-Valentine's day is coming, and Cupid has minimal time to spread some love across the neighborhood. Help him with his mission!
+Valentine's day is coming, and Cupid has minimal time tspread some love across the neighborhood. Help him with his mission!
 You will receive a string with even integers, separated by a "@" - this is our neighborhood.
 After that, a series of Jump commands will follow until you receive "Love!".
-Every house in the neighborhood needs a certain number of hearts delivered by Cupid so it can celebrate Valentine's day.
+Every house in the neighborhood needs a certain number of hearts delivered by Cupid sit can celebrate Valentine's day.
 The integers in the neighborhood indicate those needed hearts.
 Cupid starts at the position of the first house (index 0) and must jump by a given length.
 The jump commands will be in this format: "Jump {length}". 
-Every time he jumps from one house to another, the needed hearts for the visited house are decreased by 2: 
-* If the needed hearts for a certain house become equal to 0, print on the console "Place {house_index} has Valentine's day." 
-* If Cupid jumps to a house where the needed hearts are already 0, print on the console "Place {house_index} already had Valentine's day."
+Every time he jumps from one house tanother, the needed hearts for the visited house are decreased by 2: 
+* If the needed hearts for a certain house become equal t0, print on the console "Place {house_index} has Valentine's day." 
+* If Cupid jumps ta house where the needed hearts are already 0, print on the console "Place {house_index} already had Valentine's day."
 * Keep in mind that Cupid can have a larger jump length than the size of the neighborhood, 
 and if he does jump outside of it, he should start from the first house again (index 0)
 For example, we are given this neighborhood: 6@6@6. Cupid is at the start and jumps with a length of 2.
 He will end up at index 2 and decrease the needed hearts by 2: [6, 6, 4]. Next,
-he jumps again with a length of 2 and goes outside the neighborhood, so he goes back to the first house (index 0)
+he jumps again with a length of 2 and goes outside the neighborhood, she goes back tthe first house (index 0)
 and again decreases the needed hearts there: [4, 6, 4].
 Input
 * On the first line, you will receive a string with even integers separated by "@" – the neighborhood and the number of hearts for each house.
@@ -1157,7 +1157,7 @@ else:
 <details><summary>Example</summary>
 
 Create a program that calculates bonus points for each student enrolled in a course.
-On the first line, you are going to receive the number of the students. On the second line,
+On the first line, you are going treceive the number of the students. On the second line,
 you will receive the total number of lectures in the course. The course has an additional bonus,
 which you will receive on the third line. On the following lines,
 you will be receiving the count of attendances for each student.
@@ -1167,16 +1167,16 @@ Find the student with the maximum bonus and print them, along with his attendanc
 in the following format:
 "Max Bonus: {max bonus points}."
 "The student has attended {student attendances} lectures."
-Round the bonus points at the end to the nearest larger number.
+Round the bonus points at the end tthe nearest larger number.
 Input / Constrains
-* On the first line, you are going to receive the number of the students – an integer in the range [0…50]
+* On the first line, you are going treceive the number of the students – an integer in the range [0…50]
 * On the second line, you will receive the number of the lectures – an integer number in the range [0...50].
 * On the third line, you will receive the additional bonus – an integer number in the range [0….100].
 * On the following lines, you will be receiving the attendance of each student.
 * There will never be students with equal bonuses.
 Output
 * Print the maximum bonus points and the attendances of the given student,
-rounded to the nearest larger number, scored by a student in this course in the format described above.
+rounded tthe nearest larger number, scored by a student in this course in the format described above.
 
 | Input                                                                                | Output                                                    |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------|
@@ -1235,8 +1235,8 @@ Each room contains a command and a number, separated by space. The command can b
   The second part of the room contains the attack of the monster. You should remove the monster's attack from your health. 
 * If you are not dead (health <= 0), you've slain the monster, and you should print: "You slayed {monster}."
 * If you've died, print "You died! Killed by {monster}." and your quest is over. 
-Print the best room you've manage to reach: "Best room: {room}"
-If you managed to go through all the rooms in the dungeon, print on the following three lines: 
+Print the best room you've manage treach: "Best room: {room}"
+If you managed tgthrough all the rooms in the dungeon, print on the following three lines: 
 
 "You've made it!"</br>
 "Bitcoins: {bitcoins}"</br>
@@ -1319,7 +1319,7 @@ As a young traveler, you gather items and craft new items.
 Input / Constraints
 You will receive a journal with some collecting items, separated with a comma and a space (", ").
  After that, until receiving "Craft!" you will be receiving different commands split by " - ":
-* "Collect - {item}" - you should add the given item to your inventory. 
+* "Collect - {item}" - you should add the given item tyour inventory. 
 If the item already exists, you should skip this line.
 * "Drop - {item}" - you should remove the item from your inventory if it exists.
 * "Combine Items - {old_item}:{new_item}" - you should check if the old item exists. 
@@ -1478,22 +1478,22 @@ print(*items, sep=", ")
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
-Pirates are invading the sea, and you're tasked to help them plunder
+Pirates are invading the sea, and you're tasked thelp them plunder
 Create a program that checks if target plunder is reached. 
 First, you will receive how many days the pirating lasts.
 
  Then you will receive how much the pirates plunder for a day. 
  Last you will receive the expected plunder at the end.
 
-Calculate how much plunder the pirates manage to gather. Each day they gather the plunder. 
+Calculate how much plunder the pirates manage tgather. Each day they gather the plunder. 
 Keep in mind that they attack more ships every third day and 
-add additional plunder to their total gain, which is 50% of the daily plunder.
+add additional plunder ttheir total gain, which is 50% of the daily plunder.
  Every fifth day the pirates encounter a warship, and after the battle, they lose 30% of their total plunder.
-If the gained plunder is more or equal to the target, print the following:
+If the gained plunder is more or equal tthe target, print the following:
 "Ahoy! {totalPlunder} plunder gained."
 If the gained plunder is less than the target. Calculate the percentage left and print the following:
 "Collected only {percentage}% of the plunder."
-Both numbers should be formatted to the 2nd decimal place.
+Both numbers should be formatted tthe 2nd decimal place.
 Input
 * On the 1st line, you will receive the days of the plunder – an integer number in the range [0…100000]
 * On the 2nd line, you will receive the daily plunder – an integer number in the range [0…50]
@@ -1542,7 +1542,7 @@ else:
 <details> <summary> Example & Code</summary>
 <details><summary>Example</summary>
 
-The pirates need to carry a treasure chest safely back to the ship, looting along the way.
+The pirates need tcarry a treasure chest safely back tthe ship, looting along the way.
 Create a program that manages the state of the treasure chest along the way. 
 On the first line, you will receive the initial loot of the treasure chest,
  which is a string of items separated by a "|".
@@ -1568,14 +1568,14 @@ remove as much as there are.
 "{item1}, {item2}, {item3} … {itemn}"
 
 In the end, output the average treasure gain, which is the sum of all treasure items 
-length divided by the count of all items inside the chest formatted to the second decimal point:
+length divided by the count of all items inside the chest formatted tthe second decimal point:
 "Average treasure gain: {averageGain} pirate credits."
 If the chest is empty, print the following message:
 "Failed treasure hunt."
 
 ### Input
 
-* On the 1st line, you are going to receive the initial treasure chest (loot separated by "|")
+* On the 1st line, you are going treceive the initial treasure chest (loot separated by "|")
 * On the following lines, until "Yohoho!", you will be receiving commands.
 
 ### Output
@@ -1664,7 +1664,7 @@ else:
 </details>
 </details>
 
-> 3. Man O War
+> 3. Man War
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/1773#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40390)
@@ -1704,8 +1704,8 @@ in the following format:
 Warship status: {warshipSum}"
 
 ### Input
-* On the 1st line, you are going to receive the status of the pirate ship (integers separated by '>')
-* On the 2nd line, you are going to receive the status of the warship
+* On the 1st line, you are going treceive the status of the pirate ship (integers separated by '>')
+* On the 2nd line, you are going treceive the status of the warship
 * On the 3rd line, you will receive the maximum health a section of a ship can reach.
 * On the following lines, until "Retire", you will be receiving commands.
 ### Output
@@ -1787,9 +1787,9 @@ if finished_battle:
 
 ######
 
-<details><summary> Mid-Exam-1   - Missing Condition </summary>
+<details><summary> Mid-Exam-1   - Missing Condition 2,3 </summary>
 
-> 01. The Biscuit Factory  - Missing Condition
+> 01. The Biscuit Factory - tsolve the task
 
 [judge]()</br>
 [problem]()
@@ -1800,10 +1800,39 @@ if finished_battle:
 
 <details><summary>Example</summary>
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
+Create a program that will help Anna calculate how many biscuits her factory can make in a month (**30 days**) and the percentage of production compared tanother factory's production.</br>
+First, you will receive the biscuits produced **per day** (per worker). After that, you will receive the count of workers in your factory. Last, you will receive the number of biscuits that the **competing factory produces for 30 days**.</br>
+You need tcalculate the production of your factory within **30 days**. Then you should calculate how much more or less biscuits you produce compared tthe other factory (**in percentage**). There will be ncase where the factories will produce the same number of biscuits.</br>
+Every **third day** the workers produce **only 75%** of the usual production. Keep in mind that there can be only a whole biscuit after making calculations for each day – format them tthe lower number.</br>
+In the end, **print the number** of biscuits produced for **30 days** in the following format:</br>
+**"You have produced {countBiscuits} biscuits for the past month.**"</br>
+Then print the **percentage of the difference**, formatted tthe 2nd decimal place, in the following format:</br>
+If your production is **bigger** than the other factory:</br>
+**"You produce {percentage} percent more biscuits."**</br>
+If not:</br>
+**"You produce {percentage} percent less biscuits."**
+
+#### Input
+
+* On the first line, you will receive the number of biscuits a worker produces per day – an integer number in the range [1…200].
+* On the second line, you will receive the count of the workers in your factory – an integer number in the range [1…1000].
+* On the third line, you will receive the number of biscuits that the competing factory produces for 30 days – an integer number in the range [1…264].
+NOTE: The input will always be in the correct format.
+
+#### Output
+
+* Print the number of biscuits produced for 30 days in the format described above.
+* Print the percentage of the difference formatted tthe 2nd decimal place in the format described above.
+
+#### Constraints
+* The percentage can be over 100%.
+* There will be ncase where the factories will produce the same number of biscuits.
+
+| Input                | Output                                                                                            |
+|----------------------|---------------------------------------------------------------------------------------------------|
+| 78</br>8</br>16000   | You have produced 17160 biscuits for the past month.</br>You produce 7.25 percent more biscuits.  |
+| 65</br>12</br>26000  | You have produced 21450 biscuits for the past month.</br>You produce 17.50 percent less biscuits. |
+| 163</br>16</br>67020 | You have produced 71720 biscuits for the past month.</br>You produce 7.01 percent more biscuits.  |
 
 </details>
 <details> <summary>Code</summary>
@@ -1899,7 +1928,7 @@ if type_of_items == "expensive":
 
 ######
 
-<details><summary> Mid-Exam-2 - two decisions await / 1 and 3/</summary>
+<details><summary> Mid-Exam-2 - twdecisions await / 1 and 3/</summary>
 
 > 01. Burger Bus
 
@@ -1912,16 +1941,16 @@ if type_of_items == "expensive":
 
 <details><summary>Example</summary>
 
-_The Burger Bus travels around the country and serves delicious burgers. You need to help the owner keep track of his
+_The Burger Bus travels around the country and serves delicious burgers. You need thelp the owner keep track of his
 income and expenses along the way._</br>
 First, you will receive the number of cities the bus has visited. Then for every city, you will receive:
 * the name of the city
 * how much money the owner earned
 * owner's expenses
 
-Every 3rd (third) city the bus visits, the owner organizes a special event to ensure a true "Burger Bus" experience, spending an additional 50% over costs.</br>
-In every 5th (fifth) city, it is raining, and the owner losses 10% of the money he earned. In a rainy city, there is no possibility to organize a special event.</br>
-You have to calculate the owner's profit for each city and his total profit from the tour. Profit is calculated by deducting the expenses from the income.</br>
+Every 3rd (third) city the bus visits, the owner organizes a special event tensure a true "Burger Bus" experience, spending an additional 50% over costs.</br>
+In every 5th (fifth) city, it is raining, and the owner losses 10% of the money he earned. In a rainy city, there is npossibility torganize a special event.</br>
+You have tcalculate the owner's profit for each city and his total profit from the tour. Profit is calculated by deducting the expenses from the income.</br>
 #### Input
 The input will consist of:
 * Number of cities – integer in the range [1…15]
@@ -1931,11 +1960,11 @@ The input will consist of:
   * owner's expenses - a real number in the range [0.0…10 000.0]
 * The input will always be in the correct format.
 #### Output
-* For every city, you need to print the following message: </br>
+* For every city, you need tprint the following message: </br>
 **"In {cityName} Burger Bus earned {profit} leva."**
 * At the end of the tour, print:</br>
 **"Burger Bus total profit: {totalProfit} leva."**
-NOTE: The profit and the total profit should be formatted to the 2nd decimal place
+NOTE: The profit and the total profit should be formatted tthe 2nd decimal place
 
 | Input                                                                                                                                                                             | Output                                                                                                                                                                                                                                                                         |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1965,7 +1994,7 @@ NOTE: The profit and the total profit should be formatted to the 2nd decimal pla
 
 You are given numbers in a sequence on a single line, separated by a space. After that, you will receive commands that modify the sequence differently:
 
-* **"Add {value}"** - you should add the given value to the end of the sequence.
+* **"Add {value}"** - you should add the given value tthe end of the sequence.
 * **"Remove {value}"** - you should remove the first occurrence of the given value if there is such.
 * **"Replace {value} {replacement}"** - you should replace the first occurrence of the given value with the replacement if there is such occurrence.
 * **"Collapse {value}"** you must remove each number with a value less than the given one.
@@ -2121,7 +2150,7 @@ while True:
 </details>
 </details>
 
-> 3. Deck of Cards
+> 3. Deck of Cards - tsolve the task
 
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03.%20Deck_of_Cards.pdf)
@@ -2135,7 +2164,7 @@ while True:
 You will **receive a list** of Cards on a single line **separated by ", "**. On the **next line**, you will receive a number **n**. On the next **n** lines, you will receive commands that could be:
 
 * **"Add, {CardName}"**: 
-  * Add the given card to the card deck and print: **"Card successfully added"**
+  * Add the given card tthe card deck and print: **"Card successfully added"**
   * If it is already in the deck, print:  **"Card is already in the deck"**
 * **"Remove, {CardName}"**:
   * Remove the given card from the card deck and print:  **"Card successfully removed"**
@@ -2156,12 +2185,12 @@ You will **receive a list** of Cards on a single line **separated by ", "**. On 
 
 #### Output
 
-* After going through all the commands, you need to print all cards on a single line separated by ", ".
+* After going through all the commands, you need tprint all cards on a single line separated by ", ".
 
 | Input                                                                                                                                     | Output                                                                                                                                                 |
 |-------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Ace of Diamonds, Queen of Hearts, King of Clubs</br>3</br>Add, King of Diamonds</br>Insert, 2, Jack of Spades</br>Remove, Ace of Diamonds | Card successfully added</br>Card successfully added</br>Card successfully removed</br>Queen of Hearts, Jack of Spades, King of Clubs, King of Diamonds |
-| Two of Clubs, King of Spades, Five of Spades, Jack of Hearts</br>2</br>Add, Two of Clubs</br>Remove, Five of Hearts                       | Card is already in the deck</br>Card not found</br>Two of Clubs, King of Spades, Five of Spades, Jack of Hearts                                        |
+| Twof Clubs, King of Spades, Five of Spades, Jack of Hearts</br>2</br>Add, Twof Clubs</br>Remove, Five of Hearts                       | Card is already in the deck</br>Card not found</br>Twof Clubs, King of Spades, Five of Spades, Jack of Hearts                                        |
 | Jack of Spades, Ace of Clubs, Jack of Clubs</br>2</br>Insert, -1, Queen of Spades</br>Remove At, 1                                        | Index out of range</br>Card successfully removed</br>Jack of Spades, Jack of Clubs                                                                     |
 </details>
 
@@ -2190,10 +2219,10 @@ You will **receive a list** of Cards on a single line **separated by ", "**. On 
 
 <details><summary>Example</summary>
 
-_George is starting his own course, a Cooking Masterclass. So, he asked you to buy the needed items._</br>
+_George is starting his own course, a Cooking Masterclass. So, he asked you tbuy the needed items._</br>
 The number of items depends on how many students will sign up for the course. The educational set for one student consists of 1 package of flour, 10 eggs, and an apron.</br> 
-You will be given George's budget, the number of students signed, and each item's price. You should help George calculate if the budget is enough to buy all the items or how much more money he needs.</br> 
-You should know that the aprons get dirty often, so George should buy 20% more, rounded up to the next integer. Also, every fifth package of flour is free. </br>
+You will be given George's budget, the number of students signed, and each item's price. You should help George calculate if the budget is enough tbuy all the items or how much more money he needs.</br> 
+You should know that the aprons get dirty often, sGeorge should buy 20% more, rounded up tthe next integer. Also, every fifth package of flour is free. </br>
 
 * Input / Constraints
 
@@ -2204,14 +2233,14 @@ You should know that the aprons get dirty often, so George should buy 20% more, 
 * price for a package of flour - a floating-point number in the range [0.00…100.00]
 * price for a single egg - a floating-point number in the range [0.00…100.00]
 * price for a single apron - a floating-point number in the range [0.00…100.00]
-The input data will always be valid. There is no need to check it explicitly.
+The input data will always be valid. There is nneed tcheck it explicitly.
 #### Output
 The output should be printed on the console.
-* If the calculated price of the items is less or equal to the budget:
+* If the calculated price of the items is less or equal tthe budget:
   * "Items purchased for {the cost of the items}$."
 * If the calculated price is more than the budget:
   * "{neededMoney}$ more needed."
-* All prices must be formatted to two digits after the decimal point.
+* All prices must be formatted ttwdigits after the decimal point.
 
 | Input                                   | Output                      |
 |-----------------------------------------|-----------------------------|
@@ -2231,10 +2260,10 @@ price_flour = float(input())
 price_one_egg = float(input()) * 10
 price_apron = float(input())
 
-po_malko = 0
+po_malk= 0
 for n in range(1, students + 1):
     if n % 5 == 0:
-        po_malko += 1
+        po_malk+= 1
 
 
 total_price_flour = price_flour * (students - po_malko)
@@ -2420,7 +2449,7 @@ else:
 </details>
 </details>
 
-> 2. Tax Calculator  - Missing Condition
+> 2. Tax Calculator - tsolve the task
 
 [judge]()</br>
 [problem]()
@@ -2431,10 +2460,28 @@ else:
 
 <details><summary>Example</summary>
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
+_The National Revenue Agency hired you tcreate software, which will help them tcalculate the vehicle taxes.</br>_
+You will be given a string representing vehicles that will be taxed. Each vehicle is separated by ">>", where the first element is a string representing the car type, the second element is an integer representing the years the tax should be paid, and the third element is an integer representing the kilometers traveled.</br>
+There are three valid types of vehicles:</br>
+* "**family**" – the initial tax for a family car is 50 euros</br>
+* " **heavyDuty**" – the initial tax for a heavy-duty is 80 euros</br>
+* "**sports**" – the initial tax for a sports car is 100 euros</br>
+If the car is not valid print **"Invalid car type."** and continue tthe next vehicle.</br>
+When calculating tax keep in mind the following rules:</br> 
+* For a **family** car, the tax declines by 5 euros for every year in use. Also, the tax increases by **12 euros** for every **3000 km**. traveled. 
+* For a **heavyDuty** car, the tax declines by 8 euros for every year in use. Also, the tax increases by **14 euros** for every **9000 km**. traveled.
+* For a **sports** car, the tax declines by 9 euros for every year in use. Also, the tax increase by **18 euros** for every **2000 km**. Traveled.</br>
+
+#### Input</br>
+You receive a string representing the vehicles, separated with ">>": **"vehicle1>>vehicle2>>vehicle3…"**.
+#### Output</br>
+* Upon every successful taxed car print: "**A {car type} car will pay {total tax tpay} euros in taxes.**" Format the total tax tpay tthe second digit after the decimal point.
+* On the last line, print how much the National Revenue Agency will collect: **"The National Revenue Agency will collect {total tax collected} euros in taxes."** Formatted tthe second digit after the decimal point.
+
+| Input                                                                                   | Output                                                                                                                                                                                                                                                                                    |
+|-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| family 3 7210>>van 4</br> 2345>>heavyDuty 9 31000>>sports 4</br> 7410                   | A family car will pay 59.00 euros in taxes.</br>Invalid car type.</br>A heavyDuty car will pay 50.00 euros in taxes.</br>A sports car will pay 118.00 euros in taxes.                                                                                                                     |
+| family 5 3210>>pickUp 1</br> 1345>>heavyDuty 7 21000>>sports 5 </br>9410>>family 3 9012 | A family car will pay 37.00 euros in taxes.</br>Invalid car type.</br>A heavyDuty car will pay 52.00 euros in taxes.</br>A sports car will pay 127.00 euros in taxes.</br>A family car will pay 71.00 euros in taxes.</br>The National Revenue Agency will collect 287.00 euros in taxes. |
 
 </details>
 <details> <summary>Code</summary>
@@ -2447,7 +2494,7 @@ else:
 </details>
 </details>
 
-> 3. Phone Shop  - Missing Condition
+> 3. Phone Shop  - tsolve the task
 
 [judge]()</br>
 [problem]()
@@ -2458,10 +2505,33 @@ else:
 
 <details><summary>Example</summary>
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
+_Kevin has a phone shop. He has torder new models, but his storage is slarge that he doesn't know which phone models he has._
+
+Write a program that will help Kevin not tbuy unnecessary phones. You will receive a list of phones separated by "**,** " (comma and space). After that, until you receive **"End"**, you will receive different commands, each on a new line. The commands are:</br>
+* **"Add - {phone}"**:
+  * Add the given phone tthe storage.
+  * If the phone already **exists**, you should **skip** this line.
+* **"Remove - {phone}"**:
+  * Remove the phone from the storage **if it exists**.
+  * Otherwise, ignore the command.
+* **"Bonus phone - {oldPhone}:{newPhone}"**:
+  * If the old phone exists, add the new phone **after** the **old one**.
+  * Otherwise, ignore the command.
+* **"Last - {phone}"**:
+  * If the given **phone exists**, you should change its position and **put it last** in your storage.
+  * Otherwise, **ignore** the command.
+
+#### Input</br>
+On the first line - list of phones separated by ", " (comma and space)</br>
+On the next lines - commands until you receive "End"</br>
+#### Output</br>
+After receiving the "End" command, print the phones in your storage, separated by ", " (comma and space)
+
+| Input                                                                                   | Output                            |
+|-----------------------------------------------------------------------------------------|-----------------------------------|
+| SamsungA50, MotorolaG5, IphoneSE</br>Add - Iphone10</br>Remove - IphoneSE</br>End       | SamsungA50, MotorolaG5, Iphone10  |
+| HuaweiP20, XiaomiNote</br>Remove - Samsung</br>Bonus phone - XiaomiNote:Iphone5</br>End | HuaweiP20, XiaomiNote, Iphone5    |
+| SamsungA50, MotorolaG5, HuaweiP10</br>Last - SamsungA50</br>Add - MotorolaG5</br>End    | MotorolaG5, HuaweiP10, SamsungA50 |
 
 </details>
 
@@ -2576,7 +2646,7 @@ else:
 
 <details><summary>Example</summary>
 
-Your task is to do an online book library.
+Your task is tdan online book library.
 On the first line, you will receive a string representing a shelf with books in the library. Every book is separated with "&".
 
 On the next lines until the "Done" command, you will be receiving the commands separated with " | ":
