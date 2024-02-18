@@ -1903,8 +1903,8 @@ if type_of_items == "expensive":
 
 > 01. Burger Bus
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01.%20Burger_Bus.pdf)
 
 <details> <summary> Example & Code</summary>
 
@@ -1954,8 +1954,8 @@ NOTE: The profit and the total profit should be formatted to the 2nd decimal pla
 
 > 2. Numbers
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/02.%20Numbers.pdf)
 
 <details> <summary> Example & Code</summary>
 
@@ -2123,8 +2123,8 @@ while True:
 
 > 3. Deck of Cards
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03.%20Deck_of_Cards.pdf)
 
 <details> <summary> Example & Code</summary>
 
@@ -2181,8 +2181,8 @@ You will **receive a list** of Cards on a single line **separated by ", "**. On 
 
 > 01. Cooking Masterclass	
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+[judge]()</br>
+[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01.%20Cooking_Masterclass.pdf)
 
 <details> <summary> Example & Code</summary>
 
