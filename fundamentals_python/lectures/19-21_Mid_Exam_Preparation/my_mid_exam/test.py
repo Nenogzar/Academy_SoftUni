@@ -1,29 +1,25 @@
-budget = float(input())
-season = str(input())
+count_of_numbers = list(map(int, input().split()))
+command = input().split()
+while command[0] != "Finish":
+    if len(command) <= 2:
+        action = command[0]
+        value = int(command[1])
+        if action == "Add":
+            count_of_numbers.append(value)
+        elif action == "Remove":
+            count_of_numbers.remove(value)
+        elif action == "Collapse":
+            for i in count_of_numbers:
+                if i < value:
+                    count_of_numbers.remove(i)
+    elif len(command) > 2:
+        value = int(command[1])
+        replacement = int(command[2])
 
-destination = ""
+        index = count_of_numbers.index(value)
+        count_of_numbers.pop(index)
+        count_of_numbers.insert(index, replacement)
 
-if budget <= 100:
-    destination = 'Bulgaria'
-    if season == 'summer':
-        type_of_trip = 'Camp'
-        trip_expense = budget * 0.30
-    elif season == 'winter':
-        type_of_trip = 'Hotel'
-        trip_expense = budget * 0.70
-elif 100 < budget <= 1000:
-    destination = 'Balkans'
-    if season == 'summer':
-        type_of_trip = 'Camp'
-        trip_expense = budget * 0.40
-    elif season == 'winter':
-        type_of_trip = 'Hotel'
-        trip_expense = budget * 0.80
-elif budget > 1000:
-    destination = 'Europe'
-    type_of_trip = 'Hotel'
-    trip_expense = budget * 0.90
+    command = input().split()
 
-if destination:
-    print(f"Somewhere in {destination}")
-    print(f"{type_of_trip} - {trip_expense:.2f}")
+print(*count_of_numbers, sep=" ")

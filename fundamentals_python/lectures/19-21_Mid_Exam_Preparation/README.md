@@ -2070,6 +2070,34 @@ while command != "Finish":
 result_string = ' '.join(map(str, input_numbers))
 print(result_string)
 ```
+```Python
+sequence_of_numbers = [int(x) for x in input().split()]
+ 
+while True:
+    commands = input()
+ 
+    if commands == "Finish":
+        print(*sequence_of_numbers)
+        break
+ 
+    commands = commands.split()
+    action = commands[0]
+    value = int(commands[1])
+    if action == "Add":
+        sequence_of_numbers.append(value)
+ 
+    elif action == "Remove":
+        sequence_of_numbers.remove(value)
+ 
+    elif action == "Replace":
+        replace_value = int(commands[2])
+        find_index = sequence_of_numbers.index(value)
+        sequence_of_numbers.remove(value)
+        sequence_of_numbers.insert(find_index, replace_value)
+ 
+    elif action == "Collapse":
+        sequence_of_numbers = [x for x in sequence_of_numbers if x >= value]
+```
 
 </details>
 </details>
