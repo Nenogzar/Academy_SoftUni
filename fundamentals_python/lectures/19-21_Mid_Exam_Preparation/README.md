@@ -1785,7 +1785,690 @@ if finished_battle:
 
 </details>
 
+######
+
+<details><summary> Mid-Exam-1 </summary>
+
+> 01. The Biscuit Factory
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+```
+
+</details>
+</details>
+
+> 2. Coffee Lover
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+
+</details>
+</details>
+
+> 3. The Angry Cat
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+
+<details> <summary>Code</summary>
+
+Bilyana Panova
+```Python
+price_rating = [int(x) for x in input().split(", ")]
+entry_point = int(input())
+type_of_items = input()
+ 
+ 
+def cheep_summing(side):
+    return sum([x for x in side if x < entry_point])
+ 
+ 
+def expensive_summing(side):
+    return sum([x for x in side if x >= entry_point])
+ 
+ 
+left_side = price_rating[:entry_point]
+right_side = price_rating[entry_point+1:]
+entry_point = price_rating.pop(entry_point)
+ 
+if type_of_items == "cheap":
+    if cheep_summing(left_side) >= cheep_summing(right_side):
+        print(f"Left - {cheep_summing(left_side)}")
+    else:
+        print(f"Right - {cheep_summing(right_side)}")
+if type_of_items == "expensive":
+    if expensive_summing(left_side) >= expensive_summing(right_side):
+        print(f"Left - {expensive_summing(left_side)}")
+    else:
+        print(f"Right - {expensive_summing(right_side)}")
+```
+
+</details>
+</details>
+</details>
+
+######
+
+<details><summary> Mid-Exam-2 </summary>
+
+> 01. Burger Bus
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+```
+
+</details>
+</details>
+
+> 2. Numbers
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+You are given numbers in a sequence on a single line, separated by a space. After that, you will receive commands that modify the sequence differently:
+
+* •	**"Add {value}"** - you should add the given value to the end of the sequence.
+* •	**"Remove {value}"** - you should remove the first occurrence of the given value if there is such.
+* •	**"Replace {value} {replacement}"** - you should replace the first occurrence of the given value with the replacement if there is such occurrence.
+* •	**"Collapse {value}"** you must remove each number with a value less than the given one.
+
+When you receive the command "Finish", you should print the modified sequence and end the program.
+
+Input:
+* •	On the first line, you will receive a sequence with numbers, separated by spaces - integers in the range [-1000…1000].
+* •	On the following lines, you will receive commands until the "Finish" command is received.
+* •	The commands will always be valid.
+
+Output
+* •	Print a single line the array of numbers separated by a space, with the modified values.
 
 
 
 
+
+
+
+| Input                                                   | Output        |
+|---------------------------------------------------------|---------------|
+| 1 4 5 19</br>Add 1</br>Remove 4</br>Finish              | 1 5 19 1      |
+| 1 20 -1 10</br>Collapse 8</br>Finish</br>               | 20 10         |
+| 5 9 70 -56 9 9</br>Replace 9 10</br>Remove 9</br>Finish | 5 10 70 -56 9 |
+
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+def add_num(list_num, num):
+    list_num.append(num)
+    return list_num
+
+
+def rem_num(list_num, num):
+    if num in list_num:
+        list_num.remove(num)
+    return list_num
+
+
+def rep_num(list_num, num, r_num):
+    if num in list_num:
+        index = list_num.index(num)
+        list_num[index] = r_num
+    return list_num
+
+
+def colaps_num(list_num, upper_limit):
+    filtered_list = [num for num in list_num if num >= upper_limit]
+    return filtered_list
+
+
+input_numbers = list(map(int, input().split(" ")))
+command = input()
+while command != "Finish":
+
+    command_list = list(map(str, command.split(" ")))
+    if len(command_list) == 2:
+        first = int(command_list[1])
+    elif len(command_list) == 3:
+        first, second = int(command_list[1]), int(command_list[2])
+
+    if command_list[0] == "Add":
+        input_numbers = add_num(input_numbers, first)
+    elif command_list[0] == "Remove":
+        input_numbers = rem_num(input_numbers, first)
+    elif command_list[0] == "Replace":
+        input_numbers = rep_num(input_numbers, first, second)
+    elif command_list[0] == "Collapse":
+        input_numbers = colaps_num(input_numbers, first)
+
+    command = input()
+
+result_string = ' '.join(map(str, input_numbers))
+print(result_string)
+```
+```Python
+def add_num(list_num, num):
+    list_num.append(num)
+    return list_num
+
+
+def rem_num(list_num, num):
+    if num in list_num:
+        list_num.remove(num)
+    return list_num
+
+
+def rep_num(list_num, num, r_num):
+    if num in list_num:
+        index = list_num.index(num)
+        list_num[index] = r_num
+    return list_num
+
+
+def collapse_num(list_num, upper_limit):
+    list_num = [num for num in list_num if num >= upper_limit]
+    return list_num
+
+
+def execute_command(command_list, input_numbers):
+    if len(command_list) == 2:
+        first = int(command_list[1])
+    elif len(command_list) == 3:
+        first, second = int(command_list[1]), int(command_list[2])
+
+    if command_list[0] == "Add":
+        return add_num(input_numbers, first)
+    elif command_list[0] == "Remove":
+        return rem_num(input_numbers, first)
+    elif command_list[0] == "Replace":
+        return rep_num(input_numbers, first, second)
+    elif command_list[0] == "Collapse":
+        return collapse_num(input_numbers, first)
+
+
+input_numbers = list(map(int, input().split(" ")))
+command = input()
+
+while command != "Finish":
+    command_list = list(map(str, command.split(" ")))
+    input_numbers = execute_command(command_list, input_numbers)
+    command = input()
+
+result_string = ' '.join(map(str, input_numbers))
+print(result_string)
+```
+
+</details>
+</details>
+
+> 3. Deck of Cards
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+
+<details> <summary>Code</summary>
+
+```Python
+
+```
+
+</details>
+</details>
+</details>
+
+######
+
+<details><summary> Mid-Exam-3 </summary>
+
+> 01. Cooking Masterclass	
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+```
+
+</details>
+</details>
+
+> 2. Friend List Maintenance	
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+
+</details>
+</details>
+
+> 3. Chat Logger	
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+
+<details> <summary>Code</summary>
+
+```Python
+
+```
+
+</details>
+</details>
+</details>
+
+####
+<details><summary> Mid-Exam-4 </summary>
+
+> 01. Cooking Masterclass	
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+```
+
+</details>
+</details>
+
+> 2. Friend List Maintenance	
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+
+</details>
+</details>
+
+> 3. Chat Logger	
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+
+<details> <summary>Code</summary>
+
+```Python
+
+```
+
+</details>
+</details>
+</details>
+
+####
+<details><summary> Mid-Exam-5 </summary>
+
+> 01. Experience Gaining
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+```
+
+</details>
+</details>
+
+> 2. Tax Calculator
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+
+</details>
+</details>
+
+> 3. Phone Shop
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+
+<details> <summary>Code</summary>
+
+```Python
+
+```
+
+</details>
+</details>
+</details>
+
+
+####
+<details><summary> Mid-Exam-6 </summary>
+
+> 01. The Hunting Games
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+days_of_the_adventure = int(input())
+number_of_players = int(input())
+groups_energy = float(input())
+water_per_day_per_person = float(input())
+food_per_day_per_person = float(input())
+ 
+current_water = number_of_players * water_per_day_per_person * days_of_the_adventure
+all_food = number_of_players * food_per_day_per_person * days_of_the_adventure
+days_count_for_water = 0
+days_count_for_food = 0
+ 
+for day in range(1, days_of_the_adventure + 1):
+    chopping_wood = float(input())
+    groups_energy -= chopping_wood
+    days_count_for_water += 1
+    
+    if groups_energy <= 0:
+        break
+ 
+    if days_count_for_water >= 2:
+        groups_energy = (groups_energy * 0.05) + groups_energy
+        current_water = current_water - (current_water * 0.3)
+        days_count_for_water = 0
+ 
+    days_count_for_food += 1
+    if days_count_for_food >= 3:
+        groups_energy = (groups_energy * 0.1) + groups_energy
+        all_food = all_food - (all_food / number_of_players)
+        days_count_for_food = 0
+ 
+if groups_energy > 1:
+    print(f"You are ready for the quest. You will be left with - {groups_energy :.2f} energy!")
+else:
+    print(f"You will run out of energy. You will be left with {all_food :.2f} food and {current_water :.2f} water.")
+```
+
+</details>
+</details>
+
+> 2. Space Travel	
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+<details> <summary>Code</summary>
+
+```Python
+
+
+```
+
+</details>
+</details>
+
+> 3. School Library	
+
+[judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
+[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
+
+<details> <summary> Example & Code</summary>
+
+####
+
+<details><summary>Example</summary>
+
+| Input | Output |
+|-------|--------|
+|       |        |
+|       |        |
+
+</details>
+
+<details> <summary>Code</summary>
+
+```Python
+
+```
+
+</details>
+</details>
+</details>
