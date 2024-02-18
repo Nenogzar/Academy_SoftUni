@@ -1899,9 +1899,9 @@ if type_of_items == "expensive":
 
 ######
 
-<details><summary> Mid-Exam-2  - Missing Condition</summary>
+<details><summary> Mid-Exam-2 - two decisions await / 1 and 3/</summary>
 
-> 01. Burger Bus  - Missing Condition
+> 01. Burger Bus
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -1912,10 +1912,35 @@ if type_of_items == "expensive":
 
 <details><summary>Example</summary>
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
+_The Burger Bus travels around the country and serves delicious burgers. You need to help the owner keep track of his
+income and expenses along the way._</br>
+First, you will receive the number of cities the bus has visited. Then for every city, you will receive:
+* the name of the city
+* how much money the owner earned
+* owner's expenses
+
+Every 3rd (third) city the bus visits, the owner organizes a special event to ensure a true "Burger Bus" experience, spending an additional 50% over costs.</br>
+In every 5th (fifth) city, it is raining, and the owner losses 10% of the money he earned. In a rainy city, there is no possibility to organize a special event.</br>
+You have to calculate the owner's profit for each city and his total profit from the tour. Profit is calculated by deducting the expenses from the income.</br>
+#### Input
+The input will consist of:
+* Number of cities – integer in the range [1…15]
+* For each city, you will receive the following information:
+  * name of the city - string
+  * owner's income - a real number in the range [0.0…10 000.0]
+  * owner's expenses - a real number in the range [0.0…10 000.0]
+* The input will always be in the correct format.
+#### Output
+* For every city, you need to print the following message: </br>
+**"In {cityName} Burger Bus earned {profit} leva."**
+* At the end of the tour, print:</br>
+**"Burger Bus total profit: {totalProfit} leva."**
+NOTE: The profit and the total profit should be formatted to the 2nd decimal place
+
+| Input                                                                                                                                                                             | Output                                                                                                                                                                                                                                                                         |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 3</br>Sofia</br>895.67</br>213.50</br>Plovdiv</br>2563.20</br>890.26</br>Burgas</br>2360.55</br>600.00</br>                                                                       | In Sofia Burger Bus earned 682.17 leva.</br>In Plovdiv Burger Bus earned 1672.94 leva.</br>In Burgas Burger Bus earned 1460.55 leva.</br>Burger Bus total profit: 3815.66 leva.                                                                                                |
+| 5</br>Lille</br>2226.00</br>1200.60</br>Rennes</br>6320.60</br>5460.20</br>Reims</br>600.20</br>452.32</br>Bordeaux</br>6925.30</br>2650.40</br>Montpellier</br>680.50</br>290.20 | In Lille Burger Bus earned 1025.40 leva.</br>In Rennes Burger Bus earned 860.40 leva.</br>In Reims Burger Bus earned -78.28 leva.</br>In Bordeaux Burger Bus earned 4274.90 leva.</br>In Montpellier Burger Bus earned 322.25 leva.</br>Burger Bus total profit: 6404.67 leva. |
 
 </details>
 <details> <summary>Code</summary>
@@ -1927,7 +1952,7 @@ if type_of_items == "expensive":
 </details>
 </details>
 
-> 2. Numbers  - Missing Condition
+> 2. Numbers
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2096,7 +2121,7 @@ while True:
 </details>
 </details>
 
-> 3. Deck of Cards  - Missing Condition
+> 3. Deck of Cards
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2107,11 +2132,37 @@ while True:
 
 <details><summary>Example</summary>
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
+You will **receive a list** of Cards on a single line **separated by ", "**. On the **next line**, you will receive a number **n**. On the next **n** lines, you will receive commands that could be:
 
+* **"Add, {CardName}"**: 
+  * Add the given card to the card deck and print: **"Card successfully added"**
+  * If it is already in the deck, print:  **"Card is already in the deck"**
+* **"Remove, {CardName}"**:
+  * Remove the given card from the card deck and print:  **"Card successfully removed"**
+  * If it is not in the deck, print: **"Card not found"**
+* **"Remove At, {index}"**:
+  * Remove the card at the given index and print: **"Card successfully removed"**
+  * If the index is not in the range of the list, print: **"Index out of range"**
+* **"Insert, {index}, {CardName}"**:
+  * Add the card at the given index and print: **"Card successfully added"**
+  * If the index is out of range, print: **"Index out of range"**
+  * If the index is in range, but the card is already in the deck, print: **"Card is already added"**
+
+#### Input
+
+* The first input line will contain the list of cards.
+* The second input will be the number of commands – an integer number in the range [0…50].
+* On the following input lines, you will be receiving commands.
+
+#### Output
+
+* After going through all the commands, you need to print all cards on a single line separated by ", ".
+
+| Input                                                                                                                                     | Output                                                                                                                                                 |
+|-------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Ace of Diamonds, Queen of Hearts, King of Clubs</br>3</br>Add, King of Diamonds</br>Insert, 2, Jack of Spades</br>Remove, Ace of Diamonds | Card successfully added</br>Card successfully added</br>Card successfully removed</br>Queen of Hearts, Jack of Spades, King of Clubs, King of Diamonds |
+| Two of Clubs, King of Spades, Five of Spades, Jack of Hearts</br>2</br>Add, Two of Clubs</br>Remove, Five of Hearts                       | Card is already in the deck</br>Card not found</br>Two of Clubs, King of Spades, Five of Spades, Jack of Hearts                                        |
+| Jack of Spades, Ace of Clubs, Jack of Clubs</br>2</br>Insert, -1, Queen of Spades</br>Remove At, 1                                        | Index out of range</br>Card successfully removed</br>Jack of Spades, Jack of Clubs                                                                     |
 </details>
 
 <details> <summary>Code</summary>
