@@ -1789,7 +1789,7 @@ if finished_battle:
 
 <details><summary> Mid-Exam-1 </summary>
 
-> 01. The Biscuit Factory
+> 01. The Biscuit Factory  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -1815,7 +1815,7 @@ if finished_battle:
 </details>
 </details>
 
-> 2. Coffee Lover
+> 2. Coffee Lover  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -1842,7 +1842,7 @@ if finished_battle:
 </details>
 </details>
 
-> 3. The Angry Cat
+> 3. The Angry Cat  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -1901,7 +1901,7 @@ if type_of_items == "expensive":
 
 <details><summary> Mid-Exam-2 </summary>
 
-> 01. Burger Bus
+> 01. Burger Bus  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -1927,7 +1927,7 @@ if type_of_items == "expensive":
 </details>
 </details>
 
-> 2. Numbers
+> 2. Numbers  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -1954,12 +1954,6 @@ Input:
 
 Output
 * Print a single line the array of numbers separated by a space, with the modified values.
-
-
-
-
-
-
 
 | Input                                                   | Output        |
 |---------------------------------------------------------|---------------|
@@ -2102,7 +2096,7 @@ while True:
 </details>
 </details>
 
-> 3. Deck of Cards
+> 3. Deck of Cards  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2207,7 +2201,7 @@ else:
 </details>
 </details>
 
-> 2. Friend List Maintenance	
+> 2. Friend List Maintenance  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2234,7 +2228,7 @@ else:
 </details>
 </details>
 
-> 3. Chat Logger	
+> 3. Chat Logger  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2265,7 +2259,7 @@ else:
 ####
 <details><summary> Mid-Exam-4 </summary>
 
-> 01. Cooking Masterclass	
+> 01. Cooking Masterclass  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2291,7 +2285,7 @@ else:
 </details>
 </details>
 
-> 2. Friend List Maintenance	
+> 2. Friend List Maintenance  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2318,7 +2312,7 @@ else:
 </details>
 </details>
 
-> 3. Chat Logger	
+> 3. Chat Logger  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2349,7 +2343,7 @@ else:
 ####
 <details><summary> Mid-Exam-5 </summary>
 
-> 01. Experience Gaining
+> 01. Experience Gaining  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2375,7 +2369,7 @@ else:
 </details>
 </details>
 
-> 2. Tax Calculator
+> 2. Tax Calculator  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2402,7 +2396,7 @@ else:
 </details>
 </details>
 
-> 3. Phone Shop
+> 3. Phone Shop  - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2434,7 +2428,7 @@ else:
 ####
 <details><summary> Mid-Exam-6 </summary>
 
-> 01. The Hunting Games
+> 01. The Hunting Games - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
@@ -2493,7 +2487,7 @@ else:
 </details>
 </details>
 
-> 2. Space Travel	
+> 2. Space Travel	 - Missing Condition
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/)
