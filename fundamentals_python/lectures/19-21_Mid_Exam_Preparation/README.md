@@ -1787,7 +1787,7 @@ if finished_battle:
 
 ######
 
-<details><summary> Mid-Exam-1 </summary>
+<details><summary> Mid-Exam-1   - Missing Condition </summary>
 
 > 01. The Biscuit Factory  - Missing Condition
 
@@ -1899,7 +1899,7 @@ if type_of_items == "expensive":
 
 ######
 
-<details><summary> Mid-Exam-2 </summary>
+<details><summary> Mid-Exam-2  - Missing Condition</summary>
 
 > 01. Burger Bus  - Missing Condition
 
@@ -2126,7 +2126,7 @@ while True:
 
 ######
 
-<details><summary> Mid-Exam-3 </summary>
+<details><summary> Mid-Exam-3  - Missing 2 Condition</summary>
 
 > 01. Cooking Masterclass	
 
@@ -2257,7 +2257,7 @@ else:
 </details>
 
 ####
-<details><summary> Mid-Exam-4 </summary>
+<details><summary> Mid-Exam-4  - Missing 2 Condition </summary>
 
 > 01. Cooking Masterclass  - Missing Condition
 
@@ -2341,7 +2341,7 @@ else:
 </details>
 
 ####
-<details><summary> Mid-Exam-5 </summary>
+<details><summary> Mid-Exam-5  - Missing Condition </summary>
 
 > 01. Experience Gaining  - Missing Condition
 
@@ -2426,7 +2426,7 @@ else:
 
 
 ####
-<details><summary> Mid-Exam-6 </summary>
+<details><summary> Mid-Exam-6  - Missing 2 Condition</summary>
 
 > 01. The Hunting Games - Missing Condition
 
