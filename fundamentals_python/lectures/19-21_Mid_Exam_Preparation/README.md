@@ -1928,7 +1928,7 @@ if type_of_items == "expensive":
 
 ######
 
-<details><summary> Mid-Exam-2 - 1 and 3 to solve the task </summary>
+<details><summary> Mid-Exam-2 </summary>
 
 > 01. Burger Bus - to solve the task
 
@@ -1975,7 +1975,42 @@ NOTE: The profit and the total profit should be formatted tthe 2nd decimal place
 <details> <summary>Code</summary>
 
 ```Python
+def profit(earned, expense):
+    return earned - expense
 
+
+def special_event(expense):
+    return expense * 1.5
+
+
+def loss(expense):
+    return expense * 0.9
+
+
+city_num = int(input())
+report = {}
+total_profit = 0
+
+for position in range(1, city_num + 1):
+    city = input()
+    owner_earned = float(input())
+    owner_expense = float(input())
+
+    if position % 3 == 0:
+        current_profit = profit(owner_earned, special_event(owner_expense))
+    elif position % 5 == 0:
+        current_profit = profit(owner_earned, loss(owner_expense))
+    else:
+        current_profit = profit(owner_earned, owner_expense)
+
+    total_profit += current_profit
+    report[city] = {'earned': owner_earned, 'expense': owner_expense, 'profit': current_profit}
+
+    # Print individual city message
+    print(f"In {city} Burger Bus earned {current_profit:.2f} leva.")
+
+# Print total profit message at the end
+print(f"Burger Bus total profit: {total_profit:.2f} leva.")
 ```
 
 </details>
