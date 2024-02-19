@@ -286,10 +286,7 @@ while True:
 ######
 <details><summary>👈Mid-Exam-Preparation-2 </summary>
 
->  01. SoftUni Reception
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
+>  01. SoftUni Reception | [judge](https://judge.softuni.org/Contests/Practice/Index/2474#0) |[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -345,10 +342,7 @@ print(f"Time needed: {hours}h.")
 </details>
 </details>
 
-> 2.	Array Modifier
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2474#1)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40365)
+> 2.	Array Modifier [judge](https://judge.softuni.org/Contests/Practice/Index/2474#1) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40365)
 <details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
@@ -465,10 +459,7 @@ print(*initial_array, sep=', ')
 </details>
 </details>
 
-> 03. Numbers
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2474#2)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40366)
+> 03. Numbers [judge](https://judge.softuni.org/Contests/Practice/Index/2474#2) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40366)
 <details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
