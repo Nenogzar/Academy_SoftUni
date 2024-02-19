@@ -1787,7 +1787,7 @@ if finished_battle:
 
 ######
 
-<details><summary> Mid-Exam-1   - Missing Condition 2,3 </summary>
+<details><summary> Mid-Exam-1   - Missing Condition No 3 </summary>
 
 > 01. The Biscuit Factory - to solve the task
 
@@ -1844,27 +1844,83 @@ NOTE: The input will always be in the correct format.
 </details>
 </details>
 
-> 2. Coffee Lover  - Missing Condition
+> 2. Coffee Lover
 
 [judge]()</br>
 [problem]()
 
 <details> <summary> Example & Code</summary>
 
+_John is a lover of expensive and luxurious coffees._
+
+Create a program that helps John keep track of the coffee he has. You will receive a list of the coffees that John has in stock, on a single line separated by a single space in the following format:</br>
+**"{coffee1} {coffee2} {coffee3} ... {coffeeNn}"**.
+Then you will receive a number – n - a count of commands you need to execute over your list. There are four possible commands:
+
+* **"Include {coffee}"**:
+  * Add the coffee at the end of your list.
+* **"Remove {first/last} {numberOfCoffees}"**:
+  * Depending on the input, remove either the "**first**" or the "**last**" number of coffees from your list.
+  * If you have fewer coffees in your list than the given number, skip this command.
+* **"Prefer {coffeeIndex1} {coffeeIndex2}"**:
+  * If both coffee indexes exist in your list, take the two coffees and change their places.
+  * Otherwise, skip the command.
+* **"Reverse"**:
+  * Reverse the order of the coffees.
+
+In the end, print the manipulated list in the following format:
+"Coffees:
+{coffee1} {coffee2} … {coffeeNn}"
+
+
+#### Input / Constraints
+
+* On the 1st line, you will receive the **starting** list with the names of the coffees separated by a " " (empty space).
+* On the 2nd line, you will receive the **number** of commands - n – an integer in the range [1…100].
+* On the following n lines, you will be receiving **commands** in the format described above.
+#### Output
+* Print the list after the manipulations in the format described above.
+
 ####
 
 <details><summary>Example</summary>
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
+| Input                                                                                                                                                                         | Output                                                                    |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| Arabica Liberica Charrieriana Magnistipula Robusta BulkCoffee StrongCoffee </br> 5 </br>Include TurkishCoffee</br>Remove first 2</br>Remove last 1</br>Prefer 3 1</br>Reverse | Coffees:</br>StrongCoffee Magnistipula Robusta BulkCoffe Charrieriana     |
+| Arabica Robusta BulkCoffee StrongCoffee TurkishCoffee</br>5</br>Include OrdinaryCoffee</br>Remove first 1</br>Prefer 0 1</br>Prefer 3 1</br>Reverse                           | Coffees:</br>OrdinaryCoffee Robusta StrongCoffee TurkishCoffee BulkCoffee |
+| Robusta StrongCoffee BulkCoffee TurkishCoffee Arabica</br>3</br>Include OrdinaryCoffee</br>Remove first 1</br>Prefer 4 1                                                      | Coffees:</br>StrongCoffee OrdinaryCoffee TurkishCoffee Arabica BulkCoffee |
 
 </details>
 <details> <summary>Code</summary>
 
 ```Python
-
+coffee = input().split()
+number_of_commands = int(input())
+ 
+for i in range(number_of_commands):
+    command = input().split()
+    if command[0] == "Include":
+        new_coffee = command[1]
+        if new_coffee not in coffee:
+            coffee.append(new_coffee)
+    elif command[0] == "Remove":
+        if command[1] == "first":
+            command[2] = int(command[2])
+            coffee = coffee[command[2]:]
+        elif command[1] == "last":
+            command[2] = int(command[2])
+            coffee = coffee[:- command[2]]
+    elif command[0] == "Prefer":
+        index1 = int(command[1])
+        index2 = int(command[2])
+        if 0 <= index1 < len(coffee) and 0 <= index2 < len(coffee):
+            coffee[index1], coffee[index2] = coffee[index2], coffee[index1]
+    elif command[0] == "Reverse":
+        coffee.reverse()
+ 
+print(f"Coffees:")
+print(f"{coffee}")
 
 ```
 
@@ -2301,7 +2357,7 @@ print(",".join(cards_list))
 
 ######
 
-<details><summary> Mid-Exam-3  - Missing 2 Condition</summary>
+<details><summary> Mid-Exam-3  - Missing 1 Condition</summary>
 
 > 01. Cooking Masterclass	
 
@@ -2403,28 +2459,91 @@ else:
 </details>
 </details>
 
-> 3. Chat Logger  - Missing Condition
+> 3. Chat Logger
 
 [judge]()</br>
 [problem]()
 
 <details> <summary> Example & Code</summary>
 
+A company hires you to create a program that implements a chat logger which works with commands. You may receive the following commands:
+
+* **"Chat {message}"**:
+  * Add the message at the last position in the chat.
+* **"Delete {message}"**:
+  * Delete the message if it exists.
+  * Otherwise, ignore the command.
+* **"Edit {message} {editedVersion}"**:
+  * Update the message with the edited version.
+  * If it does not exist, ignore the command.
+* **"Pin {message}"**:
+  * Find the given message and move it to the last index.
+  * If it does not exist, ignore the command.
+* **"Spam {message1} {message2} {messageN}"**:
+  * Add all messages at the end of the chat.
+* **"end"**:
+  * Stop receiving commands.
+
+After the "end" command, you should print the chat history starting from the first message.
+
+#### Input
+
+* Until you receive "end", you will be receiving commands.
+* 
+#### Output
+
+* As output, you must print the chat starting from the first message. Every message must be in a new line.
+* Constraints
+* The command will always be valid.
+
+
 ####
 
 <details><summary>Example</summary>
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
+| Input                                                                                                | Output                                                      |
+|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| Chat Hello</br>Chat darling</br>Edit darling Darling</br>Spam how are you</br>Delete Darling</br>end | Hello</br>how</br>are</br>you                               |
+| Chat Hello</br>Delete John</br>Pin Hi</br>end                                                        | Hello                                                       |
+| Chat John</br>Spam Let's go to the zoo</br>Edit zoo cinema</br>Chat tonight</br>Pin John</br>end     | Let's</br>go</br>to</br>the</br>cinema</br>tonight</br>John |
 
 </details>
 
 <details> <summary>Code</summary>
 
 ```Python
-
+command = input().split()
+ 
+chat = []
+ 
+while command[0] != "end":
+    word = command[1]
+ 
+    if command[0] == "Chat":
+        chat.append(word)
+ 
+    elif command[0] == "Delete":
+        if word in chat:
+            chat.remove(word)
+ 
+    elif command[0] == "Edit":
+        if word in chat:
+            chat.remove(word)
+            command[1] = command[2]
+            chat.append(command[1])
+ 
+    elif command[0] == "Pin":
+        if word in chat:
+            chat.remove(word)
+            chat.append(word)
+            # word = chat[-1]
+ 
+    elif command[0] == "Spam":
+        chat.extend(command[1::])
+ 
+    command = input().split()
+ 
+print("\n".join(chat))
 ```
 
 </details>
@@ -2562,7 +2681,7 @@ After receiving the "End" command, print the phones in your storage, separated b
 ####
 <details><summary> Mid-Exam-5  - Missing 1 and 2 Condition</summary>
 
-> 01. The Hunting Games - Missing Condition
+> 01. The Hunting Games
 
 [judge]()</br>
 [problem]()
@@ -2571,52 +2690,89 @@ After receiving the "End" command, print the phones in your storage, separated b
 
 ####
 
+_A group of friends has decided to participate in a game. The first stage of the game is to gather some supplies. They have a list, and your job is to help them follow it and make the needed calculations._
+
+Write a program that calculates the needed provisions for a quest in the woods.</br>
+First, you will receive the days of the adventure, the count of the players, and the group's energy. Afterward, you will receive provisions for a day for one person:
+
+* Water
+* Food
+* 
+The group calculates how many supplies they'd need for the adventure and takes that much water and food.
+Every day they chop wood and lose a certain amount of energy. For each of the days, you are going to receive the amount of energy lost from chopping wood. The program should end if the energy reaches 0 or less.</br>
+Every second day they drink water, which boosts their energy with 5% of their current energy and at the same time drops their water supplies by 30% of their current water.</br>
+Every third day they eat, which reduces their food supplies (all food they have) by the following amount:</br>
+**{currentFood} / {countOfPeople}** and at the same time raises their group's energy by 10%.</br>
+The chopping of wood, the drinking of water, and the eating happen in the order above.</br>
+If they have enough energy to finish the quest, print the following message:</br>
+**"You are ready for the quest. You will be left with - {energyLevel} energy!"**</br>
+If they run out of energy, print the following message and the food and water they were left with before they ran out of energy:</br>
+**"You will run out of energy. You will be left with {food} food and {water} water."**</br>
+
+### Input / Constraints
+
+* On the 1st line, you will receive a number N - the days of the adventure – an integer in the range [1…100].
+* On the 2nd line – the number of players – an integer in the range [1 – 1000].
+* On the 3rd line - the group's energy – a real number in the range [1 - 50000].
+* On the 4th line – water per day for one person – a real number [0.00 – 1000.00].
+* On the 5th line – food per day for one person – a real number [0.00 – 1000.00].
+* On the next N lines – one for each of the days – the amount of energy loss– a real number in the range [0.00 - 1000.00].
+* You will always have enough food and water.
+
+### Output
+* The final numbers should be formatted to the second digit after the decimal separator.
+
 <details><summary>Example</summary>
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
+| Input                                                                                                                                        | Output |
+|----------------------------------------------------------------------------------------------------------------------------------------------|--------|
+| 10</br>7</br>5035.5</br>11.3</br>7.2</br>942.3</br>500.57</br>520.68</br>540.87</br>505.99</br>630.3</br>784.20</br>321.21</br>456.8</br>330 |You are ready for the quest. You will be left with - 658.72 energy!|
+|12</br>6</br>4430</br>9.8</br>5.5</br>620.3</br>840.2</br>960.1</br>220</br>340</br>674</br>365</br>345.5v</br>212</br>412.12</br>258 496|You will run out of energy. You will be left with 229.17 food and 118.59 water.|
 
 </details>
 <details> <summary>Code</summary>
 
+#### Konstantin Aleksiev
 ```Python
 days_of_the_adventure = int(input())
 number_of_players = int(input())
 groups_energy = float(input())
 water_per_day_per_person = float(input())
 food_per_day_per_person = float(input())
- 
+
 current_water = number_of_players * water_per_day_per_person * days_of_the_adventure
 all_food = number_of_players * food_per_day_per_person * days_of_the_adventure
 days_count_for_water = 0
 days_count_for_food = 0
- 
+
 for day in range(1, days_of_the_adventure + 1):
     chopping_wood = float(input())
     groups_energy -= chopping_wood
     days_count_for_water += 1
-    
+
     if groups_energy <= 0:
         break
- 
+
     if days_count_for_water >= 2:
         groups_energy = (groups_energy * 0.05) + groups_energy
         current_water = current_water - (current_water * 0.3)
         days_count_for_water = 0
- 
+
     days_count_for_food += 1
     if days_count_for_food >= 3:
         groups_energy = (groups_energy * 0.1) + groups_energy
         all_food = all_food - (all_food / number_of_players)
         days_count_for_food = 0
- 
+
 if groups_energy > 1:
     print(f"You are ready for the quest. You will be left with - {groups_energy :.2f} energy!")
 else:
     print(f"You will run out of energy. You will be left with {all_food :.2f} food and {current_water :.2f} water.")
+
+# print(f"{int(current_water)}")
+# print(f"{int(all_food)}")
 ```
+
 
 </details>
 </details>
