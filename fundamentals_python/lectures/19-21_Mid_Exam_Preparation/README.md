@@ -1787,7 +1787,7 @@ if finished_battle:
 
 ######
 
-<details><summary> Mid-Exam-1   - Missing - 3. The Angry Cat </summary>
+<details><summary> Mid-Exam-1 </summary>
 
 > 01. The Biscuit Factory - to solve the task
 
@@ -1938,10 +1938,26 @@ print(f"{coffee}")
 
 <details><summary>Example</summary>
 
-| Input | Output |
-|-------|--------|
-|       |        |
-|       |        |
+_John is very angry with his owner because he left him alone during the teamwork defenses for the Programming Fundamentals Course at SoftUni. It's time for John to get his payback, and he will do it by breaking various household items._
+
+Each item has a **price rating**, a number that describes how valuable that item is for John's owner. You will be **given an entry point** from which John will **break** the **items to his left** and **then** to **his right**. John **will never** break the item at his **entry point**.</br>
+You must calculate the damage to **both** his **left** and **right**, then print **only the higher (bigger)** damage to the household. If both **sums** are **equal**, print the **left** one.</br>
+#### Input / Constrains
+* On the first line, you will receive the price ratings, separated by (", "). Each element will be an integer in the range [-231… 231].
+* On the second line, you will receive the entry point, which will always be between the second and the penultimate element in the array.
+* On the third line, you will receive the type of items John wants to break, which will be one of the following:
+  * "cheap" – items that have a lower price rating than the entry point item
+  * "expensive" – items that have the same price rating, or higher price rating than the entry point item
+#### Output
+* A single line containing the sum of price ratings and their position based on the entry point in the following format:
+  * "{position} - {sum of price ratings}"
+  * Positions can be "Right" or "Left"
+
+| Input                                                      | Output    |
+|------------------------------------------------------------|-----------|
+| 1, 5, 1</br>1</br>cheap                                    | Left - 1  |
+| 5, 10, 12, 5, 4, 20</br>3</br>cheap                        | Right - 4 |
+| -2, 2, 1, 5, 9, 3, 2, -2, 1, -1, -3, 3</br>7</br>expensive | Left - 20 |
 
 </details>
 
