@@ -123,6 +123,17 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 </html>
 
 
-
+<table>
+  <tr>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/11.jpg" alt="Object_Classes" width="400"></th>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes/01_Objects%20and%20Classes%20-%20Lab/Exercise">Lab</a>
+  |  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes/02_Objects%20and%20Classes%20-%20Exericse/Exercise">Exercise</a>
+  </td>
+  </tr>
+</table>
 
 

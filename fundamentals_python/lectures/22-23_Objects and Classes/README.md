@@ -11,7 +11,7 @@
 
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/11.jpg" alt="List Advance" width="400"></th>
+    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/11.jpg" alt="Object_Classes" width="400"></th>
   </tr>
   <tr>
     <td>
