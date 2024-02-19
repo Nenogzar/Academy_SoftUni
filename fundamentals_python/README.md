@@ -125,7 +125,7 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 
 <table>
   <tr>
-    <th><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/11.jpg" alt="Object_Classes" width="400"></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/11.jpg" alt="Object_Classes" width="400"></th>
   </tr>
   <tr>
     <td>
@@ -135,5 +135,6 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   </td>
   </tr>
 </table>
+
 
 
