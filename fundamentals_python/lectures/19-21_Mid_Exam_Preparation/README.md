@@ -1,19 +1,16 @@
 
 <img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10.jpg" alt="ME" width="400">
 
-<details><summary> Mid-Exam-Preparation-1 </summary> 
+<details><summary>👈Mid-Exam-Preparation-1 </summary> 
 
 ####
 
-> 1.	Computer Store
+>  1.	Computer Store | [Judge](https://judge.softuni.org/Contests/Practice/Index/2517#0)| [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40358)
 
-[Judge](https://judge.softuni.org/Contests/Practice/Index/2517#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40358)
-
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details> <summary>Example</summary>
+<details> <summary>🛠️Example</summary>
 
 
 NB! Link for judge system works only if you are registered in Software University Sofia !!!!!!!!!!!!!!
@@ -56,7 +53,7 @@ The discount is applied only on the total price. Discount is only applicable tth
 
 </details>
 
-<details> <summary>Code</summary>
+  <details> <summary>🐍Code</summary>
 
 ```Python
 total_sum = 0
@@ -122,19 +119,15 @@ else:
     print(f'Taxes: {taxes:.2f}$')
     print(f"-----------\nTotal price: {total_price:.2f}$")
 ```
-
 </details>
 </details>
 
-> 02. The Lift
+> 2.The Lift | [judge](https://judge.softuni.org/Contests/Practice/Index/2517#1) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40359)
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/2517#1)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40359)
-
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 NB! Link for judge system works only if you are registered in Software University Sofia !!!!!!!!!!!!!!
 
@@ -170,7 +163,7 @@ If the lift is full and there are nmore people in the queue, you should print on
 | 20 </br> 0 2 0  | There isn't enough space! 10 people in a queue!</br> 4 4 4 |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 people = int(input())
@@ -205,14 +198,12 @@ else:
 </details>
 </details>
 
-> 03. Memory Game
+> 3.Memory Game |[judge](https://judge.softuni.org/Contests/Practice/Index/2517#2) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40360)
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/2517#2)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40360)
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 Write a program that recreates the Memory game.</br>
 On the first line, you will receive a sequence of elements.</br>
@@ -253,7 +244,7 @@ All elements in the sequence will always have a matching element.
 
 </details>
 
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 elements = input().split()
@@ -293,17 +284,17 @@ while True:
 </details>
 
 ######
-<details><summary> Mid-Exam-Preparation-2 </summary>
+<details><summary>👈Mid-Exam-Preparation-2 </summary>
 
 >  01. SoftUni Reception
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40364)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 Every day, thousands of students pass by the reception at SoftUni with different questions task.
 The employees have thelp everyone by providing all the information and answering all of the questions.
@@ -333,7 +324,7 @@ Output
 
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 first_employee = int(input())
@@ -358,10 +349,10 @@ print(f"Time needed: {hours}h.")
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40365)
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 
 You are given an array with integers. Write a program tmodify the elements after receiving the following commands:
@@ -393,7 +384,7 @@ Constraints
 | 1 2 3 4</br>swap 0 1</br>swap 1 2</br>swap 2 3</br>multiply 1 2</br>decrease</br>end                                  | 1, 11, 3, 0                         |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 def swap_element(list_mod, index1, index2):
@@ -478,10 +469,10 @@ print(*initial_array, sep=', ')
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2474#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40366)
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 Write a program tread a sequence of integers and find and print the top 5 numbers
 greater than the average value in the sequence, sorted in descending order.
@@ -504,7 +495,7 @@ The count of numbers is in the range [1…10 000].
 
 </details>
 
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 initital_list = list(map(int, input().split()))
@@ -529,17 +520,17 @@ else:
 
 
 ######
-<details><summary> Mid-Exam-Preparation-3 </summary>
+<details><summary>👈Mid-Exam-Preparation-3 </summary>
 
 > 1.	Counter-Strike
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2305#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370)</br>
 [pastebin Ivan Shopov](https://pastebin.com/vrxNF4bB)
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 Write a program that keeps track of every won battle against an enemy.</br>
 You will receive initial energy. Afterward, you will start receiving
@@ -569,7 +560,7 @@ The description contains the proper output messages for each case and the format
 
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 energy = int(input())
@@ -665,10 +656,10 @@ print(f"Won battles: {win_counter}. Energy left: {energy}")
 
 [Link tJudge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 Write a program that helps you keep track of your shot targets. </br>
 You will receive a sequence with integers, separated by a single space, 
@@ -703,7 +694,7 @@ The format of the output is described above in the problem description.
 
 </details>
 
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 targets = [int(x) for x in input().split()]
@@ -764,10 +755,10 @@ print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2305#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40372)
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 You are at the shooting gallery again, and you need a program that helps you keep track of moving targets.
 On the first line, you will receive a sequence of targets with their integer values, split by a single space. 
@@ -807,7 +798,7 @@ The commands are the following:
 
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 targets = list(map(int, input().split()))
@@ -852,17 +843,17 @@ print(*targets, sep='|')
 
 
 ######
-<details><summary> Mid-Exam-Preparation-4 </summary>
+<details><summary>👈Mid-Exam-Preparation-4 </summary>
 
 > 01. Guinea Pig
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2031#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40376)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 Merry has a guinea pig named Puppy, that she loves very much.
 Every month she goes tthe nearest pet store and buys him everything he needs – food, hay, and cover.
 On the first three lines, you will receive the quantity of food, hay, and cover, 
@@ -895,7 +886,7 @@ Output
 
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 food, hay, cover_i, guinea_weight = float(input()), float(input()), float(input()), float(input())
@@ -932,10 +923,10 @@ else:
 [judge](https://judge.softuni.org/Contests/Practice/Index/2031#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40377)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 It's the end of the week, and it is time for you tgshopping, syou need tcreate a shopping list first.
 Input
@@ -963,7 +954,7 @@ Output
 Urgent Salt</br>Unnecessary Grapes </br>Correct Pepper Onion</br>Rearrange Grapes</br>Correct Tomatoes Potatoes</br>GShopping!|Milk, Onion, Salt, Water, Banana|
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 initial_list = input().split('!')
@@ -1001,10 +992,10 @@ print(*initial_list,sep=', ')
 
 [Link tJudge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
 [Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 Valentine's day is coming, and Cupid has minimal time tspread some love across the neighborhood. Help him with his mission!
 You will receive a string with even integers, separated by a "@" - this is our neighborhood.
@@ -1044,7 +1035,7 @@ In the end, print Cupid's last position and whether his mission was successful o
 
 </details>
 
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 neighborhood = [int(x) for x in input().split("@")]
@@ -1144,17 +1135,17 @@ else:
 </details>
 
 ######
-<details><summary> Mid-Exam-Preparation-5 </summary>
+<details><summary>👈Mid-Exam-Preparation-5 </summary>
 
 > 01. Bonus Scoring System
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2028#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40382)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 Create a program that calculates bonus points for each student enrolled in a course.
 On the first line, you are going treceive the number of the students. On the second line,
@@ -1185,7 +1176,7 @@ rounded tthe nearest larger number, scored by a student in this course in the fo
 
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 from math import ceil
@@ -1216,10 +1207,10 @@ print(f"The student has attended {student_attended} lectures.")
 [judge](https://judge.softuni.org/Contests/Practice/Index/2028#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40383)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 You have initial health 100 and initial bitcoins 0. You will be given a string
  representing the dungeon's rooms. Each room is separated with '|' (vertical bar): "room1|room2|room3…"
@@ -1267,7 +1258,7 @@ You healed for 10 hp.</br>Current health: 100 hp.</br>You slayed orc.</br>You fo
 
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 dungeon = input().split('|')
@@ -1312,8 +1303,8 @@ if dead is not True:
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/2028#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40384)   
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
+<details><summary>🛠️Example</summary>
 
 As a young traveler, you gather items and craft new items.
 Input / Constraints
@@ -1336,7 +1327,7 @@ Examples
 
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 collected_items = input().split(', ')
@@ -1468,15 +1459,15 @@ print(*items, sep=", ")
 
 
 ######
-<details><summary> Mid-Exam-Preparation-6 </summary>
+<details><summary>👈Mid-Exam-Preparation-6 </summary>
 
 >  01. Black Flag
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/1773#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40388)
 
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
+<details><summary>🛠️Example</summary>
 
 Pirates are invading the sea, and you're tasked thelp them plunder
 Create a program that checks if target plunder is reached. 
@@ -1508,7 +1499,7 @@ Output
 |           |        |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 days = int(input())
@@ -1539,8 +1530,8 @@ else:
 [judge](https://judge.softuni.org/Contests/Practice/Index/1773#1)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40389)
 
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
+<details><summary>🛠️Example</summary>
 
 The pirates need tcarry a treasure chest safely back tthe ship, looting along the way.
 Create a program that manages the state of the treasure chest along the way. 
@@ -1614,7 +1605,7 @@ Failed treasure hunt.
 
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 treasure = input().split('|')
@@ -1669,8 +1660,8 @@ else:
 [judge](https://judge.softuni.org/Contests/Practice/Index/1773#2)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40390)
 
-<details> <summary> Example & Code</summary>
-<details><summary>Example</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
+<details><summary>🛠️Example</summary>
 
 The pirates encounter a huge Man-O-War at sea. 
 Create a program that tracks the battle and either chooses a winner or prints a stalemate.
@@ -1724,7 +1715,7 @@ Warship status: {warshipSum}"
 
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 pirate_ship = list(map(int, input().split('>')))
@@ -1787,18 +1778,18 @@ if finished_battle:
 
 ######
 
-<details><summary> Mid-Exam-1 </summary>
+<details><summary>👈Mid-Exam-1 </summary>
 
 > 01. The Biscuit Factory - to solve the task
 
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_The_Biscuit_Factory.pdf)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 Create a program that will help Anna calculate how many biscuits her factory can make in a month (**30 days**) and the percentage of production compared tanother factory's production.</br>
 First, you will receive the biscuits produced **per day** (per worker). After that, you will receive the count of workers in your factory. Last, you will receive the number of biscuits that the **competing factory produces for 30 days**.</br>
@@ -1835,7 +1826,7 @@ NOTE: The input will always be in the correct format.
 | 163</br>16</br>67020 | You have produced 71720 biscuits for the past month.</br>You produce 7.01 percent more biscuits.  |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 
@@ -1849,7 +1840,7 @@ NOTE: The input will always be in the correct format.
 [judge]()</br>
 [problem]()
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 _John is a lover of expensive and luxurious coffees._
 
@@ -1883,7 +1874,7 @@ In the end, print the manipulated list in the following format:
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 | Input                                                                                                                                                                         | Output                                                                    |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
@@ -1892,7 +1883,7 @@ In the end, print the manipulated list in the following format:
 | Robusta StrongCoffee BulkCoffee TurkishCoffee Arabica</br>3</br>Include OrdinaryCoffee</br>Remove first 1</br>Prefer 4 1                                                      | Coffees:</br>StrongCoffee OrdinaryCoffee TurkishCoffee Arabica BulkCoffee |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 coffee = input().split()
@@ -1932,11 +1923,11 @@ print(f"{coffee}")
 [judge]()</br>
 [problem]()
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 _John is very angry with his owner because he left him alone during the teamwork defenses for the Programming Fundamentals Course at SoftUni. It's time for John to get his payback, and he will do it by breaking various household items._
 
@@ -1961,7 +1952,7 @@ You must calculate the damage to **both** his **left** and **right**, then print
 
 </details>
 
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 Bilyana Panova
 ```Python
@@ -2038,18 +2029,18 @@ if __name__ == "__main__":
 
 ######
 
-<details><summary> Mid-Exam-2 </summary>
+<details><summary>👈Mid-Exam-2 </summary>
 
 > 01. Burger Bus - to solve the task
 
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_Burger_Bus.pdf)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 _The Burger Bus travels around the country and serves delicious burgers. You need thelp the owner keep track of his
 income and expenses along the way._</br>
@@ -2082,7 +2073,7 @@ NOTE: The profit and the total profit should be formatted tthe 2nd decimal place
 | 5</br>Lille</br>2226.00</br>1200.60</br>Rennes</br>6320.60</br>5460.20</br>Reims</br>600.20</br>452.32</br>Bordeaux</br>6925.30</br>2650.40</br>Montpellier</br>680.50</br>290.20 | In Lille Burger Bus earned 1025.40 leva.</br>In Rennes Burger Bus earned 860.40 leva.</br>In Reims Burger Bus earned -78.28 leva.</br>In Bordeaux Burger Bus earned 4274.90 leva.</br>In Montpellier Burger Bus earned 322.25 leva.</br>Burger Bus total profit: 6404.67 leva. |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 def profit(earned, expense):
@@ -2131,11 +2122,11 @@ print(f"Burger Bus total profit: {total_profit:.2f} leva.")
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/02_Numbers.pdf)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 You are given numbers in a sequence on a single line, separated by a space. After that, you will receive commands that modify the sequence differently:
 
@@ -2162,7 +2153,7 @@ Output
 
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 def add_num(list_num, num):
@@ -2300,11 +2291,11 @@ while True:
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03_Deck_of_Cards.pdf)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 You will **receive a list** of Cards on a single line **separated by ", "**. On the **next line**, you will receive a number **n**. On the next **n** lines, you will receive commands that could be:
 
@@ -2339,7 +2330,7 @@ You will **receive a list** of Cards on a single line **separated by ", "**. On 
 | Jack of Spades, Ace of Clubs, Jack of Clubs</br>2</br>Insert, -1, Queen of Spades</br>Remove At, 1                                        | Index out of range</br>Card successfully removed</br>Jack of Spades, Jack of Clubs                                                                     |
 </details>
 
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 def add_card(list_card, card_name):
@@ -2411,18 +2402,18 @@ print(",".join(cards_list))
 
 ######
 
-<details><summary> Mid-Exam-3  - Missing - 2. Friend List Maintenance</summary>
+<details><summary>👈Mid-Exam-3  - Missing - 2. Friend List Maintenance</summary>
 
 > 01. Cooking Masterclass	
 
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_Cooking_Masterclass.pdf)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 _George is starting his own course, a Cooking Masterclass. So, he asked you tbuy the needed items._</br>
 The number of items depends on how many students will sign up for the course. The educational set for one student consists of 1 package of flour, 10 eggs, and an apron.</br> 
@@ -2454,7 +2445,7 @@ The output should be printed on the console.
 | 946</br>20</br>12.05</br>0.42</br>27.89 | 0.16$ more needed.          |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 import math
@@ -2491,11 +2482,11 @@ else:
 [judge]()</br>
 [problem]()
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 | Input | Output |
 |-------|--------|
@@ -2503,7 +2494,7 @@ else:
 |       |        |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 
@@ -2518,7 +2509,7 @@ else:
 [judge]()</br>
 [problem]()
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 A company hires you to create a program that implements a chat logger which works with commands. You may receive the following commands:
 
@@ -2553,7 +2544,7 @@ After the "end" command, you should print the chat history starting from the fir
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 | Input                                                                                                | Output                                                      |
 |------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
@@ -2563,7 +2554,7 @@ After the "end" command, you should print the chat history starting from the fir
 
 </details>
 
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 command = input().split()
@@ -2607,18 +2598,18 @@ print("\n".join(chat))
 
 
 ####
-<details><summary> Mid-Exam-4  - Missing  - 01. Experience Gaining and 3. Phone Shop </summary>
+<details><summary>👈Mid-Exam-4  - Missing  - 01. Experience Gaining and 3. Phone Shop </summary>
 
 > 01. Experience Gaining  - Missing Condition
 
 [judge]()</br>
 [problem]()
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 | Input | Output |
 |-------|--------|
@@ -2626,7 +2617,7 @@ print("\n".join(chat))
 |       |        |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 
@@ -2640,11 +2631,11 @@ print("\n".join(chat))
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/02_Tax_Calculator.pdf)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 _The National Revenue Agency hired you tcreate software, which will help them tcalculate the vehicle taxes.</br>_
 You will be given a string representing vehicles that will be taxed. Each vehicle is separated by ">>", where the first element is a string representing the car type, the second element is an integer representing the years the tax should be paid, and the third element is an integer representing the kilometers traveled.</br>
@@ -2670,7 +2661,7 @@ You receive a string representing the vehicles, separated with ">>": **"vehicle1
 | family 5 3210>>pickUp 1</br> 1345>>heavyDuty 7 21000>>sports 5 </br>9410>>family 3 9012 | A family car will pay 37.00 euros in taxes.</br>Invalid car type.</br>A heavyDuty car will pay 52.00 euros in taxes.</br>A sports car will pay 127.00 euros in taxes.</br>A family car will pay 71.00 euros in taxes.</br>The National Revenue Agency will collect 287.00 euros in taxes. |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 
@@ -2685,11 +2676,11 @@ You receive a string representing the vehicles, separated with ">>": **"vehicle1
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03_Phone_Shop.pdf)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 _Kevin has a phone shop. He has torder new models, but his storage is slarge that he doesn't know which phone models he has._
 
@@ -2721,7 +2712,7 @@ After receiving the "End" command, print the phones in your storage, separated b
 
 </details>
 
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 
@@ -2733,14 +2724,14 @@ After receiving the "End" command, print the phones in your storage, separated b
 
 
 ####
-<details><summary> Mid-Exam-5  - Missing - 2. Space Travel</summary>
+<details><summary>👈Mid-Exam-5  - Missing - 2. Space Travel</summary>
 
 > 01. The Hunting Games
 
 [judge]()</br>
 [problem]()
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
@@ -2776,7 +2767,7 @@ If they run out of energy, print the following message and the food and water th
 ### Output
 * The final numbers should be formatted to the second digit after the decimal separator.
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 | Input                                                                                                                                        | Output |
 |----------------------------------------------------------------------------------------------------------------------------------------------|--------|
@@ -2784,7 +2775,7 @@ If they run out of energy, print the following message and the food and water th
 |12</br>6</br>4430</br>9.8</br>5.5</br>620.3</br>840.2</br>960.1</br>220</br>340</br>674</br>365</br>345.5v</br>212</br>412.12</br>258 496|You will run out of energy. You will be left with 229.17 food and 118.59 water.|
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 #### Konstantin Aleksiev
 ```Python
@@ -2836,11 +2827,11 @@ else:
 [judge]()</br>
 [problem]()
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 | Input | Output |
 |-------|--------|
@@ -2848,7 +2839,7 @@ else:
 |       |        |
 
 </details>
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 
@@ -2863,11 +2854,11 @@ else:
 [judge]()</br>
 [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03.%20School_Library.pdf)
 
-<details> <summary> Example & Code</summary>
+<details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
 
-<details><summary>Example</summary>
+<details><summary>🛠️Example</summary>
 
 Your task is tdan online book library.
 On the first line, you will receive a string representing a shelf with books in the library. Every book is separated with "&".
@@ -2935,7 +2926,7 @@ War and Peace, Hamlet, Ulysses, Madame Bovary
 
 </details>
 
-<details> <summary>Code</summary>
+ <details> <summary>🐍Code</summary>
 
 ```Python
 shelf = input().split("&")
