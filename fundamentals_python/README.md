@@ -77,7 +77,7 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 
 <table>
   <tr>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/14-15_Functions/01_Functions%20-%20Lab"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/7.jpg" alt="Function" width="300"></a>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/14-15_Functions"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/7.jpg" alt="Function" width="300"></a>
 </th>
     <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/16_Software%20Development%20Concepts"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/8.jpg" alt="SDC" width="300"></a></th>
   </tr>
