@@ -1787,7 +1787,7 @@ if finished_battle:
 
 ######
 
-<details><summary> Mid-Exam-1   - Missing Condition No 3 </summary>
+<details><summary> Mid-Exam-1   - Missing - 3. The Angry Cat </summary>
 
 > 01. The Biscuit Factory - to solve the task
 
@@ -2357,7 +2357,7 @@ print(",".join(cards_list))
 
 ######
 
-<details><summary> Mid-Exam-3  - Missing 1 Condition</summary>
+<details><summary> Mid-Exam-3  - Missing - 2. Friend List Maintenance</summary>
 
 > 01. Cooking Masterclass	
 
@@ -2553,7 +2553,7 @@ print("\n".join(chat))
 
 
 ####
-<details><summary> Mid-Exam-4  - Missing 1 Condition /  2 and 3 to solve the task </summary>
+<details><summary> Mid-Exam-4  - Missing  - 01. Experience Gaining and 3. Phone Shop </summary>
 
 > 01. Experience Gaining  - Missing Condition
 
@@ -2679,7 +2679,7 @@ After receiving the "End" command, print the phones in your storage, separated b
 
 
 ####
-<details><summary> Mid-Exam-5  - Missing 1 and 2 Condition</summary>
+<details><summary> Mid-Exam-5  - Missing - 2. Space Travel</summary>
 
 > 01. The Hunting Games
 
