@@ -1927,7 +1927,7 @@ print(f"{coffee}")
 </details>
 </details>
 
-> 3. The Angry Cat  - Missing Condition
+> 3. The Angry Cat
 
 [judge]()</br>
 [problem]()
