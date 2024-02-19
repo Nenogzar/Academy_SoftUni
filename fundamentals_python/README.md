@@ -112,19 +112,10 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 
 <table>
   <tr>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10.jpg" alt="Mid Exam" width="300"></a></th>
- 
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10.jpg" alt="Mid_Exam_Pre" width="300"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/21_mid_exam"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10_1.jpg" alt="Mid_Exam" width="300"></a></th>
   </tr>
-  <tr>
-    <td>
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation">mid 1</a>
-  |  
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation">mid 2</a>
-  | 
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation">More</a>
-    </td>
-
-  </tr>
+  
 </table>
 
 
