@@ -460,6 +460,7 @@ print(*initial_array, sep=', ')
 </details>
 
 > 03. Numbers [judge](https://judge.softuni.org/Contests/Practice/Index/2474#2) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40366)
+
 <details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
@@ -513,11 +514,8 @@ else:
 ######
 <details><summary>👈Mid-Exam-Preparation-3 </summary>
 
-> 1.	Counter-Strike
+> 1.	Counter-Strike | [judge](https://judge.softuni.org/Contests/Practice/Index/2305#0) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370) | [pastebin Ivan Shopov](https://pastebin.com/vrxNF4bB)
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/2305#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40370)</br>
-[pastebin Ivan Shopov](https://pastebin.com/vrxNF4bB)
 <details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
@@ -643,10 +641,8 @@ print(f"Won battles: {win_counter}. Energy left: {energy}")
 </details>
 
 
->  2.	Shoot for the Win
+>  2.	Shoot for the Win | [Link tJudge](https://judge.softuni.org/Contests/Practice/Index/2305#1) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
 
-[Link tJudge](https://judge.softuni.org/Contests/Practice/Index/2305#1)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40371)
 <details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
@@ -742,10 +738,8 @@ print(f"Shot targets: {made_shots} ->", *main_target, sep=" ")
 </details>
 </details>
 
-> 03. Moving Target
+> 03. Moving Target | [judge](https://judge.softuni.org/Contests/Practice/Index/2305#2) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40372)
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/2305#2)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40372)
 <details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
@@ -836,10 +830,7 @@ print(*targets, sep='|')
 ######
 <details><summary>👈Mid-Exam-Preparation-4 </summary>
 
-> 01. Guinea Pig
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2031#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40376)
+> 01. Guinea Pig | [judge](https://judge.softuni.org/Contests/Practice/Index/2031#0) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40376)
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -909,10 +900,7 @@ else:
 </details>
 </details>
 
-> 02. Shopping List
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2031#1)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40377)
+> 02. Shopping List | [judge](https://judge.softuni.org/Contests/Practice/Index/2031#1) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40377)
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -979,10 +967,8 @@ print(*initial_list,sep=', ')
 </details>
 </details>
 
-> 3.	Heart Delivery
+> 3.	Heart Delivery | [Link tJudge](https://judge.softuni.org/Contests/Practice/Index/2031#2) | [Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
 
-[Link tJudge](https://judge.softuni.org/Contests/Practice/Index/2031#2)</br>
-[Problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40378)
 <details> <summary>🛠️🐍 Example & Code</summary>
 
 ####
@@ -1128,10 +1114,7 @@ else:
 ######
 <details><summary>👈Mid-Exam-Preparation-5 </summary>
 
-> 01. Bonus Scoring System
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2028#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40382)
+> 01. Bonus Scoring System  | [judge](https://judge.softuni.org/Contests/Practice/Index/2028#0) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40382)
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -1193,10 +1176,7 @@ print(f"The student has attended {student_attended} lectures.")
 </details>
 </details>
 
-> 02. MuOnline
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/2028#1)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40383)
+> 02. MuOnline | [judge](https://judge.softuni.org/Contests/Practice/Index/2028#1) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40383)
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -1290,10 +1270,8 @@ if dead is not True:
 </details>
 </details>
 
-> 3.	Inventory
+> 3.	Inventory | [judge](https://judge.softuni.org/Contests/Practice/Index/2028#2) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40384)
 
-[judge](https://judge.softuni.org/Contests/Practice/Index/2028#2)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40384)   
 <details> <summary>🛠️🐍 Example & Code</summary>
 <details><summary>🛠️Example</summary>
 
@@ -1447,15 +1425,10 @@ print(*items, sep=", ")
 </details>
 
 
-
-
 ######
 <details><summary>👈Mid-Exam-Preparation-6 </summary>
 
->  01. Black Flag
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/1773#0)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40388)
+>  01. Black Flag | [judge](https://judge.softuni.org/Contests/Practice/Index/1773#0) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40388)
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 <details><summary>🛠️Example</summary>
@@ -1516,10 +1489,7 @@ else:
 </details>
 </details>
 
-> 2. Treasure Hunt
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/1773#1)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40389)
+> 2. Treasure Hunt |  [judge](https://judge.softuni.org/Contests/Practice/Index/1773#1) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40389)
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 <details><summary>🛠️Example</summary>
@@ -1646,12 +1616,10 @@ else:
 </details>
 </details>
 
-> 3. Man War
-
-[judge](https://judge.softuni.org/Contests/Practice/Index/1773#2)</br>
-[problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40390)
+> 3. Man War | [judge](https://judge.softuni.org/Contests/Practice/Index/1773#2) | [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40390)
 
 <details> <summary>🛠️🐍 Example & Code</summary>
+
 <details><summary>🛠️Example</summary>
 
 The pirates encounter a huge Man-O-War at sea. 
@@ -1771,10 +1739,7 @@ if finished_battle:
 
 <details><summary>👈Mid-Exam-1 </summary>
 
-> 01. The Biscuit Factory - to solve the task
-
-[judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_The_Biscuit_Factory.pdf)
+> 01. The Biscuit Factory - to solve the task | [judge]() | [problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_The_Biscuit_Factory.pdf)
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -1826,10 +1791,7 @@ NOTE: The input will always be in the correct format.
 </details>
 </details>
 
-> 2. Coffee Lover
-
-[judge]()</br>
-[problem]()
+> 2. Coffee Lover | [judge]()  | [problem]() |
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -1909,10 +1871,9 @@ print(f"{coffee}")
 </details>
 </details>
 
-> 3. The Angry Cat
+> 3. The Angry Cat  | [judge]()  | [problem]() |
 
-[judge]()</br>
-[problem]()
+
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2022,10 +1983,7 @@ if __name__ == "__main__":
 
 <details><summary>👈Mid-Exam-2 </summary>
 
-> 01. Burger Bus - to solve the task
-
-[judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_Burger_Bus.pdf)
+> 01. Burger Bus   | [judge]()  | [problem]() |- to solve the task 
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2108,10 +2066,7 @@ print(f"Burger Bus total profit: {total_profit:.2f} leva.")
 </details>
 </details>
 
-> 2. Numbers
-
-[judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/02_Numbers.pdf)
+> 2. Numbers  | [judge]()  | [problem]() |
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2277,10 +2232,7 @@ while True:
 </details>
 </details>
 
-> 3. Deck of Cards
-
-[judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03_Deck_of_Cards.pdf)
+> 3. Deck of Cards  | [judge]()  | [problem]() |
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2395,10 +2347,7 @@ print(",".join(cards_list))
 
 <details><summary>👈Mid-Exam-3  - Missing - 2. Friend List Maintenance</summary>
 
-> 01. Cooking Masterclass	
-
-[judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/01_Cooking_Masterclass.pdf)
+> 01. Cooking Masterclass	  | [judge]()  | [problem]() |
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2468,10 +2417,8 @@ else:
 </details>
 </details>
 
-> 2. Friend List Maintenance  - Missing Condition
+> 2. Friend List Maintenance   | [judge]()  | [problem]() | - Missing Condition
 
-[judge]()</br>
-[problem]()
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2495,10 +2442,8 @@ else:
 </details>
 </details>
 
-> 3. Chat Logger
+> 3. Chat Logger  | [judge]()  | [problem]() |
 
-[judge]()</br>
-[problem]()
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2591,10 +2536,8 @@ print("\n".join(chat))
 ####
 <details><summary>👈Mid-Exam-4  - Missing  - 01. Experience Gaining and 3. Phone Shop </summary>
 
-> 01. Experience Gaining  - Missing Condition
+> 01. Experience Gaining   | [judge]()  | [problem]() |- Missing Condition
 
-[judge]()</br>
-[problem]()
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2617,10 +2560,7 @@ print("\n".join(chat))
 </details>
 </details>
 
-> 2. Tax Calculator - to solve the task
-
-[judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/02_Tax_Calculator.pdf)
+> 2. Tax Calculator  | [judge]()  | [problem]() | - to solve the task
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2662,10 +2602,7 @@ You receive a string representing the vehicles, separated with ">>": **"vehicle1
 </details>
 </details>
 
-> 3. Phone Shop  - to solve the task
-
-[judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03_Phone_Shop.pdf)
+> 3. Phone Shop   | [judge]()  | [problem]() |- to solve the task
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2717,10 +2654,8 @@ After receiving the "End" command, print the phones in your storage, separated b
 ####
 <details><summary>👈Mid-Exam-5  - Missing - 2. Space Travel</summary>
 
-> 01. The Hunting Games
+> 01. The Hunting Games  | [judge]()  | [problem]() |
 
-[judge]()</br>
-[problem]()
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2813,10 +2748,8 @@ else:
 </details>
 </details>
 
-> 2. Space Travel	 - Missing Condition
+> 2. Space Travel	  | [judge]()  | [problem]() | - Missing Condition
 
-[judge]()</br>
-[problem]()
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
@@ -2840,10 +2773,7 @@ else:
 </details>
 </details>
 
-> 3. School Library	
-
-[judge]()</br>
-[problem](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/19-21_Mid_Exam_Preparation/my_mid_exam/03.%20School_Library.pdf)
+> 3. School Library	  | [judge]()  | [problem]() |
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
