@@ -2,10 +2,10 @@
 <img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/10.jpg" alt="ME" width="400">
 
 <details><summary> Mid-Exam-Preparation-1 </summary> 
-
+Show example
 ####
 
-> 1.	Computer Store
+>👀  1.	Computer Store
 
 [Judge](https://judge.softuni.org/Contests/Practice/Index/2517#0)</br>
 [problem](https://judge.softuni.org/Contests/Practice/DownloadResource/40358)
