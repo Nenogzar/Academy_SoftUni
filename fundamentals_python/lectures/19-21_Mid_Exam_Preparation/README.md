@@ -13,8 +13,6 @@
 <details> <summary>🛠️Example</summary>
 
 
-NB! Link for judge system works only if you are registered in Software University Sofia !!!!!!!!!!!!!!
-
 Write a program that prints you a receipt for your new computer.
 You will receive the parts' prices (without tax) until you receive what type of customer this is - special or regular.
 Once you receive the type of customer you should print the receipt.
@@ -145,7 +143,7 @@ Output
 When there is nmore available space left on the lift, or there are nmore people in the queue, 
 you should print on the console the final state of the lift's wagons separated by " " and one of the following messages:
 
-If there are nmore people and the lift have empty spots, you should print:
+If there are nоmore people and the lift have empty spots, you should print:
 
 "The lift has empty spots!</br>{wagons separated by ' '}"
 
