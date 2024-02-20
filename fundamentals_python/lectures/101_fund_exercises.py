@@ -1469,7 +1469,3 @@ assert most_spent_on_item(shopping_cart) == {
     "quantity": 9
 }
 print("Exercise 101 is complete.")
-
-# Created by [Ryan Orsinger](https://ryanorsinger.com)
-# 
-# Source code on [https://github.com/ryanorsinger/101-exercises](https://github.com/ryanorsinger/101-exercises)
