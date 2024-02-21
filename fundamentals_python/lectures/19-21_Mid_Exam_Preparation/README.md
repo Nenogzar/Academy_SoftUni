@@ -192,6 +192,39 @@ else:
     print(f"There isn't enough space! {people} people in a queue!")
     print(*lift)
 ```
+```Python
+def distribute_people(people, lift):
+    for wagon, spaces in enumerate(lift):
+        if spaces < 4:
+            available = 4 - spaces
+            if people - available >= 0:
+                people -= available
+                lift[wagon] += available
+            else:
+                lift[wagon] += people
+                people = 0
+
+    return people
+
+def main():
+    people = int(input())
+    lift = list(map(int, input().split()))
+
+    remaining_people = distribute_people(people, lift)
+
+    if remaining_people == 0:
+        if any(spaces < 4 for spaces in lift):
+            print('The lift has empty spots!')
+        print(*lift)
+    elif all(spaces == 4 for spaces in lift):
+        print(*lift)
+    else:
+        print(f"There isn't enough space! {remaining_people} people in a queue!")
+        print(*lift)
+
+if __name__ == "__main__":
+    main()
+```
 
 </details>
 </details>

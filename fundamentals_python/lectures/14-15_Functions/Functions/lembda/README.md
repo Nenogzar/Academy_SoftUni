@@ -77,6 +77,11 @@ print(doubled_numbers)  # Output: [2, 4, 6, 8, 10]
 odd_numbers = list(filter(lambda x: x % 2 != 0, numbers))
 print(odd_numbers)  # Output: [1, 3, 5]
 ```
+#### len list whit lambda and map
+```Python
+len_list = list(maps(lambda x: 1, numbers))
+print(len_list)     #: [5]
+```
 ____________________
 ## Lambda with Multiple Parameters:
 Lambdas can take multiple parameters separated by commas.
