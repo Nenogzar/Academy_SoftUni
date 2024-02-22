@@ -27,5 +27,6 @@
 * Objects;
 * Class Attributes and Instance Methods.
 
+<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/11.jpg" alt="Object_Classes" width="400">
 </body>
 </html>
