@@ -1,18 +1,27 @@
-def info(val = [1,2,3]):
-    for num in range(len(val)):
-        val[num] += 1
-    return val
+class Circle:
+    __pi = 3.14
+    def __init__(self, diameter):
+        self.diameter = diameter
+        self.radius = diameter / 2
 
-print(info())
-print(info())
-print(info())
+    def calculate_circumference(self):
+        return Circle.__pi * self.diameter
+
+
+    def calculate_area(self):
+        return Circle.__pi * (self.radius ** 2)
+
+
+    def calculate_area_of_sector(self, angle):
+        return (angle/360) * Circle.__pi * (self.radius ** 2)
+
+
+circle = Circle(10)
+angle = 5
+
+print(f"{circle.calculate_circumference():.2f}")
+print(f"{circle.calculate_area():.2f}")
+print(f"{circle.calculate_area_of_sector(angle):.2f}")
 
 
 
-def info1(val1 = 1):
-    val1 += 1
-    return val1
-
-print(info1())
-print(info1())
-print(info1())
