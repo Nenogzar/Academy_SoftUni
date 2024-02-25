@@ -1,0 +1,1 @@
+#### Generate ID by given date and period for cataloging postage stamps
