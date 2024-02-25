@@ -1,27 +1,36 @@
-class Circle:
-    __pi = 3.14
-    def __init__(self, diameter):
-        self.diameter = diameter
-        self.radius = diameter / 2
-
-    def calculate_circumference(self):
-        return Circle.__pi * self.diameter
+def numbers(num=1):
+    num += 1
+    return num
 
 
-    def calculate_area(self):
-        return Circle.__pi * (self.radius ** 2)
+print(numbers())
+print(numbers())
+print(numbers())
+print(numbers())
+print("_____________")
 
 
-    def calculate_area_of_sector(self, angle):
-        return (angle/360) * Circle.__pi * (self.radius ** 2)
+# Това е проблемното
+def numbers1(numb=[0, 1, 2]):
+    for k in range(len(numb)):
+        numb[k] += 1
+    return numb
 
 
-circle = Circle(10)
-angle = 5
-
-print(f"{circle.calculate_circumference():.2f}")
-print(f"{circle.calculate_area():.2f}")
-print(f"{circle.calculate_area_of_sector(angle):.2f}")
-
+print(numbers1())
+print(numbers1())
+print(numbers1())
+print(numbers1())
+print("_____________")
 
 
+def numbers2(numb=[0, 1, 2]):
+    numb = [x + 1 for x in numb]
+    return numb
+
+
+print(numbers2())
+print(numbers2())
+print(numbers2())
+print(numbers2())
+print("_____________")
