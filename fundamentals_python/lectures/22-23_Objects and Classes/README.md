@@ -24,8 +24,10 @@
 
 * Object-Oriented Programming (OOP);
 * Classes;
+* [Constructor;]()
 * Objects;
 * Class Attributes and Instance Methods.
+* [Stamp Catalogue]()
 
 <a href="https://ioflood.com/blog/python-abstract-class/"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes/image/abstract_class.jpg" alt="Object_Classes" width="400"></a>
 </body>
