@@ -1,8 +1,14 @@
-while True:
+class Weapon:
 
-    # code
+    def __init__(self, bullets: int):
+        self.bullets = bullets
 
-    repeat = input("Repeat? (Y/N)? ")
-    if repeat.upper() == "N":
-        print("Bay!")
-        break
+    def shoot(self):
+        if self.bullets > 0:
+            self.bullets -= 1
+            return "shooting..."
+        return "no bullets left"
+
+    def __repr__(self):
+        return f"Remaining bullets: {self.bullets}"
+
