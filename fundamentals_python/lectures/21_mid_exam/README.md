@@ -60,6 +60,8 @@ NOTE: The input will always be in the correct format.
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
+<details><summary>🛠️Example</summary>
+
 _John is a lover of expensive and luxurious coffees._
 
 Create a program that helps John keep track of the coffee he has. You will receive a list of the coffees that John has in stock, on a single line separated by a single space in the following format:</br>
@@ -92,7 +94,7 @@ In the end, print the manipulated list in the following format:
 
 ####
 
-<details><summary>🛠️Example</summary>
+
 
 | Input                                                                                                                                                                         | Output                                                                    |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
@@ -712,6 +714,8 @@ else:
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
+<details><summary>🛠️Example</summary>
+
 A company hires you to create a program that implements a chat logger which works with commands. You may receive the following commands:
 
 * **"Chat {message}"**:
@@ -745,7 +749,7 @@ After the "end" command, you should print the chat history starting from the fir
 
 ####
 
-<details><summary>🛠️Example</summary>
+
 
 | Input                                                                                                | Output                                                      |
 |------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
@@ -924,6 +928,9 @@ After receiving the "End" command, print the phones in your storage, separated b
 
 <details> <summary>🛠️🐍 Example & Code</summary>
 
+
+<details><summary>🛠️Example</summary>
+
 ####
 
 _A group of friends has decided to participate in a game. The first stage of the game is to gather some supplies. They have a list, and your job is to help them follow it and make the needed calculations._
@@ -958,7 +965,6 @@ If they run out of energy, print the following message and the food and water th
 ### Output
 * The final numbers should be formatted to the second digit after the decimal separator.
 
-<details><summary>🛠️Example</summary>
 
 | Input                                                                                                                                        | Output |
 |----------------------------------------------------------------------------------------------------------------------------------------------|--------|
@@ -966,7 +972,8 @@ If they run out of energy, print the following message and the food and water th
 |12</br>6</br>4430</br>9.8</br>5.5</br>620.3</br>840.2</br>960.1</br>220</br>340</br>674</br>365</br>345.5v</br>212</br>412.12</br>258 496|You will run out of energy. You will be left with 229.17 food and 118.59 water.|
 
 </details>
- <details> <summary>🐍Code</summary>
+ 
+<details> <summary>🐍Code</summary>
 
 #### Konstantin Aleksiev
 ```Python
