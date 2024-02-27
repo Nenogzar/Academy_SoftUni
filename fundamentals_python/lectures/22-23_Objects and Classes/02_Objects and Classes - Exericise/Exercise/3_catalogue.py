@@ -9,10 +9,14 @@ class Catalogue:
     def get_by_letter(self, first_letter: str):
         return [product for product in self.products if product.startswith(first_letter)]
 
+    def end_by_letter(self, last_leter: str):
+        return [product for product in self.products if product.endswith(last_leter)]
+
     def __repr__(self):
         returning_string = f"Items in the {self.name} catalogue:\n"
         returning_string += "\n".join(sorted(self.products))
         return returning_string
+
 
 catalogue = Catalogue("Furniture")
 catalogue.add_product("Sofa")
@@ -21,4 +25,5 @@ catalogue.add_product("Desk")
 catalogue.add_product("Chair")
 catalogue.add_product("Carpet")
 print(catalogue.get_by_letter("C"))
+print(catalogue.end_by_letter("r"))
 print(catalogue)
