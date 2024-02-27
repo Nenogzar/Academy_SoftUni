@@ -1,7 +1,7 @@
 class Stamps:
     all_stamps = []
 
-    def __init__(self, validation_date: str, BG, MI, SC, Ivert, SG):
+    def __init__(self, validation_date: str, BG: int, MI: int, SC: int, Ivert: int, SG: int):
 
         self.validation_date = validation_date
         self.BG = BG
@@ -9,37 +9,37 @@ class Stamps:
         self.SC = SC
         self.Ivert = Ivert
         self.SG = SG
-
+        self.period = "Bulgaria"
+        self.period_id = 0
+        self.stamp_id = ""
+        self.validation_year = 1879
         Stamps.all_stamps.append(self)
 
     def year_id(self):
         day, month, year = map(str, self.validation_date.split('.'))
-        validation_year = year
-        return validation_year
+        self.validation_year = year
+
 
     def period_info(self):
-        validation_year = self.year_id()
         period_id = ""
         period = ""
-        if int(validation_year) <= 1908:
-            period = "Principality of Bulgaria"
-            period_id = 1
-        elif int(validation_year) <= 1946:
-            period = "Kingdom of Bulgaria"
-            period_id = 2
-        elif int(validation_year) <= 1999:
-            period = "People's Republic of Bulgaria"
-            period_id = 3
+        if self.validation_year <= 1908:
+            self.period = "Principality of Bulgaria"
+            self.period_id = 1
+        elif self.validation_year <= 1946:
+            self.period = "Kingdom of Bulgaria"
+            self.period_id = 2
+        elif self.validation_year <= 1999:
+            self.period = "People's Republic of Bulgaria"
+            self.period_id = 3
         else:
-            period = "Republic of Bulgaria"
-            period_id = 4
-        return period_id, period
+            self.period = "Republic of Bulgaria"
+            self.period_id = 4
+
 
     def ID_generator(self):
         validation_year = self.year_id()
-        stamp_id = f"{period_id}_{validation_year}_{self.BG}"
-        return stamp_id
-
+        self.stamp_id = f"{self.period_id}_{self.validation_year}_{self.BG}"
 
 
 # Create an instance of Stamps
@@ -49,8 +49,13 @@ stamp348 = Stamps("25.02.1938", 348, 338, 324, 348, 326)
 stamp878 = Stamps("11.11.1952", 878, 836, 779, 836, 856)
 
 for stamp in Stamps.all_stamps:
-    period_id, period = stamp.period_info()
+    stamp.period_info()
+    stamp.ID_generator()
     print(
-        f"Postmark number according to BG catalog {stamp.BG} is an edition in {period} and gets an ID: {stamp.ID_generator()}. \n"
-        f"It was issued during the period of {period_id}\n"
-        f"__________")
+        f"Postmark number according to BG catalog {stamp.BG} is an edition in {stamp.period} and gets an ID: {stamp.stamp_id}. \n"
+        f"It was issued during the period of {stamp.period_id}\n"
+        f"__________"
+    )
+    print(f"BG: {stamp.BG}, Period: {stamp.period}, Period ID: {stamp.period_id}, Stamp ID: {stamp.stamp_id}")
+    print("____________________")
+
