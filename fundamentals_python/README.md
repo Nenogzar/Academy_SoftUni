@@ -126,15 +126,18 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 <table>
   <tr>
     <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/11.jpg" alt="Object_Classes" width="300"></a></th>
+</th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/16_Software%20Development%20Concepts"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/12.jpg" alt="SDC2" width="300"></a></th>
   </tr>
   <tr>
     <td>
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes/01_Objects%20and%20Classes%20-%20Lab">Lab</a>
   |  
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes/02_Objects%20and%20Classes%20-%20Exericise">Exercise</a>
-  </td>
+    </td>
+    <td>   
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/24_Software%20Development%20Conceptions%20-%202">Lecture</a>
+    </td>
   </tr>
 </table>
-
-
 
