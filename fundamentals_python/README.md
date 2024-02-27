@@ -129,9 +129,9 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   </tr>
   <tr>
     <td>
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes/01_Objects%20and%20Classes%20-%20Lab/Exercise">Lab</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes/01_Objects%20and%20Classes%20-%20Lab">Lab</a>
   |  
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes/02_Objects%20and%20Classes%20-%20Exericse/Exercise">Exercise</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/22-23_Objects%20and%20Classes/02_Objects%20and%20Classes%20-%20Exericise">Exercise</a>
   </td>
   </tr>
 </table>
