@@ -15,4 +15,4 @@ input_str = input().split(" ")
 char_dict = count_letter(input_str)
 
 for k, v, in char_dict.items():
-    print(f"{k} -> {v}")
+    print(f"{sorted({k})} -> {v}")
