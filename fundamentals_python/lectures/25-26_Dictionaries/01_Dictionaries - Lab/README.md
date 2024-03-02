@@ -14,7 +14,7 @@
   <tr>
     <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/25-26_Dictionaries"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/13.jpg" alt="Dictionary" width="300"></a>
 </th>
-    <th>Legend:<br>🛠️Condition - task conditions<br>🐍Code - solution of tasks</th>
+    <th>Legend:<br>Under each task name, you have two choices<br>🛠️Condition - task conditions<br>🐍Code - solution of tasks</th>
   </tr>
   <tr>
     <td>
