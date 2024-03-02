@@ -32,7 +32,7 @@
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/1736)
 
-> ## Dictionaries
+> ## Dictionaries Lab
 
 <details><summary> TASK CONDITIONS 🛠️ AND SOLUTION OF TASKS 🐍</summary>
 
