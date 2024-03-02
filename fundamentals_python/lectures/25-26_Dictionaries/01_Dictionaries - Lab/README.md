@@ -157,6 +157,78 @@ Example
 <details> <summary>🐍Code</summary>
 
 ```Python
+def product_func(dict_product, product_dict):
+    key, value = dict_product[0], int(dict_product[1])
+
+    if key not in product_dict:
+        product_dict[key] = value
+    else:
+        product_dict[key] += value
+    return product_dict
+
+
+command = input()
+product_dict = {}
+while command != "statistics":
+    product_info = command.split(": ")
+    product_dict = product_func(product_info, product_dict)
+
+    command = input()
+
+print("Products in stock:")
+for k, v in product_dict.items():
+    print(f"- {k}: {v}")
+print(f"Total Products: {len(product_dict)}")
+print(f"Total Quantity: {sum(product_dict.values())}")
+# or 
+# print(f"Products in stock:")
+# [print(f"- {item}: {quantity}") for item, quantity in product_dict.items()]
+# print(f"Total Products: {len(product_dict)}\nTotal Quantity: {sum(product_dict.values())}")
+```
+```Python
+product_input = input()
+
+products_in_stock = {}
+
+while product_input != 'statistics':
+    product, quantity = product_input.split(': ')
+    products_in_stock[product] = products_in_stock.get(product, 0) + int(quantity)
+    product_input = input()
+
+print('Products in stock:')
+for product, quantity in products_in_stock.items():
+    print(f'- {product}: {quantity}')
+print(f'Total Products: {len(products_in_stock)}')
+print(f'Total Quantity: {sum(products_in_stock.values())}')
+```
+
+</details>
+</details>
+
+><details><summary>EXAMP</summary>
+
+
+<details><summary>🛠️Condition</summary>
+
+
+
+
+Example
+
+
+| Input	| Output  	|
+|-------|-----------|
+|       |     		|
+|  		|    		|
+|  		|  			|
+
+
+</details>
+
+<details> <summary>🐍Code</summary>
+
+
+```Python
  
 
 ```
