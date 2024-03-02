@@ -14,7 +14,7 @@
   <tr>
     <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/25-26_Dictionaries"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/13.jpg" alt="Dictionary" width="300"></a>
 </th>
-    <th>Legend:<br>Under each task name, you have two choices<br>🛠️Condition - task conditions<br>🐍Code - solution of tasks</th>
+    <th>Legend:<br>Under each task name, you have two choices:<br>🛠️Condition - task conditions<br>🐍Code - solution of tasks</th>
   </tr>
   <tr>
     <td>
@@ -24,6 +24,7 @@
   |  
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/25-26_Dictionaries/03_Dictionaries%20-%20More%20Exercises/Exercise">More</a>
     </td>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/25-26_Dictionaries/01_Dictionaries%20-%20Lab/Exercise">problem solving python files</a></th>
   </tr>
 
 </table>
@@ -207,7 +208,7 @@ print(f'Total Quantity: {sum(products_in_stock.values())}')
 </details>
 </details>
 
-><details><summary>EXAMP</summary>
+><details><summary>4. Students</summary>
 
 
 <details><summary>🛠️Condition</summary>
