@@ -32,6 +32,8 @@
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/1736)
 
+> ## Dictionaries
+
 <details><summary> TASK CONDITIONS 🛠️ AND SOLUTION OF TASKS 🐍</summary>
 
 > ### 01. Bakery
