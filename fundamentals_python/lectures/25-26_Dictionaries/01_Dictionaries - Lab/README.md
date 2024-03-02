@@ -43,10 +43,10 @@ They will be separated by a **single space** (the first element is the key, the 
 
 Example
 
-| Input	| Output  	|
-|-------|-----------|
-|bread 10 butter 4 sugar 9 jam 12|{'bread': 10, 'butter': 4, 'sugar': 9, 'jam': 12}|
-|eggs 3 sugar 7 salt 1 butter 3|{'eggs': 3, 'sugar': 7, 'salt': 1, 'butter': 3}|
+| Input	                           | Output  	                                         |
+|----------------------------------|---------------------------------------------------|
+| bread 10 butter 4 sugar 9 jam 12 | {'bread': 10, 'butter': 4, 'sugar': 9, 'jam': 12} |
+| eggs 3 sugar 7 salt 1 butter 3   | {'eggs': 3, 'sugar': 7, 'salt': 1, 'butter': 3}   |
 
 </details>
 
@@ -87,10 +87,10 @@ On the following line, you will be given products to search for. Check for each 
 
 #### Example
 
-| Input	| Output  	|
-|-------|-----------|
-|cheese 10 bread 5 ham 10 chocolate 3</br>jam cheese ham tomatoes|Sorry, we don't have jam</br>We have 10 of cheese left</br>We have 10 of ham left</br>Sorry, we don't have tomatoes|
-|eggs 5 bread 10</br>bread eggs|We have 10 of bread left</br>We have 5 of eggs left|
+| Input	                                                           | Output  	                                                                                                           |
+|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| cheese 10 bread 5 ham 10 chocolate 3</br>jam cheese ham tomatoes | Sorry, we don't have jam</br>We have 10 of cheese left</br>We have 10 of ham left</br>Sorry, we don't have tomatoes |
+| eggs 5 bread 10</br>bread eggs                                   | We have 10 of bread left</br>We have 5 of eggs left                                                                 |
 
 </details>
 
@@ -149,11 +149,10 @@ When you receive the **"statistics"** command, print the following:
 
 Example
 
-| Input	| Output  	|
-|-------|-----------|
-|bread: 4</br>cheese: 2</br>ham: 1</br>bread: 1</br>statistics|Products in stock:</br>- bread: 5</br>- cheese: 2</br>- ham: 1</br>Total Products: 3</br>Total Quantity: 8|
-|eggs: 10</br>bread: 6</br>cheese: 8</br>milk: 7</br>statistics|Products in stock:</br>- eggs: 10</br>- bread: 6</br>- cheese: 8</br>- milk: 7</br>Total Products: 4</br>Total Quantity: 31|
-
+| Input	                                                         | Output  	                                                                                                                   |
+|----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| bread: 4</br>cheese: 2</br>ham: 1</br>bread: 1</br>statistics  | Products in stock:</br>- bread: 5</br>- cheese: 2</br>- ham: 1</br>Total Products: 3</br>Total Quantity: 8                  |
+| eggs: 10</br>bread: 6</br>cheese: 8</br>milk: 7</br>statistics | Products in stock:</br>- eggs: 10</br>- bread: 6</br>- cheese: 8</br>- milk: 7</br>Total Products: 4</br>Total Quantity: 31 |
 
 </details>
 
@@ -213,17 +212,21 @@ print(f'Total Quantity: {sum(products_in_stock.values())}')
 
 <details><summary>🛠️Condition</summary>
 
-
-
+You will be receiving names of students, their ID, and a course of programming they have taken in the format
+#### "{name}:{ID}:{course}"
+On the last line, you will receive the **name** of a course in snake case lowercase letters. 
+You should **print only the information** of the students who have taken the corresponding course in the format:
+#### "{name} - {ID}"
+on separate lines.
+#### Note: **each student's ID will always be unique**
 
 Example
 
+| Input	                                                                                                                       | Output  	                               |
+|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
+| Peter:123:programming basics<br>John:5622:fundamentals<br>Maya:89:fundamentals<br>Lilly:633:fundamentals<br>fundamentals     | John - 5622<br>Maya - 89<br>Lilly - 633 |
+| Alex:6:programming basics<br>Maria:7:programming basics<br>Kaloyan:9:advanced<br>Todor:10:fundamentals<br>programming_basics | Alex - 6<br>Maria - 7                   |
 
-| Input	| Output  	|
-|-------|-----------|
-|       |     		|
-|  		|    		|
-|  		|  			|
 
 
 </details>
@@ -232,9 +235,48 @@ Example
 
 
 ```Python
- 
+"""Building a dictionary by student -> {'student': ('ID', 'course')}"""
+command = input().split(":")
+student_dict = {}
+
+while len(command) > 1:
+
+    studen, id_student, course  = command
+    student_dict[studen] = (id_student, course)
+    command = input().split(":")
+#print(student_dict)
+# {'Peter': ('123', 'programming basics'), 'John': ('5622', 'fundamentals'), 'Maya': ('89', 'fundamentals'), 'Lilly': ('633', 'fundamentals')}
+value = command[0]
+formatted_value = value.replace('_', ' ')
+
+for name, (id, courses) in student_dict.items():
+    if formatted_value == courses:
+        print(f"{name} - {id}")
 
 ```
+kumchovylcho solution
+
+```Python
+""" Building a dictionary by course - student  - ID - > {'course': {'student': 'ID'}"""
+student_information = input()
+student_dic = {}
+
+while not student_dic.get(student_information):
+    student_information = student_information.split(":")
+    name_student, id_student, couse_student = student_information
+
+    if couse_student not in student_dic:
+        student_dic[couse_student] = {}
+    student_dic[couse_student][name_student] = id_student
+#   {'programming basics': {'Peter': '123'}, 'fundamentals': {'John': '5622', 'Maya': '89', 'Lilly': '633'}}
+    student_information = input()
+
+    student_information = student_information.replace("_", " ")
+
+for key, value in student_dic[student_information].items():
+    print(f"{key} - {value}")
+```
+
 
 </details>
 </details>
