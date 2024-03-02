@@ -32,7 +32,9 @@
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/1736)
 
-><details><summary>01. Bakery</summary>
+<details><summary> TASK CONDITIONS 🛠️ AND SOLUTION OF TASKS 🐍</summary>
+
+> ### 01. Bakery
 
 <details><summary>🛠️Condition</summary>
 
@@ -70,9 +72,9 @@ print(food_type)
 ```
 
 </details>
-</details>
 
-><details><summary>02. Stock</summary>
+
+> ### 02. Stock
 
 
 <details><summary>🛠️Condition</summary>
@@ -126,9 +128,9 @@ for result in check_results:
 ```
 
 </details>
-</details>
 
-><details><summary>3. Statistics</summary>
+
+> ### 3. Statistics
 
 <details><summary>🛠️Condition</summary>
 
@@ -205,9 +207,9 @@ print(f'Total Quantity: {sum(products_in_stock.values())}')
 ```
 
 </details>
-</details>
 
-><details><summary>4. Students</summary>
+
+> ### 4. Students
 
 
 <details><summary>🛠️Condition</summary>
@@ -226,8 +228,6 @@ Example
 |------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
 | Peter:123:programming basics<br>John:5622:fundamentals<br>Maya:89:fundamentals<br>Lilly:633:fundamentals<br>fundamentals     | John - 5622<br>Maya - 89<br>Lilly - 633 |
 | Alex:6:programming basics<br>Maria:7:programming basics<br>Kaloyan:9:advanced<br>Todor:10:fundamentals<br>programming_basics | Alex - 6<br>Maria - 7                   |
-
-
 
 </details>
 
@@ -279,4 +279,170 @@ for key, value in student_dic[student_information].items():
 
 
 </details>
+
+
+
+> ### 5. ASCII Values
+
+
+<details><summary>🛠️Condition</summary>
+
+Write a program that receives a list of characters separated by **", "**. 
+
+It should create a dictionary with each character as a key and its ASCII value as a value. 
+Try solving that problem using comprehension.
+
+Example
+
+
+| Input	| Output  	|
+|-------|-----------|
+|a, b, c, a|{'a': 97, 'b': 98, 'c': 99}|
+|d, c, m, h|{'d': 100, 'c': 99, 'm': 109, 'h': 104}|
+|s, t, o, y, a, n|{'s': 115, 't': 116, 'o': 111, 'y': 121, 'a': 97, 'n': 110}|
+
+
 </details>
+
+<details> <summary>🐍Code</summary>
+
+```Python
+input_string = input().split(", ")
+ascii_dict = {}
+
+for char in input_string:
+    ascii_dict[char] = ord(char)
+
+print(ascii_dict)
+```
+
+```Python
+"""using comprehension """
+input_characters = list(map(str, input().split(", ")))
+
+ascii_dict = {char: ord(char) for char in input_characters}
+
+print(ascii_dict)
+
+```
+
+```Python
+def create_ascii_dict(characters):
+    ascii_dict = {char: ord(char) for char in characters}
+    return ascii_dict
+
+input_characters = input().split(", ")
+result_dict = create_ascii_dict(input_characters)
+
+print(result_dict)
+```
+
+</details>
+
+> ### 6. Odd Occurrences
+
+<details><summary>🛠️Condition</summary>
+
+Write a program that prints all elements from a given sequence of words that occur an odd number of times (case-insensitive) in it.
+• Words are given on a single line, space-separated.
+
+
+
+Example
+
+
+| Input	                         | Output  	  |
+|--------------------------------|------------|
+| Java C# PHP PHP JAVA C java    | java c# c  |
+| 3 5 5 hi pi HO Hi 5 ho 3 hi pi | 5 hi       |
+| a a A SQL xx a xx a A a XX c   | a sql xx c |
+
+
+</details>
+
+<details> <summary>🐍Code</summary>
+
+
+```Python
+words = input().split()
+odd_occurrences = {}
+
+for word in words:
+    word = word.lower()
+    if word not in odd_occurrences.keys():
+        odd_occurrences[word] = 1
+    else:
+        odd_occurrences[word] += 1
+for key, value in odd_occurrences.items():
+    if value % 2 != 0:
+        print(f"{key} ", end="")
+
+```
+
+</details>
+
+> ### 7. Word Synonyms
+
+<details><summary>🛠️Condition</summary>
+
+Write a program, which keeps a dictionary with **synonyms**.<br> The key of the dictionary will be the word. 
+The value **will be a list** of all the synonyms of that word. <br>
+You will be given a **number n – the count of the words**. 
+After each term, you will be **given a synonym**, so the count of lines you should read from the console is **2 * n**. 
+You will be receiving a word and a synonym each on a **separate line like this**:
+* **{word}**<br>
+* **{synonym}**<br>
+If you get the same word twice, just add the new synonym to the list.<br>
+Print the words in the following format:<br>
+**{word} - {synonym1, synonym2 … synonymN}**
+
+Example
+
+| Input	                                                       | Output  	                                   |
+|--------------------------------------------------------------|---------------------------------------------|
+| 3<br>cute<br>adorable<br>cute<br>charming<br>smart<br>clever | cute - adorable, charming<br>smart - clever |
+| 2<br>task<br>problem<br>task<br>assignment                   | task – problem, assignment                  |
+
+
+
+</details>
+
+<details> <summary>🐍Code</summary>
+
+
+```Python
+number_synonyms = int(input())
+synonyms_dict = {}
+
+for _ in range(number_synonyms):
+    word = input()
+    synonym = input()
+
+    if word in synonyms_dict:
+        synonyms_dict[word].append(synonym)
+    else:
+        synonyms_dict[word] = [synonym]
+# print(synonyms_dict)
+for word, synonyms in synonyms_dict.items():
+    print(f"{word} - {', '.join(synonyms)}")
+```
+```Python
+count_of_synonyms = int(input())
+synonyms = dict()
+
+for item in range(count_of_synonyms):
+    word, synonym = input(), input()
+
+    synonyms[word] = synonyms.get(word, [])
+    synonyms[word].append(synonym)
+
+[print(f"{word} - {', '.join(synonyms[word])}") for word in synonyms]
+```
+
+</details>
+
+</details>
+
+
+
+
