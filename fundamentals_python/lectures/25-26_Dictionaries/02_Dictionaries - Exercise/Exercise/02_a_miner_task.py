@@ -16,7 +16,8 @@ for i in range(0, len(res_list), 2):
 
 for resource, quantity in resourse_dict.items():
     print(f"{resource} -> {quantity}")
-
+# OR
+# [print{resource} -> {quantity} for resource, quantity in resourse_dict.items()]
 
 
 """ whit dicrionary """
@@ -38,6 +39,8 @@ while material != "stop":
 for resource, quantity in mined_materials.items():
     print(f"{key} -> {quantity}")
 
+# OR
+# [print {key} -> {quantity} for resource, quantity in mined_materials.items()]
 
 """whit get() """
 
