@@ -524,7 +524,137 @@ while input_info != "buy":
 for key, value in dict_products.items():
     print(f"{key} -> {value['price'] * value['quantity']:.2f}")
 ```
+</details>
+
+> ### 7. SoftUni Parking
+
+<details><summary>🛠️Condition</summary>
+
+SoftUni just got a new fancy **parking lot**. It even has online **parking validation**, except the online service doesn't work. It can only receive users' data, but it doesn't know what to do with it. Good thing you're on the dev team and know how to fix it, right?
+Write a program, which validates a parking place - users can register to enter the park and unregister to leave.
+The program receives 2 types of commands:
+
+* **"register {username} {license_plate_number}"**:
+  *The system only supports one car per user at the moment, so if a user tries to register another license plate using the same username, the system should print: "ERROR: already registered with plate number {license_plate_number}"
+  * If the check above passes successfully, the user should be registered, so the system should print: "{username} registered {license_plate_number} successfully"
+* **"unregister {username}"**:
+  * If the user is not present in the database, the system should print: "ERROR: user {username} not found"
+  * If the check above passes successfully, the system should print: "{username} unregistered successfully"
+
+After you execute all of the commands, print all the currently registered users and their license plates in the format:
+  * • **"{username} => {license_plate_number}"**
+### Input
+  * • First line: n - number of commands - **integer**
+  * • Next n lines: commands in one of the two possible formats:
+    * o Register: **"register {username} {license_plate_number}"**
+    * o Unregister: **"unregister {username}"**
+    
+The input will always be valid, and you do not need to check it explicitly.
+
+Example
+
+| Input	                                                                                                                                                     | Output  	                                                                                                                                                                                                                                                                                                        |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 5<br>register John CS1234JS<br>register George JAVA123S<br>register Andy AB4142CD<br>register Jesica VR1223EE<br>unregister Andy                           | John registered CS1234JS successfully<br>George registered JAVA123S successfully<br>Andy registered AB4142CD successfully<br>Jesica registered VR1223EE successfully<br>Andy unregistered successfully<br>John => CS1234JS<br>George => JAVA123S<br>Jesica => VR1223EE                                           |
+| 4<br>register Jony AA4132BB<br>register Jony AA4132BB<br>register Linda AA9999BB<br>unregister Jony                                                        | Jony registered AA4132BB successfully<br>ERROR: already registered with plate number AA4132BB<br>Linda registered AA9999BB successfully<br>Jony unregistered successfully<br>Linda => AA9999BB                                                                                                                   |
+| 6<br>register Jacob MM1111XX<br>register Anthony AB1111XX<br>unregister Jacob<br>register Joshua DD1111XX<br>unregister Lily<br>register Samantha AA9999BB | Jacob registered MM1111XX successfully<br>Anthony registered AB1111XX successfully<br>Jacob unregistered successfully<br>Joshua registered DD1111XX successfully<br>ERROR: user Lily not found<br>Samantha registered AA9999BB successfully<br>Anthony => AB1111XX<br>Joshua => DD1111XX<br>Samantha => AA9999BB |
 
 </details>
 
+<details> <summary>🐍Code</summary>
+
+
+```Python
+dict_registered = {}
+
+reg_num = int(input())
+
+for _ in range(reg_num):
+    info_string = input().split(" ")
+
+    if len(info_string) == 3:
+        type_register, name, reg_num = [item for item in info_string]
+
+        if type_register == "register":
+            if name not in dict_registered:
+                dict_registered[name] = reg_num
+                print(f"{name} registered {reg_num} successfully")
+            else:
+                print(f"ERROR: already registered with plate number {dict_registered[name]}")
+
+    elif len(info_string) == 2:
+        type_register, name = [item for item in info_string]
+        if type_register == "unregister":
+            if name in dict_registered:
+                del dict_registered[name]
+                print(f"{name} unregistered successfully")
+            else:
+                print(f"ERROR: user {name} not found")
+
+for name, license in dict_registered.items():
+    print(f"{name} => {license}")
+
+```
+```Python
+""" Ivan Shopov solution"""
+parking = {}
+n = int(input())
+for i in range(n):
+    command = input().split()
+    action = command[0]
+
+    if action == "register":
+        key = command[1]
+        value = command[2]
+        if key in parking.keys():
+            print(f"ERROR: already registered with plate number {parking[key]}")
+        else:
+            parking[key] = value
+            print(f"{key} registered {value} successfully")
+    elif action == "unregister":
+        key = command[1]
+        if key in parking.keys():
+            del parking[key]
+            print(f"{key} unregistered successfully")
+        else:
+            print(f"ERROR: user {key} not found")
+for key in parking.keys():
+    print(f"{key} => {parking[key]}")
+```
+```Python
+""" kumchovalcho solution """
+def register(username: str, car_plate: str):
+    if username in parking:
+        return f"ERROR: already registered with plate number {car_plate}"
+
+    parking[username] = car_plate
+    return f"{username} registered {car_plate} successfully"
+
+
+def unregister(username: str):
+    if username not in parking:
+        return f"ERROR: user {username} not found"
+
+    parking.pop(username)
+    return f"{username} unregistered successfully"
+
+
+parking = {}
+
+commands = {
+    'register': register,
+    'unregister': unregister,
+    }
+
+number_of_operations = int(input())
+for _ in range(number_of_operations):
+    command, name, *license_plate = input().split()
+
+    print(commands[command](name, *license_plate))
+
+for name, plate in parking.items():
+    print(f"{name} => {plate}")
+```
+
+</details>
 </details>END
