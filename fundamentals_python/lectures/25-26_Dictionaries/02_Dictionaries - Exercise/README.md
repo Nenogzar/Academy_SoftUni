@@ -658,6 +658,7 @@ for name, plate in parking.items():
 </details>
 
 > ### 8. Courses
+<details><summary>🛠️Condition</summary>
 
 Write a program that **keeps the information about courses**. Each **course** has a name and registered **students**.
 You will be **receiving** a **course name** and a **student name** until you receive the command **"end"**.
