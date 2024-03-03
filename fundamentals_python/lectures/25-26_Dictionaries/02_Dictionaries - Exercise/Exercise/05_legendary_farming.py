@@ -1,42 +1,97 @@
-input_items = input().split()
-item_useful = {"shards": 0, "fragments": 0, "motes": 0}
-item_useless = {}
+# input_items = input().split()
+# item_useful = {"shards": 0, "fragments": 0, "motes": 0}
+# item_useless = {}
+#
+# obtained = False
+#
+# while True:
+#     for i in range(0, len(input_items), 2):
+#         quantity = int(input_items[i])
+#         material = input_items[i + 1].lower()
+#         if material == "shards" or material == "fragments" or material == "motes":
+#             item_useful[material] += quantity
+#         else:
+#             if material not in item_useless:
+#                 item_useless[material] = quantity
+#             else:
+#                 item_useless[material] += quantity
+#         if item_useful["motes"] >= 250:
+#             print("Dragonwrath obtained!")
+#             item_useful["motes"] -= 250
+#             obtained = True
+#             break
+#         elif item_useful["fragments"] >= 250:
+#             print("Valanyr obtained!")
+#             item_useful["fragments"] -= 250
+#             obtained = True
+#             break
+#         elif item_useful["shards"] >= 250:
+#             print("Shadowmourne obtained!")
+#             item_useful["shards"] -= 250
+#             obtained = True
+#             break
+#     if obtained:
+#         break
+#     input_items = input().split()
+#
+#
+# for keys, value in item_useful.items():
+#     print(f"{keys}: {value}")
+# for keys, value in item_useless.items():
+#     print(f"{keys}: {value}")
+#
+"""  """
+def print_func(legendary_items_dict, junk_items_dict, special_item):
+    print(f'{special_item} obtained!')
+    print(f"shards: {legendary_items_dict['shards']}")
+    print(f"fragments: {legendary_items_dict['fragments']}")
+    print(f"motes: {legendary_items_dict['motes']}")
 
-obtained = False
+    for key, value in junk_items_dict.items():
+        print(f'{key}: {value}')
 
-while True:
-    for i in range(0, len(input_items), 2):
-        quantity = int(input_items[i])
-        material = input_items[i + 1].lower()
-        if material == "shards" or material == "fragments" or material == "motes":
-            item_useful[material] += quantity
-        else:
-            if material not in item_useless:
-                item_useless[material] = quantity
+
+def legendary_farming():
+    legendary_items_dict = {'shards': 0, 'fragments': 0, 'motes': 0}
+    junk_items_dict = {}
+    while_condition = False
+
+    while True:
+        items = input().lower()
+        items = items.split(' ')
+
+        for value, material in zip(items[0::2], items[1::2]):
+            material = material.lower()
+            value = int(value)
+
+            if material in ['shards', 'fragments', 'motes']:
+                if material not in legendary_items_dict:
+                    legendary_items_dict[material] = value
+                else:
+                    legendary_items_dict[material] += value
+
+                if legendary_items_dict[material] >= 250:
+                    legendary_items_dict[material] -= 250
+                    special_item = ''
+                    if material == 'shards':
+                        special_item = 'Shadowmourne'
+                    elif material == 'fragments':
+                        special_item = 'Valanyr'
+                    elif material == 'motes':
+                        special_item = 'Dragonwrath'
+
+                    print_func(legendary_items_dict, junk_items_dict, special_item)
+                    while_condition = True
+
             else:
-                item_useless[material] += quantity
-        if item_useful["motes"] >= 250:
-            print("Dragonwrath obtained!")
-            item_useful["motes"] -= 250
-            obtained = True
-            break
-        elif item_useful["fragments"] >= 250:
-            print("Valanyr obtained!")
-            item_useful["fragments"] -= 250
-            obtained = True
-            break
-        elif item_useful["shards"] >= 250:
-            print("Shadowmourne obtained!")
-            item_useful["shards"] -= 250
-            obtained = True
-            break
-    if obtained:
-        break
-    input_items = input().split()
+                if material not in junk_items_dict:
+                    junk_items_dict[material] = value
+                else:
+                    junk_items_dict[material] += value
 
+            if while_condition:
+                break
+        if while_condition:
+            break
 
-for keys, value in item_useful.items():
-    print(f"{keys}: {value}")
-for keys, value in item_useless.items():
-    print(f"{keys}: {value}")
-
+legendary_farming()

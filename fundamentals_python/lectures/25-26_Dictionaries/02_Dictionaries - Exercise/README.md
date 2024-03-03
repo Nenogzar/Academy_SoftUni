@@ -217,7 +217,7 @@ country_dict = dict(zip(country_names, capytal_name))
 ```
 </details>
 
-> ### 4 Phonebook
+> ### 4. Phonebook
 
 <details><summary>🛠️Condition</summary>
 
@@ -281,7 +281,7 @@ for _ in range(int(phone_number)):
 ```
 </details>
 
-> ### 5 Legendary Farming
+> ### 5. Legendary Farming
 
 <details><summary>🛠️Condition</summary>
 
@@ -305,7 +305,7 @@ At that **point**, you have to **print** that the **corresponding legendary item
 
 Finally, **print** the collected junk items in the order of appearance.
 #### Input
-• Each line comes in the following format:
+* Each line comes in the following format:
 
 **"{quantity1} {material1} {quantity2} {material2} … {quantityN} {materialN}"**
 #### Output
@@ -326,7 +326,6 @@ Example
 
 </details>
 <details> <summary>🐍Code</summary>
-
 
 ```Python 
 input_items = input().split()
@@ -371,5 +370,161 @@ for keys, value in item_useful.items():
 for keys, value in item_useless.items():
     print(f"{keys}: {value}")
 ```
+```Python 
+def print_func(legendary_items_dict, junk_items_dict, special_item):
+    print(f'{special_item} obtained!')
+    print(f"shards: {legendary_items_dict['shards']}")
+    print(f"fragments: {legendary_items_dict['fragments']}")
+    print(f"motes: {legendary_items_dict['motes']}")
+
+    for key, value in junk_items_dict.items():
+        print(f'{key}: {value}')
+
+
+def legendary_farming():
+    legendary_items_dict = {'shards': 0, 'fragments': 0, 'motes': 0}
+    junk_items_dict = {}
+    while_condition = False
+
+    while True:
+        items = input().lower()
+        items = items.split(' ')
+
+        for value, material in zip(items[0::2], items[1::2]):
+            material = material.lower()
+            value = int(value)
+
+            if material in ['shards', 'fragments', 'motes']:
+                if material not in legendary_items_dict:
+                    legendary_items_dict[material] = value
+                else:
+                    legendary_items_dict[material] += value
+
+                if legendary_items_dict[material] >= 250:
+                    legendary_items_dict[material] -= 250
+                    special_item = ''
+                    if material == 'shards':
+                        special_item = 'Shadowmourne'
+                    elif material == 'fragments':
+                        special_item = 'Valanyr'
+                    elif material == 'motes':
+                        special_item = 'Dragonwrath'
+
+                    print_func(legendary_items_dict, junk_items_dict, special_item)
+                    while_condition = True
+
+            else:
+                if material not in junk_items_dict:
+                    junk_items_dict[material] = value
+                else:
+                    junk_items_dict[material] += value
+
+            if while_condition:
+                break
+        if while_condition:
+            break
+
+legendary_farming()
+```
 </details>
+
+> ### 6. Orders
+
+<details><summary>🛠️Condition</summary>
+
+Write a program that **keeps the information** about **products** and their **prices**. 
+Each product has a name, a price, and a quantity:
+* **If the product doesn't exist** yet, **add** it with its starting quantity.
+*  **If you receive a product**, that **already exists**, increase its quantity by the **input quantity** and if its price is **different**, **replace** the price as well.
+You will receive products' names, prices, and quantities on new lines. Until you receive the command "buy", keep adding items. 
+* Finally, **print** all items with their **names** and the **total price of each product**.
+#### Input
+*  Until you receive "**buy**", the products will be coming in the format: **"{name} {price} {quantity}"**.
+* The product data is always delimited by a **single space**.
+#### Output
+* Print information about each product in the following format: **"{product_name} -> {total_price}"**
+* **Format** the total price to the **2nd digit** after the decimal separator.
+
+Example
+
+| Input	                                                                                        | Output  	                                                                            |
+|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Beer 2.20 100<br>IceTea 1.50 50<br>NukaCola 3.30 80<br>Water 1.00 500<br>buy                  | Beer -> 220.00<br>IceTea -> 75.00<br>NukaCola -> 264.00<br>Water -> 500.00           |
+| Beer 2.40 350<br>Water 1.25 200<br>IceTea 5.20 100<br>Beer 1.20 200<br>IceTea 0.50 120<br>buy | Beer -> 660.00<br>Water -> 250.00<br>IceTea -> 110.00                                |
+| CesarSalad 10.20 25<br>SuperEnergy 0.80 400<br>Beer 1.35 350<br>IceCream 1.50 25<br>buy       | CesarSalad -> 255.00<br>SuperEnergy -> 320.00<br>Beer -> 472.50<br>IceCream -> 37.50 |
+
+</details>
+
+<details> <summary>🐍Code</summary>
+
+```Python 
+dict_products = {}
+
+input_info = input()
+
+while input_info != "buy":
+    input_info = input_info.split(" ")
+    names, prices, quantities = input_info[0], float(input_info[1]), int(input_info[2])
+
+    if names in dict_products:
+        existing_prices, existing_quantities = dict_products[names]
+        dict_products[names] = (prices, existing_quantities + quantities)
+    else:
+        dict_products[names] = (prices, quantities)
+
+    input_info = input()
+
+for names, (prices, quantities) in dict_products.items():
+    total_price = prices * quantities
+    print(f"{names} -> {total_price:.2f}")
+```
+```Python
+def orders_func(dict_products, input_info):
+    names = input_info[0]
+    price = float(input_info[1])
+    quantity = int(input_info[2])
+
+    if names in dict_products:
+        dict_products[names] = [price, (quantity + dict_products[names][1])]
+    else:
+        dict_products[names] = [price, quantity]
+
+    return dict_products
+
+def orders():
+
+    dict_products = {}
+    input_info = input()
+    while  input_info != 'buy':
+
+        input_info = input_info.split(' ')
+        dict_products = orders_func(dict_products, input_info)
+        input_info = input()
+        
+    for k in dict_products:
+        total_sum = dict_products[k][0] * dict_products[k][1]
+        print(f'{k} -> {total_sum:.2f}')
+
+orders()
+```
+```Python
+dict_products = {}
+
+input_info = input()
+while input_info != "buy":
+    names, price, quantity = [item for item in input_info.split()]
+
+    dict_products[names] = dict_products.get(names, {"price": 0, "quantity": 0})
+    dict_products[names]['price'] = float(price)
+    dict_products[names]['quantity'] += int(quantity)
+
+
+    input_info = input()
+
+for key, value in dict_products.items():
+    print(f"{key} -> {value['price'] * value['quantity']:.2f}")
+```
+
+</details>
+
 </details>END
