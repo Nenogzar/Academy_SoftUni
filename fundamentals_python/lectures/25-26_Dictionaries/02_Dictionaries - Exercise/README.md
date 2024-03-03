@@ -187,25 +187,189 @@ for resource, quantity in total_resource.items():
 
 <details><summary>🛠️Condition</summary>
 
+Using **dictionary comprehension**, write a program that receives **country** names on the first line, 
+separated by comma and space **", "**, and their corresponding **capital** cities on the second line 
+(again separated by **comma and space ", "**). 
+Print each country with its capital on a separate line in the following format: **"{country} -> {capital}"**.
 
+**Hints**
 
+* You could use the zip() method.
 
 Example
 
-| Input	| Output  	|
-|-------|-----------|
-|       |     		|
-|  		|    		|
+| Input	                                                                  | Output  	                                                                           |
+|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| Bulgaria, Romania, Germany, England<br>Sofia, Bucharest, Berlin, London | Bulgaria -> Sofia<br>Romania -> Bucharest<br>Germany -> Berlin<br>England -> London |
+| Bulgaria, Germany, France<br>Varna, Frankfurt, Paris                    | Bulgaria -> Varna<br>Germany -> Frankfurt<br>France -> Paris                        |
 
 </details>
 <details> <summary>🐍Code</summary>
 
 
 ```Python
- 
+country_names = input().split(", ")
+capytal_name = input().split(", ")
+country_dict = dict(zip(country_names, capytal_name))
+
+[print(f"{country} -> {capital}") for country, capital in country_dict.items()]
 
 ```
 </details>
 
+> ### 4 Phonebook
 
+<details><summary>🛠️Condition</summary>
+
+Write a program that receives info from the console about people and their phone numbers.
+Each entry should have a **name and a number (both strings) separated by a "-"**.
+
+If you receive a **name that already exists** in the phonebook, **update its number**.
+After filling out the phonebook, you will receive a number – N.
+Your program should be able to perform a search of contact by name and print its details in the format:
+
+**"{name} -> {number}"**. 
+
+In case the contact isn't found, print: **"Contact {name} does not exist."**
+
+Example
+
+| Input	                                                                                                                    | Output  	                                                                                                     |
+|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Adam-0888080808<br>2<br>Mery<br>Adam                                                                                      | Contact Mery does not exist.<br>Adam -> 0888080808                                                            |
+| Adam-+359888001122<br>Ralf-666<br>George-5559393<br>Silvester-02/987665544<br>4<br>Silvester<br>silvester<br>Rolf<br>Ralf | Silvester -> 02/987665544<br>Contact silvester does not exist.<br>Contact Rolf does not exist.<br>Ralf -> 666 |
+
+</details>
+<details> <summary>🐍Code</summary>
+
+```Python
+phone_book = {}
+
+input_data = input()
+
+while not input_data.isdigit():
+    parts = input_data.split("-")
+    if len(parts) == 2:
+        name = parts[0].strip()
+        phone = parts[1].strip()
+        phone_book[name] = phone
+    input_data = input()
+
+num = int(input_data)
+
+for _ in range(num):
+    check_name = input()
+    if check_name in phone_book:
+        print(f"{check_name} -> {phone_book[check_name]}")
+    else:
+        print(f"Contact {check_name} does not exist.")
+```
+```Python
+phone_book = {}
+phone_number = input()
+while not phone_number.isdigit():
+    name, number = phone_number.split("-")
+    phone_book[name] = phone_book.get(name, number)
+    phone_number = input()
+
+for _ in range(int(phone_number)):
+    name_check = input()
+    if name_check in phone_book:
+        print(f"{name_check} -> {phone_book[name_check]}")
+    else:
+        print(f"Contact {name_check} does not exist.")
+```
+</details>
+
+> ### 5 Legendary Farming
+
+<details><summary>🛠️Condition</summary>
+
+You are playing a game, and your goal is to win a **legendary item** - any legendary item will be good enough. 
+However, it's a tedious process, and it requires quite a bit of farming. **The possible items are**:
+* "**Shadowmourne**" - requires 250 Shards
+* "**Valanyr**" - requires 250 Fragments
+* "**Dragonwrath**" - requires 250 Motes
+
+"**Shards**", "**Fragments**", and "**Motes**" are the key materials (**case-insensitive**), and everything else is junk.<br>
+You will be given lines of input in the format:<br>
+**"{quantity1} {material1} {quantity2} {material2} … {quantityN} {materialN}"**<br>
+
+**Keep track** of the key materials - the **first one that reaches 250**, wins the race. 
+At that **point**, you have to **print** that the **corresponding legendary item is obtained.**
+**In the end**, **print** the remaining **shards, fragments,** and **motes** in the format:<br>
+
+**"shards: {number_of_shards}"**<br>
+**"fragments: {number_of_fragments}"**<br>
+**"motes: {number_of_motes}"**<br>
+
+Finally, **print** the collected junk items in the order of appearance.
+#### Input
+• Each line comes in the following format:
+
+**"{quantity1} {material1} {quantity2} {material2} … {quantityN} {materialN}"**
+#### Output
+* On the **first line**, print the obtained item in the format: **"{Legendary item} obtained!"**<br>
+* On the **next three lines**, print the remaining key **materials**<br>
+* On the **several final lines**, print the junk **items**<br>
+* **All materials** should be printed in the format: **"{material}: {quantity}"**<br>
+* The **output** should be lowercase, except for the **first letter of the legendary**<br>
+
+
+
+Example
+
+| Input	                                                                                                     | Output  	                                                                                   |
+|------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| 3 Motes 5 stones 5 Shards<br>6 leathers 255 fragments 7 Shards                                             | Valanyr obtained!<br>shards: 5<br>fragments: 5<br>motes: 3<br>stones: 5<br>leathers: 6      |
+| 123 silver 6 shards 8 shards 5 motes<br>9 fangs 75 motes 103 MOTES 8 Shards<br>86 Motes 7 stones 19 silver | Dragonwrath obtained!<br>shards: 22<br>fragments: 0<br>motes: 19<br>silver: 123<br>fangs: 9 |
+
+</details>
+<details> <summary>🐍Code</summary>
+
+
+```Python 
+input_items = input().split()
+item_useful = {"shards": 0, "fragments": 0, "motes": 0}
+item_useless = {}
+
+obtained = False
+
+while True:
+    for i in range(0, len(input_items), 2):
+        quantity = int(input_items[i])
+        material = input_items[i + 1].lower()
+        if material == "shards" or material == "fragments" or material == "motes":
+            item_useful[material] += quantity
+        else:
+            if material not in item_useless:
+                item_useless[material] = quantity
+            else:
+                item_useless[material] += quantity
+        if item_useful["motes"] >= 250:
+            print("Dragonwrath obtained!")
+            item_useful["motes"] -= 250
+            obtained = True
+            break
+        elif item_useful["fragments"] >= 250:
+            print("Valanyr obtained!")
+            item_useful["fragments"] -= 250
+            obtained = True
+            break
+        elif item_useful["shards"] >= 250:
+            print("Shadowmourne obtained!")
+            item_useful["shards"] -= 250
+            obtained = True
+            break
+    if obtained:
+        break
+    input_items = input().split()
+
+
+for keys, value in item_useful.items():
+    print(f"{keys}: {value}")
+for keys, value in item_useless.items():
+    print(f"{keys}: {value}")
+```
+</details>
 </details>END

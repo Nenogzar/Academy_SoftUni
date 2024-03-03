@@ -13,3 +13,24 @@ for _ in range(int(phone_number)):
         print(f"Contact {name_check} does not exist.")
 
 
+
+phone_book = {}
+
+input_data = input()
+
+while not input_data.isdigit():
+    parts = input_data.split("-")
+    if len(parts) == 2:
+        name = parts[0].strip()
+        phone = parts[1].strip()
+        phone_book[name] = phone
+    input_data = input()
+
+num = int(input_data)
+
+for _ in range(num):
+    check_name = input()
+    if check_name in phone_book:
+        print(f"{check_name} -> {phone_book[check_name]}")
+    else:
+        print(f"Contact {check_name} does not exist.")

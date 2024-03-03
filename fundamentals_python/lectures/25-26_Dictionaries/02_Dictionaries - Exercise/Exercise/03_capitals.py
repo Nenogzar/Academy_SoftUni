@@ -1,9 +1,6 @@
-country = input().split(", ")
-capital = input().split(", ")
+country_names = input().split(", ")
+capytal_name = input().split(", ")
+country_dict = dict(zip(country_names, capytal_name))
 
-
-country_cap_dict = dict(zip(country,capital))
-
-for key, value in country_cap_dict:
-    print(key, value)
+[print(f"{country} -> {capital}") for country, capital in country_dict.items()]
 
