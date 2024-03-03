@@ -24,7 +24,7 @@
   </tr>
 </table>
 
-* Dictionary Definition;
+* [Dictionary Definition](https://realpython.com/python-dicts/);
 * Keys and Values;
 * Iterating Through Dictionaries;
 * Existence in Dictionaries;
