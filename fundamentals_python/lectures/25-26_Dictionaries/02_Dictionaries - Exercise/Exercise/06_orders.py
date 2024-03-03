@@ -18,6 +18,7 @@ for names, (prices, quantities) in dict_products.items():
     total_price = prices * quantities
     print(f"{names} -> {total_price:.2f}")
 
+####################
 """ """
 
 def orders_func(dict_products, input_info):
@@ -48,6 +49,7 @@ def orders():
 
 orders()
 
+####################
 """ """
 
 dict_products = {}
@@ -65,6 +67,7 @@ while input_info != "buy":
 for key, value in dict_products.items():
     print(f"{key} -> {value['price'] * value['quantity']:.2f}")
 
+####################
 """ """
 dict_products = {}
 

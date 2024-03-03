@@ -19,7 +19,7 @@ for resource, quantity in resourse_dict.items():
 # OR
 # [print{resource} -> {quantity} for resource, quantity in resourse_dict.items()]
 
-
+####################
 """ whit dicrionary """
 
 mined_materials = dict()
@@ -42,6 +42,7 @@ for resource, quantity in mined_materials.items():
 # OR
 # [print {key} -> {quantity} for resource, quantity in mined_materials.items()]
 
+####################
 """whit get() """
 
 resource = input()

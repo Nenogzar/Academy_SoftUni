@@ -40,6 +40,7 @@
 # for keys, value in item_useless.items():
 #     print(f"{keys}: {value}")
 #
+####################
 """  """
 def print_func(legendary_items_dict, junk_items_dict, special_item):
     print(f'{special_item} obtained!')

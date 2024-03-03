@@ -38,7 +38,7 @@
 #             parking_system.unregister_user(username)
 #
 #     parking_system.print_registered_users()
-######################################################################################################################
+####################
 # """  """
 #
 # dict_registered = {}
@@ -70,7 +70,7 @@
 # for name, license in dict_registered.items():
 #     print(f"{name} => {license}")
 #
-# ######################################################################################################################
+####################
 # """ I.Shopov """
 # parking = {}
 # n = int(input())
@@ -96,7 +96,7 @@
 # for key in parking.keys():
 #     print(f"{key} => {parking[key]}")
 
-######################################################################################################################
+####################
 """kuchovalcho """
 def register(username: str, car_plate: str):
     if username in parking:

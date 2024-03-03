@@ -9,7 +9,7 @@ for char in text:
 for key, value in letters.items():
     print(f"{key} -> {value}")
 
-
+####################
 """ """
 
 # def count_letter(current_text):
@@ -31,6 +31,7 @@ for key, value in letters.items():
 # for k, v, in char_dict.items():
 #     print(f"{sorted({k})} -> {v}")
 
+####################
 """ """
 characters = input().replace(" ", "")
 
