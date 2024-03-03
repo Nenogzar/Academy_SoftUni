@@ -655,6 +655,79 @@ for _ in range(number_of_operations):
 for name, plate in parking.items():
     print(f"{name} => {plate}")
 ```
+</details>
+
+> ### 8. Courses
+
+Write a program that **keeps the information about courses**. Each **course** has a name and registered **students**.
+You will be **receiving** a **course name** and a **student name** until you receive the command **"end"**.
+You should register each user into the corresponding course. **If** the given course **does not** exist, **add it**.
+When you **receive** the command **"end"**, print the courses with their **names** and **total registered users**. 
+For each course, print the registered users.
+### Input
+* Until the "end" command is received, you will be receiving input lines in the format:
+
+**"{course_name} : {student_name}"**
+ * The product data is always delimited by **" : "**
+### Output
+* Print the information about each **course** in the following **format**: 
+ **"{course_name}: {registered_students}"**
+* Print the information about each **student** in the following **format**: 
+**"-- {student_name}"**
+
+Example
+
+| Input                                                                                                                                                                                                                | Output                                                                                                                                                                             |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Programming Fundamentals : John Smith<br>Programming Fundamentals : Linda Johnson<br>JS Core : Will Wilson<br>Java Advanced : Harrison White<br>end                                                                  | Programming Fundamentals: 2<br>-- John Smith<br>-- Linda Johnson<br>JS Core: 1<br>-- Will Wilson<br>Java Advanced: 1<br>-- Harrison White                                          |
+| Algorithms : Jay Moore<br>Programming Basics : Martin Taylor<br>Python Fundamentals : John Anderson<br>Python Fundamentals : Andrew Robinson<br>Algorithms : Bob Jackson<br>Python Fundamentals : Clark Lewis<br>end | Algorithms: 2<br>-- Jay Moore<br>-- Bob Jackson<br>Programming Basics: 1<br>-- Martin Taylor<br>Python Fundamentals: 3<br>-- John Anderson<br>-- Andrew Robinson<br>-- Clark Lewis |
+
 
 </details>
+
+<details> <summary>🐍Code</summary>
+
+
+```Python
+dict_courses = {}
+
+courses_info = input()
+while courses_info != "end":
+    info = courses_info.split(" : ")
+    if len(info) > 1:
+
+        course_name, student_name = [item for item in info]
+        if course_name not in dict_courses:
+            dict_courses[course_name] = [student_name]
+        else:
+            if student_name not in dict_courses[course_name]:
+                dict_courses[course_name].append(student_name)
+
+    courses_info = input()
+
+for course_name, registered_students in dict_courses.items():
+    print(f"{course_name}: {len(registered_students)}")
+    for student_name in registered_students:
+        print(f"-- {student_name}")
+```
+```Python
+dict_courses = {}
+
+courses_info = input()
+while courses_info != "end":
+    courses = courses_info.split(" : ")
+    course_name, student_name = courses[0], courses[1]
+
+    dict_courses[course_name] = dict_courses.get(course_name,  {})
+    dict_courses[course_name][student_name] = student_name
+
+    courses_info = input()
+
+for key, value in dict_courses.items():
+    print(f"{key}: {len(dict_courses[key])}")
+    for name in dict_courses[key]:
+        print(f"-- {dict_courses[key][name]}")  
+```
+</details>
+
 </details>END
