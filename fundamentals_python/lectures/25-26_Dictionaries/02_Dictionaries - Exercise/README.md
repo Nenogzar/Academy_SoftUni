@@ -937,4 +937,150 @@ for name_uni in company_info:
 ```
 </details>
 
+> 11. *Force Book
+
+<details><summary>🛠️Condition</summary>
+
+The force users struggle to remember which side is the different force users from because they switch them too often. So you are tasked to create a web application to manage their profiles. You should store information for every unique force user registered in the application.
+You will receive several input lines in one of the following formats:
+
+**"{force_side} | {force_user}"**<br>
+**"{force_user} -> {force_side}"**
+
+The **"force_user"** and **"force_side"** are **strings**, containing any character.
+
+If you **receive "force_side | force_user":**
+
+* If there is **no such force user and no such force side** -> **create** a **new force** side and add the force user to the corresponding side.
+* **Only** if there **is no such force user in any force side** -> **add** the **force user** to the corresponding side.
+* **If there is such** force user **already** -> **skip** the **command** and **continue** to the next operation.
+
+If you receive a **"force_user -> force_side":**
+
+* If there is **such force user already** -> **change** their side.
+* If there is **no such force user** in any force side -> **add** the force user to the corresponding force side.
+* If there is **no such force user** and **no such force side** -> **create new force** side and add the force user to the corresponding side.
+
+* Then you should print on the console: **"{force_user} joins the {force_side} side!"**.
+
+You should end your program when you **receive** the command **"Lumpawaroo"**. 
+At that **point**, you should print each force side. **For each side, print the force users.**
+In case there are no forced users on a side, **you shouldn't print the side information**.
+#### Input / Constraints
+* The input comes in the form of commands in one of the formats specified above.
+* The input ends when you receive the command **"Lumpawaroo"**.
+#### Output
+* As output for each force side, you must print all the force users.
+* The output format is:
+
+**Side: {force_side}, Members: {force_users_count}**
+**! {force_user1}**
+**! {force_user2}**
+**…**
+**! {force_userN}"**
+
+* In case there are **NO** force users on a side, **don't print this side**.
+
+Example
+
+| Input                                                                                       | Output                                                                                                                                |
+|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Light ! Peter<br>Dark ! Kim<br>Light ! Kim<br>Lumpawaroo                                    | Side: Light, Members: 1<br>! Peter<br>Side: Dark, Members: 1<br>! Kim                                                                  |
+| Lighter ! Royal<br>Darker ! DCay<br>Ivan Ivanov -> Lighter<br>DCay -> Lighter<br>Lumpawaroo | Ivan Ivanov joins the Lighter side!<br>DCay joins the Lighter side!<br>Side: Lighter, Members: 3<br>! Royal<br>! Ivan Ivanov<br>! DCay |
+
+</details>
+
+<details> <summary>🐍Code</summary>
+
+
+```Python
+force_book = {}
+input_info = input()
+
+while input_info != "Lumpawaroo":
+    if "|" in input_info:
+        side, user = input_info.split(" | ")
+        # Инициализация на страната в речника, ако тя все още не съществува
+        force_book[side] = force_book.get(side, [])
+        # Проверка за потребителя в други страни
+        no_user = True
+        for key in force_book:
+            if user in force_book[key]:
+                no_user = False
+                break
+        # Ако потребителят не съществува в други страни, се добавя към текущата
+        if no_user:
+            force_book[side].append(user)
+
+    elif "->" in input_info:
+        user, side = input_info.split(" -> ")
+        # Проверка за съществуване на потребителя в други страни и премахване от тях
+        for key in force_book:
+            if user in force_book[key]:
+                force_book[key].remove(user)
+        # Инициализация на новата страна в речника, ако тя все още не съществува
+        force_book[side] = force_book.get(side, [])
+        # Добавяне на потребителя към новата страна
+        force_book[side].append(user)
+
+        print(f"{user} joins the {side} side!")
+        
+    input_info = input()
+
+
+for side in force_book:
+    if force_book[side]:
+        print(f"Side: {side}, Members: {len(force_book[side])}")
+        for names in range(len(force_book[side])):
+            print(f"! {force_book[side][names]}")
+
+```
+```Python
+force_side_dict = {}
+while True:
+    command = input()
+    if command == 'Lumpawaroo':
+        break
+    if ' | ' in command:
+        force_side, force_user = command.split(' | ')
+        present = 0
+        for k, v in force_side_dict.items():
+            if force_user in v:
+                present = 1
+        if present == 0:
+            if force_side not in force_side_dict:
+                force_side_dict[force_side] = [force_user]
+            else:
+                if force_user not in force_side_dict[force_side]:
+                    force_side_dict[force_side].append(force_user)
+    else:
+        force_side, force_user = command.split(' -> ')
+        present = 0
+        for k, v in force_side_dict.items():
+            if force_user in v:
+                force_side_dict[k].pop(v.index(force_user))
+                present = 1
+        if present == 1:
+            if force_side not in force_side_dict:
+                force_side_dict[force_side] = [force_user]
+            else:
+                force_side_dict[force_side] += [force_user]
+        else:
+            if force_side not in force_side_dict:
+                force_side_dict[force_side] = [force_user]
+            else:
+                force_side_dict[force_side] += [force_user]
+        print(f"{force_user} joins the {force_side} side!")
+
+for i in force_side_dict:
+    if len(force_side_dict[i]) > 0:
+        print(f"Side: {i}, Members: {len(force_side_dict[i])}")
+        [print(f"! {i}") for i in (force_side_dict[i])]
+```
+
+</details>
+
+
+
+
 </details>END
