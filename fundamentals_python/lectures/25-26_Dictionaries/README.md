@@ -43,7 +43,6 @@ d = {'a': 10, 'b': 20, 'c': 30}
 ```Python
 d.clear()
 print(d)
-
 # {}
 ```
 </details>
@@ -54,7 +53,6 @@ print(d)
 ```Python
 x = d.copy()
 print(x)
-
 # {'a': 10, 'b': 20, 'c': 30}
 ```
 </details>
@@ -63,8 +61,8 @@ print(x)
 
 <details><summary>🏛️ get(key[, default]) - Returns the value for a key if it exists in the dictionary</summary>
 
-> get(<key>) searches dictionary d for <key> and returns the associated value if it is found.<br>
-If <key> is not found, it returns None:
+>⚠️ get(key) searches dictionary d for key and returns the associated value if it is found.<br>
+If key **is not found**, it returns **None**:
 
 
 ```Python
@@ -131,7 +129,6 @@ print(d.values())
 y = 0
 thisdict = dict.fromkeys(x, y) 
 print(thisdict)
-
 # {'a': 0, 'b': 0, 'c': 0}
 ```
 </details>
@@ -147,7 +144,7 @@ d.pop('b')
 print(d)
 # {'a': 10, 'c': 30}
 ```
-> d.pop(<key>) raises a KeyError exception if <key> is not in d:
+>💣 d.pop(key) raises a KeyError exception if key is not in d:
 
 ```Python
 d.pop('z')
@@ -156,12 +153,12 @@ Traceback (most recent call last):
     d.pop('z')
 KeyError: 'z'
 ```
-> If <key> is not in d, and the optional **default** argument is specified, then that value is returned, and no exception is raised:
+> If key is not in d, and the optional **default** argument is specified, then that value is returned, and no exception is raised:
 ```Python
 d.pop('z', -1)
--1
+
 print(d)
-{'a': 10, 'b': 20, 'c': 30}
+# {'a': 10, 'b': 20, 'c': 30}
 ```
 </details>
 
@@ -178,9 +175,9 @@ d.popitem('b', 20)
 print(d)
 # {'a': 10}
 ```
-> If d is empty, d.popitem() raises a KeyError exception:
+> 💣 If d is empty, d.popitem() raises a KeyError exception:
  
-```Python
+```Python 
 d = {}
 d.popitem()
 Traceback (most recent call last):
