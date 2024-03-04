@@ -1080,6 +1080,69 @@ for i in force_side_dict:
 
 </details>
 
+> 12. *SoftUni Exam Results
+
+
+<details><summary>🛠️Condition</summary>
+
+Judge statistics on the last Programming Fundamentals exam were not working correctly, 
+so you have the task of taking all the submissions and analyzing them properly. 
+You should collect all the submissions and print the final results and 
+statistics about each language in which the participants submitted their solutions.
+
+You will be receiving lines in the following format: **"{username}-{language}-{points}"** until you receive **"exam finished"**. 
+You should store each username and their submissions and points. 
+If a student has two or more submissions for the **same language**, save only his **maximum points**.
+You can receive a command to ban a user for cheating in the following format: **"{username}-banned"**. 
+In that case, you should remove the user from the contest but **preserve his submissions in the total count of submissions for each language**.
+After receiving the "exam finished", print each of the participants in the following format:
+
+Results:
+**{username1} | {points}<br>
+{username2} | {points}<br>
+…<br>
+{usernameN} | {points}**
+
+
+After that, print each language used in the exam in the following format:
+
+
+Submissions:
+
+**{language1} - {submissions_count}<br>
+{language2} - {submissions_count}<br>
+…<br>
+{language3} - {submissions_count}<br>**
+
+
+#### Input / Constraints
+Until you receive "exam finished" you will be receiving participant submissions in the following format: **"{username}-{language}-{points}"**
+You can receive a ban command -> **"{username}-banned"**
+The points of the participant will always be a **valid integer in the range** [0-100];
+#### Output
+* Print the **exam results for each participant**
+* After that, print **each language in the format shown above**
+* Allowed working time **/ memory: 100ms / 16MB**
+
+Example
+
+| Input                                                                                       | Output                                                                                  |
+|---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Peter-Java-84<br>George-C#-84<br>George-C#-70<br>Katy-C#-94<br>exam finished                | Results:<br>Peter \ 84<br>George\ 84<br>Katy \ 94<br>Submissions:<br>Java - 1<br>C# - 3 |
+| Peter-Java-91<br>George-C#-84<br>Katy-Java-90<br>Katy-C#-50<br>Katy-banned<br>exam finished | Results:<br>Peter \ 91<br>George \ 84<br>Submissions:<br>Java - 2<br>C# - 2             |
+
+
+</details>
+
+<details> <summary>🐍Code</summary>
+
+
+```Python
+ 
+
+```
+
+</details>
 
 
 
