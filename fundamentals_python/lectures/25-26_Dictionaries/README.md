@@ -47,6 +47,19 @@ print(d)
 # {}
 ```
 </details>
+<details><summary>🏛️ copy() - Copy a dictionary.</summary>
+
+> The copy() method returns a copy of the specified dictionary.
+
+```Python
+x = d.copy()
+print(x)
+
+# {'a': 10, 'b': 20, 'c': 30}
+```
+</details>
+
+
 
 <details><summary>🏛️ get(key[, default]) - Returns the value for a key if it exists in the dictionary</summary>
 
@@ -110,11 +123,22 @@ print(d.values())
 > Technical Note: The .items(), .keys(), and .values() methods actually return something called a view object. A dictionary view object is more or less like a window on the keys and values. For practical purposes, you can think of these methods as returning lists of the dictionary’s keys and values.
 
 </details>
+<details><summary>🏛️ fromkeys()- Returns a dictionary with the specified keys and the specified value</summary>
 
+> The fromkeys() method returns a dictionary with the specified keys and the specified value
+
+```Python
+y = 0
+thisdict = dict.fromkeys(x, y) 
+print(thisdict)
+
+# {'a': 0, 'b': 0, 'c': 0}
+```
+</details>
 <details><summary>🏛️ pop(key[, default]) - Removes a key from a dictionary, if it is present, and returns its value.</summary>
 
 
->If <key> is present in d, d.pop(<key>) removes <key> and returns its associated value:
+>If key is present in d, d.pop(key) removes key and returns its associated value:
 
 ```Python
 d.pop('b')
@@ -197,9 +221,45 @@ d1.update(b=200, d=400)
 print(d1)
 # {'a': 10, 'b': 200, 'c': 30, 'd': 400}
 ```
-
 </details>
 
+<details><summary>🏛️ setdefault() -  Returns the value of the item with the specified key</summary>
+
+>If the key does not exist, insert the key, with the specified value, see example below
+
+> Parameter Values
+
+|Parameter|Description|
+|-|-|
+|keyname|Required. The keyname of the item you want to return the value from|
+|value|Optional.<br>If the key exist, this parameter has no effect.<br>If the key does not exist, this value becomes the key's value<br>Default value None|
+
+
+```Python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.setdefault("model", "Bronco")
+print(x)
+# Mustang
+```
+> **Example:** Get the value of the "color" item, if the "color" item does not exist, insert "color" with the value "white":
+
+```Python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.setdefault("color", "White")
+print(x)
+# White
+print(car)
+# {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'White'}
+```
+</details>
 
 
 
