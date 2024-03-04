@@ -31,7 +31,7 @@
 
 
 [judge](https://judge.softuni.org/Contests/Practice/Index/1738)
-> ## Dictionaries - Exercise
+> ## Dictionaries - More Exercise
 
 <details><summary> TASK CONDITIONS 🛠️ AND SOLUTION OF TASKS 🐍</summary>
 
