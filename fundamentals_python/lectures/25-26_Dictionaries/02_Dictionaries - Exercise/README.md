@@ -731,4 +731,143 @@ for key, value in dict_courses.items():
 ```
 </details>
 
+> ### 9. Student Academy
+<details><summary>🛠️Condition</summary>
+
+Write a program that **keeps** the information about **students and their grades**.<br>
+On the **first line**, you will receive an **integer number** representing the next pair of rows. <br>
+On the **next lines**, you will be receiving each **student's name and their grade**.****
+**Keep** track of **all grades for each student** and **keep only** the students with an average grade **higher** than or **equal to 4.50**.
+
+**Print** the final dictionary with students and their average grade in the following format:
+
+**"{name} -> {averageGrade}"**
+
+**Format** the average grade to the **2nd decimal place**.
+
+Example
+
+| Input                                                                            | Output                                             |
+|----------------------------------------------------------------------------------|----------------------------------------------------|
+| 5<br>John<br>5.5<br>John<br>4.5<br>Alice<br>6<br>Alice<br>3<br>George<br>5       | John -> 5.00<br>Alice -> 4.50<br>George -> 5.00    |
+| 5<br>Amanda<br>3.5<br>Amanda<br>4<br>Rob<br>5.5<br>Christian<br>5<br>Robert<br>6 | Rob -> 5.50<br>Christian -> 5.00<br>Robert -> 6.00 |
+
+</details>
+
+<details> <summary>🐍Code</summary>
+
+```Python
+""" whit list for grades"""
+students = {}
+student_number = int(input())
+
+for _ in range(student_number):
+    name, grade = input(), float(input())
+    if name not in students:
+        students[name] = [grade]
+    else:
+        students[name].append(grade)
+
+for name, grades in students.items():
+    average_grade = sum(grades) / len(grades)
+    if average_grade >= 4.5:
+        # students[name] = {"grades": grades, "average_grade": average_grade}
+        print(f"{name} -> {average_grade:.2f}")
+# print(students)
+```
+```Python
+""" whit nested dict for grades"""
+
+number_students = int(input())
+
+students_grades = {}
+
+for _ in range(number_students):
+    name = input()
+    grade = float(input())
+    if name not in students_grades:
+        students_grades[name] = {}
+        students_grades[name][name + str(grade)] = 0
+    if name in students_grades:
+        students_grades[name][name + str(grade)] = 0
+    students_grades[name][name + str(grade)] += grade
+
+for name_student in students_grades:
+    score = 0
+    for key, value in students_grades[name_student].items():
+        score += value
+    average_score = score / len(students_grades[name_student])
+    if average_score >= 4.50:
+        print(f"{name_student} -> {average_score:.2f}")
+print(students_grades)
+```
+```Python
+""" whit Function and  list for grades"""
+
+students_with_grades = dict()
+
+
+def main():
+    pair_of_rows = int(input())
+    for pair in range(pair_of_rows):
+        student_name = input()
+        student_grade = float(input())
+
+        if student_name not in students_with_grades:
+            students_with_grades[student_name] = []
+
+        students_with_grades[student_name].append(student_grade)
+
+    average_grade_checker()
+
+
+def average_grade_checker():
+    for student in students_with_grades:
+        average_grade = sum(students_with_grades[student]) / len(students_with_grades[student])
+        if average_grade >= 4.50:
+            print(f"{student} -> {average_grade:.2f}")
+    print(students_with_grades)
+main()
+```
+</details>
+
+
+> 10. Company Users
+
+<details><summary>🛠️Condition</summary>
+
+Write a program that **keeps the information about companies and their employees**.<br>
+You will be receiving **company names** and an **employees**' id until you receive the **command "End"** command.<br> 
+Add each employee to the given company. **Keep** in mind that a company cannot have two employees with the same id.<br>
+Print the company name and each employee's id in the following format:
+
+**{company_name}**
+**-- {id1}**
+**-- {id2}**
+**…**
+**-- {idN}"**
+#### Input / Constraints
+
+* Until you receive the **"End"** command, you will be receiving input in the format:<br>
+**"{company_name} -> {employee_id}"**
+* The input always will be valid.
+
+Example
+
+| Input                                                                                                             | Output                                                                                |
+|-------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| SoftUni -> AA12345<br>SoftUni -> BB12345<br>Microsoft -> CC12345<br>HP -> BB12345<br>End                          | SoftUni<br>-- AA12345<br>-- BB12345<br>Microsoft<br>-- CC12345<br>HP<br>-- BB12345    |
+| SoftUni -> AA12345<br>SoftUni -> CC12344<br>Lenovo -> XX23456<br>SoftUni -> AA12345<br>Movement -> DD11111<br>End | SoftUni<br>-- AA12345<br>-- CC12344<br>Lenovo<br>-- XX23456<br>Movement<br>-- DD11111 |
+
+</details>
+
+<details> <summary>🐍Code</summary>
+
+```Python
+ 
+
+```
+
+</details>
+
 </details>END
