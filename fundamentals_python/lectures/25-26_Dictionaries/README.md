@@ -25,13 +25,12 @@
 </table>
 
 * [Dictionary Definition](https://realpython.com/python-dicts/);
-* Keys and Values;
-* Iterating Through Dictionaries;
-* Existence in Dictionaries;
-* Dictionary Methods.
-
-
+* [Keys and Values](https://www.geeksforgeeks.org/python-accessing-key-value-in-dictionary/);
+* [Iterating Through Dictionaries](https://realpython.com/iterate-through-dictionary-python/);
+* [Existence in Dictionaries](https://pieriantraining.com/how-to-check-if-a-key-exists-in-a-python-dictionary/);
 <details><summary> 🏛️ Built-in Dictionary Methods 🐍</summary>
+
+#### To illustrate the methods I will use this one dictionary:
 
 ```Python
 d = {'a': 10, 'b': 20, 'c': 30}
