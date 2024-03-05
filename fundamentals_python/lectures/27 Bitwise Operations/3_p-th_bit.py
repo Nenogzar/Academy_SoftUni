@@ -29,4 +29,4 @@ bit_at_position_p = shifted_number & 1
 result = bit_at_position_p
 
 # Step 4: Print the result
-print(f"The bit at position {p} of {n} is {result}")
+print(result)
