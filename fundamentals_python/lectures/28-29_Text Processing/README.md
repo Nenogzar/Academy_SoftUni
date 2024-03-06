@@ -24,9 +24,9 @@
   </tr>
 </table>
 
-* String Definition;
-* String Manipulation;
-* String Methods.
+* [String Definition](https://www.geeksforgeeks.org/python-string/);
+* [String Manipulation](https://www.w3schools.com/python/python_ref_string.asp);
+* [String Methods](https://www.copahost.com/blog/string-python/).
 
 </body>
 </html>
