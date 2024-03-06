@@ -165,3 +165,24 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
   </tr>
 </table>
 
+
+<table>
+  <tr>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/28-29_Text%Processing"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/15.jpg" alt="Text Processing" width="300"></a>
+</th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/30%Problem%Solving"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/16.jpg" alt="Problem Solving" width="300"></a>
+</th>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/28-29_Text Processing">Lab</a>
+  |  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/28-29_Text Processing">Exercise</a>
+  |  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/28-29_Text Processing">More</a>
+    </td>
+    <td>   
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/30%Problem%Solving">Lecture</a>
+    </td>
+  </tr>
+</table>
