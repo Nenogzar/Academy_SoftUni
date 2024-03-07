@@ -1,15 +1,16 @@
-drinking_age = int(input())
-
-age_info = {
-    "toddy": 14,
-    "coke": 18,
-    "beer": 21,
-    "whisky": 100
-}
-for drinks, age in age_info.items():
-    if drinking_age <= age:
-        print('drink', drinks)
-        break
+from icecream import ic
+# drinking_age = int(input())
+#
+# age_info = {
+#     "toddy": 14,
+#     "coke": 18,
+#     "beer": 21,
+#     "whisky": 100
+# }
+# for drinks, age in age_info.items():
+#     if drinking_age <= age:
+#         print('drink', drinks)
+#         break
 
 """ 2 """
 
@@ -29,16 +30,16 @@ for drinks, age in age_info.items():
 
 """ 3 """
 
-# drink = ""
-# age = int(input())
-# if age <= 14:
-#     drink = "toddy"
-# elif age <= 18:
-#     drink = "coke"
-# elif age <= 21:
-#     drink = "beer"
-# else:
-#     drink = "whisky"
-# print('drink', drink)
+drink = ""
+age = int(input())
+if age <= 14:
+    drink = "toddy"
+elif age <= 18:
+    drink = "coke"
+elif age <= 21:
+    drink = "beer"
+else:
+    drink = "whisky"
+print('drink', drink)
 
 
