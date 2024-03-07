@@ -1,10 +1,4 @@
-"""Develop a program that is capable of:
-1) Read a string from standard input, in the format dd/mm/yyyy.
-2) Display the date on standard output, in dd/mm/yyyy format.
-3) Display the date in standard output in words. E.g.: “February 1, 2024”.
-4) Check if the date is valid.
-5) Add days to a date.
-6) Calculate the difference between two dates in years."""
+from prettytable import PrettyTable
 
 def read_date(input_text: str) -> tuple[int, int, int]:
     date_str = input(input_text)
@@ -74,6 +68,12 @@ def calculate_difference_in_years(day1: int, month1: int, year1: int,
         difference -= 1
     return difference
 
+def visualize_table(header, data):
+    table = PrettyTable()
+    table.field_names = header
+    table.add_row(data)
+    print(table)
+
 # Main program
 date1 = read_date("Enter date 1 (dd/mm/yyyy): ")
 date2 = read_date("Enter date 2 (dd/mm/yyyy): ")
@@ -92,6 +92,11 @@ if date1 and date2:
 
         difference_years = calculate_difference_in_years(*date1, *date2)
         print(f"Difference in years between date 1 and date 2: {difference_years}")
+
+        # Visualize in table format
+        visualize_table(["Day", "Month", "Year"], list(date1))
+        visualize_table(["Day", "Month", "Year"], list(new_date))
+
     else:
         print("Date 1 is not valid.")
 
