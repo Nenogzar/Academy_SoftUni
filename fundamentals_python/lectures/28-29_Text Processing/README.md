@@ -15,11 +15,11 @@
   </tr>
   <tr>
     <td>
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/28-29_Text%20Processing/01_Text%20Processing%20-%20Lab/Exercise">Lab</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/28-29_Text%20Processing/01_Text%20Processing%20-%20Lab/Exercise" target="_blank">Lab</a>
   |  
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/28-29_Text%20Processing/02_Text%20Processing%20-%20Exercise/Exercise">Exercise</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/28-29_Text%20Processing/02_Text%20Processing%20-%20Exercise/Exercise" target="_blank">Exercise</a>
   | 
-  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/28-29_Text%20Processing/03_Text%20Processing%20-%20More%20Exercises">More</a>
+  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/28-29_Text%20Processing/03_Text%20Processing%20-%20More%20Exercises" target="_blank">More</a>
     </td>
   </tr>
 </table>
