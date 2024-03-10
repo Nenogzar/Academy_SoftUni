@@ -27,7 +27,7 @@ def multi(value):
         return False
 
 
-print(multi(10))
-print(multi(11))
-print(multi(12))
-print(multi(13))
+ic(multi(10))
+ic(multi(11))
+ic(multi(12))
+ic(multi(13))

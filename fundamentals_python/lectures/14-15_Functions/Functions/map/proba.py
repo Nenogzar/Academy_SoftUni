@@ -1,6 +1,7 @@
 from icecream import ic
 
-numbers = list(range(-5, 6))
+numbers =(list(range(1,8)))
+numbers1=(list(range(-6,1)))
 ic(numbers)
 ic("################################")
 
@@ -85,3 +86,37 @@ def safe_float_conversion(value):
 
 float_list = []
 ic(list(filter(None, map(safe_float_conversion, list_str))))
+
+ic("################################")
+# ic(numbers)
+def devide_by_two(num):
+    if num == 0:
+        pass
+    # ic(num, num / 2)
+    return num / 2
+
+ic(list(map(devide_by_two, numbers)))
+
+ic([num / 2 for num in numbers if num != 0])
+
+ic("################################")
+ic(numbers)
+ic(numbers1)
+def divide_two_numbers(num1, num2):
+    try:
+        if num1 == 0 or num2 == 0:
+            raise ValueError("Division by zero is not allowed.")
+        result = num1 / num2
+        ic(num1, num2, result)
+        return result
+    except ValueError as e:
+        ic(e)
+        return None
+
+result_map = list(map(divide_two_numbers, numbers, numbers1))
+ic(result_map)
+
+ic([num1 / num2 for num1, num2 in zip(numbers, numbers1) if num2 != 0])
+
+
+ic("################################")
