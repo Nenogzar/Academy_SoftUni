@@ -1,6 +1,7 @@
 # Text processing
 
-Examp:
+**`solutions to the tasks`** :
+
 1.	[Valid Usernames](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/28-29_Text%20Processing/02_Text%20Processing%20-%20Exercise/Exercise/01_valid_user.py)
 2.  [Character Multiplier](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/28-29_Text%20Processing/02_Text%20Processing%20-%20Exercise/Exercise/02_character_multiplier.py)
 3. [Extract File](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/28-29_Text%20Processing/02_Text%20Processing%20-%20Exercise/Exercise/03_extract_file.py)
