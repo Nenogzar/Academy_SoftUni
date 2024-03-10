@@ -1,8 +1,8 @@
 # Text processing - more exercises
 **`solutions to the tasks`** :
 
-1. [Extract Person Information ]() -> [judge](https://judge.softuni.org/Contests/Practice/Index/1741#0)
-2. [ASCII Sumator]() -> [judge](https://judge.softuni.org/Contests/Practice/Index/1741#1)
-3. [Treasure Finder]() -> [judge](https://judge.softuni.org/Contests/Practice/Index/1741#2)
-4. [Morse Code Translator]() -> [judge](https://judge.softuni.org/Contests/Practice/Index/1741#3)
-5. [HTML]() -> [judge](https://judge.softuni.org/Contests/Practice/Index/1741#4)
+1. [Extract Person Information ](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/28-29_Text%20Processing/03_Text%20Processing%20-%20More%20Exercises/Exercise/01_extract_person_information.py) -> [judge](https://judge.softuni.org/Contests/Practice/Index/1741#0)
+2. [ASCII Sumator](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/28-29_Text%20Processing/03_Text%20Processing%20-%20More%20Exercises/Exercise/02_ascii_sumator.py) -> [judge](https://judge.softuni.org/Contests/Practice/Index/1741#1)
+3. [Treasure Finder](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/28-29_Text%20Processing/03_Text%20Processing%20-%20More%20Exercises/Exercise/03_treasure_finder.py) -> [judge](https://judge.softuni.org/Contests/Practice/Index/1741#2)
+4. [Morse Code Translator](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/28-29_Text%20Processing/03_Text%20Processing%20-%20More%20Exercises/Exercise/04_morse_code_translator.py) -> [judge](https://judge.softuni.org/Contests/Practice/Index/1741#3)
+5. [HTML](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/28-29_Text%20Processing/03_Text%20Processing%20-%20More%20Exercises/Exercise/05_html.py) -> [judge](https://judge.softuni.org/Contests/Practice/Index/1741#4)
