@@ -186,3 +186,25 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
     </td>
   </tr>
 </table>
+
+
+<table>
+  <tr>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/31-32_Regular%20Expressions"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/17.jpg" alt="Regular Expressions" width="300"></a>
+</th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/33%20Database%20Basics"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/18.jpg" alt="Database Basics" width="300"></a>
+</th>
+  </tr>
+  <tr>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/31-32_Regular%20Expressions/01_Regular%20Expressions%20-%20Lab">Lab</a>
+  |  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/31-32_Regular%20Expressions/02_Regular%20Expressions%20-%20Exercise/Exercise">Exercise</a>
+  |  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/31-32_Regular%20Expressions/03_Regular%20Expressions%20-%20More%20Exercises/Exercise">More</a>
+    </td>
+    <td>   
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/33%20Database%20Basics">Lecture</a>
+    </td>
+  </tr>
+</table>
