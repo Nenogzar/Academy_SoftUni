@@ -15,11 +15,11 @@
   </tr>
   <tr>
     <td>
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/31-32_Regular%20Expressions/01_Regular%20Expressions%20-%20Lab/Exercise">Lab</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/31-32_Regular%20Expressions/01_Regular%20Expressions%20-%20Lab">Lab</a>
   |  
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/31-32_Regular%20Expressions/02_Regular%20Expressions%20-%20Exercise/Exercise">Exercise</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/31-32_Regular%20Expressions/02_Regular%20Expressions%20-%20Exercise">Exercise</a>
   | 
-  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/31-32_Regular%20Expressions/03_Regular%20Expressions%20-%20More%20Exercises/Exercise">More</a>
+  <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/31-32_Regular%20Expressions/03_Regular%20Expressions%20-%20More%20Exercises">More</a>
     </td>
   </tr>
 </table>
