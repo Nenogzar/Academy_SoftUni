@@ -1,1 +1,7 @@
 **`solutions to the tasks`** :
+
+1. [01. Race](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/31-32_Regular%20Expressions/03_Regular%20Expressions%20-%20More%20Exercises/Exercise/01_race.py)    ->  [judge](https://judge.softuni.org/Contests/Practice/Index/1744#0)
+2. [02. SoftUni Bar Income](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/31-32_Regular%20Expressions/03_Regular%20Expressions%20-%20More%20Exercises/Exercise/02_softuni_bar_income.py)    ->  [judge](https://judge.softuni.org/Contests/Practice/Index/1744#1)
+3. [03. Star Enigma]()    ->  [judge](https://judge.softuni.org/Contests/Practice/Index/1744#2)
+4. [04. Nether Realms]()    ->  [judge](https://judge.softuni.org/Contests/Practice/Index/1744#3)
+5. [05. HTML Parser]()    ->  [judge](https://judge.softuni.org/Contests/Practice/Index/1744#4)

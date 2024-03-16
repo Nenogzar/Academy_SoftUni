@@ -1,7 +1,8 @@
 **`solutions to the tasks`** :
 
-[]()
-[]()
-[]()
-[]()
-[]()
+1. [01. Capture the Numbers](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/31-32_Regular%20Expressions/02_Regular%20Expressions%20-%20Exercise/Exercise/1_capture_the_numbers.py) -> [judge](https://judge.softuni.org/Contests/Compete/Index/1743#0)
+2. [02. Find Variable Names in Sentences](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/31-32_Regular%20Expressions/02_Regular%20Expressions%20-%20Exercise/Exercise/2_find_variable_names_in_sentences.py) -> [judge](https://judge.softuni.org/Contests/Compete/Index/1743#1)
+3. [03. Find Occurrences of Word in Sentence](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/31-32_Regular%20Expressions/02_Regular%20Expressions%20-%20Exercise/Exercise/3_find_occurrences_of_word_in_sentence.py) -> [judge](https://judge.softuni.org/Contests/Compete/Index/1743#2)
+4. [04. Extract Emails](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/31-32_Regular%20Expressions/02_Regular%20Expressions%20-%20Exercise/Exercise/4_extract_emails.py) -> [judge](https://judge.softuni.org/Contests/Compete/Index/1743#3)
+5. [05. Furniture](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/31-32_Regular%20Expressions/02_Regular%20Expressions%20-%20Exercise/Exercise/5_furniture.py) -> [judge](https://judge.softuni.org/Contests/Compete/Index/1743#4)
+6. [06. Extract the Links](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/31-32_Regular%20Expressions/02_Regular%20Expressions%20-%20Exercise/Exercise/6_extract_the_links.py) -> [judge](https://judge.softuni.org/Contests/Compete/Index/1743#5)
