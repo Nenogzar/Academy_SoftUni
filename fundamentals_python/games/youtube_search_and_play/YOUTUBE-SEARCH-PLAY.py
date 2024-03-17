@@ -1,17 +1,14 @@
 import tkinter as tk
-from tkinter import messagebox
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-from PIL import Image, ImageTk
-import io
-import requests
-import pytube
+import os
+import webbrowser
+from youtube_search import YoutubeSearch
+from pytube import YouTube
+
 
 class VideoPlayer:
     def __init__(self, root):
         self.root = root
         self.video_urls = {}
-        self.current_video = None
 
         # Color Palette
         self.bg_color = "#336699"
@@ -21,7 +18,7 @@ class VideoPlayer:
         self.main_frame = tk.Frame(root, bg=self.bg_color)
         self.main_frame.pack(fill="both", expand=True)
 
-        self.title_label = tk.Label(self.main_frame, text="YOUTUBE VIDEO PLAYER", font=("Arial", 24, "bold"),
+        self.title_label = tk.Label(self.main_frame, text="NENOGZAR YOUTUBE VIDEO PLAYER", font=("Arial", 24, "bold"),
                                     fg=self.text_color, bg=self.bg_color)
         self.title_label.pack(pady=10)
 
@@ -45,7 +42,7 @@ class VideoPlayer:
         self.button_frame = tk.Frame(self.main_frame, bg=self.bg_color)
         self.button_frame.pack(side="bottom", fill="x")
 
-        self.lst = tk.Listbox(self.list_frame, width=30, height=20, bg=self.bg_color, fg=self.text_color)
+        self.lst = tk.Listbox(self.list_frame, width=45, height=20, bg=self.bg_color, fg=self.text_color)
         self.lst.pack(side="left", fill="both", expand=True)
 
         self.scrollbar = tk.Scrollbar(self.list_frame, orient="vertical", command=self.lst.yview)
@@ -72,73 +69,46 @@ class VideoPlayer:
         self.load_saved_results()
 
     def search_and_play(self):
-
-        API_KEY = "enter you API cay"
-
-        # Създаване на обект за достъп до YouTube Data API
-        youtube = build('youtube', 'v3', developerKey=API_KEY)
-
         query = self.search_entry.get()
-        try:
-            search_response = youtube.search().list(
-                q=query,
-                part='snippet',
-                type='video',
-                maxResults=5
-            ).execute()
-
+        search_results = YoutubeSearch(query, max_results=5).to_dict()
+        if search_results:
             self.lst.delete(0, tk.END)
-            self.video_urls.clear()
-
-            for item in search_response['items']:
-                video_title = item['snippet']['title']
-                video_id = item['id']['videoId']
-                video_url = f"https://www.youtube.com/watch?v={video_id}"
-
+            for result in search_results:
+                video_title = result['title']
+                video_url = 'https://www.youtube.com' + result['url_suffix']
                 self.lst.insert(tk.END, video_title)
-                self.video_urls[video_title] = video_id
+                self.video_urls[video_title] = video_url  # Store title and URL in dictionary
+            self.save_results()  # Save updated list of videos
 
-        except HttpError as e:
-            messagebox.showerror("Error", f"An error occurred: {e}")
+    """ os play """
+    # def play_video(self):
+    #     if self.lst.curselection():
+    #         title = self.lst.get(self.lst.curselection())
+    #         video_url = self.video_urls.get(title)  # Get URL from dictionary
+    #         print("Playing video:", video_url)  # Print URL for debugging
+    #
+    #         # Отваряме URL адреса в стандартния браузър на Windows
+    #         os.system(f'start {video_url}')
+    #         self.current_video_label.config(text=f"Playing: {title}")
+    #     else:
+    #         print("No video selected.")
+
 
     def play_video(self):
         if self.lst.curselection():
             title = self.lst.get(self.lst.curselection())
-            video_id = self.video_urls.get(title)  # Get video ID from dictionary
-            video_url = f"https://www.youtube.com/watch?v={video_id}"
+            video_url = self.video_urls.get(title)  # Get URL from dictionary
+            print("Playing video:", video_url)  # Print URL for debugging
+
+            webbrowser.open(video_url)
             self.current_video_label.config(text=f"Playing: {title}")
-
-            try:
-                video = pytube.YouTube(video_url)
-                stream = video.streams.filter(progressive=True, file_extension='mp4').first()
-                video_data = requests.get(stream.url).content
-                video_stream = io.BytesIO(video_data)
-                video_stream.seek(0)
-
-                self.current_video = Image.open(video_stream)
-                self.current_video.thumbnail((640, 480), Image.ANTIALIAS)
-                photo_image = ImageTk.PhotoImage(self.current_video)
-
-                video_label = tk.Label(self.player_frame, image=photo_image)
-                video_label.image = photo_image
-                video_label.pack()
-
-            except Exception as e:
-                messagebox.showerror("Error", f"An error occurred while playing the video: {e}")
-
         else:
-            messagebox.showerror("Error", "No video selected.")
-
+            print("No video selected.")
     def stop_video(self):
-        if self.current_video:
-            self.current_video_label.config(text="Video stopped")
-            for widget in self.player_frame.winfo_children():
-                widget.destroy()
-        else:
-            messagebox.showerror("Error", "No video is currently playing.")
+        self.current_video_label.config(text="Video stopped")
 
     def save_results(self):
-        with open("YouTube_list.txt", "a") as file:  # Append mode to append new results
+        with open("YouTube_list.txt", "a") as file:
             for title, url in self.video_urls.items():
                 file.write(f"{title}: {url}\n")
 
@@ -154,11 +124,12 @@ class VideoPlayer:
             print("No saved results found.")
 
     def show_video(self, event):
+
         pass
 
 root = tk.Tk()
 root.geometry("800x600+300+50")
-root.title("YouTube Player")
+root.title("NENOGZAR YouTube Player")
 root.configure(bg="#336699")
 video_player = VideoPlayer(root)
 root.mainloop()
