@@ -11,10 +11,13 @@
 
 <img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/22.jpg" alt="RFE" width="400"></a>
 
-* Final Exam
-* Retake Mid Exam
-* Retake Final Exam
-
+| Solution               | condition of task / judge                                     | Solution               | condition of task / judge                                     | Solution                         | condition of task / judge                                     |
+|------------------------|---------------------------------------------------------------|------------------------|---------------------------------------------------------------|----------------------------------|---------------------------------------------------------------|
+| [Activation Keys]()    | [1](https://judge.softuni.org/Contests/Practice/Index/2302#0) | [Emoji Detector]()     | [2](https://judge.softuni.org/Contests/Practice/Index/2302#1) | [P!rates]()                      | [3](https://judge.softuni.org/Contests/Practice/Index/2302#2) |
+| [Password Reset]()     | [1](https://judge.softuni.org/Contests/Practice/Index/2303#0) | [Fancy Barcodes]()     | [2](https://judge.softuni.org/Contests/Practice/Index/2303#1) | [Heroes of Code and Logic VII]() | [3](https://judge.softuni.org/Contests/Practice/Index/2303#2) |
+| [Secret Chat]()        | [1](https://judge.softuni.org/Contests/Practice/Index/2307#0) | [Mirror words]()       | [2](https://judge.softuni.org/Contests/Practice/Index/2307#1) | [Need for Speed III]()           | [3](https://judge.softuni.org/Contests/Practice/Index/2307#2) |
+| [The Imitation Game]() | [1](https://judge.softuni.org/Contests/Practice/Index/2525#0) | [Ad Astra]()           | [2](https://judge.softuni.org/Contests/Practice/Index/2525#1) | [The Pianist]()                  | [3](https://judge.softuni.org/Contests/Practice/Index/2525#2) |
+| [World Tour]()         | [1](https://judge.softuni.org/Contests/Practice/Index/2518#0) | [Destination Mapper]() | [2](https://judge.softuni.org/Contests/Practice/Index/2518#1) | [Plant Discovery]()              | [3](https://judge.softuni.org/Contests/Practice/Index/2518#2) |
 
 </body>
 </html>
