@@ -10,7 +10,8 @@
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
 <img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/22.jpg" alt="RFE" width="400"></a>
-[pastebin-Shopov 22.03.2023](https://pastebin.com/f7xqfPhF)
+
+> [pastebin-Shopov 22.03.2023](https://pastebin.com/f7xqfPhF)
 
 | Solution | condition of task | Solution | condition of task | Solution | condition of task |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|-------------------|-----------------------------------------------------------------------|------------------------------------|-----------------------------------------------------------------------|
@@ -22,3 +23,4 @@
 |[Registration](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/38%20Regular%20Final%20Exam/01/01_registration.py)|[1 - judge](https://judge.softuni.org/Contests/Practice/Index/4778#0)|[Destination Mapper](https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/38%20Regular%20Final%20Exam/02/02_destination_mapper.py)|[2-judge](https://judge.softuni.org/Contests/Practice/Index/4778#1)|[Bakery Shop]()|[3 - judge](https://judge.softuni.org/Contests/Practice/Index/4778#2)|
 </body>
 </html>
+    
