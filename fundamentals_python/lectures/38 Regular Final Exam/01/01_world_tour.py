@@ -15,3 +15,4 @@ while command != "Travel":
     command = input()
 
 print(f"Ready for world tour! Planned stops: {containing_string}")
+
