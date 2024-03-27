@@ -47,3 +47,4 @@ for idx, lesson in enumerate(new_schedule, start=1):
 #    ...
 
 # exercise(input_schedule)
+
