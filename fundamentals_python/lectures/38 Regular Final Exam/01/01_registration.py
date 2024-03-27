@@ -18,8 +18,6 @@ while register != "Registration":
         if 0 <= start_index < len(user_name) and 0 <= end_index < len(user_name):
             reversed_string = user_name[start_index: end_index + 1][::-1]
             print(reversed_string)
-        else:
-            print("Invalid indices.")
 
     elif command == 'Substring':
         given_substring = key[1]
