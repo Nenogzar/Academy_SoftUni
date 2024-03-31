@@ -213,7 +213,7 @@ This is my collection of solutions to the tasks included in the SoftUni Fundamen
 <table>
   <tr>
     <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/38%20Regular%20Final%20Exam"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/19.jpg" alt="Exam" width="300"></a></th>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/38%20Regular%20Final%20Exam"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/24.jpg" alt="Final Exam" width="300"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/39_Final_Exam"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/image/24.jpg" alt="Final Exam" width="300"></a></th>
     
   </tr>
   
