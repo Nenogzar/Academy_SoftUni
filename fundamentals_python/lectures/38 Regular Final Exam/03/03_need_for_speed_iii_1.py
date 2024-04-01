@@ -61,7 +61,7 @@
 #         print(f"{car} -> Mileage: {details['mileage']} kms, Fuel in the tank: {details['fuel']} lt.")
 
 
-""" """
+""" defaultdict """
 from collections import defaultdict
 
 def drive_action(car, distance, fuel, racing_car):
@@ -94,7 +94,7 @@ def revert_car(car, kilometers, racing_car):
     else:
         racing_car[car]['mileage'] = min_mileage
 
-racing_car = defaultdict(lambda: {'mileage': 0, 'fuel': 0})  # Използвайте defaultdict за автоматично инициализиране на стойности
+racing_car = defaultdict(lambda: {'mileage': 0, 'fuel': 0})
 number_of_cars = int(input())
 for _ in range(number_of_cars):
     info_cars = input().split("|")
