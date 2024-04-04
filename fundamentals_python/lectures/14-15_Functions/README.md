@@ -47,7 +47,7 @@
 <img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/14-15_Functions/image/control_flow.png" alt="control_flow" width="350">
 </a>
 <a>
-<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/14-15_Functions/image/arg_par.jpg" alt="arg_parameters" width="350">
+<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/14-15_Functions/image/arg_par.png" alt="arg_parameters" width="350">
 </a>
 </p>
 </body>
