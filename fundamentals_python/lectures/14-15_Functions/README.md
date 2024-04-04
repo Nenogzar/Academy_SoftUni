@@ -42,7 +42,14 @@
 <img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/14-15_Functions/python-function-definition.png" alt="Nenogzar_Python" width="350">
 </a>
 </p>
-
+<p>
+<a>
+<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/14-15_Functions/image/control_flow.png" alt="control_flow" width="350">
+</a>
+<a>
+<img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/fundamentals_python/lectures/14-15_Functions/image/arg_par.jpg" alt="arg_parameters" width="350">
+</a>
+</p>
 </body>
 </html>
 
