@@ -58,3 +58,5 @@ for item in range(count_of_synonyms):
 
 
 [print(f"{word} - {', '.join(synonyms[word])}") for word in synonyms]
+
+
