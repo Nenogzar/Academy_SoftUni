@@ -24,3 +24,13 @@ new_fruits = {key: value for key, value in fruits.items() if value <= 2}
 print(new_fruits) # {'apple': 1, 'orange': 2}
 
 
+""" Filtering Items in a Dictionary: filter() """
+
+fruits = {"apple": 0.40, "orange": 0.35, "banana": 0.25}
+
+def has_low_price(item, price=0.4):
+    return item[1] < price
+
+
+filtered_dict = dict(filter(has_low_price, fruits.items()))
+print(filtered_dict)
