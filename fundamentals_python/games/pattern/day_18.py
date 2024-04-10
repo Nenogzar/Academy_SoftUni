@@ -8,21 +8,25 @@ def printpattern(n):
             matrix[top][i] = num
             num -= 1
         top += 1
+       #  print(f" top => {matrix}")
 
         for i in range(top, botton + 1):
             matrix[i][right] = num
             num -= 1
         right -= 1
+      #  print(f" right => {matrix}")
 
         for i in range(right, left - 1, -1):
             matrix[botton][i] = num
             num -= 1
         botton -= 1
+      #  print(f" botton => {matrix}")
 
         for i in range(botton, top - 1, -1):
             matrix[i][left] = num
             num -= 1
         left += 1
+      #  print(f" left => {matrix}")
     return matrix
 
 
@@ -33,10 +37,12 @@ def printMatrix(martix):
         print()
 
 
-n = int(input())
+n = int(input("матрица от кой ред? "))
 matrix = printpattern(n)
+#  print(matrix)
 printMatrix(matrix)
 
+# 5
 # 25 24 23 22 21
 # 10  9  8  7 20
 # 11  2  1  6 19
