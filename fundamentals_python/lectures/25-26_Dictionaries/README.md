@@ -30,6 +30,7 @@
   * [Iterating through dictionaries - examples](https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/25-26_Dictionaries/iterating_through_dictionaries)
 * [Existence in Dictionaries](https://pieriantraining.com/how-to-check-if-a-key-exists-in-a-python-dictionary/);
   
+
 <details><summary> 🏛️ Built-in Dictionary Methods 🐍</summary>
 
 #### To illustrate the methods I will use this one dictionary:
