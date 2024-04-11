@@ -36,6 +36,9 @@ sort_value = {
 }
 print(sort_value) #{'orange': 3500.0, 'banana': 5000.0, 'apple': 5600.0}
 
+
+
+
 """ Iterating Through a Dictionary in Reverse-Sorted Order """
 for fruit in sorted(incomes, reverse=True):
     print(fruit, "->", incomes[fruit])
