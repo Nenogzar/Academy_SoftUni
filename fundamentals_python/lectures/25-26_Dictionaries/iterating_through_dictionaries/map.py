@@ -12,3 +12,5 @@ print(map2)
 map3 = dict(map(lambda item: apply_discount(item, 0.15), fruits.items()))
 print(map3)
     # {'apple': 0.34, 'orange': 0.3, 'banana': 0.21}
+print("***")
+
