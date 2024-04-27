@@ -2,34 +2,38 @@
 
 from collections import deque
 
-gas_station = int(input())
 liters, kilometers = deque(), deque()
-current_gas_station = 0
 
-for i in range(gas_station):
+for _ in range(int(input())):
     liter, kilometer = map(int, input().split())
     liters.append(liter)
     kilometers.append(kilometer)
-if sum(kilometers) <= sum(liters):
-    while kilometers:
-        current_liter = liters.popleft()
-        current_kilometer = kilometers.popleft()
 
-        if current_liter < current_kilometer:
-            current_gas_station += 1
-            liters.append(current_liter)
-            kilometers.append(current_kilometer)
-        else:
-            break
-            remaining_liters = current_liter - current_kilometer
-            if liters:
-                liters[0] += remaining_liters
+liters_copy = liters.copy()
+kilometers_copy = kilometers.copy()
+
+gas_in_tank = 0
+index = 0
+
+while liters_copy:
+    liter = liters_copy.popleft()
+    kilometer = kilometers_copy.popleft()
+    gas_in_tank += liter
+
+    if gas_in_tank >= kilometer:
+        gas_in_tank -= kilometer
+    else:
+        liters.append(liters.popleft()) # liters.rotate(-1)
+        kilometers.append(kilometers.popleft()) # kilometers.rotate(-1)
+        liters_copy = liters.copy()
+        kilometers_copy = kilometers.copy()
+        index += 1
+        gas_in_tank = 0
+
+print(index)
 
 
-
-print(current_gas_station)
-
-""" """
+"""  """
 #
 def can_complete_circle(petrol_pumps):
     total_petrol = 0
@@ -62,3 +66,29 @@ def main():
 if __name__ == "__main__":
     main()
 #
+
+""" dean"""
+# from collections import deque
+#
+# pump_data = deque([[int(x) for x in input().split()] for _ in range(int(input()))])
+#
+# # OR
+# # pump_data = [deque(map(int, input().split())) for _ in range(int(input()))]
+#
+# pump_data_copy = pump_data.copy()
+# gas_in_tank = 0
+# index = 0
+#
+# while pump_data_copy:
+#     petrol, distance = pump_data_copy.popleft()
+#     gas_in_tank += petrol
+#     if gas_in_tank >= distance:
+#         gas_in_tank -= distance
+#     else:
+#         pump_data.rotate(-1)
+#         pump_data_copy = pump_data.copy()
+#
+#         index += 1
+#         gas_in_tank = 0
+# print(index)
+
