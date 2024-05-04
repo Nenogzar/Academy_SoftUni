@@ -2,7 +2,10 @@ from collections import deque
 import operator
 
 some_string = deque(input().split())
-sings = {"*": operator.mul, "+": operator.add, "-": operator.sub, "/": operator.floordiv}
+sings = {"*": operator.mul,
+         "+": operator.add,
+         "-": operator.sub,
+         "/": operator.floordiv}
 result = deque()
 
 for current_char in some_string:
