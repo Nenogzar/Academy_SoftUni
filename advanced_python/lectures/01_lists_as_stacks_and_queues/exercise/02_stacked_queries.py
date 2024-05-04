@@ -1,25 +1,18 @@
-import time
-start_time = time.time()
 """whit dictionary"""
 stack = []
 
-def push(number):
-    stack.append(number)
-
 def delete():
-    if stack:
-        stack.pop()
+    stack.pop()
 
 def print_max():
-    if stack:
-        print(max(stack))
+    max_value = max(stack)
+    print(*max_value)
 
 def print_min():
-    if stack:
-        print(min(stack))
+    min_value = min(stack)
+    print(*min_value)
 
 commands = {
-    '1': push,
     '2': delete,
     '3': print_max,
     '4': print_min
@@ -39,12 +32,14 @@ N = int(input())
 for _ in range(N):
     command, *numbers = input().split()
     if command == '1':
-        numbers = [int(num) for num in numbers]
-        commands[command](*numbers)
+        number = [int(num) for num in numbers]
+        stack.append(number)
     else:
-        commands[command]()
+        if stack:
+            commands[command]()
 
-print(", ".join(map(str, reversed(stack))))
+reversed_stack = reversed(stack)
+print(', '.join(str(*item) for item in reversed_stack))
 
 
 """ time = 1.26"""
@@ -74,8 +69,3 @@ print(", ".join(map(str, reversed(stack))))
 #
 # print(", ".join(str(stack_queries.pop()) for n in range(len(stack_queries))))
 
-""" time = 1.33"""
-
-end_time = time.time()
-print("Execution time: {:.2f} seconds".format(end_time - start_time))
-""" """
