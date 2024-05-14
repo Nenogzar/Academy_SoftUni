@@ -42,7 +42,7 @@ reversed_stack = reversed(stack)
 print(', '.join(str(*item) for item in reversed_stack))
 
 
-""" time = 1.26"""
+
 
 
 """ """

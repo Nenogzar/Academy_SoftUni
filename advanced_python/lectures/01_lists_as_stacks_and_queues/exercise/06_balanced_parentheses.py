@@ -90,3 +90,23 @@ else:
 #     print("NO")
 # else:
 #     print("Yes")
+
+"""  Bi """
+from collections import deque
+
+parentheses = list(input())
+open_parenthesis = {"[": "]", "{": "}", "(": ")"}
+is_balanced = deque()
+
+for el in parentheses:
+
+    if el in open_parenthesis.keys():
+        is_balanced.append(el)
+    else:
+        if is_balanced and open_parenthesis[is_balanced[-1]] == el:
+            is_balanced.pop()
+        else:
+            print("NO")
+            break
+else:
+    print("YES")
