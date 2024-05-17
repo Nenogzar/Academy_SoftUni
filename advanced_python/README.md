@@ -16,8 +16,8 @@ This is my collection of solutions to the tasks included in the SoftUni Advence 
 
 <table>
   <tr>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/01_lists_as_stacks_and_queues"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/01.jpg" alt="Stack_Deque" width="400"></a></th>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/02_tuples_and_sets"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/02.jpg" alt="Tuple_Sets" width="400"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/01_lists_as_stacks_and_queues"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/01.jpg" alt="Stack_Deque" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/02_tuples_and_sets"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/02.jpg" alt="Tuple_Sets" width="500"></a></th>
   </tr>
 
   <tr>
