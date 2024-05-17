@@ -10,7 +10,7 @@
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
 
-<details><summary> 🏛️ Tuples 🐍</summary>
+<details><summary> 🏛️ Tuples in Python🐍</summary>
 
 <details><summary>🏛️ Ordered: They contain elements that are sequentially arranged according to their specific insertion order.</summary>
 
