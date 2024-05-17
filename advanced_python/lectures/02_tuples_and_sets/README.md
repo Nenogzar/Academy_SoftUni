@@ -26,8 +26,6 @@
 <details><summary>🏛️ Immutable: They don’t support in-place mutations or changes to their contained elements. They don’t support growing or shrinking operations.</summary>
 
 <details><summary>⛓️ 1</summary>
->items() returns a list of tuples containing the key-value pairs in d. <br>
-The first item in each tuple is the key, and the second item is the key’s value:
 
 </details>
 
