@@ -16,8 +16,8 @@ This is my collection of solutions to the tasks included in the SoftUni Advence 
 
 <table>
   <tr>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/05-06_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/01.jpg" alt="Stack_Deque" width="400"></a></th>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/fundamentals_python/lectures/07_Git%20and%20GitHub"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/02.jpg" alt="Tuple_Sets" width="400"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/01_lists_as_stacks_and_queues"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/01.jpg" alt="Stack_Deque" width="400"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/02_tuples_and_sets"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/02.jpg" alt="Tuple_Sets" width="400"></a></th>
   </tr>
 
   <tr>
