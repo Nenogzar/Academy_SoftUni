@@ -1,38 +1,38 @@
-# from collections import deque
-#
-# green_light = int(input())
-# free_window = int(input())
-#
-# cars = deque()
-# passed_cars = []
-#
-# command = input()
-# while command != "END":
-#     if command == "green":
-#         current_green_light = green_light
-#         while cars:
-#             car = cars.popleft()
-#             car_length = len(car)
-#             if current_green_light >= car_length:
-#                 current_green_light -= car_length
-#                 passed_cars.append(car)
-#             else:
-#                 if free_window + 1 < len(car):
-#                     character_hit = car[free_window + 1]
-#                 if current_green_light + free_window < car_length:
-#                     print("A crash happened!")
-#                     print(f"{car} was hit at {character_hit}.")
-#                     quit()
-#                 else:
-#                     passed_cars.append(car[:current_green_light + free_window])
-#                     break
-#     else:
-#         cars.append(command)
-#
-#     command = input()
-#
-# print("Everyone is safe.")
-# print(f"{len(passed_cars)} total cars passed the crossroads.")
+from collections import deque
+
+green_light = int(input())
+free_window = int(input())
+
+cars = deque()
+passed_cars = []
+
+command = input()
+while command != "END":
+    if command == "green":
+        current_green_light = green_light
+        while cars:
+            car = cars.popleft()
+            car_length = len(car)
+            if current_green_light >= car_length:
+                current_green_light -= car_length
+                passed_cars.append(car)
+            else:
+                if free_window + 1 < len(car):
+                    character_hit = car[free_window + 1]
+                if current_green_light + free_window < car_length:
+                    print("A crash happened!")
+                    print(f"{car} was hit at {character_hit}.")
+                    quit()
+                else:
+                    passed_cars.append(car[:current_green_light + free_window])
+                    break
+    else:
+        cars.append(command)
+
+    command = input()
+
+print("Everyone is safe.")
+print(f"{len(passed_cars)} total cars passed the crossroads.")
 
 
 

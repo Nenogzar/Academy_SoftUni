@@ -110,3 +110,35 @@ for el in parentheses:
             break
 else:
     print("YES")
+
+
+""" """
+
+input_string = input()
+stack = []
+balanced = True
+
+for char in input_string:
+    # Ако символът е отваряща скоба, добавям го към стека
+    if char in "([{":
+        stack.append(char)
+    else:
+        # Проверявам дали няма отварящи скоби, и ако е, това означава неправилно разположение на затваряща скоба
+        if not stack:
+            balanced = False
+            break
+        # Изваждам последната добавена отваряща скоба от стека и проверявам дали отговаря на съответната затваряща скоба
+        last_opening = stack.pop()
+        if (char == ")" and last_opening != "(") or \
+           (char == "]" and last_opening != "[") or \
+           (char == "}" and last_opening != "{"):
+            balanced = False
+            break
+
+if stack:
+    balanced = False
+
+if balanced:
+    print("YES")
+else:
+    print("NO")
