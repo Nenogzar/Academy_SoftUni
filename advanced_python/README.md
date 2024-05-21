@@ -30,6 +30,8 @@ This is my collection of solutions to the tasks included in the SoftUni Advence 
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/02_tuples_and_sets/lab">Lab</a>
   |  
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/02_tuples_and_sets/exercise">Exercise</a>
+  |  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/02_1_stacks_queues_tuples_and_sets">Stacks Queues Tuples and Sets</a>
 </td>
   </tr>
 </table>
