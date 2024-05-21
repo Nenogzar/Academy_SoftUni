@@ -38,3 +38,32 @@ print(f"Last is {kids.pop()}")  #ex time = 1.38
 end_time = time.time()
 execution_time = (end_time - start_time)
 print(f"Execution time: {execution_time:.2f} seconds")
+
+
+""" qceka88  """
+from collections import deque
+
+
+class HotPotato:
+
+    def __init__(self):
+        self.kids = deque(input().split())
+        self.rotations = int(input())
+        self.message = []
+        self.rotate_kids()
+
+    def return_message(self):
+        print('\n'.join(f'Removed {name}' for name in self.message[:-1]))
+        print(f'Last is {self.message[-1]}')
+
+    def rotate_kids(self):
+        while self.kids:
+            self.kids.rotate(-self.rotations)
+            self.message.append(self.kids.pop())
+        self.return_message()
+
+
+if __name__ == '__main__':
+    HotPotato()
+
+
