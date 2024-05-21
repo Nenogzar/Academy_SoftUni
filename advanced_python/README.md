@@ -34,3 +34,29 @@ This is my collection of solutions to the tasks included in the SoftUni Advence 
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/03_multidimensional_lists"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/03.jpg" alt="Multidimensional_Lists" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/04_functions_advanced"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/04.jpg" alt="functions_advanced" width="500"></a></th>
+  </tr>
+
+  <tr>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/03_multidimensional_lists/lab">Lab</a>
+  |  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/03_multidimensional_lists/exercise_I">Exercise 1</a>
+|  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/03_multidimensional_lists/exercise_II">Exercise 2</a>
+    
+</td>
+    <td>
+
+[//]: # (    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/02_tuples_and_sets/lab">Lab</a>)
+
+[//]: # (  |  )
+
+[//]: # (    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/02_tuples_and_sets/exercise">Exercise</a>)
+</td>
+  </tr>
+</table>
+
