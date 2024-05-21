@@ -22,7 +22,22 @@ Output
 [[7, 1, 3, 3, 2, 1], [1, 3, 9, 8, 5, 6], [4, 6, 7, 9, 1, 0]]
 
 
-"""
+""" 
+""" 1 """
+rows, cols = [int(x) for x in input().split(", ")]
+
+total = 0
+matrix = []
+for i in range(rows):
+    row = [int(x) for x in input().split(", ")]
+    matrix.append(row)
+    total += sum(row)
+
+print(total)
+print(matrix)
+
+
+""" class """
 class SumMatrixElements:
 
     def __init__(self):
