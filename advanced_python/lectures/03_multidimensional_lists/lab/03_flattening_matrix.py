@@ -35,7 +35,21 @@ Output
 
 """
 
-""" 1 """
+##########: variant 1 :##########
+n = int(input())
+
+matrix = []
+for i in range(n):
+    # row = [int(x) for x in input().split(", ")]
+    row = list(map(int, input().split(", ")))
+    # matrix.append(row)      # [[10, 2, 21, 4], [5, 20, 41, 9], [6, 2, 4, 99]]
+    matrix.extend(row)    # [10, 2, 21, 4, 5, 20, 41, 9, 6, 2, 4, 99]
+
+print(matrix)
+
+
+
+##########: variant 3 - Class :##########
 
 class FlatteningMatrix:
 

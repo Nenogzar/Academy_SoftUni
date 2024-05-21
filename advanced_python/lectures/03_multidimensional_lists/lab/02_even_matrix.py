@@ -34,9 +34,35 @@ Output
 
 
 """
+##########: variant 1 :##########
 
+row = int(input())
+matrix = []
+evan_matrix = []
+for _ in range(row):
+    current_row = list(map(int, input().split(", ")))
+    matrix.append(current_row)
 
-""" 1 """
+for i in range(row):
+    evan_row = []
+    for j in range(row):
+        if matrix[i][j] % 2 == 0:
+            evan_row.append(matrix[i][j])
+    evan_matrix.append(evan_row)
+
+print(evan_matrix)
+
+##########: variant 2 :##########
+
+row_num = int(input())
+matrix = []
+
+for i in range(row_num):
+	row_data = [int(el) for el in input().split(", ") if int(el) % 2 == 0]
+	matrix.append(row_data)
+print(matrix)
+
+##########: variant 3 - Class :##########
 
 class EvenMatrix:
     def __init__(self):

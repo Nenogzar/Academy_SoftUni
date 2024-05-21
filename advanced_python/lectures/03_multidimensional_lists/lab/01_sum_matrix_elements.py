@@ -23,13 +23,15 @@ Output
 
 
 """ 
-""" 1 """
-rows, cols = [int(x) for x in input().split(", ")]
+##########: variant 1 :##########
+
+# rows, cols = [int(x) for x in input().split(", ")]
+rows, cols = list(map(int, input().split(", ")))
 
 total = 0
 matrix = []
 for i in range(rows):
-    row = [int(x) for x in input().split(", ")]
+    row = list(map(int, input().split(", ")))
     matrix.append(row)
     total += sum(row)
 
@@ -37,35 +39,36 @@ print(total)
 print(matrix)
 
 
-""" class """
-class SumMatrixElements:
+##########: variant 2 - Class :##########
 
-    def __init__(self):
-        self.result_message = ''
-        self.rows, self.cols = [int(n) for n in input().split(', ')]
-        self.matrix = []
-        self.main_meth()
-
-    def main_meth(self):
-        self.fill_matrix_with_elements()
-        self.find_sum_of_elements()
-        self.prepare_return_message()
-
-    def fill_matrix_with_elements(self):
-        for _ in range(self.rows):
-            line = [int(x) for x in input().split(', ')]
-            self.matrix.append(line)
-
-    def find_sum_of_elements(self):
-        self.result_message = str(sum(sum(row) for row in self.matrix))
-
-    def prepare_return_message(self):
-        self.result_message += f'\n{self.matrix}'
-
-    def __repr__(self):
-        return self.result_message
-
-
-if __name__ == '__main__':
-    print(SumMatrixElements())
-
+# class SumMatrixElements:
+#
+#     def __init__(self):
+#         self.result_message = ''
+#         self.rows, self.cols = [int(n) for n in input().split(', ')]
+#         self.matrix = []
+#         self.main_meth()
+#
+#     def main_meth(self):
+#         self.fill_matrix_with_elements()
+#         self.find_sum_of_elements()
+#         self.prepare_return_message()
+#
+#     def fill_matrix_with_elements(self):
+#         for _ in range(self.rows):
+#             line = [int(x) for x in input().split(', ')]
+#             self.matrix.append(line)
+#
+#     def find_sum_of_elements(self):
+#         self.result_message = str(sum(sum(row) for row in self.matrix))
+#
+#     def prepare_return_message(self):
+#         self.result_message += f'\n{self.matrix}'
+#
+#     def __repr__(self):
+#         return self.result_message
+#
+#
+# if __name__ == '__main__':
+#     print(SumMatrixElements())
+#

@@ -40,6 +40,72 @@ Hints
 
 """
 
+##########: variant 1 :##########
+
+rows, cols = list(map(int, input().split(", ")))
+
+matrix = []
+for i in range(rows):
+    row = list(map(int, input().split(", ")))
+    matrix.append(row)
+
+max_sum = -float('inf')
+max_matrix = []
+for i in range(rows - 1):
+    for j in range(cols - 1):
+        sub_matrix = [
+            [matrix[i][j], matrix[i][j + 1]],
+            [matrix[i + 1][j], matrix[i + 1][j + 1]]
+        ]
+        current_sum = 0
+        for row in sub_matrix:
+            current_sum += sum(row)
+        if current_sum > max_sum:
+            max_sum = current_sum
+            max_matrix = sub_matrix
+
+for r in max_matrix:
+    print(*r, sep=" ")
+print(max_sum)
+
+
+
+    ##########: variant 2 :##########
+
+rows, colons = list(map(int, input().split(", ")))
+
+matrix_list = [list(map(int, input().split(", "))) for row in range(rows)]
+max_sum = {"max number": -3333,
+           "row": 0,
+           "col": 0}
+
+
+def check_valid_index(row, col):
+    if 0 <= row + 2 <= rows and 0 <= col + 2 <= colons:
+        return True
+
+
+def sum_square(row, col):
+    if check_valid_index(row, col):
+        sum_total = 0
+        for row_check in range(row, row + 2):
+            sum_total += sum(matrix_list[row_check][col: col + 2])
+        if max_sum["max number"] < sum_total:
+            max_sum["max number"] = sum_total
+            max_sum["row"] = row
+            max_sum["col"] = col
+
+
+for row in range(rows):
+    for col in range(colons):
+        sum_square(row, col)
+
+for row in range(max_sum["row"], max_sum["row"] + 2):
+    print(" ".join([str(x) for x in matrix_list[row][max_sum["col"]: max_sum["col"] + 2]]))
+print(max_sum['max number'])
+
+
+    ##########: variant 3 - Class :##########
 class MaxSumSquare:
 
     def __init__(self):

@@ -32,17 +32,34 @@ Output
 
 """
 
+    ##########: variant 1 :##########
 
-##################################### variant 01 #####################################
+rows = int(input())
+matrix = [[int(x) for x in input().split()] for _ in range(rows)]
+sum_of_diagonal = 0
+for row in range(rows):
+    sum_of_diagonal += matrix[row][row]
+print(sum_of_diagonal)
 
+    ##########: variant 2 :##########
 
+matrix = []
+matrix_size = int(input())
+for row in range(matrix_size):
+    numbers = list(map(int, input().split()))
+    matrix.append(numbers)
+result = 0
+for index, col in enumerate(zip(*matrix)):
+    result += col[index]
+print(result)
 
-##################################### variant 02 #####################################
+    ##########: variant 3 :###########
+
 n = int(input())
 
 matrix = []
 for _ in range(n):
-    row = [int(x) for x in input().split()]
+    row = list(map(int, input().split()))
     matrix.append(row)
 
 primary_sum = 0
@@ -52,8 +69,7 @@ for i in range(n):
 print(primary_sum)
 
 
-
-##################################### variant 03 #####################################
+##########: variant 4 - Class:##########
 class PrimaryDiagonal:
 
     def __init__(self):
