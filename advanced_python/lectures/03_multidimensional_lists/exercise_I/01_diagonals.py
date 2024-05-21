@@ -22,6 +22,30 @@ Secondary diagonal: 3, 5, 7. Sum: 15
 """
 
 """ 1 """
+size = int(input())
+
+matrix = []
+for _ in range(size):
+    row = [int(x) for x in input().split(', ')]
+    matrix.append(row)
+
+primary_diagonal = []
+secondary_diagonal = []
+
+for i in range(size):
+    primary_diagonal.append(matrix[i][i])
+    secondary_diagonal.append(matrix[size - 1 - i][i])
+
+primary_diagonal_str = ', '.join(str(x) for x in primary_diagonal)
+secondary_diagonal_str = ', '.join(str(x) for x in reversed(secondary_diagonal))
+
+output_message = f'Primary diagonal: {primary_diagonal_str}. Sum: {sum(primary_diagonal)}\n'
+output_message += f'Secondary diagonal: {secondary_diagonal_str}. Sum: {sum(secondary_diagonal)}'
+
+
+print(output_message)
+
+""" 2 """
 
 class Diagonals:
 
