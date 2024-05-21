@@ -48,7 +48,7 @@ for _ in range(len(reversed_list)):
     new_list.append(reversed_list.pop())
 print(" ".join(new_list))
 
-"" qceka88 """
+""" qceka88 """
 class Reversing:
 
     def __init__(self):
