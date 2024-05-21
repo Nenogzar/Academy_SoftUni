@@ -39,6 +39,25 @@ Output
 
 """
 
+""" 1 """
+size = int(input())
+
+matrix = []
+primary_diagonal_sum = 0
+secondary_diagonal_sum = 0
+
+for i in range(size):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+    primary_diagonal_sum += row[i]
+    secondary_diagonal_sum += row[size - 1 - i]
+
+difference_of_diagonals = abs(primary_diagonal_sum - secondary_diagonal_sum)
+
+print(difference_of_diagonals)
+
+""" 2 """
+
 class DiagonalDifference:
 
     def __init__(self):
