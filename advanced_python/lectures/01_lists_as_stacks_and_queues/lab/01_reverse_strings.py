@@ -1,8 +1,33 @@
-import time
+#################################### TASK CONDITION ############################
+"""
+
+1.	Reverse Strings
+Write program that:
+•	Reads an input string
+•	Reverses it using a stack
+•	Prints the result back on the console
+
+____________________________________________________________________________________________
+Example_01
+
+Input
+I Love Python
+
+Output
+nohtyP evoL I
+
+____________________________________________________________________________________________
+Example_02
+
+Input
+Stacks and Queues
+
+Output
+seueuQ dna skcatS
+
+"""
+
 from collections import deque
-
-start_time = time.time()
-
 
 # input_str = input()
 #
@@ -30,7 +55,7 @@ start_time = time.time()
 
 # test = list(input())
 # while test:
-# 	print(test.pop(),end="")    # time 1.13
+# 	print(test.pop(),end="")    
 
 """ OR """
 
@@ -38,18 +63,31 @@ start_time = time.time()
 # stack = []
 # for index in range(len(test)):
 # 	stack.append(test.pop())
-# print("".join(stack))       # time 1.17
+# print("".join(stack))       
 
 """ Whit deque """
 
 stack = deque(input())
 # print(stack)
 stack.reverse()
-print(*stack, sep="")       # time  1.08
+print(*stack, sep="")       
 
+""" """
+class ReverseString:
 
+    def __init__(self, stack):
+        self.stack = stack
+        self.reversed_stack = []
 
-end_time = time.time()
-execution_time = end_time - start_time
-print(f"Време за изпълнение:, {execution_time:.2f}, секунди")
+    def reversing_string(self):
+        for _ in range(len(self.stack)):
+            self.reversed_stack.append(self.stack.pop())
 
+    def __repr__(self):
+        return ''.join(self.reversed_stack)
+
+string = [char for char in input()]
+
+output = ReverseString(string)
+output.reversing_string()
+print(output)
