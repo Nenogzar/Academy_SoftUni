@@ -108,7 +108,7 @@ Teddy bear: 1
 from collections import deque
 
 
-class PresentFactory:
+class SantaFactory:
 
     def __init__(self):
         self.result_message = ''
@@ -179,7 +179,7 @@ class PresentFactory:
 
 
 if __name__ == '__main__':
-    print(PresentFactory())
+    print(SantaFactory())
 
 
 
