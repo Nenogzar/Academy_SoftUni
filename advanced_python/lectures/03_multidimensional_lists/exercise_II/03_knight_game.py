@@ -69,9 +69,161 @@ Output
 
 """ 1 """
 
+def knights_attacked(mtrx, pos):
+    row, col = pos
+    count = 0
+    for direction in directions:
+        x, y = direction
+        r, c = row + x, col + y
+        if 0 <= r <= len(mtrx) - 1 and 0 <= c <= len(mtrx[0]) - 1:
+            if mtrx[r][c] == KNIGHT:
+                count += 1
+    return count
+
+
+KNIGHT, EMPTY = "K", "0"
+
+n = int(input())
+board = []
+knights = []
+for i in range(n):
+    row, text = [], input()
+    for j, ele in enumerate(text):
+        if ele == KNIGHT:
+            knights.append([(i, j), -1])
+        row.append(ele)
+    board.append(row)
+
+directions = {
+    (-2, -1),
+    (-1, -2),
+    (-2, 1),
+    (-1, 2),
+    (1, 2),
+    (2, 1),
+    (2, -1),
+    (1, -2),
+}
+
+count_removed = 0
+while True:
+    if all(ele[1] == 0 for ele in knights):
+        break
+    max_attacker_idx = None
+    max_attacker_pos = ()
+    max_attacked_count = -1
+    for idx, knight in enumerate(knights):
+        knight[1] = knights_attacked(board, knight[0])
+        if knight[1] > max_attacked_count:
+            max_attacker_idx = idx
+            max_attacker_pos = knight[0]
+            max_attacked_count = knight[1]
+
+    if max_attacked_count > 0:
+        knights.pop(max_attacker_idx)
+        row, col = max_attacker_pos
+        board[row][col] = EMPTY
+        count_removed += 1
+
+print(count_removed)
+
 """ 2 """
 
+KNIGHT, EMPTY = "K", "0"
+POSSIBLE_MOVES = [(-2, -1), (-1, -2), (-2, 1), (-1, 2), (1, 2), (2, 1), (2, -1), (1, -2)]
+
+
+def knight_attacks_counter(matrix, knight):
+    counter = 0
+    for move in POSSIBLE_MOVES:
+        row = knight[0] + move[0]
+        col = knight[1] + move[1]
+        if row < 0 or row >= len(matrix) or col < 0 or col >= len(matrix[0]):
+            continue
+        if matrix[row][col] == KNIGHT:
+            counter += 1
+    return counter
+
+
+def get_max_attacker():
+    max_attacks_count = 0
+    max_attacker = None
+    for knight in knights:
+        current_attacks_count = knight_attacks_counter(board, knight)
+        if current_attacks_count > max_attacks_count:
+            max_attacks_count = current_attacks_count
+            max_attacker = knight
+    return max_attacker
+
+
+board_size = int(input())
+board = []
+knights = []
+
+for r in range(board_size):
+    line = list(input())
+    for c in range(board_size):
+        if line[c] == KNIGHT:
+            knights.append((r, c))
+    board.append(line)
+
+knight_to_remove = get_max_attacker()
+removed_knights_counter = 0
+while True:
+    knight_to_remove = get_max_attacker()
+    if not knight_to_remove:
+        break
+    row, col = knight_to_remove
+    board[row][col] = EMPTY
+    removed_knights_counter += 1
+    knights.remove((row, col))
+
+print(removed_knights_counter)
+
+
 """ 3 """
+
+rows = int(int(input()))
+
+pos_knights,  matrix, total_knights = [], [], [0]
+for row in range(rows):
+    matrix.append(list(input()))
+    for col in range(len(matrix[0])):
+        if matrix[row][col] == "K":
+            pos_knights.append([row, col])
+
+cols = len(matrix[0])
+
+
+def check_valid_index(row, col):
+    if 0 <= row < rows and 0 <= col < cols:
+        return True
+
+
+movement = {
+    "up left": [-2, -1], "up right": [-2, 1], "down left": [2, -1], "down right": [2, 1],
+    "left up": [-1, -2], "left down": [1, -2], "right up": [-1, 2], "right down": [1, 2],
+}
+
+
+def check_knights():
+    result = {}
+    for row, col in pos_knights:
+        for m_row, m_col in movement.values():
+            knight_row, knight_col = row + m_row, col + m_col
+            if check_valid_index(knight_row, knight_col) and matrix[knight_row][knight_col] == "K":
+                result[f"{row} {col}"] = result.get(f"{row} {col}", 0) + 1
+    if not result:
+        return
+    total_knights[0] += 1
+    row, col = [int(x) for x in max(result, key=result.get).split()]
+    matrix[row][col] = "0"
+    pos_knights.remove([row, col])
+    check_knights()
+
+
+check_knights()
+print(total_knights[0])
 
 """ 4 """
 class KnightGame:
