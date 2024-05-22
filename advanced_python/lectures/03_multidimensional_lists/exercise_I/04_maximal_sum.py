@@ -53,7 +53,7 @@ Sum = 34
 import sys
 
 # Въвеждане на броя на редовете и колоните
-rows, cols = [int(x) for x in input().split()]
+rows, cols = list(map(int, input().split()))
 # Създаване на матрицата
 matrix = [[int(n) for n in input().split()] for _ in range(rows)]
 # Инициализиране на променливи за максималната сума и подматрицата
