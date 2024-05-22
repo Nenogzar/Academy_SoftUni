@@ -103,7 +103,69 @@ Teddy bear: 1
 
 
 """
-""" 1 """
+    ##########: variant 1 :##########
+
+from collections import deque
+
+materials = deque([int(x) for x in input().split()])
+magic_level = deque([int(x) for x in input().split()])
+
+doll_magic_needed = 150
+wooden_train_magic_needed = 250
+teddy_bear_magic_needed = 300
+bicycle_magic_needed = 400
+
+possible_toys = {
+    "Doll": doll_magic_needed,
+    "Wooden train": wooden_train_magic_needed,
+    "Teddy bear": teddy_bear_magic_needed,
+    "Bicycle": bicycle_magic_needed
+}
+created_toys = {"Doll": 0, "Wooden train": 0, "Teddy bear": 0, "Bicycle": 0}
+
+while materials and magic_level:
+    material = materials.pop()
+    magic = magic_level.popleft()
+
+    # Skip zero values
+    if material == 0 and magic == 0:
+        continue
+    if material == 0:
+        magic_level.appendleft(magic)
+        continue
+    if magic == 0:
+        materials.append(material)
+        continue
+
+    total_magic = material * magic
+
+    if total_magic in possible_toys.values():
+        for toy, needed_magic in possible_toys.items():
+            if total_magic == needed_magic:
+                created_toys[toy] += 1
+                break
+    elif total_magic < 0:
+        materials.append(material + magic)
+    else:
+        materials.append(material + 15)
+
+if (created_toys["Teddy bear"] >= 1 and created_toys["Bicycle"] >= 1) or (created_toys["Doll"] >= 1 and created_toys["Wooden train"] >= 1):
+    print("The presents are crafted! Merry Christmas!")
+else:
+    print("No presents this Christmas!")
+
+if materials:
+    print(f"Materials left: {', '.join(map(str, reversed(materials)))}")
+if magic_level:
+    print(f"Magic left: {', '.join(map(str, magic_level))}")
+
+for toy in sorted(created_toys):
+    if created_toys[toy] > 0:
+        print(f"{toy}: {created_toys[toy]}")
+
+
+
+    ##########: variant 3 - Class :##########
 
 from collections import deque
 
