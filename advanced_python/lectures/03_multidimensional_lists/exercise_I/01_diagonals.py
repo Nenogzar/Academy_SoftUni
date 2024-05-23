@@ -21,7 +21,7 @@ Secondary diagonal: 3, 5, 7. Sum: 15
 
 """
 
-""" 1 """
+      ##########: variant 1 :##########
 size = int(input())
 
 matrix = []
@@ -45,7 +45,7 @@ output_message += f'Secondary diagonal: {secondary_diagonal_str}. Sum: {sum(seco
 
 print(output_message)
 
-""" 2 """
+      ##########: variant 2 :##########
 
 class Diagonals:
 
