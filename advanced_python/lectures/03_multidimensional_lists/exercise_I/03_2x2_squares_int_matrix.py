@@ -62,7 +62,8 @@ C C K P  C C K P  C C K P
 
 """
 
-""" 1 """
+      ##########: variant 1 :##########
+
 rows, cols = [int(x) for x in input().split()]
 
 matrix = [input().split() for row in range(rows)]
@@ -78,7 +79,8 @@ for row in range(rows - 1):
 print(counted_squares)
 
 
-""" 2 """
+      ##########: variant 2 - Class :##########
+
 class SquaresInMatrix:
 
     def __init__(self):
