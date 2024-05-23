@@ -54,7 +54,7 @@ Hello World
 
 
 """
-""" 1 """
+      ##########: variant 1 :##########
 rows, cols = [int(x) for x in input().split()]
 matrix = [[x for x in input().split()] for _ in range(rows)]
 output_message = ''
@@ -80,7 +80,7 @@ while True:
 print(output_message)
 
 
-""" 2 """
+      ##########: variant 2 - Class :##########
 
 class ShuffleMatrix:
 
