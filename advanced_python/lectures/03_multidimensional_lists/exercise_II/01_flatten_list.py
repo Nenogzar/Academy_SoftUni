@@ -34,18 +34,17 @@ Output
 
 """
 
-""" 1  """
+      ##########: variant 1 :##########
 
-first_matrix = [row.split() for row in input().split('|')]
+matrix = [row.split() for row in input().split('|')]
 flatten_matrix = []
 
-for row in first_matrix[::-1]:
-    flatten_matrix.extend(row)
+for flat in matrix[::-1]:
+    flatten_matrix.extend(flat)
 
-output_message = ' '.join(flatten_matrix)
-print(output_message)
+print(*flatten_matrix)
 
-""" 2 """
+      ##########: variant 2 :##########
 
 line = input().split("|")
 result = []
@@ -53,7 +52,7 @@ result = []
 print(*result)
 
 
-""" 2 """
+      ##########: variant 3 - Class :##########
 
 class FattenList:
 

@@ -39,8 +39,7 @@ Output
 
 """
 
-""" 1 """
-
+      ##########: variant 1 :##########
 size = int(input())
 
 matrix = []
@@ -57,7 +56,7 @@ difference_of_diagonals = abs(primary_diagonal_sum - secondary_diagonal_sum)
 
 print(difference_of_diagonals)
 
-""" 2 """
+      ##########: variant 2 - Class :##########
 
 class DiagonalDifference:
 

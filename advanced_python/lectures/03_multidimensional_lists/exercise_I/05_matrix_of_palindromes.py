@@ -35,7 +35,7 @@ ccc cdc
 
 
 """
-""" 1 """
+      ##########: variant 1 :##########
 rows, cols = map(int, input().split())
 
 first_letter = 97
@@ -50,18 +50,10 @@ for row in range(rows):
 
 output_message = '\n'.join(' '.join(row) for row in matrix)
 
-for nest in matrix:
-    print(*nest)
+print(output_message)
 
-""" 2 """
 
-rows, columns = map(int, input().split())
-
-matrix = [[chr(97 + r) + chr(97 + r + c) + chr(97 + r) for c in range(columns)] for r in range(rows)]
-for row in matrix:
-    print(*row)
-
-""" 3 """
+      ##########: variant 1 - Class :##########
 class PalindromesMatrix:
 
     def __init__(self):

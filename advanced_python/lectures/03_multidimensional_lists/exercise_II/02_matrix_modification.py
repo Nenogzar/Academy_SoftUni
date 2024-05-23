@@ -55,7 +55,35 @@ Invalid coordinates
 
 """
 
-""" 1 """
+
+""" 2 """
+
+rows = int(input())
+matrix = [list(map(int, input().split(" "))) for _ in range(rows)]
+
+command = input()
+while command != "END":
+    parts = command.split()
+    action = parts[0]
+    row, col, val = [int(x) for x in parts[1:4]]
+
+    if 0 <= row < len(matrix) and 0 <= col < len(matrix[0]):
+        if action == "Add":
+            matrix[row][col] += val
+        elif action == "Subtract":
+            matrix[row][col] -= val
+    else:
+        print("Invalid coordinates")
+
+
+    command = input()
+
+for nest in matrix:
+    print(*nest)
+
+
+
+""" 2 """
 n = int(input())
 matrix = [[int(x) for x in input().split()] for _ in range(n)]
 
@@ -76,7 +104,8 @@ while True:
 
 [print(*matrix[i], sep=" ") for i in range(n)]
 
-""" 2 """
+
+""" 3 """
 
 n = int(input())
 matrix = [[int(x) for x in input().split()] for _ in range(n)]
@@ -99,7 +128,7 @@ while command != "END":
 [print(*row) for row in matrix]
 
 
-""" 3 """
+""" 4 """
 def create_matrix(size):
     return [[int(x) for x in input().split()] for _ in range(size)]
 
@@ -145,64 +174,5 @@ def matrix_modification():
 
 if __name__ == '__main__':
     print(matrix_modification())
-
-
-""" 4 """
-
-class MatrixModification:
-
-    def __init__(self):
-        self.output_message = []
-        self.size = int(input())
-        self.matrix = []
-        self.actions = {
-            'Add': self.add_number,
-            'Subtract': self.subtract_number,
-        }
-        self.main_meth()
-
-    def main_meth(self):
-        self.create_matrix()
-        self.start_modifications()
-        self.prepare_output_message()
-
-    def create_matrix(self):
-        self.matrix = [[int(x) for x in input().split()] for _ in range(self.size)]
-
-    def valid_coordinates(self, row, col):
-        if 0 <= row < self.size and 0 <= col < self.size:
-            return True
-        else:
-            return False
-
-    def add_number(self, r, c, value):
-        self.matrix[r][c] += value
-
-    def subtract_number(self, r, c, value):
-        self.matrix[r][c] -= value
-
-    def start_modifications(self):
-        while True:
-            data = input().split()
-            if data[0] == 'END':
-                break
-            act, row, col, value = data[0], int(data[1]), int(data[2]), int(data[3])
-
-            if self.valid_coordinates(row, col):
-                self.actions[act](row, col, value)
-            else:
-                self.output_message.append('Invalid coordinates')
-
-    def prepare_output_message(self):
-        for row in self.matrix:
-            line = ' '.join(str(x) for x in row)
-            self.output_message.append(line)
-
-    def __repr__(self):
-        return '\n'.join(self.output_message)
-
-
-if __name__ == '__main__':
-    print(MatrixModification())
 
 
