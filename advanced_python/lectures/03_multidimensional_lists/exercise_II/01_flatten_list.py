@@ -36,14 +36,13 @@ Output
 
       ##########: variant 1 :##########
 
-first_matrix = [row.split() for row in input().split('|')]
+matrix = [row.split() for row in input().split('|')]
 flatten_matrix = []
 
-for row in first_matrix[::-1]:
-    flatten_matrix.extend(row)
+for flat in matrix[::-1]:
+    flatten_matrix.extend(flat)
 
-output_message = ' '.join(flatten_matrix)
-print(output_message)
+print(*flatten_matrix)
 
       ##########: variant 2 :##########
 
