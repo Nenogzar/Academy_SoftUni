@@ -67,11 +67,36 @@ for row in range(1, rows + 1):
         snake.rotate(-1)
     matrix.append(snake_row)
 
-output_message = '\n'.join(''.join(row) for row in matrix)
+for nest in matrix:
+    print(*nest, sep='')
 
-print(output_message)
 
 """ 2 """
+
+N, M = map(int, input().split())
+snake = input()
+
+matrix = [['' for _ in range(M)] for _ in range(N)]
+
+snake_index = 0
+snake_length = len(snake)
+
+for row in range(N):
+    if row % 2 == 0:
+        for col in range(M):
+            matrix[row][col] = snake[snake_index]
+            snake_index = (snake_index + 1) % snake_length
+    else:
+        for col in range(M - 1, -1, -1):
+            matrix[row][col] = snake[snake_index]
+            snake_index = (snake_index + 1) % snake_length
+
+for row in matrix:
+    print(*row, sep='')
+
+
+
+""" 3 """
 from collections import deque
 
 

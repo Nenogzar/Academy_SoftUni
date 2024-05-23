@@ -40,6 +40,7 @@ Output
 """
 
 """ 1 """
+
 size = int(input())
 
 matrix = []

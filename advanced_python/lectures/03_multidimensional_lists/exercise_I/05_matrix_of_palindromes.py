@@ -50,10 +50,18 @@ for row in range(rows):
 
 output_message = '\n'.join(' '.join(row) for row in matrix)
 
-print(output_message)
-
+for nest in matrix:
+    print(*nest)
 
 """ 2 """
+
+rows, columns = map(int, input().split())
+
+matrix = [[chr(97 + r) + chr(97 + r + c) + chr(97 + r) for c in range(columns)] for r in range(rows)]
+for row in matrix:
+    print(*row)
+
+""" 3 """
 class PalindromesMatrix:
 
     def __init__(self):

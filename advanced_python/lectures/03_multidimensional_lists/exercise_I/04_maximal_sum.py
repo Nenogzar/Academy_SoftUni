@@ -52,21 +52,18 @@ Sum = 34
 """ 1 """
 import sys
 
-# Въвеждане на броя на редовете и колоните
 rows, cols = list(map(int, input().split()))
-# Създаване на матрицата
-matrix = [[int(n) for n in input().split()] for _ in range(rows)]
-# Инициализиране на променливи за максималната сума и подматрицата
+
+matrix = [list(map(int, input().split())) for _ in range(rows)]
+
 max_sum = -sys.maxsize
 best_mini_matrix = []
-# Обхождане на матрицата за намиране на максималната сума на подматрица 3x3
+
 for row in range(rows - 2):
     for col in range(cols - 2):
-        # Определяне на текущата подматрица 3x3
         mini_matrix = [matrix[row][col:col + 3],
                        matrix[row + 1][col:col + 3],
                        matrix[row + 2][col:col + 3]]
-        # Изчисляване на сумата на текущата подматрица 3x3
         current_sum = sum(sum(r) for r in mini_matrix)
         # Проверка дали текущата сума е по-голяма от максималната сума
         if current_sum > max_sum:

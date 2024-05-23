@@ -63,9 +63,9 @@ C C K P  C C K P  C C K P
 """
 
 """ 1 """
-rows, cols = [int(x) for x in input().split()]
+rows, cols = map(int, input().split())
 
-matrix = [input().split() for row in range(rows)]
+matrix = [list(map(int, input().split())) for _ in range(rows)]
 
 counted_squares = 0
 
