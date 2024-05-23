@@ -49,7 +49,7 @@ Sum = 34
 6 0 5
 
 """
-""" 1 """
+      ##########: variant 1 :##########
 import sys
 
 # Въвеждане на броя на редовете и колоните
@@ -77,7 +77,7 @@ output_message += '\n'.join(' '.join(str(x) for x in row) for row in best_mini_m
 print(output_message)
 
 
-""" 2 """
+      ##########: variant 2 :##########
 
 import sys
 
