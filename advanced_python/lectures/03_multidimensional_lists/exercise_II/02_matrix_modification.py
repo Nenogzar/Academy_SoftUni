@@ -65,7 +65,7 @@ command = input()
 while command != "END":
     parts = command.split()
     action = parts[0]
-    row, col, val = int(parts[1]), int(parts[2]), int(parts[3])
+    row, col, val = [int(x) for x in parts[1:4]]
 
     if 0 <= row < len(matrix) and 0 <= col < len(matrix[0]):
         if action == "Add":
