@@ -1,6 +1,5 @@
 #################################### TASK CONDITION ############################
-"""
-                5.	Matrix of Palindromes
+"""                5.	Matrix of Palindromes
 Write a program to generate the following matrix of palindromes of 
 3 letters with r rows and c columns like the one in the examples below.
 •	Rows define the first and the last letter: row 0  'a', row 1  'b', row 2  'c', …
@@ -33,8 +32,9 @@ aaa aba
 bbb bcb
 ccc cdc
 
-
 """
+
+
       ##########: variant 1 :##########
 rows, cols = map(int, input().split())
 
@@ -48,9 +48,8 @@ for row in range(rows):
         current_row.append(combination)
     matrix.append(current_row)
 
-output_message = '\n'.join(' '.join(row) for row in matrix)
-
-print(output_message)
+for nest in matrix:
+    print(*nest)
 
 
       ##########: variant 1 - Class :##########
@@ -69,7 +68,7 @@ class PalindromesMatrix:
         self.prepare_output_message()
 
     def define_rows_cols_of_matrix(self):
-        self.rows, self.cols = [int(x) for x in input().split()]
+        self.rows, self.cols = list(map(int, input().split()))
 
     def fill_the_matrix_with_palindromes(self):
         for row in range(self.rows):
