@@ -1,5 +1,6 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/1835#2
                2.	Diagonal Difference
 Write a program that finds the difference between the sums of the square matrix diagonals (absolute value).
 
@@ -32,7 +33,7 @@ Input
 -7 14 9 -20
 3 4 9 21
 -14 6 8 44
-30 9 7 -14	
+30 9 7 -14
 
 Output
 34	
@@ -56,7 +57,18 @@ difference_of_diagonals = abs(primary_diagonal_sum - secondary_diagonal_sum)
 
 print(difference_of_diagonals)
 
-      ##########: variant 2 - Class :##########
+
+    ##########: variant 2 :##########
+
+num = int(input())
+matrix = [list(map(int, input().split())) for _ in range(num)]
+p_sum, s_sum = 0, 0
+for i in range(num):
+    p_sum += matrix[i][i]
+    s_sum += matrix[i][size - i -1]
+print(abs(p_sum - s_sum))
+
+      ##########: variant 3 - Class :##########
 
 class DiagonalDifference:
 

@@ -38,6 +38,11 @@ for i in range(rows):
 print(total)
 print(matrix)
 
+##########: variant 2 :##########
+
+
+n = input()
+
 
 ##########: variant 2 - Class :##########
 

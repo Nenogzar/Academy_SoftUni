@@ -1,5 +1,7 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/1835#3
+
                      3.	2x2 Squares in Matrix
 Find the number of all 2x2 squares containing identical chars in a matrix. 
 On the first line, you will receive the matrix's dimensions in the 
@@ -62,24 +64,38 @@ C C K P  C C K P  C C K P
 
 """
 
-      ##########: variant 1 :##########
+    ##########: variant 1 :##########
 
 rows, cols = [int(x) for x in input().split()]
 
 matrix = [input().split() for row in range(rows)]
 
 counted_squares = 0
-
-for row in range(rows - 1):
-    for col in range(cols - 1):
-        if matrix[row][col] == matrix[row][col + 1] \
-                == matrix[row + 1][col] == matrix[row + 1][col + 1]:
+for i in range(rows-1):
+    for j in range(cols-1):
+        symbol = matrix[i][j]
+        if symbol == matrix[i][j+1] == matrix[i+1][j] == matrix[i+1][j+1]:
             counted_squares += 1
-
 print(counted_squares)
 
 
-      ##########: variant 2 - Class :##########
+    ##########: variant 2 :##########
+
+rows, cols = [int(el) for el in input().split()]
+matrix = [input().split() for _ in range(rows)]
+
+counted_squares = 0
+for i in range(rows - 1):
+    for j in range(cols - 1):
+        if (matrix[i][j] \
+                == matrix[i][j + 1] \
+                == matrix[i + 1][j] \
+                == matrix[i + 1][j + 1]):
+
+            counted_squares += 1
+print(counted_squares)
+
+      ##########: variant 3 - Class :##########
 
 class SquaresInMatrix:
 
@@ -119,3 +135,25 @@ if __name__ == '__main__':
     print(SquaresInMatrix())
 
 
+##########: variant 4 :  3 4 ##########
+
+# rows, cols = [int(x) for x in input().split()]
+# matrix = [input().split() for row in range(rows)]
+#
+# equal_block = 0
+# for i in range(rows):
+#     for j in range(cols):
+#         if (matrix[i][j] == matrix[i][j + 1] == matrix[i + 1][j] == matrix[i + 1][j + 1]):
+#             valid_block = True
+#
+#             for inner_cow in range(i, i + 2):
+#                 for inner_row in range(j, j + 2):
+#                     if matrix[i][j] != matrix[inner_cow][inner_row]:
+#                         valid_block = False
+#                         break
+#
+#                 if not valid_block:
+#                     break
+#             else:
+#                 equal_block += 1
+# print(equal_block)

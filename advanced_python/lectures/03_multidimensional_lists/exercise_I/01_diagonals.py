@@ -1,5 +1,6 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/1835#1
                           1.	Diagonals
 Using a nested list comprehension, write a program that reads rows of a square 
 matrix and its elements, separated by a comma and a space ", ". You should find 
@@ -46,6 +47,17 @@ output_message += f'Secondary diagonal: {secondary_diagonal_str}. Sum: {sum(seco
 print(output_message)
 
       ##########: variant 2 :##########
+n = int(input())
+matrix = [[int(el) for el in input().split(", ")] for _ in range(n)]
+# matrix = [list(map(int, input().split(", "))) for _ in range(n)]
+primary = [matrix[i][i] for i in range(n)]
+secondary = [matrix[i][n - i - 1] for i in range(n)]
+
+print(f"Primary diagonal: {', '.join(str(x) for x in primary)}. Sum: {sum(primary)}")
+print(f"Secondary diagonal: {', '.join(str(x) for x in secondary)} Sum: {sum(secondary)} ")
+
+
+    ##########: variant 3 - Class :##########
 
 class Diagonals:
 
