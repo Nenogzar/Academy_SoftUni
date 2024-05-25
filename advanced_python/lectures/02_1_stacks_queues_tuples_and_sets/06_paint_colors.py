@@ -79,7 +79,54 @@ Output
 
 
 """
+##########: variant 1 :##########
 
+from collections import deque
+
+string_with_substrings = deque(input().split())
+
+main_colors = ["red", "yellow", "blue"]
+secondary_colors = ["orange", "purple", "green"]
+final_list = []
+
+while string_with_substrings:
+    if len(string_with_substrings) > 1:
+        first_color = string_with_substrings.popleft()
+        last_color = string_with_substrings.pop()
+    else:
+        first_color = string_with_substrings.popleft()
+        last_color = ""
+
+    first_way = first_color + last_color
+    second_way = last_color + first_color
+    if first_way in main_colors or first_way in secondary_colors:
+        final_list.append(first_way)
+    elif second_way in main_colors or second_way in secondary_colors:
+        final_list.append(second_way)
+    else:
+        first_color = first_color[:-1]
+        last_color = last_color[:-1]
+        if first_color:
+            string_with_substrings.insert(len(string_with_substrings) // 2, first_color)
+        if last_color:
+            string_with_substrings.insert(len(string_with_substrings) // 2, last_color)
+
+required_colors = {
+    "orange": ["red", "yellow"],
+    "purple": ["red", "blue"],
+    "green": ["yellow", "blue"]
+}
+
+for color in final_list.copy():
+    if color in secondary_colors:
+        required_primary_colors = required_colors[color]
+        if not all(primary_color in final_list for primary_color in required_primary_colors):
+            final_list.remove(color)
+
+print(final_list)
+
+
+##########: variant 2 :##########
 from collections import deque
 
 

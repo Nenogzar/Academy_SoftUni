@@ -46,7 +46,7 @@ Output
 Pyth
 
 """
-""" 1 """
+##########: variant 1 :##########
 
 from collections import deque
 
@@ -70,8 +70,7 @@ for row in range(1, rows + 1):
 for nest in matrix:
     print(*nest, sep='')
 
-
-""" 2 """
+##########: variant 2 :##########
 
 N, M = map(int, input().split())
 snake = input()
@@ -94,9 +93,76 @@ for row in range(N):
 for row in matrix:
     print(*row, sep='')
 
+    ##########: variant 3 :##########
+
+    N, M = map(int, input().split())
+    # OR
+    # N, M = [int(num) for num in input().split()]
+    snake = input()
+
+    matrix = [['' for _ in range(M)] for _ in range(N)]
+    # OR
+    # matrix = [list(map(str, ['' for _ in range(M)])) for _ in range(N)]
+
+    snake_index = 0
+    snake_length = len(snake)
+
+    for row in range(N):
+
+        if row % 2 == 0:
+            # Ако редът е четен, попълваме от ляво на дясно
+            for col in range(M):
+                matrix[row][col] = snake[snake_index]
+                # Увеличаваме индекса на змията и го нормализираме спрямо дължината на низа за змията
+                snake_index = (snake_index + 1) % snake_length
+        else:
+            # Ако редът е нечетен, попълваме от дясно на ляво
+            for col in range(M - 1, -1, -1):
+                matrix[row][col] = snake[snake_index]
+                # Увеличаваме индекса на змията и го нормализираме спрямо дължината на низа за змията
+                snake_index = (snake_index + 1) % snake_length
+
+    for row in matrix:
+        print(*row, sep='')
+
+##########: variant 4 :##########
 
 
-""" 3 """
+from collections import deque
+
+rows, cols = map(int, input().split())
+word = list(input())
+word_queue = deque(word)
+
+while len(word_queue) < rows * cols:
+    word_queue.extend(word[:rows * cols - len(word_queue)])
+
+for row in range(rows):
+    if row % 2 == 0:
+        print(*[word_queue.popleft() for _ in range(cols)], sep="")
+    else:
+        print(*[word_queue.popleft() for _ in range(cols)][::-1], sep="")
+
+##########: variant 5 :##########
+
+from collections import deque
+
+rows, cols = map(int, input().split())
+word = list(input())
+word_queue = deque(word)
+
+for row in range(rows):
+    while len(word_queue) < cols:
+        word_queue.extend(word)
+
+    if row % 2 == 0:
+        print(*[word_queue.popleft() for _ in range(cols)], sep="")
+    else:
+        print(*[word_queue.popleft() for _ in range(cols)][::-1], sep="")
+
+##########: variant 6 :##########
+
+
 from collections import deque
 
 
@@ -147,5 +213,3 @@ class SnakeMoves:
 
 if __name__ == '__main__':
     print(SnakeMoves())
-
-
