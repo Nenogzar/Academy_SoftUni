@@ -48,8 +48,21 @@ for row in range(rows):
         current_row.append(combination)
     matrix.append(current_row)
 
-for nest in matrix:
-    print(*nest)
+[print(*nest) for nest in matrix]
+
+
+
+    ##########: variant 2 :##########
+
+rows, cols = map(int, input().split())
+start = ord('a')
+for row in range(start, start + rows):
+    for cow in range(row, row + cols):
+        print(chr(row), chr(cow), chr(row), sep="", end=" ")
+
+    print()
+
+
 
 
       ##########: variant 1 - Class :##########
@@ -68,7 +81,7 @@ class PalindromesMatrix:
         self.prepare_output_message()
 
     def define_rows_cols_of_matrix(self):
-        self.rows, self.cols = list(map(int, input().split()))
+        self.rows, self.cols = [int(x) for x in input().split()]
 
     def fill_the_matrix_with_palindromes(self):
         for row in range(self.rows):
@@ -91,4 +104,3 @@ class PalindromesMatrix:
 
 if __name__ == '__main__':
     print(PalindromesMatrix())
-

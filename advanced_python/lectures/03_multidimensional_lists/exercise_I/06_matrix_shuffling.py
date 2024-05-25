@@ -54,7 +54,9 @@ Hello World
 
 
 """
-      ##########: variant 1 :##########
+
+
+##########: variant 1 :##########
 rows, cols = [int(x) for x in input().split()]
 matrix = [[x for x in input().split()] for _ in range(rows)]
 output_message = ''
@@ -66,7 +68,7 @@ while True:
 
     command = line[0]
     indexes = [int(n) for n in line if n.isdigit()]
-    
+
     if command == 'swap' and len(indexes) == 4:
         row1, col1, row2, col2 = indexes
         if 0 <= row1 < rows and 0 <= col1 < cols and 0 <= row2 < rows and 0 <= col2 < cols:
@@ -80,7 +82,99 @@ while True:
 print(output_message)
 
 
-      ##########: variant 2 - Class :##########
+    ##########: variant 2 : whit try - exept ##########
+
+rows, cols = map(int, input().split())
+matrix = [input().split() for _ in range(rows)]
+
+valid_rows, valid_cols = range(rows), range(cols)
+
+command = input().split()
+while command[0] != "END":
+    try:
+        action, *coordinates = [int(x) if x.isdigit() else x for x in command]
+    except ValueError:
+        print("Invalid input!")
+        command = input().split()
+        continue
+
+    if action == "swap" and len(coordinates) == 4:
+        row1, col1, row2, col2 = coordinates
+        if {row1, row2}.issubset(valid_rows) and {col1, col2}.issubset(valid_cols):
+            matrix[row1][col1], matrix[row2][col2] = matrix[row2][col2], matrix[row1][col1]
+            for row in matrix:
+                print(*row)
+        else:
+            print("Invalid input!")
+    else:
+        print("Invalid input!")
+
+    command = input().split()
+
+
+    ##########: variant 3 :##########
+
+def indeces_is_valid(indeces):
+    return {indeces[0], indeces[2]}.issubset(valid_rows) and {indeces[1], indeces[3]}.issubset(valid_cols)
+
+
+def swap_elements(command, indeces):
+    if len(indeces) == 4 and indeces_is_valid(indeces) and command == "swap":
+        row1, col1, row2, col2 = indeces
+        matrix[row1][col1], matrix[row2][col2] = matrix[row2][col2], matrix[row1][col1]
+        [print(*row) for row in matrix]
+    else:
+        print("Invalid input!")
+
+
+rows, cols = [int(x) for x in input().split()]
+matrix = [input().split() for _ in range(rows)]
+
+valid_rows, valid_cols = range(rows), range(cols)
+
+while True:
+    command_type, *coordinates = [int(x) if x.isdigit() else x for x in input().split()]
+
+    if command_type == 'END':
+        break
+
+    swap_elements(command_type, coordinates)
+
+
+    ##########: variant 4 : whit try - exept ##########
+def indeces_is_valid(indeces):
+    return {indeces[0], indeces[2]}.issubset(valid_rows) and {indeces[1], indeces[3]}.issubset(valid_cols)
+
+def swap_elements(command, indeces):
+    if len(indeces) == 4 and indeces_is_valid(indeces) and command == "swap":
+        row1, col1, row2, col2 = indeces
+        matrix[row1][col1], matrix[row2][col2] = matrix[row2][col2], matrix[row1][col1]
+        [print(*row) for row in matrix]
+    else:
+        print("Invalid input!")
+
+rows, cols = [int(x) for x in input().split()]
+matrix = [input().split() for _ in range(rows)]
+
+valid_rows, valid_cols = range(rows), range(cols)
+
+while True:
+    user_input = input().split()
+    command_type = user_input[0]
+    if command_type == 'END':
+        break
+    try:
+        coordinates = list(map(int, user_input[1:]))
+    except ValueError:
+        print("Invalid input!")
+        continue
+    if command_type == 'swap' and len(coordinates) == 4:
+        swap_elements(command_type, coordinates)
+    else:
+        print("Invalid input!")
+
+
+    ##########: variant 4 - Class :##########
 
 class ShuffleMatrix:
 
@@ -134,3 +228,50 @@ if __name__ == '__main__':
     print(ShuffleMatrix())
 
 
+
+
+    ##########: variant 5 - Class :##########
+class ShuffleMatrix:
+    def __init__(self, rows, cols):
+        self.rows = rows
+        self.cols = cols
+        self.matrix = [input().split() for _ in range(rows)]
+        self.valid_rows = range(rows)
+        self.valid_cols = range(cols)
+
+    def indeces_are_valid(self, indeces):
+        return {indeces[0], indeces[2]}.issubset(self.valid_rows) and {indeces[1], indeces[3]}.issubset(self.valid_cols)
+
+    def swap_elements(self, indeces):
+        if len(indeces) == 4 and self.indeces_are_valid(indeces):
+            row1, col1, row2, col2 = indeces
+            self.matrix[row1][col1], self.matrix[row2][col2] = self.matrix[row2][col2], self.matrix[row1][col1]
+            self.print_matrix()
+        else:
+            print("Invalid input!")
+
+    def print_matrix(self):
+        for row in self.matrix:
+            print(*row)
+
+    def process_commands(self):
+        while True:
+            command = input().split()
+            if command[0] == "END":
+                break
+            try:
+                action, *coordinates = [int(x) if x.isdigit() else x for x in command]
+            except ValueError:
+                print("Invalid input!")
+                continue
+
+            if action == "swap" and len(coordinates) == 4:
+                self.swap_elements(coordinates)
+            else:
+                print("Invalid input!")
+
+
+# Пример за използване на класа:
+rows, cols = map(int, input().split())
+shuffle_matrix = ShuffleMatrix(rows, cols)
+shuffle_matrix.process_commands()
