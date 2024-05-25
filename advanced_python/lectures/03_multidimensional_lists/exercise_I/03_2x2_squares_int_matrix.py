@@ -1,6 +1,6 @@
 #################################### TASK CONDITION ############################
 """
-https://judge.softuni.org/Contests/Compete/Index/1835#3
+https://judge.softuni.org/Contests/Compete/Index/1835#2
 
                      3.	2x2 Squares in Matrix
 Find the number of all 2x2 squares containing identical chars in a matrix. 

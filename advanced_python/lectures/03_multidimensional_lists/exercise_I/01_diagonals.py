@@ -1,6 +1,6 @@
 #################################### TASK CONDITION ############################
 """
-https://judge.softuni.org/Contests/Compete/Index/1835#1
+https://judge.softuni.org/Contests/Compete/Index/1835#0
                           1.	Diagonals
 Using a nested list comprehension, write a program that reads rows of a square 
 matrix and its elements, separated by a comma and a space ", ". You should find 

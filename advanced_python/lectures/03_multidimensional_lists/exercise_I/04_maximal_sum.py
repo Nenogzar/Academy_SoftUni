@@ -1,6 +1,6 @@
 #################################### TASK CONDITION ############################
 """
-https://judge.softuni.org/Contests/Compete/Index/1835#4
+https://judge.softuni.org/Contests/Compete/Index/1835#3
 
                       4.	Maximal Sum
 Write a program that reads a rectangular matrix's dimensions and finds the 3x3 

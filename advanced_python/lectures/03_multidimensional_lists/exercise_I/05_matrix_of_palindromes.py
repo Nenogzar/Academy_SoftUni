@@ -1,5 +1,8 @@
 #################################### TASK CONDITION ############################
 """                5.	Matrix of Palindromes
+
+https://judge.softuni.org/Contests/Compete/Index/1835#4
+
 Write a program to generate the following matrix of palindromes of 
 3 letters with r rows and c columns like the one in the examples below.
 •	Rows define the first and the last letter: row 0  'a', row 1  'b', row 2  'c', …

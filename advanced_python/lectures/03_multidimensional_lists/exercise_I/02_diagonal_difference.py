@@ -1,6 +1,6 @@
 #################################### TASK CONDITION ############################
 """
-https://judge.softuni.org/Contests/Compete/Index/1835#2
+https://judge.softuni.org/Contests/Compete/Index/1835#1
                2.	Diagonal Difference
 Write a program that finds the difference between the sums of the square matrix diagonals (absolute value).
 

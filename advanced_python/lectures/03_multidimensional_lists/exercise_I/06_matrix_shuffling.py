@@ -1,5 +1,7 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/1835#5
+
                            6.	Matrix Shuffling
 Write a program that reads a matrix from the console and performs certain 
 operations with its elements. User input is provided similarly to the 
@@ -56,7 +58,9 @@ Hello World
 """
 
 
-##########: variant 1 :##########
+    ##########: variant 1 :##########
+
+
 rows, cols = [int(x) for x in input().split()]
 matrix = [[x for x in input().split()] for _ in range(rows)]
 output_message = ''
@@ -83,6 +87,8 @@ print(output_message)
 
 
     ##########: variant 2 : whit try - exept ##########
+
+
 
 rows, cols = map(int, input().split())
 matrix = [input().split() for _ in range(rows)]
@@ -112,7 +118,10 @@ while command[0] != "END":
     command = input().split()
 
 
+
     ##########: variant 3 :##########
+
+
 
 def indeces_is_valid(indeces):
     return {indeces[0], indeces[2]}.issubset(valid_rows) and {indeces[1], indeces[3]}.issubset(valid_cols)
@@ -142,6 +151,8 @@ while True:
 
 
     ##########: variant 4 : whit try - exept ##########
+
+
 def indeces_is_valid(indeces):
     return {indeces[0], indeces[2]}.issubset(valid_rows) and {indeces[1], indeces[3]}.issubset(valid_cols)
 
@@ -231,6 +242,8 @@ if __name__ == '__main__':
 
 
     ##########: variant 5 - Class :##########
+
+
 class ShuffleMatrix:
     def __init__(self, rows, cols):
         self.rows = rows
@@ -271,7 +284,6 @@ class ShuffleMatrix:
                 print("Invalid input!")
 
 
-# Пример за използване на класа:
 rows, cols = map(int, input().split())
 shuffle_matrix = ShuffleMatrix(rows, cols)
 shuffle_matrix.process_commands()
