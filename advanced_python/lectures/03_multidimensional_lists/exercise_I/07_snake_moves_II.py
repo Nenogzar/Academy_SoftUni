@@ -121,6 +121,6 @@ for row in range(N):
         snake_index = (snake_index + 1) % snake_length
 
 for row in matrix:
-    print("".join(row))
+    print(*row, sep='')
 
 
