@@ -1,5 +1,6 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/1835#8
                                    9.	*Miner
 You are going to create a game called "Miner".
 First, you will receive the size of a square field in which the miner should move. 
@@ -84,8 +85,9 @@ Output
 
 
 """
+##########: Solutions whit deque:##########
 
-""" 1 """
+##########: variant 1 :##########
 from collections import deque
 
 output_message = ''
@@ -151,7 +153,9 @@ print(output_message)
 
 
 
-""" 2 """
+##########: variant 2 :##########
+
+
 from collections import deque
 
 output_message = ''
@@ -230,7 +234,8 @@ if __name__ == '__main__':
 
 
 
-""" 3 """
+##########: variant 3 :##########
+
 from collections import deque
 
 
