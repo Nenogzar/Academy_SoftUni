@@ -1,5 +1,7 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/1835#7
+
                            8.	*Bombs
 You will be given a square matrix of integers, each integer separated by a 
 single space, and each row will be on a new line. On the last line of input, 
