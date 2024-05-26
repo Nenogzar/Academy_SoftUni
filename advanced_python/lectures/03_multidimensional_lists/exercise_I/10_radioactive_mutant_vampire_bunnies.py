@@ -1,5 +1,7 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/1835#9
+
                 10.	*Radioactive Mutant Vampire Bunnies
 You come across an old JS Basics teamwork game. It is about bunnies that 
 multiply extremely fast. There's also a player that should escape from their 
