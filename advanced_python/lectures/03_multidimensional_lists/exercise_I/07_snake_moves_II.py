@@ -1,5 +1,6 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/1835#6
                         7.	Snake Moves
 You are tasked to visualize a snake's zigzag path in a rectangular matrix with
 a size N x M.  A string represents the snake. It starts moving from the top-left
