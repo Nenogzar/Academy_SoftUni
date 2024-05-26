@@ -72,62 +72,6 @@ for nest in matrix:
 
 ##########: variant 2 :##########
 
-N, M = map(int, input().split())
-snake = input()
-
-matrix = [['' for _ in range(M)] for _ in range(N)]
-
-snake_index = 0
-snake_length = len(snake)
-
-for row in range(N):
-    if row % 2 == 0:
-        for col in range(M):
-            matrix[row][col] = snake[snake_index]
-            snake_index = (snake_index + 1) % snake_length
-    else:
-        for col in range(M - 1, -1, -1):
-            matrix[row][col] = snake[snake_index]
-            snake_index = (snake_index + 1) % snake_length
-
-for row in matrix:
-    print(*row, sep='')
-
-    ##########: variant 3 :##########
-
-    N, M = map(int, input().split())
-    # OR
-    # N, M = [int(num) for num in input().split()]
-    snake = input()
-
-    matrix = [['' for _ in range(M)] for _ in range(N)]
-    # OR
-    # matrix = [list(map(str, ['' for _ in range(M)])) for _ in range(N)]
-
-    snake_index = 0
-    snake_length = len(snake)
-
-    for row in range(N):
-
-        if row % 2 == 0:
-            # Ако редът е четен, попълваме от ляво на дясно
-            for col in range(M):
-                matrix[row][col] = snake[snake_index]
-                # Увеличаваме индекса на змията и го нормализираме спрямо дължината на низа за змията
-                snake_index = (snake_index + 1) % snake_length
-        else:
-            # Ако редът е нечетен, попълваме от дясно на ляво
-            for col in range(M - 1, -1, -1):
-                matrix[row][col] = snake[snake_index]
-                # Увеличаваме индекса на змията и го нормализираме спрямо дължината на низа за змията
-                snake_index = (snake_index + 1) % snake_length
-
-    for row in matrix:
-        print(*row, sep='')
-
-##########: variant 4 :##########
-
-
 from collections import deque
 
 rows, cols = map(int, input().split())
@@ -143,7 +87,7 @@ for row in range(rows):
     else:
         print(*[word_queue.popleft() for _ in range(cols)][::-1], sep="")
 
-##########: variant 5 :##########
+##########: variant 3 :##########
 
 from collections import deque
 
@@ -159,6 +103,39 @@ for row in range(rows):
         print(*[word_queue.popleft() for _ in range(cols)], sep="")
     else:
         print(*[word_queue.popleft() for _ in range(cols)][::-1], sep="")
+
+##########: variant 4 :##########
+
+from collections import deque
+
+rows, cols = map(int, input().split())
+word = list(input())
+word_queue = deque(word)
+step = 1
+
+for row in range(rows):
+    while len(word_queue) < cols:
+        word_queue.extend(word)
+
+    print(*[word_queue.popleft() for _ in range(cols)][::step], sep="")
+    step *= -1
+
+##########: variant 5 :##########
+
+from collections import deque
+
+rows, cols = map(int, input().split())
+word = list(input())
+word_queue = deque(word)
+
+for row in range(rows):
+    while len(word_queue) < cols:
+        word_queue.extend(word)
+
+    current_row = [word_queue.popleft() for _ in range(cols)]
+    if row % 2 == 1:  # ако редът е нечетен
+        current_row = current_row[::-1]  # обръщаме реда
+    print("".join(current_row))
 
 ##########: variant 6 :##########
 
