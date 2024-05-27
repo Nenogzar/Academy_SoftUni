@@ -22,3 +22,4 @@ Output
 This is George from Sofia and he is 20 years old
 
 '''
+##########: variant 1 :##########
