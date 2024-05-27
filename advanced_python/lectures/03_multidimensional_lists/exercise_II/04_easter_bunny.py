@@ -70,7 +70,7 @@ down
 
 """
 
-""" 1 """
+##########: variant 1 :##########
 
 BUNNY, TRAP = "B", "X"
 DIRECTIONS = {
@@ -114,7 +114,7 @@ print(max_direction)
 print(max_eggs_collected)
 
 
-""" 2 """
+##########: variant 2 :##########
 
 def bunny_move(mtrx, pos, direct, pth):
     r = pos[0] + direct[0]
@@ -163,7 +163,7 @@ for direction, coordinates in directions.items():
 print(best_direction), print(*best_path, sep="\n"), print(best_result)
 
 
-""" 3 """
+##########: variant 3 :##########
 
 
 rows = int(input())
@@ -213,7 +213,7 @@ if sum(result.values()) != 0:
     print(result[max_direction])
 
 
-""" 4 """
+##########: variant 4 :##########
 
 class EasterBunny:
 
