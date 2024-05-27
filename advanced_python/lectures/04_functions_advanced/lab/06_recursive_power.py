@@ -3,7 +3,7 @@
 
 https://judge.softuni.org/Contests/Practice/Index/1838#5
 
-                   5.	Recursive Power
+                   6.	Recursive Power
 Create a recursive function called recursive_power() which should receive a 
 number and a power. Using recursion, return the result of number ** power. 
 Submit only the function in the judge system.
