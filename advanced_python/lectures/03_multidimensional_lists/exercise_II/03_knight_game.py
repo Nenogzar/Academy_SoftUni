@@ -1,18 +1,20 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/3194#2
+
                              3.	Knight Game
-Chess is the oldest game, but it is still popular these days. 
+Chess is the oldest game, but it is still popular these days.
 It will be used only one chess piece for this task - the Knight.
-A chess knight has 8 possible moves it can make, as illustrated. 
-It can move to the nearest square but not on the same row, column, 
-or diagonal. (e.g., it can move two squares horizontally, then one 
-square vertically, or it can move one square horizontally then two 
-squares vertically - i.e., in an "L" pattern.) 
+A chess knight has 8 possible moves it can make, as illustrated.
+It can move to the nearest square but not on the same row, column,
+or diagonal. (e.g., it can move two squares horizontally, then one
+square vertically, or it can move one square horizontally then two
+squares vertically - i.e., in an "L" pattern.)
 The knight game is played on a board with dimensions N x N.
-You will receive a board with "K" for knights and "0" for empty cells. 
-Your task is to remove knights until no knights that can attack one 
-another with one move are left.  Always remove the knight who can attack 
-the greatest number of knights. If there are two or more knights with the 
+You will receive a board with "K" for knights and "0" for empty cells.
+Your task is to remove knights until no knights that can attack one
+another with one move are left.  Always remove the knight who can attack
+the greatest number of knights. If there are two or more knights with the
 same number of attacks, remove the top-left one.
 Input
 •	On the first line, you will receive integer N - the size of the board
@@ -26,13 +28,13 @@ Constraints
 ____________________________________________________________________________________________
 Example_01
 
-Input				
-5 
+Input
+5
 0K0K0
 K000K
 00K00
 K000K
-0K0K0	
+0K0K0
 
 Output
 1
@@ -43,10 +45,10 @@ Example_02
 Input
 2
 KK
-KK	
+KK
 
 Output
-0	
+0
 
 ____________________________________________________________________________________________
 Example_03
@@ -60,14 +62,72 @@ KKKKKK0K
 K0K0000K
 KK00000K
 00K0K000
-000K00KK	
+000K00KK
 
 Output
 12
 
 """
+##########: variant 1 :##########
 
-""" 1 """
+def main():
+    rows = int(input().strip())
+
+    pos_knights = []
+    matrix = []
+
+    for row in range(rows):
+        line = list(input().strip())
+        matrix.append(line)
+        for col in range(len(line)):
+            if line[col] == 'K':
+                pos_knights.append((row, col))
+
+    cols = len(matrix[0])
+
+    def check_valid_index(row, col):
+        return 0 <= row < rows and 0 <= col < cols
+
+    movements = [
+        (-2, -1), (-2, 1), (2, -1), (2, 1),
+        (-1, -2), (-1, 2), (1, -2), (1, 2)
+    ]
+
+    def count_attacks(row, col):
+        count = 0
+        for m_row, m_col in movements:
+            n_row, n_col = row + m_row, col + m_col
+            if check_valid_index(n_row, n_col) and matrix[n_row][n_col] == 'K':
+                count += 1
+        return count
+
+    total_knights_removed = 0
+
+    while True:
+        max_attacks = 0
+        knight_to_remove = None
+
+        for row, col in pos_knights:
+            attacks = count_attacks(row, col)
+            if attacks > max_attacks:
+                max_attacks = attacks
+                knight_to_remove = (row, col)
+
+        if max_attacks == 0:
+            break
+
+        row, col = knight_to_remove
+        matrix[row][col] = '0'
+        pos_knights.remove((row, col))
+        total_knights_removed += 1
+
+    print(total_knights_removed)
+
+if __name__ == "__main__":
+    main()
+
+
+##########: variant 2 :##########
 
 def knights_attacked(mtrx, pos):
     row, col = pos
@@ -127,7 +187,7 @@ while True:
 
 print(count_removed)
 
-""" 2 """
+##########: variant 3 :##########
 
 KNIGHT, EMPTY = "K", "0"
 POSSIBLE_MOVES = [(-2, -1), (-1, -2), (-2, 1), (-1, 2), (1, 2), (2, 1), (2, -1), (1, -2)]
@@ -181,9 +241,9 @@ while True:
 print(removed_knights_counter)
 
 
-""" 3 """
+##########: variant 4 :##########
 
-rows = int(int(input()))
+rows = int(input())
 
 pos_knights,  matrix, total_knights = [], [], [0]
 for row in range(rows):
@@ -225,7 +285,12 @@ def check_knights():
 check_knights()
 print(total_knights[0])
 
-""" 4 """
+
+
+##########: variant 5 :##########
+
+
+
 class KnightGame:
 
     def __init__(self):
@@ -291,5 +356,3 @@ class KnightGame:
 
 if __name__ == '__main__':
     print(KnightGame())
-
-
