@@ -56,7 +56,36 @@ Invalid coordinates
 """
 
 
-""" 2 """
+##########: variant 1 :##########
+
+
+row = int(input())
+matrix = [list(map(int, input().split())) for _ in range(row)]
+
+action_input = input()
+
+while action_input != "END":
+    action, start, end, value = action_input.split()
+    start, end, value = int(start), int(end), int(value)
+
+    if start not in range(row) or end not in range(len(matrix[0])):
+        print("Invalid coordinates")
+    else:
+        if action == "Add":
+            matrix[start][end] += value
+        elif action == "Subtract":
+            matrix[start][end] -= value
+        else:
+            print("Invalid action")
+
+    action_input = input()
+
+for r in matrix:
+    print(*r)
+
+
+##########: variant 2 :##########
+
 
 rows = int(input())
 matrix = [list(map(int, input().split(" "))) for _ in range(rows)]
@@ -68,6 +97,9 @@ while command != "END":
     row, col, val = [int(x) for x in parts[1:4]]
 
     if 0 <= row < len(matrix) and 0 <= col < len(matrix[0]):
+    # OR
+    # if row in range(rows) or col in range(len(matrix[0])):
+      
         if action == "Add":
             matrix[row][col] += val
         elif action == "Subtract":
@@ -83,7 +115,7 @@ for nest in matrix:
 
 
 
-""" 2 """
+##########: variant 3 :##########
 n = int(input())
 matrix = [[int(x) for x in input().split()] for _ in range(n)]
 
@@ -105,7 +137,35 @@ while True:
 [print(*matrix[i], sep=" ") for i in range(n)]
 
 
-""" 3 """
+##########: variant 4 - whit tri-exeption :##########
+
+row = int(input())
+matrix = [list(map(int, input().split())) for _ in range(row)]
+action_input = input()
+
+while action_input != "END":
+    action, x, y, value = action_input.split()
+    x, y, value = int(x), int(y), int(value)
+
+    if x not in range(row) or y not in range(len(matrix[0])):
+        print("Invalid coordinates")
+    else:
+        try:
+            if action == "Add":
+                matrix[x][y] += value
+            elif action == "Subtract":
+                matrix[x][y] -= value
+            else:
+                print("Invalid action")
+        except ValueError:
+            continue
+
+    action_input = input()
+
+for r in matrix:
+    print(*r)
+
+##########: variant 5 :##########
 
 n = int(input())
 matrix = [[int(x) for x in input().split()] for _ in range(n)]
@@ -127,8 +187,8 @@ while command != "END":
 
 [print(*row) for row in matrix]
 
-
-""" 4 """
+##########: variant 5  - Whit Class :##########
+ 
 def create_matrix(size):
     return [[int(x) for x in input().split()] for _ in range(size)]
 
