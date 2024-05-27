@@ -1,5 +1,7 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/3194#4
+
                        5.	Alice in Wonderland
 Alice is going to the mad tea party, to see her friends. On the way to 
 the party, she needs to collect bags of tea.
@@ -90,7 +92,7 @@ She did it! She went to the party.
 """
 
 
-""" 1 """
+##########: variant 1 :##########
 
 ALICE, RABBIT_HOLE, EMPTY, VISITED = "A", "R", ".", "*"
 DIRECTIONS = {
@@ -137,7 +139,7 @@ else:
 
 
 
-""" 2 """
+##########: variant 2 :##########
 
 ALICE, RABBIT_HOLE, EMPTY, VISITED = "A", "R", ".", "*"
 
@@ -196,7 +198,7 @@ else:
 [print(*territory[row], sep=" ") for row in range(size)]
 
 
-""" 3 """
+##########: variant 3 :##########
 
 rows = int(input())
 matrix = [[x for x in input().split()] for _ in range(rows)]
@@ -249,7 +251,7 @@ print("She did it! She went to the party.")
 show_result()
 
 
-""" 4 """
+##########: variant 4 :##########
 
 
 from collections import deque
