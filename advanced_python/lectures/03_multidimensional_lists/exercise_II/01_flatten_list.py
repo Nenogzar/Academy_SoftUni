@@ -34,9 +34,11 @@ Output
 
 """
 
-      ##########: variant 1 :##########
+##########: variant 1 :##########
 
-matrix = [row.split() for row in input().split('|')]
+matrix = []
+for row in input().split('|'):
+    matrix.append(row.split())
 flatten_matrix = []
 
 for flat in matrix[::-1]:
@@ -44,15 +46,24 @@ for flat in matrix[::-1]:
 
 print(*flatten_matrix)
 
-      ##########: variant 2 :##########
+
+##########: variant 2 :##########
+
+matrix = [row.split() for row in input().split('|')]
+line = []
+
+for nest in matrix[::-1]:
+    line.extend(nest)
+print(*line)
+
+##########: variant 3 :##########
 
 line = input().split("|")
 result = []
 [result.extend([y for y in x.split()])for x in line[::-1]]
 print(*result)
 
-
-      ##########: variant 3 - Class :##########
+##########: variant 4 - Class :##########
 
 class FattenList:
 
