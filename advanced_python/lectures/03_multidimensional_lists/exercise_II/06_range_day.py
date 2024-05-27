@@ -1,5 +1,6 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/3194#5
                               06. Range Day
 You are participating in a Firearm course. It is a training day at 
 the shooting range. You will be given a matrix with 5 rows and 5 columns. 
@@ -97,7 +98,7 @@ Training not completed! 1 targets left.
 """
 
 
-""" 1 """
+##########: variant 1 :##########
 
 SIZE = 5
 AIM, TARGET, EMPTY = "A", "x", "."
@@ -168,7 +169,7 @@ else:
     print(f"Training completed! All {target_count} targets hit.")
 print(*targets_hit, sep="\n")
 
-""" 2 """
+##########: variant 2 :##########
 
 AIM, TARGET, EMPTY = "A", "x", "."
 DIRECTIONS = {
@@ -237,7 +238,7 @@ else:
     print(f"Training not completed! {targets_count - len(target_coordinates)} targets left.")
 [print(p) for p in target_coordinates]
 
-""" 3 """
+##########: variant 3 :##########
 
 SIZE_MATRIX = 5
 matrix = [[x for x in input().split()] for _ in range(SIZE_MATRIX)]
@@ -304,7 +305,10 @@ else:
     print(f"Training not completed! {total_targets[0]} targets left.")
     show_result()
 
-""" 4 """
+
+##########: variant 4 :##########
+
+
 class RangeDay:
 
     def __init__(self):
