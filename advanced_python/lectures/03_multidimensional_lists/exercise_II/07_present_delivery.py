@@ -1,5 +1,7 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/3194#5
+
                         7.	Present Delivery
 The presents are ready, and Santa has to deliver them to the kids. 
 You will receive an integer m for the number of presents Santa has and an 
@@ -102,7 +104,7 @@ receive presents. He runs out of presents because we have 3 kids there and only
 
 """
 
-""" 1 """
+##########: variant 1 :##########
 
 SANTA, NICE, NAUGHTY, COOKIE, EMPTY = "S", "V", "X", "C", "-"
 
@@ -175,7 +177,7 @@ if nice_kids:
 else:
     print(f"Good job, Santa! {total_nice_kids} happy nice kid/s.")
 
-""" 2 """
+##########: variant 2 :##########
 
 SANTA, NAUGHTY_KID, NICE_KID, COOKIE, EMPTY = "S", "X", "V", "C", "-"
 DIRECTIONS = {
@@ -237,7 +239,9 @@ else:
 
 
 
-""" 4 """ 
+##########: variant 3 :##########
+
+
 class PresentDelivery:
 
     def __init__(self):
