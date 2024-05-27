@@ -1,5 +1,7 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/3194#3
+
                    4.	Easter Bunny
 Your task is to collect as many eggs as possible.
 On the first line, you will be given a number representing the size 
