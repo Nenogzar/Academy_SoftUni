@@ -1,5 +1,7 @@
 #################################### TASK CONDITION ############################
 """
+https://judge.softuni.org/Contests/Compete/Index/3194#0
+
                     1.	Flatten Lists
 Write a program to flatten several lists of numbers received in the following format:
 	String with numbers or empty strings separated by "|"
