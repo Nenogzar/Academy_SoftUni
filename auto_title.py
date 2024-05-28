@@ -15,6 +15,6 @@ while input_string:
 for file_name in matrix:
     with open(f"{file_name}.py", "w") as file:
 
-        file.write("# This file was created automatically\n")
+        file.write(f"# {file_name}\n")
 
-print("The files were created successfully.")
+print("Файловете бяха успешно създадени.")
