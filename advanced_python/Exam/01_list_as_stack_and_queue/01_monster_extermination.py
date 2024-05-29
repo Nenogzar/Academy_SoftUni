@@ -1,5 +1,7 @@
 #################################### TASK CONDITION ############################
 """
+Python Advanced Retake Exam - 09 August 2023
+
 https://judge.softuni.org/Contests/Practice/Index/4089#0
 
 01.	Monster Extermination

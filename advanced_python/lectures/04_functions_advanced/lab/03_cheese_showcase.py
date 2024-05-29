@@ -1,6 +1,7 @@
 #################################### TASK CONDITION ############################
 '''
 https://judge.softuni.org/Contests/Practice/Index/1838#2
+
              3.	Cheese Showcase
 White a function called sorting_cheeses that receives keywords arguments:
 •	The key represents the name of the cheese
@@ -63,3 +64,11 @@ Parmigiano
 
 '''
 ##########: variant 1 :##########
+
+def sorting_cheeses(**kwargs):
+    result = ""
+    cheeses = sorted(kwargs.items(), key=lambda x: (-len(x[1]), x[0]))
+    for cheese, quantities in cheeses:
+        result += cheese + "\n"
+        result += "\n".join([str(q) for q in sorted(quantities, reverse=True)]) + "\n"
+    return result

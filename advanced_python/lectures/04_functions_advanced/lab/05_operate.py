@@ -37,3 +37,32 @@ Explanation
 
 '''
 ##########: variant 1 :##########
+
+
+def operate(operator, *args):
+    def add(*nums):
+        return sum(nums)
+
+    def subtract(x, *nums):
+        return x + sum(-y for y in nums)
+
+    def multiply(x, *nums):
+        result = x
+        for y in nums:
+            result *= y
+        return result
+
+    def divide(x, *nums):
+        result = x
+        for y in nums:
+            result /= y
+        return result
+
+    if operator == "+":
+        return add(*args)
+    elif operator == "-":
+        return subtract(*args)
+    elif operator == "*":
+        return multiply(*args)
+    elif operator == "/":
+        return divide(*args)

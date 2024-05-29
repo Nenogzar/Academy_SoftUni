@@ -1,5 +1,7 @@
 #################################### TASK CONDITION ############################
 """
+Python Advanced Retake Exam - 09 August 2023
+
 https://judge.softuni.org/Contests/Practice/Index/4089#2
 3. Pets Hotel
 You are a pet hotel owner. 

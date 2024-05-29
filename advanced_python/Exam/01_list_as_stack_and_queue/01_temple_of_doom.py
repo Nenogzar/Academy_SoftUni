@@ -1,4 +1,7 @@
+#################################### TASK CONDITION ############################
 """
+Python Advanced Exam - 17 June 2023
+
 https://judge.softuni.org/Contests/Practice/Index/4081#0
 
 01. Temple of Doom

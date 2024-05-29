@@ -28,3 +28,8 @@ Output
 
 '''
 ##########: variant 1 :##########
+
+def recursive_power(num, pwr):
+    if pwr == 0:
+        return 1
+    return num * recursive_power(num, pwr - 1)
