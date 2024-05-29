@@ -70,7 +70,7 @@ This is my collection of solutions to the tasks included in the SoftUni Advence 
     <td>
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/05_error_handling/lab">Lab</a>
 |  
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/05_error_handling/exercise">Exercise 1</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/05_error_handling/exercise">Exercise</a>
     
 </td>
     <td>
