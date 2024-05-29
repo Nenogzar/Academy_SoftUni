@@ -52,10 +52,9 @@ This is my collection of solutions to the tasks included in the SoftUni Advence 
     
 </td>
     <td>
-
-<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/04_function_advances/lab">Lab</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/04_functions_advanced/lab">Lab</a>
 | 
-<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/04_function_advances/exercise">Exercise</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/04_function_advances/exercise">Exercise</a>
 </td>
   </tr>
 </table>
