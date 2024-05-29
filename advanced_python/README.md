@@ -59,3 +59,25 @@ This is my collection of solutions to the tasks included in the SoftUni Advence 
   </tr>
 </table>
 
+
+<table>
+  <tr>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/05_error_handling"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/05.jpg" alt="Multidimensional_Lists" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/06_file_hendling"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/06.jpg" alt="functions_advanced" width="500"></a></th>
+  </tr>
+
+  <tr>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/05_error_handling/lab">Lab</a>
+|  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/05_error_handling/exercise">Exercise 1</a>
+    
+</td>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/06_file_hendling/lab">Lab</a>
+| 
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/06_file_hendling/exercise">Exercise</a>
+</td>
+  </tr>
+</table>
+
