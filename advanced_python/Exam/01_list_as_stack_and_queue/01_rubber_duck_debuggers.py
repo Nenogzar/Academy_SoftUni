@@ -1,6 +1,8 @@
 ############################## 01_rubber_duck_debuggers ##############################
   ############################## TASK CONDITION ##############################
 """
+https://judge.softuni.org/Contests/Practice/Index/3893#0
+
  Rubber Duck Debugging is a type of debugging where you place
  a rubber duck on your desk and explain to it your code line by line.
  You gathered a few programmers and gave them a task and judging by the time it took them to write the code,
@@ -86,6 +88,8 @@ Big Blue Rubber Ducky: 2
 Small Yellow Rubber Ducky: 2
 
 """
+
+##########: variant 1 :##########
 from collections import deque
 
 
@@ -130,3 +134,89 @@ while needed_time and exam_number:
 print("Congratulations, all tasks have been completed! Rubber ducks rewarded:")
 for ducky in ["Darth Vader Ducky", "Thor Ducky", "Big Blue Rubber Ducky", "Small Yellow Rubber Ducky"]:
     print(f"{ducky}: {duckies_awarded[ducky]}")
+
+
+##########: variant 2 - whit Dictionary :##########
+
+from collections import deque
+
+time_diapazon = {
+    "Darth Vader Ducky": [0, 60],
+    "Thor Ducky": [61, 120],
+    "Big Blue Rubber Ducky": [121, 180],
+    "Small Yellow Rubber Ducky": [181, 240],
+}
+
+
+def check_diapazon(calculated_time, time_diapazon):
+    """Check which diapazon the calculated_time falls into."""
+    for ducky, (low, high) in time_diapazon.items():
+        if calculated_time in range(low, high + 1):
+            return ducky
+    return None
+
+
+def update_awards(duckies_awarded, ducky):
+    """Update the duckies_awarded dictionary."""
+    if ducky:
+        duckies_awarded[ducky] += 1
+
+
+needed_time = deque(map(int, input().split()))
+exam_number = deque(map(int, input().split()))
+
+duckies_awarded = {
+    "Darth Vader Ducky": 0,
+    "Thor Ducky": 0,
+    "Big Blue Rubber Ducky": 0,
+    "Small Yellow Rubber Ducky": 0,
+}
+
+
+while needed_time and exam_number:
+    programmer_time = needed_time.popleft()
+    task_number = exam_number.pop()
+
+    calculated_time = programmer_time * task_number
+
+    ducky = check_diapazon(calculated_time, time_diapazon)
+    update_awards(duckies_awarded, ducky)
+
+    if not ducky:
+        exam_number.append(task_number - 2)
+        needed_time.append(programmer_time)
+
+print("Congratulations, all tasks have been completed! Rubber ducks rewarded:")
+for ducky in ["Darth Vader Ducky", "Thor Ducky", "Big Blue Rubber Ducky", "Small Yellow Rubber Ducky"]:
+    print(f"{ducky}: {duckies_awarded[ducky]}")
+
+
+##########: variant 3 solution SoftUni :##########
+
+
+from collections import deque
+
+programmers = deque(map(int, input().split()))
+tasks = list(map(int, input().split()))
+givenDucks = {"Darth Vader Ducky": 0, "Thor Ducky": 0, "Big Blue Rubber Ducky": 0, "Small Yellow Rubber Ducky": 0}
+
+while programmers and tasks:
+    current_programmer = programmers.popleft()
+    current_task = tasks.pop()
+    time_taken = current_programmer * current_task
+
+    if 0 < time_taken <= 60:
+        givenDucks["Darth Vader Ducky"] += 1
+    elif 60 < time_taken <= 120:
+        givenDucks["Thor Ducky"] += 1
+    elif 120 < time_taken <= 180:
+        givenDucks["Big Blue Rubber Ducky"] += 1
+    elif 180 < time_taken <= 240:
+        givenDucks["Small Yellow Rubber Ducky"] += 1
+    else:
+        programmers.append(current_programmer)
+        tasks.append(current_task - 2)
+
+print("Congratulations, all tasks have been completed! Rubber ducks rewarded: ")
+for key, value in givenDucks.items():
+    print(key + ": " + str(value))
