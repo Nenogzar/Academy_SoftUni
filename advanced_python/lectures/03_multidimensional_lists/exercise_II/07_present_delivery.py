@@ -1,6 +1,6 @@
 #################################### TASK CONDITION ############################
 """
-https://judge.softuni.org/Contests/Compete/Index/3194#5
+https://judge.softuni.org/Contests/Compete/Index/3194#6
 
                         7.	Present Delivery
 The presents are ready, and Santa has to deliver them to the kids. 
