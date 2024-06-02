@@ -17,6 +17,7 @@ for file_name in matrix:
         symbol  = "#"
         file.write(f'{(30*symbol) + (" "+ file_name+ " ") + (30*symbol)}\n '
                    f' {(30*symbol) + " TASK CONDITION " + (30*symbol)}'
-                   f'\n"""\n \n"""')
+                   f'\n"""\n https://judge.softuni.org/Contests/Practice/Index/3889#0'
+                   f'\n\n"""')
 
 print("Файловете бяха успешно създадени.")
