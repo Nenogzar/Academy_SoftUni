@@ -63,3 +63,56 @@ for word in words:
     result.append("".join(cur_word))
 
 print(" ".join(result))
+
+
+"""" whit regex """
+
+import re
+
+
+def decode_word(encoded_word):
+    pattern = r'(\d+)([a-zA-Z]+)'
+    match = re.match(pattern, encoded_word)
+
+    if match:
+        ascii_code = int(match.group(1))
+        remaining_chars = list(match.group(2))  # Преобразуваме низа в списък
+
+        first_char = chr(ascii_code)
+        remaining_chars[0], remaining_chars[-1] = remaining_chars[-1], remaining_chars[0]
+        decoded_word = first_char + "".join(remaining_chars)
+
+        return decoded_word
+    return ""
+
+
+def decode_message(encoded_message):
+    words = encoded_message.split()
+    decoded_words = [decode_word(word) for word in words]
+    return " ".join(decoded_words)
+
+
+decoded_message = decode_message(input())
+print(decoded_message)
+
+
+""" other one """
+
+message = input()
+
+deciphered_message = []
+for word in message.split():
+    first_letter = ""
+    deciphered_word = []
+    for letter in word:
+        if letter.isnumeric():
+            first_letter += letter
+            continue
+        deciphered_word.append(letter)
+
+    deciphered_word[0], deciphered_word[-1] = deciphered_word[-1], deciphered_word[0]
+    deciphered_word = chr(int(first_letter)) + "".join(deciphered_word)
+
+    deciphered_message.append(deciphered_word)
+
+print(*deciphered_message, sep=" ")
