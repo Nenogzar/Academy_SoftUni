@@ -1,6 +1,6 @@
 # ******* Advanced Exam - 23 October 2021 ******* #
 
-    # *******  01_aladdin's_gifts  ******* #
+# *******  01_aladdin's_gifts  ******* #
 
 # *******  TASK CONDITION  ******* #
 """
@@ -109,7 +109,6 @@ Porcelain Sculpture: 1
 
 """
 
-
 ##########: variant 1 :##########
 
 
@@ -136,12 +135,19 @@ def check_dict(result):
     for key, value in presents.items():
         start, end = value
         if result in range(start, end + 1):
+
             if key not in items:
                 items[key] = 1
             else:
                 items[key] += 1
             return True
     return False
+
+
+def under_hundred(material, magic):
+    if result % 2 == 0:
+        return (material * 2) + (magic * 3)
+    return (material + magic) * 2
 
 
 while materials and magic_levels:
@@ -151,21 +157,14 @@ while materials and magic_levels:
 
     if not check_dict(result):
         if result < 100:
-            if result % 2 == 0:
-                material *= 2
-                magic *= 3
-                result = sum_item(material, magic)
-                check_dict(result)
-            else:
-                result *= 2
-                check_dict(result)
+            result = under_hundred(material, magic)
+            check_dict(result)
         elif result > 499:
             result //= 2
             check_dict(result)
 
-
 crafted_presents = ("Gemstone" in items and "Porcelain Sculpture" in items) or (
-            "Gold" in items and "Diamond Jewellery" in items)
+        "Gold" in items and "Diamond Jewellery" in items)
 if crafted_presents:
     print("The wedding presents are made!")
 else:
@@ -233,9 +232,7 @@ while materials and magic_levels:
             result //= 2
             check_dict(result)
 
-
 crafted_presents = all(x in items for x in option[:2]) or all(x in items for x in option[2:])
-
 
 if crafted_presents:
     print("The wedding presents are made!")
