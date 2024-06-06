@@ -81,3 +81,25 @@ This is my collection of solutions to the tasks included in the SoftUni Advence 
   </tr>
 </table>
 
+
+<table>
+  <tr>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/07_workshop"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/07.jpg" alt="Multidimensional_Lists" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/08_modules"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/08.jpg" alt="functions_advanced" width="500"></a></th>
+  </tr>
+
+  <tr>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/07_workshop/lab">Lab</a>
+|  
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/07_workshop/exercise">Exercise</a>
+    
+</td>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/08_modules/lab">Lab</a>
+| 
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/08_modules/exercise">Exercise</a>
+</td>
+  </tr>
+</table>
+
