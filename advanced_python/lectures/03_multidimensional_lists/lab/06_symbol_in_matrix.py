@@ -38,6 +38,27 @@ Output
 
 """
 
+##########: variant INES :##########
+
+n = int(input())
+matrix = []
+position = None
+for _ in range(n):
+    row_data = list(input())
+    matrix.append(row_data)
+symbol = input()
+for row_index in range(len(matrix)):
+    for cow_index in range(len(matrix)):
+        if matrix[row_index][cow_index] == symbol:
+            position = (row_index, cow_index)
+            print(position)
+            exit()
+
+print(f"{symbol} does not occur in the matrix")
+
+
+
+
 ##########: variant 1 :##########
 
 matrix = []
