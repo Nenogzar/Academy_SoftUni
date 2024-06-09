@@ -3,7 +3,8 @@
 import os
 
 matrix = []
-input_string = input()
+input_string = input("File name: ")
+
 
 while input_string:
     input_string = input_string.replace('*', '').replace('.', '').replace('-', '')
@@ -14,9 +15,15 @@ while input_string:
 
 for file_name in matrix:
     with open(f"{file_name}.py", "w") as file:
-        symbol  = "#"
-        file.write(f'{(30*symbol) + (" "+ file_name+ " ") + (30*symbol)}\n '
-                   f' {(30*symbol) + " TASK CONDITION " + (30*symbol)}'
-                   f'\n"""\n \n"""')
+        symbol  = "# ******* "
+        file.write(f'{(symbol ) + input("Section : ") + ( symbol[::-1])}\n'
+                    f'\n{(symbol ) + (" "+ file_name + " ") + ( symbol[::-1])}\n '
+                    f'\n{(symbol ) + " TASK CONDITION " + ( symbol[::-1])}\n'
+                    f'"""\n '
+                    f'{input("Judge link: ")}\n'
+                    f'\n"""\n'
+                    f'\n##########: variant 1 :##########\n\n\n'
+                    f'\n##########: variant 2 :##########\n\n\n'
+                    f'\n##########: variant 3 solution SoftUni :##########\n\n\n')
 
-print("Файловете бяха успешно създадени.")
+print("The files were created successfully.")
