@@ -63,8 +63,26 @@ C C C G  C C C G  C C C G
 C C K P  C C K P  C C K P
 
 """
-
     ##########: variant 1 :##########
+
+rows, cols = list(map(int, input().split(" ")))
+
+matrix = [input().split() for _ in range(rows)]
+equal_block = 0
+
+for i in range(rows -1):
+    for j in range(cols-1):
+        symbol = matrix[i][j]
+        left_index = matrix[i][j +1]
+        down_index = matrix[i+1][j]
+        diagonal = matrix[i+1][j+1]
+
+        if symbol == left_index and symbol == down_index and symbol==diagonal:
+            equal_block += 1
+
+print(equal_block)
+
+    ##########: variant 2 :##########
 
 rows, cols = [int(x) for x in input().split()]
 
@@ -79,7 +97,7 @@ for i in range(rows-1):
 print(counted_squares)
 
 
-    ##########: variant 2 :##########
+    ##########: variant 3 :##########
 
 rows, cols = [int(el) for el in input().split()]
 matrix = [input().split() for _ in range(rows)]
@@ -95,7 +113,7 @@ for i in range(rows - 1):
             counted_squares += 1
 print(counted_squares)
 
-      ##########: variant 3 - Class :##########
+      ##########: variant 4 - Class :##########
 
 class SquaresInMatrix:
 
@@ -135,7 +153,7 @@ if __name__ == '__main__':
     print(SquaresInMatrix())
 
 
-##########: variant 4 :  3 4 ##########
+##########: variant 5 :  3 4 ##########
 
 # rows, cols = [int(x) for x in input().split()]
 # matrix = [input().split() for row in range(rows)]
