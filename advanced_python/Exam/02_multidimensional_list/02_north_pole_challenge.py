@@ -35,6 +35,7 @@ Output
     o	"Merry Christmas!"
     o	Otherwise, skip the line
 
+
 •	Next, print the number of collected items in the format:
     o	"You've collected:
     o	- {number_of_decoration} Christmas decorations
@@ -221,8 +222,7 @@ for line in workshop:
 def validate_coordinate(item, limit):
     return item if 0 <= item < limit else (limit - 1 if item < 0 else 0)
 
-def move_y(start_row, start_col, direction, steps, workshop, rows, cols, current_position, empty_position,
-           last_position, collected_items):
+def move_y(start_row, start_col, collected_items):
 
     for _ in range(steps):
         new_row, new_col = start_row, start_col
@@ -280,21 +280,18 @@ for row in range(rows):
     if start_row != -1:
         break
 
-while True:
-    distination = input().strip()
-    if distination.lower() == 'end':
-        break
+distination = input()
+while distination.lower() != 'end':
 
     direction, steps = distination.split('-')
     steps = int(steps)
 
-    start_row, start_col, all_items_collected = move_y(start_row, start_col, direction, steps, workshop, rows, cols,
-                                                       current_position, empty_position, last_position, collected_items)
+    start_row, start_col, all_items_collected = move_y(start_row, start_col, collected_items)
 
     if all_items_collected:
         print("\nMerry Christmas!")
         break
-
+    distination = input()
 
 print("You've collected:")
 print(f"- {collected_items['D'][1]} Christmas decorations")
