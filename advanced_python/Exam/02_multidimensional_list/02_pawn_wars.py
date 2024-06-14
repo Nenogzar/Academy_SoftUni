@@ -387,3 +387,180 @@ for _ in range(8):
         position = positions_col[black_pawn_coordinates[1]] + position_row[black_pawn_coordinates[0]]
         print(f"Game over! Black pawn is promoted to a queen at {position}.")
         break
+
+
+
+##########: variant 4 solution CEO :##########
+
+matrix = []
+b_row, b_col, w_col, w_row = 0, 0, 0, 0
+
+for row in range(8):
+    matrix.append(input().split())
+    if "w" in matrix[row]:
+        w_row, w_col = row, matrix[row].index("w")
+    elif "b" in matrix[row]:
+        b_row, b_col = row, matrix[row].index("b")
+
+while True:
+
+    if (w_row - 1, w_col - 1) == (b_row, b_col) or (w_row - 1, w_col + 1) == (b_row, b_col):
+        print(f"Game over! White win, capture on {chr(97 + b_col)}{abs(b_row - 8)}.")
+        break
+    w_row -= 1
+    if w_row == -1:
+        print(f"Game over! White pawn is promoted to a queen at {chr(97 + w_col)}8.")
+        break
+
+    if (b_row + 1, b_col - 1) == (w_row, w_col) or (b_row + 1, b_col + 1) == (w_row, w_col):
+        print(f"Game over! Black win, capture on {chr(97 + w_col)}{abs(w_row - 8)}.")
+        break
+    b_row += 1
+    if b_row == 8:
+        print(f"Game over! Black pawn is promoted to a queen at {chr(97 + b_col)}1.")
+        break
+
+##########: variant 5 solution CEO :##########
+
+def draw_board_ranks():
+    chess_ranks = []
+    letters = "abcdefgh"
+    for row in range(matrix_size, 0, -1):
+        chess_ranks.append([letters[col] + str(row) for col in range(matrix_size)])
+    return chess_ranks
+
+
+def find_pawns():
+    black = []
+    white = []
+    for row in range(matrix_size):
+        for col in range(len(matrix[row])):
+            if matrix[row][col] == "b":
+                black = [row, col]
+            if matrix[row][col] == "w":
+                white = [row, col]
+    return black, white
+
+
+def white_pawn_move(row, col):
+    if 0 <= row - 1 < len(matrix) and 0 <= col - 1 < len(matrix):
+        if "b" == matrix[row - 1][col - 1]:
+            print(f"Game over! White win, capture on {chess_board_ranks[row - 1][col - 1]}.")
+            rules['white'] = True
+    if 0 <= row - 1 < len(matrix) and 0 <= col + 1 < len(matrix):
+        if "b" == matrix[row - 1][col + 1]:
+            print(f"Game over! White win, capture on {chess_board_ranks[row - 1][col + 1]}.")
+            rules['white'] = True
+    if 0 <= row < len(matrix):
+        if not rules['white']:
+            matrix[row][col] = "-"
+            row -= 1
+            matrix[row][col] = "w"
+        if row == 0:
+            print(f"Game over! White pawn is promoted to a queen at {chess_board_ranks[row][col]}.")
+            rules['white'] = True
+    return [row, col]
+
+
+def black_pawn_move(row, col):
+    if 0 <= row + 1 < len(matrix) and 0 <= col - 1 < len(matrix):
+        if "w" == matrix[row + 1][col - 1]:
+            print(f"Game over! Black win, capture on {chess_board_ranks[row + 1][col - 1]}.")
+            rules['black'] = True
+    if 0 <= row + 1 < len(matrix) and 0 <= col + 1 < len(matrix):
+        if "w" == matrix[row + 1][col + 1]:
+            print(f"Game over! Black win, capture on {chess_board_ranks[row + 1][col + 1]}.")
+            rules['black'] = True
+    if 0 <= row < len(matrix):
+        if not rules['black']:
+            matrix[row][col] = "-"
+            row += 1
+            matrix[row][col] = "b"
+        if row == 7:
+            print(f"Game over! Black pawn is promoted to a queen at {chess_board_ranks[row][col]}.")
+            rules['black'] = True
+    return [row, col]
+
+
+matrix_size = 8
+chess_board_ranks = draw_board_ranks()
+matrix = [[col for col in input().split()] for row in range(matrix_size)]
+black_pawn, white_pawn = find_pawns()
+take_turns = 1
+rules = {
+    'white': False,
+    'black': False,
+}
+while not rules['white'] and not rules['black']:
+    if take_turns % 2 != 0:
+        white_pawn = white_pawn_move(*white_pawn)
+    elif take_turns % 2 == 0:
+        black_pawn = black_pawn_move(*black_pawn)
+    take_turns += 1
+    [print(*matrix[row]) for row in range(matrix_size)]
+    print()
+
+
+def print_board(board):
+    for row in board:
+        print(" ".join(row))
+    print()
+
+
+
+##########: variant 5 solution Bilyana Panova :##########
+
+SIZE = 8
+
+
+def find_players():
+    white_p = []
+    black_p = []
+    for r in range(SIZE):
+        for c in range(SIZE):
+            if play_ground[r][c] == "w":
+                white_p.extend([r, c])
+            elif play_ground[r][c] == "b":
+                black_p.extend([r, c])
+    return white_p, black_p
+
+
+def check_diagonals(args):
+    directions = {"left up": [-1, -1], "left down": [1, -1], "right up": [-1, 1], "right down": [1, 1]}
+    for d in directions.keys():
+        r, c = [x + y for x, y in zip(args, directions[d])]
+        if r in range(SIZE) and c in range(SIZE):
+            if play_ground[r][c] != "-":
+                return r, c
+    return False
+
+
+def move(playground, *args):
+    winner = "White" if counter % 2 == 0 else "Black"
+    m = 1 if counter % 2 == 0 else -1
+    r, c = args[0] - m, args[1]
+    diagonals = check_diagonals(args)
+
+    if diagonals:
+        return f"Game over! {winner} win, capture on {chr(97 + diagonals[1]) + str(SIZE - diagonals[0])}."
+    if r != 0 and r != 7:
+        playground[r][c] = winner[0].lower()
+        playground[args[0]][args[1]] = "-"
+        return playground
+
+    return f"Game over! {winner} pawn is promoted to a queen at {chr(97 + c) + str(SIZE - r)}."
+
+
+play_ground = [input().split() for _ in range(SIZE)]
+counter = 0
+while True:
+
+    try:
+        white_pawn, black_pawn = find_players()
+    except IndexError:
+        print(play_ground)
+        break
+
+    player = white_pawn if counter % 2 == 0 else black_pawn
+    play_ground = move(play_ground, *player)
+    counter += 1
