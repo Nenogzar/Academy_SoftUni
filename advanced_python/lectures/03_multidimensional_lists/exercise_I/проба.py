@@ -1,16 +1,64 @@
-from collections import deque
+""" DiyanKalaydzhiev 1 """
+n = int(input())
 
-rows, cols = map(int, input().split())
-word = list(input())
-word_queue = deque(word)
+matrix = [[int(x) for x in input().split()] for _ in range(n)]
+coordinates = ((int(x) for x in c.split(",")) for c in input().split())
+# 1,2  3,4  5,6 => ["1,2", "3,4", "5, 6"] => ((1, 2), (3, 4), (5, 6))
+
+directions = (
+    (-1, 0),    # up
+    (1, 0),     # down
+    (0, -1),    # left
+    (0, 1),     # right
+    (-1, 1),    # top-right
+    (-1, -1),   # top-left
+    (1, -1),    # bottom-left
+    (1, 1),     # bottom-right
+    (0, 0),     # current -> !important to be last
+)
+
+for row, col in coordinates:
+    if matrix[row][col] <= 0:
+        continue
+
+    for x, y in directions:
+        r, c = row + x, col + y
+
+        if 0 <= r < n and 0 <= c < n:
+            matrix[r][c] -= matrix[row][col] if matrix[r][c] > 0 else 0
+
+alive_cells = [num for row in range(n) for num in matrix[row] if num > 0]
+
+print(f"Alive cells: {len(alive_cells)}")
+print(f"Sum: {sum(alive_cells)}")
+
+[print(*row) for row in matrix]
 
 
+""" DiyanKalaydzhiev 2 """
 
-for row in range(rows):
-    while len(word_queue) < cols:
-        word_queue.extend(word)
+n = int(input())
 
-    if row % 2 == 0:
-        print(*[word_queue.popleft() for _ in range(cols)], sep="")
-    else:
-        print(*[word_queue.popleft() for _ in range(cols)][::-1], sep="")
+matrix = [[int(x) for x in input().split()] for _ in range(n)]
+coordinates = ((int(x) for x in c.split(",")) for c in input().split()) # 1,2  3,4  5,6 => ["1,2", "3,4", "5, 6"] => ((1, 2), (3, 4), (5, 6))
+
+for row, col in coordinates:
+    if matrix[row][col] <= 0:
+        continue
+
+    bomb_value = matrix[row][col]
+
+    for x in range(-1, 2):  # -1 0 1
+        for y in range(-1, 2):  # -1 0 1
+            r, c = row + x, col + y
+
+            if 0 <= r < n and 0 <= c < n:
+                matrix[r][c] -= bomb_value if matrix[r][c] > 0 else 0
+
+
+alive_cells = [num for row in range(n) for num in matrix[row] if num > 0]
+
+print(f"Alive cells: {len(alive_cells)}")
+print(f"Sum: {sum(alive_cells)}")
+
+[print(*row) for row in matrix]
