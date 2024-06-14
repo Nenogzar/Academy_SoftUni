@@ -1,7 +1,7 @@
 # ******* Advanced Exam - 19 February 2022 ******* #
 
 # *******  02_pawn_wars  ******* #
- 
+
 # *******  TASK CONDITION  ******* #
 """
  https://judge.softuni.org/Contests/Practice/Index/3374#1
@@ -133,14 +133,257 @@ w - - - - - - -
 
 """
 
-##########: variant 1 :##########
 
+##########: variant 1 :##########
+def print_board(board):
+    for row in board:
+        print(" ".join(row))
+    print()
+
+
+board = []
+white_pos = None
+black_pos = None
+
+for i in range(8):
+    line = input().split()
+    board.append(line)
+    if "w" in line:
+        white_pos = (i, line.index("w"))
+    if "b" in line:
+        black_pos = (i, line.index("b"))
+
+
+def pos_to_chess(pos):
+    row, col = pos
+    return f"{chr(col + ord('a'))}{8 - row}"
+
+
+game_over = False
+
+while not game_over:
+    white_row, white_col = white_pos
+
+    if (white_row > 0 and white_col > 0 and board[white_row - 1][white_col - 1] == "b"):
+        white_pos = (white_row - 1, white_col - 1)
+        board[white_row][white_col] = "-"
+        board[white_row - 1][white_col - 1] = "w"
+        print(f"Game over! White win, capture on {pos_to_chess(white_pos)}.")
+        game_over = True
+    elif (white_row > 0 and white_col < 7 and board[white_row - 1][white_col + 1] == "b"):
+        white_pos = (white_row - 1, white_col + 1)
+        board[white_row][white_col] = "-"
+        board[white_row - 1][white_col + 1] = "w"
+        print(f"Game over! White win, capture on {pos_to_chess(white_pos)}.")
+        game_over = True
+    else:
+
+        if white_row > 0 and board[white_row - 1][white_col] == "-":
+            white_pos = (white_row - 1, white_col)
+            board[white_row][white_col] = "-"
+            board[white_row - 1][white_col] = "w"
+        if white_row - 1 == 0:
+            print(f"Game over! White pawn is promoted to a queen at {pos_to_chess(white_pos)}.")
+            game_over = True
+
+    if game_over:
+        break
+
+    black_row, black_col = black_pos
+
+    if (black_row < 7 and black_col > 0 and board[black_row + 1][black_col - 1] == "w"):
+        black_pos = (black_row + 1, black_col - 1)
+        board[black_row][black_col] = "-"
+        board[black_row + 1][black_col - 1] = "b"
+        print(f"Game over! Black win, capture on {pos_to_chess(black_pos)}.")
+        game_over = True
+    elif (black_row < 7 and black_col < 7 and board[black_row + 1][black_col + 1] == "w"):
+        black_pos = (black_row + 1, black_col + 1)
+        board[black_row][black_col] = "-"
+        board[black_row + 1][black_col + 1] = "b"
+        print(f"Game over! Black win, capture on {pos_to_chess(black_pos)}.")
+        game_over = True
+    else:
+
+        if black_row < 7 and board[black_row + 1][black_col] == "-":
+            black_pos = (black_row + 1, black_col)
+            board[black_row][black_col] = "-"
+            board[black_row + 1][black_col] = "b"
+        if black_row + 1 == 7:
+            print(f"Game over! Black pawn is promoted to a queen at {pos_to_chess(black_pos)}.")
+            game_over = True
 
 
 ##########: variant 2 :##########
 
+def print_board(board):
+    for row in board:
+        print(" ".join(row))
+    print()
+
+
+board = []
+white_pos = None
+black_pos = None
+
+for i in range(8):
+    line = input().split()
+    board.append(line)
+    if "w" in line:
+        white_pos = (i, line.index("w"))
+    if "b" in line:
+        black_pos = (i, line.index("b"))
+
+
+def pos_to_chess(pos):
+    row, col = pos
+    return f"{chr(col + ord('a'))}{8 - row}"  # индекси и букви -  координати
+
+
+pawn_moves = {
+    "w": {
+        "start": white_pos,
+        "direction": -1,
+        "opponent": "b",
+        "promote_row": 0,
+        "win_message": "White win, capture on {}.",
+        "promote_message": "White pawn is promoted to a queen at {}."
+    },
+    "b": {
+        "start": black_pos,
+        "direction": 1,
+        "opponent": "w",
+        "promote_row": 7,
+        "win_message": "Black win, capture on {}.",
+        "promote_message": "Black pawn is promoted to a queen at {}."
+    }
+}
+
+
+def move_pawn(pawn, board):
+    pos = pawn_moves[pawn]["start"]
+    direction = pawn_moves[pawn]["direction"]
+    opponent = pawn_moves[pawn]["opponent"]
+    promote_row = pawn_moves[pawn]["promote_row"]
+    win_message = pawn_moves[pawn]["win_message"]
+    promote_message = pawn_moves[pawn]["promote_message"]
+
+    row, col = pos
+
+    for d_col in [-1, 1]: # улавяне на противниковата пешка диагонално
+        new_row, new_col = row + direction, col + d_col
+        if 0 <= new_row < 8 and 0 <= new_col < 8 and board[new_row][new_col] == opponent:
+            new_pos = (new_row, new_col)
+            board[row][col] = "-"
+            board[new_row][new_col] = pawn
+            pawn_moves[pawn]["start"] = new_pos
+            print(f"Game over! " + win_message.format(pos_to_chess(new_pos)))
+            return True
+
+    new_row = row + direction
+    if 0 <= new_row < 8 and board[new_row][col] == "-":
+        new_pos = (new_row, col) # Проверка за нормално движение напред
+        board[row][col] = "-"
+        board[new_row][col] = pawn
+        pawn_moves[pawn]["start"] = new_pos
+        if new_row == promote_row:
+            print(f"Game over! " + promote_message.format(pos_to_chess(new_pos)))
+            return True
+
+    return False
+
+
+game_over = False
+
+while not game_over:
+    # Бяла пешка
+    game_over = move_pawn("w", board)
+    if game_over:
+        break
+
+    # Черна пешка
+    game_over = move_pawn("b", board)
 
 
 ##########: variant 3 solution SoftUni :##########
 
+def check_if_can_capture(coordinates_attacker, coordinates_defender):
+    row_a = coordinates_attacker[0]
+    col_a = coordinates_attacker[1]
+    row_d = coordinates_defender[0]
+    col_d = coordinates_defender[1]
+    if row_a - 1 >= 0 and col_a - 1 >= 0:
+        if row_a - 1 == row_d and col_a - 1 == col_d:
+            return [row_a - 1, col_a - 1]
+    if row_a - 1 >= 0 and col_a + 1 < 8:
+        if row_a - 1 == row_d and col_a + 1 == col_d:
+            return [row_a - 1, col_a + 1]
+    if row_a + 1 < 8 and col - 1 >= 0:
+        if row_a + 1 == row_d and col_a - 1 == col_d:
+            return [row_a + 1, col_a - 1]
+    if row_a + 1 < 8 and col + 1 < 8:
+        if row_a + 1 == row_d and col_a + 1 == col_d:
+            return [row_a + 1, col_a + 1]
 
+
+matrix = []
+for _ in range(8):
+    matrix.append(input().split())
+
+white_pawn_coordinates = []
+black_pawn_coordinates = []
+
+position_row = {
+    0: "8",
+    1: "7",
+    2: "6",
+    3: "5",
+    4: "4",
+    5: "3",
+    6: "2",
+    7: "1",
+}
+positions_col = {
+    0: "a",
+    1: "b",
+    2: "c",
+    3: "d",
+    4: "e",
+    5: "f",
+    6: "g",
+    7: "h",
+}
+
+for row in range(8):
+    for col in range(8):
+        if matrix[row][col] == "w":
+            white_pawn_coordinates = [row, col]
+        if matrix[row][col] == "b":
+            black_pawn_coordinates = [row, col]
+
+for _ in range(8):
+    capture_on = check_if_can_capture(white_pawn_coordinates, black_pawn_coordinates)
+    if capture_on:
+        position = positions_col[capture_on[1]] + position_row[capture_on[0]]
+        print(f"Game over! White win, capture on {position}.")
+        break
+
+    white_pawn_coordinates[0] -= 1
+
+    if white_pawn_coordinates[0] == 0:
+        position = positions_col[white_pawn_coordinates[1]] + position_row[white_pawn_coordinates[0]]
+        print(f"Game over! White pawn is promoted to a queen at {position}.")
+        break
+
+    capture_on = check_if_can_capture(black_pawn_coordinates, white_pawn_coordinates)
+    if capture_on:
+        position = positions_col[capture_on[1]] + position_row[capture_on[0]]
+        print(f"Game over! Black win, capture on {position}.")
+        break
+
+    black_pawn_coordinates[0] += 1
+
+    if black_pawn_coordinates[0] == 7:
+        position = positions_col[black_pawn_coordinates[1]] + position_row[black_pawn_coordinates[0]]
+        print(f"Game over! Black pawn is promoted to a queen at {position}.")
+        break
