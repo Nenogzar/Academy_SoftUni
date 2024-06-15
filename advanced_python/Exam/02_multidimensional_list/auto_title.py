@@ -21,7 +21,7 @@ for file_name in matrix:
                     f'\n{(symbol ) + " TASK CONDITION " + ( symbol[::-1])}\n'
                     f'"""\n '
                     f'{input("Judge link: ")}\n'
-                    f'\n"""\n'
+                    f'\n"""'
                     f'\n##########: variant 1 :##########\n\n\n'
                     f'\n##########: variant 2 :##########\n\n\n'
                     f'\n##########: variant 3 solution SoftUni :##########\n\n\n')
