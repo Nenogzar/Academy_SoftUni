@@ -136,94 +136,160 @@ H 8 . . . .
 
 """
 
-"""
-def directions(poss, size, command):
-    if command == "up" or command == "left":
-        poss -= 1
-    elif command == "right" or command == "down":
-        poss += 1
-"""
-
 
 ##########: variant 1 :##########
-
-def directions(poss, size, command):
-    row, col = poss
+def directions(r_pos, c_pos, size, command):
     if command == "up":
-        row -= 1
+        r_pos -= 1
     elif command == "down":
-        row += 1
+        r_pos += 1
     elif command == "left":
-        col -= 1
+        c_pos -= 1
     elif command == "right":
-        col += 1
-
-    if 0 <= row < size and 0 <= col < size:
-        return row, col
-    return poss
+        c_pos += 1
+    if 0 <= r_pos < size and 0 <= c_pos < size:
+        return r_pos, c_pos
 
 
-def create(position, value, db):
-    row, col = position
-    if db[row][col] == ".":
-        db[row][col] = value
+def create(r_pos, c_pos, value, db):
+    if db[r_pos][c_pos] == ".":
+        db[r_pos][c_pos] = value
 
 
-def update(position, value, db):
-    row, col = position
-    if db[row][col] != ".":
-        db[row][col] = value
+def update(r_pos, c_pos, value, db):
+    if db[r_pos][c_pos] != ".":
+        db[r_pos][c_pos] = value
 
 
-def delete(position, db):
-    row, col = position
-    if db[row][col] != ".":
-        db[row][col] = "."
+def delete(r_pos, c_pos, db):
+    if db[r_pos][c_pos] != ".":
+        db[r_pos][c_pos] = "."
 
 
-def read(position, db):
-    row, col = position
-    if db[row][col] != ".":
-        print(db[row][col])
+def read(r_pos, c_pos, db):
+    if db[r_pos][c_pos] != ".":
+        print(db[r_pos][c_pos])
 
 
+commands_dict = {
+    "Create": create,
+    "Update": update,
+    "Read": read,
+    "Delete": delete
+}
 
-size_db, db, numbers, alpha = 6, [], {}, {}
+size_db = 6
 
-for i in range(size_db):
-    row = input().split()
-    row = [int(el) if el.isdigit() or (el[0] == '-' and el[1:].isdigit()) else el for el in row]
-    db.append(row)
+db = [list(map(str, input().split())) for _ in range(size_db)]
 
-position = list(map(int, input().strip("()").split(", ")))
-
+r_pos, c_pos = map(int, input().strip("()").split(", "))
 
 crud = input()
 while crud != "Stop":
     commands = crud.split(", ")
+    command = commands[0]
+    direction = commands[1]
 
-    if len(commands) == 2:
-        command, direction = commands[0], commands[1]
-        new_position = directions(position, size_db, direction)
-        if command == "Read":
-            read(new_position, db)
-        elif command == "Delete":
-            delete(new_position, db)
-    elif len(commands) == 3:
-        command, direction, value = commands[0], commands[1], commands[2]
-        new_position = directions(position, size_db, direction)
-        if command == "Create":
-            create(new_position, value, db)
-        elif command == "Update":
-            update(new_position, value, db)
+    new_r_pos, new_c_pos = directions(r_pos, c_pos, size_db, direction)
 
-    position = new_position
+    if command in commands_dict:
+        if len(commands) == 3:
+            value = commands[2]
+            commands_dict[command](new_r_pos, new_c_pos, value, db)
+        else:
+            commands_dict[command](new_r_pos, new_c_pos, db)
+
+    r_pos, c_pos = new_r_pos, new_c_pos
     crud = input()
 
 for row in db:
-    print(" ".join(map(str, row)))
+    print(" ".join(row))
 
-##########: variant 2 :##########
+##########: variant 2 solutuin CIO :##########
+
+
+matrix = [input().split() for _ in range(6)]
+
+row, col = [int(x) for x in input()[1:-1].split(", ")]
+# info = input()
+# row, col = int(info[1]), int(info[-1])
+# row, col = [int(x) for x in input().replace("(", "").replace(")", "").split(", ")]
+
+command = input()
+
+while command != "Stop":
+    command_type, direction, *value = command.split(", ")
+
+    if direction == "up":
+        row -= 1
+    elif direction == "down":
+        row += 1
+    elif direction == "left":
+        col -= 1
+    elif direction == "right":
+        col += 1
+
+    step_on = matrix[row][col]
+
+    if command_type == "Create" and step_on == ".":
+        step_on = value[0]
+
+    elif not step_on.isalnum():
+        pass
+
+    elif command_type == "Update":
+        step_on = value[0]
+
+    elif command_type == "Delete":
+        step_on = "."
+
+    elif command_type == "Read":
+        print(step_on)
+
+    matrix[row][col] = step_on
+    command = input()
+
+[print(*row) for row in matrix]
 
 
 ##########: variant 3 solution SoftUni :##########
+
+def move(direction_, position_):
+    if direction_ == 'up':
+        position_[0] -= 1
+    elif direction_ == 'down':
+        position_[0] += 1
+    elif direction_ == 'left':
+        position_[1] -= 1
+    elif direction_ == 'right':
+        position_[1] += 1
+    return position_
+
+
+matrix = []
+for _ in range(6):
+    matrix.append(input().split())
+
+position = list(map(int, input().strip("(").strip(")").split(", ")))
+
+while True:
+    command = input()
+    if command == 'Stop':
+        break
+    current_command = command.split(", ")
+    position = move(current_command[1], position)
+    if current_command[0] == 'Create':
+        if matrix[position[0]][position[1]] == '.':
+            matrix[position[0]][position[1]] = current_command[2]
+    elif current_command[0] == 'Update':
+        if matrix[position[0]][position[1]] != '.':
+            matrix[position[0]][position[1]] = current_command[2]
+    elif current_command[0] == 'Delete':
+        if matrix[position[0]][position[1]] != '.':
+            matrix[position[0]][position[1]] = '.'
+    elif current_command[0] == 'Read':
+        if matrix[position[0]][position[1]] != '.':
+            print(matrix[position[0]][position[1]])
+
+for row in matrix:
+    print(' '.join(row))
