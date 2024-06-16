@@ -179,13 +179,6 @@ def distance(position, direction, size):
         col += 1
     return (row, col) if 0 <= row < size and 0 <= col < size else position
 
-def final():
-    pass
-
-def tunnel():
-    pass
-
-
 size = int(input())
 car_number = str(input())
 race_route = [input().split() for _ in range(size)]
