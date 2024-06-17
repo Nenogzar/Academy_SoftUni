@@ -29,7 +29,8 @@ If you've collected all items at any point, end the program and print: "Merry Ch
 Input
 •	On the first line, you will receive the number of rows and columns in the format "{rows}, {columns}"
 •	On the next lines, you will receive each row with its columns - symbols, separated by a single space.
-•	On the following lines, you will receive commands in the format described above until you receive the command "End" or until you collect all items.
+•	On the following lines, you will receive commands in the format described above
+    until you receive the command "End" or until you collect all items.
 Output
 •	On the first line, if you have collected all items, print:
     o	"Merry Christmas!"

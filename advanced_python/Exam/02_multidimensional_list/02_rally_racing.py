@@ -120,10 +120,14 @@ Distance covered 80 km.
 Comment
 The race car starts moving from position[0,0].
 The first command is down, so the moving direction is down. The race car is in position[1,0].
-Next three commands are right, so the race car  comes across the tunnel – "T". The current car position is [1,3]. Swap the "T" with "." The race car goes through the tunnel, so its next position is [3,1]. Swap the "T" with "."
+Next three commands are right, so the race car  comes across the tunnel – "T".
+The current car position is [1,3]. Swap the "T" with "."
+The race car goes through the tunnel, so its next position is [3,1]. Swap the "T" with "."
 Next direction is down, so the race car position is [4,1].
 Next direction is right, so the race car position is [4,2].
-The race car reaches the finish line before the "End" command. So it manages to finish the stage. The remaining directions will be ignored and no more moves are going to be executed.
+The race car reaches the finish line before the "End" command.
+So it manages to finish the stage.
+The remaining directions will be ignored and no more moves are going to be executed.
 
 
 Input

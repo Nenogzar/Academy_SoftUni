@@ -23,7 +23,8 @@ Possible characters in the field:
 
 The squirrel starts from the s - position.
 
-•	If the squirrel steps on a hazelnut, you have to increase them by 1. The position should be marked with an asterisk (*).
+•	If the squirrel steps on a hazelnut, you have to increase them by 1.
+    The position should be marked with an asterisk (*).
 o	If the squirrel collects all 3 hazelnuts, the game ends.
 •	Asterisk (*) does nothing, so nothing happens if the squirrel steps on it.
 •	If it steps on a trap, the game ends.
@@ -64,7 +65,8 @@ Good job! You have collected all hazelnuts!
 Hazelnuts collected: 3
 
 Comments
-The squirrel moves 2 times to the left and collects its first hazelnut. After that collect the second one. Finally, with the last "up" command, the squirrel collects its final hazelnut.
+The squirrel moves 2 times to the left and collects its first hazelnut. After that collect the second one.
+Finally, with the last "up" command, the squirrel collects its final hazelnut.
 
 Input
 4
