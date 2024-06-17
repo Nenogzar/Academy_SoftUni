@@ -114,7 +114,7 @@ food_supplies = deque(map(int, input().split(", ")))
 daily_stamina = deque(map(int, input().split(", ")))
 
 days = 1
-current_peak = iter(climbing_peak.items())  # Създавам итератор за върховете
+current_peak = iter(climbing_peak.items())
 
 # Взимам първия връх
 try:
@@ -133,7 +133,7 @@ while days <= 7 and food_supplies and daily_stamina:
         try:
             peak_name, peak_difficulty = next(current_peak)
         except StopIteration:
-            break  # Ако няма повече върхове, прекратявам цикъла
+            break  
 
     days += 1
 
