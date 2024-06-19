@@ -179,7 +179,7 @@ Result is: 7 + 1 + 9 +7 + 7 = 31. You succeeded!
 #     return row, col, matrix
 
 
-def directions(position, direction, rows, matrix):
+def directions(position, direction, matrix):
     row, col = position
     matrix[row][col] = "-"
 
@@ -189,8 +189,8 @@ def directions(position, direction, rows, matrix):
              'right': (0, 1)}
 
     d_row, d_col = moves[direction]
-    row = (row + d_row) % rows
-    col = (col + d_col) % rows
+    row = (row + d_row) % len(matrix[row]) # row = (row + d_row) % rows
+    col = (col + d_col) % len(matrix[row]) # col = (col + d_col) % rows
     return row, col, matrix
 
 
@@ -213,7 +213,7 @@ for row_ in range(rows):
 direction = input()
 
 while direction != "collect the nets":
-    n_row, n_col, fishing_area = directions(position, direction, rows, fishing_area)
+    n_row, n_col, fishing_area = directions(position, direction, fishing_area)
     new_position = n_row, n_col
 
     step = fishing_area[n_row][n_col]
