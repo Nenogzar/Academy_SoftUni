@@ -564,3 +564,82 @@ while True:
     player = white_pawn if counter % 2 == 0 else black_pawn
     play_ground = move(play_ground, *player)
     counter += 1
+##########: variant 6 - Adrian Stoyanov whir Functions :##########
+
+SIZE = 8
+
+
+def initialize_board():
+    position_w, position_b = (-1, -1), (-1, -1)
+    matrix = []
+    for row in range(SIZE):
+        line = input().split(" ")
+        if "w" in line:
+            position_w = (row, line.index("w"))
+        if "b" in line:
+            position_b = (row, line.index("b"))
+        matrix.append(line)
+    return matrix, position_w, position_b
+
+
+def print_game_over(winner, position):
+    print(f"Game over! {winner} win, capture on {chr(97 + position[1])}{SIZE - position[0]}.")
+
+
+def print_promotion(winner, column):
+    row = '8' if winner == 'White' else '1'
+    print(f"Game over! {winner} pawn is promoted to a queen at {chr(97 + column) + row}.")
+
+
+def move_pawn(current_r, current_c, direction, matrix):
+    new_r = current_r + direction[0]
+    new_c = current_c + direction[1]
+    if 0 <= new_r < SIZE and 0 <= new_c < SIZE:
+        return new_r, new_c
+    return current_r, current_c
+
+
+def main():
+    matrix, position_w, position_b = initialize_board()
+    w_start_r, w_start_c = position_w
+    b_start_r, b_start_c = position_b
+
+    directions_w = [(-1, 0), (-1, -1), (-1, 1)]
+    directions_b = [(1, 0), (1, -1), (1, 1)]
+
+    if abs(w_start_c - b_start_c) > 1:
+        if w_start_r < (SIZE - 1 - b_start_r):
+            print_promotion('White', w_start_c)
+        elif w_start_r > (SIZE - 1 - b_start_r):
+            print_promotion('Black', b_start_c)
+    else:
+        while True:
+            for dr, dc in directions_w[1:]:
+                new_r_w, new_c_w = move_pawn(w_start_r, w_start_c, (dr, dc), matrix)
+                if matrix[new_r_w][new_c_w] == "b":
+                    print_game_over('White', (new_r_w, new_c_w))
+                    return
+
+            matrix[w_start_r][w_start_c] = "-"
+            w_start_r, w_start_c = move_pawn(w_start_r, w_start_c, directions_w[0], matrix)
+            if w_start_r == 0:
+                print_promotion('White', w_start_c)
+                return
+            matrix[w_start_r][w_start_c] = "w"
+
+            for dr, dc in directions_b[1:]:
+                new_r_b, new_c_b = move_pawn(b_start_r, b_start_c, (dr, dc), matrix)
+                if matrix[new_r_b][new_c_b] == "w":
+                    print_game_over('Black', (new_r_b, new_c_b))
+                    return
+
+            matrix[b_start_r][b_start_c] = "-"
+            b_start_r, b_start_c = move_pawn(b_start_r, b_start_c, directions_b[0], matrix)
+            if b_start_r == SIZE - 1:
+                print_promotion('Black', b_start_c)
+                return
+            matrix[b_start_r][b_start_c] = "b"
+
+
+if __name__ == "__main__":
+    main()
