@@ -201,7 +201,7 @@ if __name__ == "__main__":
 
 ##########: variant 2 whit Functions :##########
 
-def directions(position, direction, rows, matrix):
+def directions(position, direction, matrix):
     row, col = position
     matrix[row][col] = "-"
 
@@ -215,7 +215,7 @@ def directions(position, direction, rows, matrix):
     d_row, d_col = moves[direction]
     row += d_row
     col += d_col
-    if 0 <= row < rows and 0 <= col < rows:
+    if 0 <= row < len(matrix[row]) and 0 <= col < len(matrix[row]):
         return row, col, matrix
     return None
 
@@ -258,7 +258,7 @@ def main():
     target = input()
 
     while target != "end":
-        result = directions(position, target, rows, game_board)
+        result = directions(position, target, game_board)
         if result is None:
             print("Game over! You lost everything!")
             return
