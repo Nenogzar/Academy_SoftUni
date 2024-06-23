@@ -75,3 +75,17 @@ print(negative_vs_positive(*nums))
 
 ##########: variant 3 :##########
 
+def point_numbers(nums) -> None:
+    positive_sum = sum(num for num in nums if num > 0)
+    negative_sum = sum(num for num in nums if num <=0)
+
+    print(f"{negative_sum}\n{positive_sum}")
+
+    if positive_sum > abs(negative_sum):
+        print("The positives are stronger than the negatives")
+    else:
+        print("The negatives are stronger than the positives")
+
+numbers = list(map(int, input().split()))
+
+point_numbers(numbers)a
