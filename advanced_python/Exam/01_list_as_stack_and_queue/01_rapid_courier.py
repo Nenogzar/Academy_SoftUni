@@ -4,7 +4,7 @@
  
 # *******  TASK CONDITION  ******* #
 """
- https://judge.softuni.org/Contests/4796/Python-Advanced-Regular-Exam-22-June-2024
+ https://judge.softuni.org/Contests/4796
 
 You have created your own delivery service called "Rapid Courier".
     You want to analyze how well your couriers are doing in delivering all the packages.
