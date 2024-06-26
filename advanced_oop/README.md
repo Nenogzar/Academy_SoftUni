@@ -16,8 +16,8 @@ This is my collection of solutions to the tasks included in the SoftUni OOP whit
 
 <table>
   <tr>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/01_lists_as_stacks_and_queues"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/01.jpg" alt="Stack_Deque" width="500"></a></th>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/02_tuples_and_sets"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/02.jpg" alt="Tuple_Sets" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/01_lists_as_stacks_and_queues"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/01.jpg" alt="First Step" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/02_tuples_and_sets"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/02.jpg" alt="Classes and Objects" width="500"></a></th>
   </tr>
 
   <tr>
@@ -38,8 +38,8 @@ This is my collection of solutions to the tasks included in the SoftUni OOP whit
 
 <table>
   <tr>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/03_multidimensional_lists"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/03.jpg" alt="Multidimensional_Lists" width="500"></a></th>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/04_functions_advanced"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/04.jpg" alt="functions_advanced" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/03_multidimensional_lists"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/03.jpg" alt="Multidimensional_Lists" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/04_functions_advanced"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/04.jpg" alt="functions_advanced" width="500"></a></th>
   </tr>
 
   <tr>
@@ -62,8 +62,8 @@ This is my collection of solutions to the tasks included in the SoftUni OOP whit
 
 <table>
   <tr>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/05_error_handling"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/05.jpg" alt="Multidimensional_Lists" width="500"></a></th>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/06_file_hendling"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/06.jpg" alt="functions_advanced" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/05_error_handling"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/05.jpg" alt="Multidimensional_Lists" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/06_file_hendling"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/06.jpg" alt="functions_advanced" width="500"></a></th>
   </tr>
 
   <tr>
@@ -84,8 +84,8 @@ This is my collection of solutions to the tasks included in the SoftUni OOP whit
 
 <table>
   <tr>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/07_workshop"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/07.jpg" alt="Multidimensional_Lists" width="500"></a></th>
-    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/08_modules"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_python/images/08.jpg" alt="functions_advanced" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/07_workshop"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/07.jpg" alt="Multidimensional_Lists" width="500"></a></th>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_python/lectures/08_modules"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/08.jpg" alt="functions_advanced" width="500"></a></th>
   </tr>
 
   <tr>
