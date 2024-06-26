@@ -8,6 +8,7 @@ print()
 
 for n in A:
     for m in n:
+        pass
         print(m, n)
 
 
