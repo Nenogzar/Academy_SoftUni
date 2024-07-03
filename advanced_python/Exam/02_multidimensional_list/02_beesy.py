@@ -61,13 +61,76 @@ Constraints
 """
 ##########: variant 1 :##########
 
+def directions(position, direction, matrix):
+    row, col = position
+    matrix[row][col] = "-"
+
+    moves = {'up': (-1, 0),
+             'down': (1, 0),
+             'left': (0, -1),
+             'right': (0, 1)}
+
+    d_row, d_col = moves[direction]
+    row = (row + d_row) % len(matrix)
+    col = (col + d_col) % len(matrix[row])
+
+    return row, col, matrix
 
 
+def print_matrix(matrix):
+    for row in matrix:
+        print("".join(map(str, row)))
 
 
+field_size = int(input())
+bee, hive, empty = 'B', 'H', '-'
+bee_energy = 15
+field = []
+found_hive = False
+nectar, nectar_max = 0, 30
+energy_restored = False
 
+position = (-1, -1)
+for row_ in range(field_size):
+    line = list(input())
+    if bee in line:
+        position = (row_, line.index(bee))
+    field.append(line)
 
+while True:
+    direction = input()
 
+    new_row, new_col, field = directions(position, direction, field)
+    bee_energy -= 1
+    position = (new_row, new_col)
+
+    step = field[new_row][new_col]
+    if step.isdigit():
+        nectar += int(step)
+        field[new_row][new_col] = empty
+
+    elif step == hive:
+        found_hive = True
+        if nectar >= nectar_max:
+            print(f"Great job, Beesy! The hive is full. Energy left: {bee_energy}")
+        else:
+            print("Beesy did not manage to collect enough nectar.")
+        break
+    if bee_energy == 0:
+        if nectar >= nectar_max:
+            if not energy_restored:
+                energy_restored = True
+                energy_to_restore = nectar - nectar_max
+                bee_energy += energy_to_restore
+                nectar = nectar_max
+                continue
+
+        print("This is the end! Beesy ran out of energy.")
+        break
+
+field[position[0]][position[1]] = bee
+
+print_matrix(field)
 
 ##########: variant 2 :##########
 
