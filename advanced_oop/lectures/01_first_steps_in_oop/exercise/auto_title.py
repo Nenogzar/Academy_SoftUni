@@ -27,3 +27,8 @@ for file_name in matrix:
                     f'\n##########: variant 3 solution SoftUni :##########\n\n\n')
 
 print("The files were created successfully.")
+
+
+
+First Steps in OOP - Exercise
+https://judge.softuni.org/Contests/Compete/Index/1935

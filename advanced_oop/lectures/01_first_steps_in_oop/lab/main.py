@@ -1,30 +1,16 @@
-n = int(input())
+check1 = ['Learn', 'quiz', 'practice', 'contribute']
+check2 = check1
+check3 = check1[:]
 
+check2[0] = "Code"
+check3[1] = "Mcq"
 
-def print_row(size, row):
-    empty = " "
-    star = "* "
-    print(f"{empty * (size - row)}{star * row}")
+counter = 0
 
+for c in (check1, check2, check3):
+    if c[0] == "Code":
+        counter += 1
+    if c[1] == "Mcq":
+        counter += 10
 
-def print_upper_part(size):
-    for row in range(1, size):
-        print_row(size, row)
-
-
-def print_center_part(size):
-    print_row(size, size)
-
-
-def print_bottom_part(size):
-    for row in range(size - 1, 0, -1):
-        print_row(size, row)
-
-
-def print_rhumbus(size):
-    print_upper_part(size)
-    print_center_part(size)
-    print_bottom_part(size)
-
-
-print_rhumbus(n)
+print(counter)
