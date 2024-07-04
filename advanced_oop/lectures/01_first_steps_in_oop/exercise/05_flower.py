@@ -62,7 +62,13 @@ class Flower:
 
     def status(self):
         return (f"{self.name} is happy") if self.is_happy else (f"{self.name} is not happy")
+        # OR 
         # return f"{self.name} is {'' if self.is_happy else 'not '}happy"
+        # OR 
+        # if self.is_happy:
+        #     return f"{self.name} is happy"
+        #
+        # return f"{self.name} is not happy"
 
 
 flower = Flower("Lilly", 100)
