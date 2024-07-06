@@ -11,7 +11,7 @@
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
 ## Python OOP - MAY 2024
-
+![first steps in OOP](https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/01.jpg) 
 This is my collection of solutions to the tasks included in the SoftUni OOP whit Python
 
 <table>
