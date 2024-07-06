@@ -12,9 +12,9 @@
 
 ## Python OOP - MAY 2024
 
-| ![first steps in OOP](https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/01.jpg)                                                                                                                            |![first steps in OOP](https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/01.jpg)| ![first steps in OOP](https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/01.jpg)|
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-|-|
-| [lab](https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_oop/lectures/01_first_steps_in_oop) / [exercise](https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_oop/lectures/01_first_steps_in_oop/exercise) |||
+| ![first steps in OOP](https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/01.jpg)                                                                                                                            |![first steps in OOP](https://github.com/Nenogzar/Academy_SoftUni/blob/main/advanced_oop/image/01.jpg)| 
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-|
+| [lab](https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_oop/lectures/01_first_steps_in_oop) / [exercise](https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_oop/lectures/01_first_steps_in_oop/exercise) ||
 
 
 
