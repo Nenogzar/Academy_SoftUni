@@ -21,9 +21,9 @@ for file_name in matrix:
                     f'\n{(symbol ) + " TASK CONDITION " + ( symbol[::-1])}\n'
                     f'"""\n '
                     f'{input("Judge link: ")}\n'
-                    f'\n"""'
-                    f'\n##########: variant 1 :##########\n\n\n'
-                    f'\n##########: variant 2 :##########\n\n\n'
-                    f'\n##########: variant 3 solution SoftUni :##########\n\n\n')
+                    f'\n"""\n'
+                    f'\n##########: SOLUTION :##########\n\n\n'
+                    f'\n##########: TEST CODE :##########\n\n\n'
+                    f'\n##########: UNITTEST :##########\n\n\n')
 
 print("The files were created successfully.")
