@@ -24,6 +24,7 @@ for file_name in matrix:
                     f'\n"""\n'
                     f'\n##########: SOLUTION :##########\n\n\n'
                     f'\n##########: TEST CODE :##########\n\n\n'
+                    f'\n"""\nOutput:\n\n """'
                     f'\n##########: UNITTEST :##########\n\n\n')
 
 print("The files were created successfully.")
