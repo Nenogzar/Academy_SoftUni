@@ -30,5 +30,3 @@ print("The files were created successfully.")
 
 
 
-First Steps in OOP - Exercise
-https://judge.softuni.org/Contests/Compete/Index/1935
