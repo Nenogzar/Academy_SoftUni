@@ -27,12 +27,12 @@ class Counter:
         return self
 
     def __next__(self):
-        if self.current > self.high:
-            return StopIteration
-        else:
-            self.current += 1
-            return self.current - 1
-
+        try:
+            if self.current <= self.high:
+                self.current += 1
+                return self.current -1
+        except StopIteration:
+            return "StopIteration"
 
 counter = Counter(1, 3)
 print(next(counter))  # 1
@@ -55,12 +55,14 @@ class IterableCounter:
         return self
 
     def __next__(self):
-        if self.current > self.high:
+        try:
+            if self.current <= self.high:
+                self.current += 1
+                return self.current - 1
+        except StopIteration:
             return "StopIteration"
 
-        else:
-            self.current += 1
-            return self.current - 1
+
 
 
 counters = IterableCounter(1, 3)
@@ -84,10 +86,12 @@ class Reverse:
         return self
 
     def __next__(self):
-        if self.index == 0:
-            raise StopIteration
-        self.index -= 1
-        return self.data[self.index]
+        try:
+            if self.index != 0:
+                self.index -= 1
+                return self.data[self.index]
+        except StopIteration:
+            return "StopIteration"
 
 
 rev = Reverse('spam')
@@ -147,11 +151,14 @@ class MyIterator:
         return self
 
     def __next__(self):
-        if self.current >= self.end:
-            raise StopIteration
-        else:
-            self.current += 1
-            return self.current - 1
+        try:
+            if self.current < self.end:
+                self.current += 1
+                return self.current - 1
+        except StopIteration:
+            return "StopIteration"
+
+
 
 
 my_iter = MyIterator(1, 4)
