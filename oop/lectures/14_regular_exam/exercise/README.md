@@ -11,6 +11,5 @@
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
 
-<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/advanced_oop">Back to Advance OOP</a>
-
+## <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop">Back to Python OOP</a>
 </body>
