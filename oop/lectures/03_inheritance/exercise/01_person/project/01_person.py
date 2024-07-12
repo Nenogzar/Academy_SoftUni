@@ -20,8 +20,21 @@ Submit in judge a zip file named project, containing a separate file (person.py 
 
 
 ##########: TEST CODE :##########
+from project.person import Person
+from project.child import Child
 
 
+person = Person("Peter", 25)
+child = Child("Peter Junior", 5)
+print(person.name)
+print(person.age)
+print(child.name)
+print(child.age)
+print(f"The father's name is {person.name} hi is a  {person.age} old")
+print(f"The child's name is {child.name} hi is a  {child.age} old")
+print(f"{person.name} became a father at the age of {person.age - child.age}")
+
+print(child.__class__.__bases__[0].__name__)
 
 """
 Output:
@@ -30,8 +43,7 @@ Output:
 ##########: UNITTEST :##########
 
 # zero test
-from project.person import Person
-from project.child import Child
+
 import unittest
 
 class Tests(unittest.TestCase):
