@@ -86,17 +86,14 @@ class Reverse:
         return self
 
     def __next__(self):
-        try:
-            if self.index != 0:
-                self.index -= 1
-                return self.data[self.index]
-        except StopIteration:
-            return "StopIteration"
-
+        if self.index == 0:
+            raise StopIteration
+        self.index -= 1
+        return self.data[self.index]
 
 rev = Reverse('spam')
 for char in rev:
-    print(*char, end=" ")  # m a p s
+    print(char, end=" ")  # m a p s
 
 
 """
@@ -105,11 +102,11 @@ for char in rev:
 и други контексти, изискващи итерация.
 """
 
-"""
-counter = IterableCounter(1, 3)
-for num in counter:
-    print(num)  # 1 2 3
-"""
+
+# counter1 = IterableCounter(1, 3)
+# for num in counter1:
+#     print(num)  # 1 2 3
+
 print()
 """
 7.Поддържане на състояние:
@@ -171,8 +168,8 @@ print(next(my_iter))  # StopIteration
 2. Използване на __next__ в цикли:
 Класовете, имплементиращи __next__, могат лесно да бъдат използвани в цикли.
 """
-my_iter = MyIterator(1, 4)
-for num in my_iter:
+my_iter1 = MyIterator(1, 4)
+for num in my_iter1:
     print(*num, end="")  # 1 2 3
 
 """
