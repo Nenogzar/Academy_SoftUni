@@ -15,6 +15,24 @@ Your task is to create the following game hierarchy
                     |                   |
                 SoulMaster          BladeKnight
 
+Create a class Hero. It should contain the following attributes:
+•	username: string
+•	level: int
+Override the __str__() method of the base class so it returns: "{name} of type {class_name} has level {level}"
+
+hero.py
+blade_knight.py
+dark_knight.py
+dark_wizard.py
+elf.py
+hero.py
+knight.py
+muse_elf.py
+soul_master.py
+wizart.py
+
+
+
 """
 from    project.elf import Elf
 from    project.knight import Knight
@@ -27,12 +45,18 @@ from    project.soul_master import SoulMaster
 from    project.hero import Hero
 ##########: SOLUTION :##########
 
+"""
+def __str__(self):
+   return f"{self.username} of type {self.__class__.__name__} has level {self.level}"
+                                       |
+OR                                     |
+                                       |
+on every fail                          |
+def __str__(self):                     |
+   return f"{self.username} of type {WriteClass.__name__} has level {self.level}"
 
+"""
 ##########: TEST CODE :##########
-
-
-
-
 
 hero = Hero("Hero", 4)
 print(hero.username)
