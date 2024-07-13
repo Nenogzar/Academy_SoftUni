@@ -45,7 +45,7 @@ This is my collection of solutions to the tasks included in the SoftUni OOP whit
     <td>
     <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/03_inheritance/lab">Lab</a>
 |  
-    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/03_inheritance/exercise_I">Exercise</a>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/03_inheritance/exercise">Exercise</a>
 
     
 </td>
