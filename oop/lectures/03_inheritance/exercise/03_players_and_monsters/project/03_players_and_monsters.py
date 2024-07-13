@@ -53,7 +53,7 @@ OR                                     |
                                        |
 on every fail                          |
 def __str__(self):                     |
-   return f"{self.username} of type {WriteClass.__name__} has level {self.level}"
+   return f"{self.username} of type {Class Name.__name__} has level {self.level}"
 
 """
 ##########: TEST CODE :##########
