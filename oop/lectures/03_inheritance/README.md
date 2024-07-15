@@ -11,8 +11,14 @@
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
 
+|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop">Back to Python OOP</a>|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/03_inheritance/lab">Lecture</a>|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/03_inheritance/exercise">Exercise</a>|
+|-|-|-|
+
+
+
 ## <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop">Back to Python OOP</a>
-</body>
+
+
 
 
 > inheritance
@@ -235,4 +241,8 @@ for shape in shapes:
 Важно е да следвате принципите на добрата практика, 
 като принципа на единната отговорност и принципа на подмяна на Лисков, 
 за да създадете устойчиви и добре организирани системи.
+
+
+
+</body>
 
