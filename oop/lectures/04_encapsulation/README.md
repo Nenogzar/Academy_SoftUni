@@ -9,8 +9,8 @@
 </head>
 
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
-
-|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop">Back to Python OOP</a>|||
+https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/04_encapsulation/lab
+|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop">Back to Python OOP</a>|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/04_encapsulation/lab">Lecture</a>|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/04_encapsulation/exercise">Exercise</a>|
 |-|-|-|
 
 
