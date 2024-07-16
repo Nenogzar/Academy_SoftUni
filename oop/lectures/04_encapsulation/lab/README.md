@@ -10,7 +10,8 @@
 
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
 
+|<a href="https://softuni.bg/trainings/4542/python-oop-june-2024#lesson-71086">Encapsulation - Lecture SoftUni</a>|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop">Back to Python OOP</a>|
+|-|-|
 
-## <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop">Back to Python OOP</a>
 
 </body>
