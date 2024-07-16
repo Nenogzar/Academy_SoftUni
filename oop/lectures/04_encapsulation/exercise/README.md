@@ -9,7 +9,7 @@
 </head>
 
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
-https://softuni.bg/trainings/4542/python-oop-june-2024#lesson-71087
+
 |<a href="https://softuni.bg/trainings/4542/python-oop-june-2024#lesson-71087">Exercise: Encapsulation - SofUni</a>|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop">Back to Python OOP</a>|
 |-|-|
 
