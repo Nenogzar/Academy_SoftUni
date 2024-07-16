@@ -19,7 +19,39 @@ Override the __str__() method of the base class, so it returns:
 """
 
 ##########: SOLUTION :##########
+class Profile:
+    def __init__(self, username: str, password: str, ):
+        self.username = username
+        self.password = password
 
+    @property
+    def username(self):
+        return self.__username
+
+    @username.setter
+    def username(self, value):
+        length_name = len(value)
+        if length_name < 5 or length_name > 15:
+            raise ValueError("The username must be between 5 and 15 characters.")
+        self.__username = value
+
+    @property
+    def password(self):
+        return self.__password
+
+    @password.setter
+    def password(self, value):
+        is_long = len(value) >= 8
+        is_upper_char = any(char.isupper() for char in value)
+        is_digit = any(char.isdigit() for char in value)
+
+        if not is_long or not is_upper_char or not is_digit:
+            raise ValueError("The password must be 8 or more characters with at least 1 digit and 1 uppercase letter.")
+        self.__password = value
+
+    def __str__(self):
+        length_password = len(self.__password)
+        return f"You have a profile with username: \"{self.__username}\" and password: {length_password * '*'}"
 
 
 ##########: TEST CODE :##########
