@@ -9,8 +9,11 @@
 </head>
 
 <body style="background-color: #0d1117; color: white; align-items: center; height: 100vh; margin: 0;">
+
+    
 |<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop">Back to Python OOP</a>|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/05_static_and_class_methods/lab">Lab</a>|<a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/05_static_and_class_methods/exercise">Exercise</a>|
 |-|-|-|
+
 
 > Class and Static Methods
 
@@ -19,9 +22,13 @@
 3. Class Methods
 
 > ### Static Methods
+
 ▪ It knows nothing about the class or instance it is called on
+
 ▪ It cannot modify object state or class state
+
 ▪ It could be put outside the class, but it is inside the class where it is applicable
+
 ▪ To turn a method into a static, we add a line with @staticmethod in front of the method header 
 
 Example: Static Methods
