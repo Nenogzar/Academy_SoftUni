@@ -127,7 +127,9 @@ second_pizza = Pizza.quattro_formaggi()
 ### Benefits
 
 > ▪ Simply provide a shortcut for creating new instance objects
+
 > ▪ Ensures correct instance creation of the derived class
+
 > ▪ You could easily follow the Don't Repeat Yourself (DRY) principle using class methods
 
 
@@ -144,7 +146,7 @@ second_pizza = Pizza.quattro_formaggi()
     ▪ __repr__()
 
 Skeleton: Shop
-
+```py
 class Shop:
     def __init__(self, name, type, capacity):
         pass
@@ -161,4 +163,133 @@ class Shop:
     
     def __repr__(self):
         pass
+```
+
+### Problem:👈 Integer
+
+▪ Follow the instructions in the lab document and create a class called Integer with the following methods
+
+▪ from_float(value)
+
+▪ from_roman(value)
+
+▪ from_string(value)
+
+Skeleton: Integer
+
+```py
+class Integer:
+    def __init__(self, value):
+        self.value = value
+
+    @classmethod
+    def from_float(cls, float_value):
+        pass
+
+    @classmethod
+    def from_roman(cls, value):
+        pass
+
+    @classmethod
+    def from_string(cls, value):
+        pass
+
+```
+
+
+> # Overriding Using Class Methods
+
+
+
+```py
+class Person:
+    min_age = 0
+    max_age = 150
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @staticmethod
+    def __validate_age(value):
+        if value < Person.min_age or \
+        value > Person.max_age:
+        raise ValueError()
+
+    @property
+    def age(self):
+        return self.__age
+
+    @age.setter
+    def age(self, value):
+        self.__validate_age(value)
+        self.__age = value
+```
+
+```py
+class Employee(Person):
+    min_age = 16
+    max_age = 150
+    def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+@staticmethod
+def __validate_age(value):
+    if value < Employee.min_age or \
+    value > Employee.max_age:
+    raise ValueError()
+
+@property
+def age(self):
+    return self.__age
+
+@age.setter
+def age(self, value):
+    self.__validate_age(value)
+    self.__age = value
+
+```
+
+> ▪ If the methods do not rely on state and they are the same, they could be optimized using @classmethod
+
+```py
+class Person:
+    min_age = 0
+    max_age = 150
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def __validate_age(cls, value):
+        raise ValueError(f'{value} must be between '
+                        f'{cls.min_age} and {cls.max_age}')
+# __validate_age() takes the class attributes of class Person
+
+
+    @property
+        def age(self):
+        return self.__age
+    @age.setter
+        def age(self, value):
+        self.__validate_age(value)
+        self.__age = value
+
+class Employee(Person):
+    min_age = 16
+    # __validate_age() takes the class attribute min_age of class Employee
+
+    def __init__(self, name, age, salary):
+        super().__init__(name, age) # when checking the age of the Employee
+        self.salary = salary
+```
+
+
+> ### Summary
+
+> ▪ A static method is a method that knows nothing about the class or instance it is called on
+> ▪ A class method, on the other hand, is bound to the class and not the object of the class
+
 </body>
