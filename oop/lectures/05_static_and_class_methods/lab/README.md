@@ -54,9 +54,13 @@ print(girl.is_adult(20)) # True
 ### Benefits
 
 > ▪ Shows that a particular method is independent of everything else around it
+> 
 > ▪ Often helps to avoid accidental modifications that go against the original design
+> 
 > ▪ Communicates and enforces developer intent about the class design
+> 
 > ▪ It is much easier to test since it is completely independent from the rest of the class
+
 
 
 
