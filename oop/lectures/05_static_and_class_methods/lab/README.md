@@ -290,6 +290,7 @@ class Employee(Person):
 > ### Summary
 
 > ▪ A static method is a method that knows nothing about the class or instance it is called on
+
 > ▪ A class method, on the other hand, is bound to the class and not the object of the class
 
 </body>
