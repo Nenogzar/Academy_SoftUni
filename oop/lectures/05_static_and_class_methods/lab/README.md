@@ -130,7 +130,7 @@ class Pizza:
 first_pizza = Pizza.peperoni()
 second_pizza = Pizza.quattro_formaggi()
 ```
-whi can add more ingredients to pizza:
+we may add additional ingredients to the pizza:
 ```py
      @classmethod
         def quattro_formaggi(cls, additional_ingredients = []):
