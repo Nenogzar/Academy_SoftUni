@@ -38,16 +38,23 @@ To call a static method, we could use both the instance or the class
 
 ```py
 class Person:
+
     def __init__(self, name):
         self.name = name
 
-    @staticmethod        
-        def is_adult(age):    # It does not take a self parameter
+    def change_name(self, new_name):
+        self.name = new_name
+
+    @staticmethod
+    def is_adult(age):
         return age >= 18
 
-print(Person.is_adult(5)) # False
-girl = Person("Amy")
-print(girl.is_adult(20)) # True
+person = Person("Name")
+print(person.name)        # Name
+person.change_name("New name")
+print(person.name)        # Ne name
+print(person.is_adult(20))    # True
+print(person.is_adult(17))    # False
 
 ```
 
