@@ -130,6 +130,21 @@ class Pizza:
 first_pizza = Pizza.peperoni()
 second_pizza = Pizza.quattro_formaggi()
 ```
+whi can add more ingredients to pizza:
+```py
+     @classmethod
+        def quattro_formaggi(cls, additional_ingredients = []):
+            all_ingredient = ["mozzarella", "gorgonzola", "fontina", "parmigiano"] + additional_ingredients
+            return cls(all_ingredient)
+
+first_pizza = Pizza.pepperoni()
+second_pizza = Pizza.quattro_formaggi(["banana"])
+
+
+print(second_pizza.ingredients)
+```
+
+
 
 ### Benefits
 
