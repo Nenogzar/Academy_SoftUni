@@ -21,7 +21,7 @@ for file_name in matrix:
         file.write(f'{symbol}{section_name}{symbol[::-1]}\n'
                    f'\n{symbol}{" " + file_name + " "}{symbol[::-1]}\n '
                    f'\n{symbol} TASK CONDITION {symbol[::-1]}\n'
-                   f'"""\n '
+                   f'"""\n'
                    f'{judge_link}\n'
                    f'\n"""\n'
                    f'\n##########: SOLUTION :##########\n\n\n'
@@ -30,4 +30,3 @@ for file_name in matrix:
                    f'\n##########: UNITTEST :##########\n\n\n')
 
 print("The files were created successfully.")
-

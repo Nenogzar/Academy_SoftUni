@@ -1,7 +1,7 @@
 # ******* Polymorphism and Abstraction - Lab ******* #
 
 # *******  04_shapes  ******* #
- 
+
 # *******  TASK CONDITION  ******* #
 """
 https://judge.softuni.org/Contests/Practice/Index/1942
@@ -21,25 +21,46 @@ Submit all the classes and your imports in the judge system
 
 ##########: SOLUTION :##########
 
-class Shape:
-    pass
+from abc import ABC, abstractmethod
+from math import pi
 
-    def calculate_are(self):
+class Shape(ABC):
+    @abstractmethod
+    def calculate_area(self):
         pass
 
-class Circle:
-    pass
+    @abstractmethod
+    def calculate_perimeter(self):
+        pass
 
-class Rectangle:
-    pass
 
+class Circle(Shape):
+    def __init__(self, radius):
+        self.__radius = radius
+    def calculate_area(self):
+        return self.__radius * self.__radius * pi
+
+    def calculate_perimeter(self):
+        return 2*pi*self.__radius
+
+class Rectangle(Shape):
+
+    def __init__(self, width, height):
+        self.__width = width
+        self.__height = height
+
+    def calculate_area(self):
+        return self.__width * self.__height
+
+    def calculate_perimeter(self):
+        return 2*(self.__width+self.__height)
 
 ##########: TEST CODE :##########
 # 1
 
 circle = Circle(5)
 print(circle.calculate_area())
-print(circle.calculate_perimeter()
+print(circle.calculate_perimeter())
 
 # 2
 
@@ -58,5 +79,3 @@ Output:
 60
  """
 ##########: UNITTEST :##########
-
-
