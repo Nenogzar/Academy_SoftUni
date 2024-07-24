@@ -86,14 +86,11 @@ class Account:
     def __len__(self):
         return len(self._transactions)
 
-    def __iter__(self):
-        return iter(self._transactions)
+    def __getitem__(self, index):
+        return self._transactions[index]
 
     def __reversed__(self):
         return reversed(self._transactions)
-
-    def __getitem__(self, index):
-        return self._transactions[index]
 
     def __lt__(self, other):
         return self.balance < other.balance
@@ -103,6 +100,10 @@ class Account:
 
     def __ge__(self, other):
         return self.balance >= other.balance
+
+
+    def __iter__(self):
+        return iter(self._transactions)
 
     def __add__(self, other):
         new_owner = f"{self.owner}&{other.owner}"
