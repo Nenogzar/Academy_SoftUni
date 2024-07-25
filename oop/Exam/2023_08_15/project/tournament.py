@@ -27,16 +27,10 @@ class Tournament:
             "IndoorTeam": IndoorTeam
         }
 
-    def validate_equipment_type(self, equipment_type: str):
-        if equipment_type not in self.equipment_types:
-            raise Exception("Invalid equipment type!")
-
-    def validate_team_type(self, team_type: str):
-        if team_type not in self.team_types:
-            raise Exception("Invalid team type!")
 
     def add_equipment(self, equipment_type: str):
-        self.validate_equipment_type(equipment_type)
+        if equipment_type not in self.equipment_types:
+            raise Exception("Invalid equipment type!")
         equipment_class = self.equipment_types[equipment_type]
         # Създаване на инстанция на оборудването
         equipment = equipment_class()
@@ -44,7 +38,8 @@ class Tournament:
         return f"{equipment_type} was successfully added."
 
     def add_team(self, team_type: str, team_name: str, country: str, advantage: int):
-        self.validate_team_type(team_type)
+        if team_type not in self.team_types:
+            raise Exception("Invalid team type!")
 
         if len(self.teams) >= self.capacity:
             return 'Not enough tournament capacity.'
