@@ -5,6 +5,7 @@ from project.teams.indoor_team import IndoorTeam
 from project.equipment.elbow_pad import ElbowPad
 from project.equipment.knee_pad import KneePad
 
+
 class Tournament:
     def __init__(self, name: str, capacity: int):
         self.name = name
@@ -37,7 +38,8 @@ class Tournament:
     def add_equipment(self, equipment_type: str):
         self.validate_equipment_type(equipment_type)
         equipment_class = self.equipment_types[equipment_type]
-        equipment = equipment_class()  # Създаване на инстанция без параметри
+        # Създаване на инстанция на оборудването
+        equipment = equipment_class()
         self.equipment.append(equipment)
         return f"{equipment_type} was successfully added."
 
@@ -45,25 +47,25 @@ class Tournament:
         self.validate_team_type(team_type)
 
         if len(self.teams) >= self.capacity:
-            return "Not enough tournament capacity."
+            return 'Not enough tournament capacity.'
 
         if any(team.name == team_name for team in self.teams):
-            raise Exception("Team name already exists!")
+            raise Exception('Team name already exists!')
 
         team_class = self.team_types[team_type]
-        team = team_class(team_name, country, advantage)
-        self.teams.append(team)
-        return f"{team_type} was successfully added."
+        budget = BaseTeam.teams[team_type]["budget"]
+
+        self.teams.append(team_class(team_name, country, advantage, budget))
+        return f'{team_type} was successfully added.'
+
 
     def sell_equipment(self, equipment_type: str, team_name: str):
         self.validate_equipment_type(equipment_type)
-
         team = next((t for t in self.teams if t.name == team_name), None)
         if not team:
             raise Exception("No such team!")
 
         equipment_class = self.equipment_types[equipment_type]
-
         equipment = next((eq for eq in reversed(self.equipment) if isinstance(eq, equipment_class)), None)
 
         if not equipment:
@@ -88,11 +90,11 @@ class Tournament:
             raise Exception(f"The team has {team.wins} wins! Removal is impossible!")
 
         self.teams.remove(team)
+        self.capacity += 1
         return f"Successfully removed {team_name}."
 
     def increase_equipment_price(self, equipment_type: str):
         self.validate_equipment_type(equipment_type)
-
         equipment_class = self.equipment_types[equipment_type]
         count = 0
         for eq in self.equipment:

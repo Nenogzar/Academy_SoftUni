@@ -6,11 +6,6 @@ class BaseTeam(ABC):
         'IndoorTeam': 'IndoorTeam'
     }
 
-    teams = {
-        "OutdoorTeam": {"budget": 1000.0, "advantage": 115},
-        "IndoorTeam": {"budget": 500.0, "advantage": 145}
-    }
-
     def __init__(self, name: str, country: str, advantage: int, budget: float):
         self.name = name
         self.country = country
@@ -18,6 +13,12 @@ class BaseTeam(ABC):
         self.budget = budget
         self.wins = 0
         self.equipment = []
+        self.team_name = self.__class__.__name__
+
+    teams = {
+        "OutdoorTeam": {"budget": 1000.0, "advantage": 115},
+        "IndoorTeam": {"budget": 500.0, "advantage": 145}
+    }
 
     @staticmethod
     def check_name(value):
@@ -50,12 +51,12 @@ class BaseTeam(ABC):
     @advantage.setter
     def advantage(self, value):
         if int(value) <= 0:
-            raise ValueError('Advantage must be greater than zero!')
+            raise ValueError ('Advantage must be greater than zero!')
         self._advantage = value
 
     def win(self):
         team_type = self.__class__.__name__
-        self._advantage += BaseTeam.teams[team_type]["advantage"]
+        self._advantage += self.teams[team_type]["advantage"]
         self.wins += 1
 
     def get_statistics(self):
@@ -72,3 +73,9 @@ class BaseTeam(ABC):
             f"Total Equipment Price: {total_equipment_price:.2f}\n"
             f"Average Protection: {avg_protection}"
         )
+
+class OutdoorTeam(BaseTeam):
+    pass
+
+class IndoorTeam(BaseTeam):
+    pass
