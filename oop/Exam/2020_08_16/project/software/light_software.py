@@ -2,12 +2,12 @@ from project.software.software import Software
 
 
 class LightSoftware(Software):
-    __TYPE = "Light"
-    __CAPACITY = 1.5
-    __MEMORY = 0.5
+    __SOFTWARE_TYPE = "Light"
+    __CAPACITY_CONSUMPTION = 1.5
+    __MEMORY_CONSUMPTION = 0.5
 
-    def __init__(self, name: str, capacity_consumption: int, memory_consumption: int):
+    def __init__(self, name, capacity_consumption, memory_consumption):
         super().__init__(name,
-                         LightSoftware.__TYPE,
-                         int(capacity_consumption * LightSoftware.__CAPACITY),
-                         int(memory_consumption * LightSoftware.__MEMORY))
+                         LightSoftware.__SOFTWARE_TYPE,
+                         int(capacity_consumption * LightSoftware.__CAPACITY_CONSUMPTION),
+                         int(memory_consumption * LightSoftware.__MEMORY_CONSUMPTION))

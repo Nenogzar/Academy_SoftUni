@@ -2,12 +2,12 @@ from project.hardware.hardware import Hardware
 
 
 class HeavyHardware(Hardware):
-    __TYPE = "Heavy"
-    __CAPACITY = 2
-    __MEMORY = 0.75
+    __HARDWARE_TYPE = "Heavy"
+    __CAPACITY_SPACE = 2
+    __MEMORY_SPACE = 0.75
 
     def __init__(self, name: str, capacity: int, memory: int):
         super().__init__(name,
-                         HeavyHardware.__TYPE,
-                         int(capacity * HeavyHardware.__CAPACITY),
-                         int(memory * HeavyHardware.__MEMORY))
+                         HeavyHardware.__HARDWARE_TYPE,
+                         int(capacity * HeavyHardware.__CAPACITY_SPACE),
+                         int(memory * HeavyHardware.__MEMORY_SPACE))
