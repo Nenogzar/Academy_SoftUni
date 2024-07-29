@@ -14,4 +14,4 @@ class YoungCoupleWithChildren(Room):
         self.children = list(children)
         total_person = self.member_in_room + len(self.children)
         self.appliances = self.appliance * total_person
-        self.calculate_expenses(self.children, self.appliance)
+        self.calculate_expenses(self.children, self.appliances)
