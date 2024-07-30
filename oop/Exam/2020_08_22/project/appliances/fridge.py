@@ -1,8 +1,0 @@
-from project.appliances.appliance import Appliance
-
-
-class Fridge(Appliance):
-    cost = 1.20
-
-    def __init__(self):
-        super().__init__(self.cost)

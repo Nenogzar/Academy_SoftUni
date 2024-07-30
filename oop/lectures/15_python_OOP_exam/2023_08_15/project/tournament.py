@@ -1,8 +1,9 @@
-from project.teams.indoor_team import IndoorTeam
-from project.teams.outdoor_team import OutdoorTeam
 from project.equipment.base_equipment import BaseEquipment
-from project.equipment.knee_pad import KneePad
+from project.teams.base_team import BaseTeam
+from project.teams.outdoor_team import OutdoorTeam
+from project.teams.indoor_team import IndoorTeam
 from project.equipment.elbow_pad import ElbowPad
+from project.equipment.knee_pad import KneePad
 
 
 class Tournament:
@@ -26,42 +27,43 @@ class Tournament:
             "IndoorTeam": IndoorTeam
         }
 
-    @property
-    def name(self):
-        return self._name
-
-    @name.setter
-    def name(self, value):
-        if not value.replace(" ", "").isalnum():
-            raise ValueError("Tournament name should contain letters and digits only!")
-        self._name = value
 
     def add_equipment(self, equipment_type: str):
         if equipment_type not in self.equipment_types:
             raise Exception("Invalid equipment type!")
-
         equipment_class = self.equipment_types[equipment_type]
         equipment = equipment_class()
         self.equipment.append(equipment)
         return f"{equipment_type} was successfully added."
 
     def add_team(self, team_type: str, team_name: str, country: str, advantage: int):
-        if self.capacity == 0:
-            return "Not enough tournament capacity."
-
         if team_type not in self.team_types:
             raise Exception("Invalid team type!")
 
-        self.capacity -= 1
+        if len(self.teams) >= self.capacity:
+            return 'Not enough tournament capacity.'
+
+        if any(team.name == team_name for team in self.teams):
+            raise Exception('Team name already exists!')
+
         team_class = self.team_types[team_type]
-        team = team_class(name=team_name, country=country, advantage=advantage)
-        self.teams.append(team)
-        return f"{team_type} was successfully added."
+        budget = BaseTeam.teams[team_type]["budget"]
+
+        self.teams.append(team_class(team_name, country, advantage, budget))
+        return f'{team_type} was successfully added.'
+
 
     def sell_equipment(self, equipment_type: str, team_name: str):
+        self.validate_equipment_type(equipment_type)
         team = next((t for t in self.teams if t.name == team_name), None)
+        if not team:
+            raise Exception("No such team!")
 
-        equipment = next((e for e in reversed(self.equipment) if e.__class__.__name__ == equipment_type), None)
+        equipment_class = self.equipment_types[equipment_type]
+        equipment = next((eq for eq in reversed(self.equipment) if isinstance(eq, equipment_class)), None)
+
+        if not equipment:
+            raise Exception("No such equipment!")
 
         if team.budget < equipment.price:
             raise Exception("Budget is not enough!")
@@ -74,47 +76,56 @@ class Tournament:
 
     def remove_team(self, team_name: str):
         team = next((t for t in self.teams if t.name == team_name), None)
-        if team is None:
+
+        if not team:
             raise Exception("No such team!")
 
         if team.wins > 0:
             raise Exception(f"The team has {team.wins} wins! Removal is impossible!")
 
-        self.capacity += 1
         self.teams.remove(team)
+        self.capacity += 1
         return f"Successfully removed {team_name}."
 
     def increase_equipment_price(self, equipment_type: str):
-        equipment_to_update = [e for e in self.equipment if e.__class__.__name__ == equipment_type]
+        self.validate_equipment_type(equipment_type)
+        equipment_class = self.equipment_types[equipment_type]
+        count = 0
+        for eq in self.equipment:
+            if isinstance(eq, equipment_class):
+                eq.increase_price()
+                count += 1
 
-        for equipment in equipment_to_update:
-            equipment.increase_price()
-
-        return f"Successfully changed {len(equipment_to_update)}pcs of equipment."
+        return f"Successfully changed {count}pcs of equipment."
 
     def play(self, team_name1: str, team_name2: str):
         team1 = next((t for t in self.teams if t.name == team_name1), None)
         team2 = next((t for t in self.teams if t.name == team_name2), None)
 
+        if not team1 or not team2:
+            raise Exception("No such team!")
+
         if type(team1) != type(team2):
             raise Exception("Game cannot start! Team types mismatch!")
 
-        team1_result = team1.advantage + sum(e.protection for e in team1.equipment)
-        team2_result = team2.advantage + sum(e.protection for e in team2.equipment)
+        total1 = team1.advantage + sum(eq.protection for eq in team1.equipment)
+        total2 = team2.advantage + sum(eq.protection for eq in team2.equipment)
 
-        if team1_result > team2_result:
+        if total1 > total2:
             team1.win()
             return f"The winner is {team_name1}."
-        elif team2_result > team1_result:
+        elif total2 > total1:
             team2.win()
             return f"The winner is {team_name2}."
         else:
             return "No winner in this game."
 
     def get_statistics(self):
-        stats = [f"Tournament: {self.name}"]
-        stats.append(f"Number of Teams: {len(self.teams)}")
-        stats.append("Teams:")
+        stats = [
+            f"Tournament: {self.name}",
+            f"Number of Teams: {len(self.teams)}",
+            "Teams:"
+        ]
 
         sorted_teams = sorted(self.teams, key=lambda t: t.wins, reverse=True)
         for team in sorted_teams:
