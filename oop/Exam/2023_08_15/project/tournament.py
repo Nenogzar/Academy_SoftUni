@@ -32,7 +32,6 @@ class Tournament:
         if equipment_type not in self.equipment_types:
             raise Exception("Invalid equipment type!")
         equipment_class = self.equipment_types[equipment_type]
-        # Създаване на инстанция на оборудването
         equipment = equipment_class()
         self.equipment.append(equipment)
         return f"{equipment_type} was successfully added."
