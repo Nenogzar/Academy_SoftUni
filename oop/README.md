@@ -146,3 +146,29 @@ This is my collection of solutions to the tasks included in the SoftUni OOP whit
 </td>
   </tr>
 </table>
+
+
+
+
+
+
+<table>
+  <tr>
+    <th><a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/15_python_OOP_exam"><img src="https://github.com/Nenogzar/Academy_SoftUni/blob/main/oop/image/12.jpg" alt="EXAMS" width="500"></a></th>
+    <th><a href=><img src="" alt="" width="500"></a></th>
+  </tr>
+
+  <tr>
+    <td>
+    <a href="https://github.com/Nenogzar/Academy_SoftUni/tree/main/oop/lectures/15_python_OOP_exam">EXAMS</a>
+|  
+    <a href=""></a>
+    
+</td>
+    <td>
+    <a href=""></a>
+| 
+    <a href=""></a>
+</td>
+  </tr>
+</table>
