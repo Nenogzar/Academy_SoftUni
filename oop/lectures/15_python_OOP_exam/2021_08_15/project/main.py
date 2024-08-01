@@ -6,128 +6,101 @@ from project.drink.water import Water
 from project.table.inside_table import InsideTable
 from project.table.outside_table import OutsideTable
 from project.bakery import Bakery
-# """Cake"""
-# print("Cake")
-# try:
-#     pasta = Cake("Garash", 1.5)
-#     print(repr(pasta))
-# except ValueError as e:
-#     print(e)
-#
-# print("________________________")
-# """Bread"""
-# print("Bread")
-# try:
-#     leb = Bread("Mek leb", 5.8)
-#     print(repr(leb))
-# except ValueError as e:
-#     print(e)
-#
-# print("________________________")
-# """Tea"""
-# print("Tea")
-# try:
-#     tea = Tea("Black tea", 150, "Ahmad")
-#     print(repr(tea))
-# except ValueError as e:
-#     print(e)
-# print("________________________")
-# """Water"""
-# print("Water")
-# try:
-#     water = Water("Mineral water", 220, "Bankya")
-#     print(repr(water))
-# except ValueError as e:
-#     print(e)
-#
-# print("________________________")
-#
-# """table OutsideTable"""
-# print("OutsideTable")
-# try:
-#     tab = OutsideTable(49,10)
-#     print(repr(tab))
-#     print(tab.free_table_info())
-# except ValueError as e:
-#     print(e)
-# print("________________________")
-# """InsideTable"""
-# print("InsideTable")
-# try:
-#     tab1 = InsideTable(51,5)
-#     print(repr(tab1))
-#     print(tab1.free_table_info())
-# except ValueError as e:
-#     print(e)
-# print("________________________")
-#
-# tab2 = InsideTable(3,5)
-# tab2.reserve(4)
-#
-# print(tab2.is_reserved)
-# print(tab2.number_of_people)
-# print(tab2.free_table_info())
-# print("_____")
-#
-# tab2.clear()
-# print(tab2.is_reserved)
-# print(tab2.number_of_people)
-#
-#
-# print("________________________")
-# """Bakery"""
-# print("Bakery")
-#
-# try:
-#     app = Bakery("Koza")
-#     print(app)
-#     print(app.get_free_tables_info())
-# except ValueError as e:
-#     print(e)
-#
-# print("________________________")
-#
-# """add_food"""
-# print("add_food")
-# try:
-#     mandja = Bakery("Yare")
-#     print(mandja.add_food("Bread", "Tipov", 2.2))
-#     print(mandja.add_food("Bread", "Tipov", 2.2))
-#
-# except ValueError as e:
-#     print(e)
-#
-# print("________________________")
-#
-# """add_drink"""
-# print("add_drink")
-# try:
-#     ahmad = Bakery("Chay")
-#     print(ahmad.add_drink("Water", "Rose", 200, "Mechka"))
-#     print(ahmad.add_drink("Tea", "Black", 200, "Ahmad"))
-#     print(ahmad.add_drink("Tea", "Black", 200, "Ahmad"))
-#
-# except ValueError as e:
-#     print(e)
-#
-# print("________________________")
-#
-# """add_table"""
-# print("add_table")
-# try:
-#     masa = Bakery("Chay")
-#     print(masa.add_table("InsideTable", 10, 6))
-#     print(masa.add_table("InsideTable", 55, 6))
-#     print(masa.add_table("InsideTable", 0, 6))
-#
-# except ValueError as e:
-#     print(e)
-#
-# print("________________________")
 
-"""reserve_table"""
-print("reserve_table")
 try:
+    #
+    # """Cake"""
+    # print("Cake")
+    #
+    # pasta = Cake("Garash", 1.5)
+    # print(repr(pasta))
+    # print("________________________")
+    #
+    # """Bread"""
+    # print("Bread")
+    #
+    # leb = Bread("Mek leb", 5.8)
+    # print(repr(leb))
+    # print("________________________")
+    #
+    # """Tea"""
+    # print("Tea")
+    #
+    # tea = Tea("Black tea", 150, "Ahmad")
+    # print(repr(tea))
+    # print("________________________")
+    #
+    # """Water"""
+    # print("Water")
+    #
+    # water = Water("Mineral water", 220, "Bankya")
+    # print(repr(water))
+    # print("________________________")
+    #
+    # """table OutsideTable"""
+    # print("OutsideTable")
+    #
+    # tab = OutsideTable(49, 10)
+    # print(repr(tab))
+    # print(tab.free_table_info())
+    # print("________________________")
+
+    # """InsideTable"""
+    # print("InsideTable")
+    #
+    # tab1 = InsideTable(51, 5)
+    # print(repr(tab1))
+    # print(tab1.free_table_info())
+    # print("________________________")
+    #
+    # tab2 = InsideTable(3, 5)
+    # tab2.reserve(4)
+    #
+    # print(tab2.is_reserved)
+    # print(tab2.number_of_people)
+    # print(tab2.free_table_info())
+    # print("_____")
+    #
+    # tab2.clear()
+    # print(tab2.is_reserved)
+    # print(tab2.number_of_people)
+    # print("________________________")
+
+    # """Bakery"""
+    # print("Bakery")
+    #
+    # app1 = Bakery("Koza")
+    # print(app1)
+    # print(app1.get_free_tables_info())
+    # print("________________________")
+    #
+    # """add_food"""
+    # print("add_food")
+    #
+    # mandja = Bakery("Yare")
+    # print(mandja.add_food("Bread", "Tipov", 2.2))
+    # print(mandja.add_food("Bread", "Tipov", 2.2))
+    # print("________________________")
+    #
+    # """add_drink"""
+    # print("add_drink")
+    #
+    # ahmad = Bakery("Chay")
+    # print(ahmad.add_drink("Water", "Rose", 200, "Mechka"))
+    # print(ahmad.add_drink("Tea", "Black", 200, "Ahmad"))
+    # print(ahmad.add_drink("Tea", "Black", 200, "Ahmad"))
+
+    # """add_table"""
+    # print("________________________")
+    # print("add_table")
+    # masa = Bakery("Chay")
+    # print(masa.add_table("InsideTable", 10, 6))
+    # print(masa.add_table("InsideTable", 55, 6))
+    # print(masa.add_table("InsideTable", 0, 6))
+
+    """Bakery"""
+    print("Bakery")
+    print("________________________")
     app = Bakery("Dom")
     print(app.add_food("Bread", "White", 2.50))
     print(app.add_food("Bread", "Black", 2.00))
@@ -152,6 +125,7 @@ try:
 
     print("*****************************")
     print(app.get_total_income())
+
 except ValueError as e:
     print(e)
 
