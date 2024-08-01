@@ -13,7 +13,7 @@ class Astronaut(ABC):
 
     @property
     def name(self):
-        return
+        return self.__name
 
     @name.setter
     def name(self, value):
