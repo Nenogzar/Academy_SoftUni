@@ -49,7 +49,7 @@ class Movie(ABC):
 
     @age_restriction.setter
     def age_restriction(self, value):
-        Validation.valid_number(value, self._restrict_age, self._message)  #  todo
+        Validation.valid_number(value, self._restrict_age, self._message)
         self.__age_restriction = value
 
     @abstractmethod

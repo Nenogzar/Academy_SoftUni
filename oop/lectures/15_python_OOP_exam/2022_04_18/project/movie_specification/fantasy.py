@@ -16,4 +16,3 @@ class Fantasy(Movie):
                             f"Age restriction:{self.age_restriction}, " \
                             f"Likes:{self.likes}, " \
                             f"Owned by:{self.owner.username}"
-
