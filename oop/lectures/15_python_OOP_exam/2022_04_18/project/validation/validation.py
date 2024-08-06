@@ -16,3 +16,9 @@ class Validation:
     def movie_owner(owner):
         if owner.__class__.__name__ != "User":
             raise ValueError("The owner must be an object of type User!")
+
+
+    @staticmethod
+    def user_owned_movie(client_class, movie_class):
+        if movie_class.owner.username != client_class.username:
+            raise Exception(f"{client_class.username} is not the owner of the movie {movie_class.title}!")
