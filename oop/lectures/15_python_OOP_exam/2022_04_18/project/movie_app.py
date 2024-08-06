@@ -2,6 +2,7 @@ from typing import List
 
 from project.movie_specification.movie import Movie
 from project.user import User
+from project.validation.validation import Validation
 
 
 class MovieApp:
@@ -30,8 +31,9 @@ class MovieApp:
             raise Exception("This user does not exist!")
 
         # Ако намереният потребител не е собственик на филма"""
-        if movie.owner.username != username:
-            raise Exception(f"{username} is not the owner of the movie {movie.title}!")
+        # if movie.owner.username != username:
+        #     raise Exception(f"{username} is not the owner of the movie {movie.title}!")
+        Validation.user_owned_movie(user,movie)
 
         # Проверка дали филмът вече е добавен"""
         if movie in self.movies_collection:
@@ -48,10 +50,13 @@ class MovieApp:
         if movie not in self.movies_collection:
             raise Exception(f"The movie {movie.title} is not uploaded!")
 
-        # Проверка дали потребителят е собственик на филма
-        if movie.owner.username != username:
-            raise Exception(f"{username} is not the owner of the movie {movie.title}!")
 
+        # Проверка дали потребителят е собственик на филма
+        user = next(u for u in self.users_collection if u.username == username)
+        # if movie.owner.username != username:
+        #     raise Exception(f"{username} is not the owner of the movie {movie.title}!")
+        Validation.user_owned_movie(user,movie)
+        
         # Актуализиране на атрибутите на филма според kwargs
         for key, value in kwargs.items():
             if key == "title":
@@ -69,9 +74,12 @@ class MovieApp:
         if movie not in self.movies_collection:
             raise Exception(f"The movie {movie.title} is not uploaded!")
 
+        
         # Проверка дали потребителят е собственик на филма
-        if movie.owner.username != username:
-            raise Exception(f"{username} is not the owner of the movie {movie.title}!")
+        user = next(u for u in self.users_collection if u.username == username)
+        # if movie.owner.username != username:
+        #     raise Exception(f"{username} is not the owner of the movie {movie.title}!")
+        Validation.user_owned_movie(user, movie)
 
         # Премахване на филма от списъка на филмите
         user = next(u for u in self.users_collection if u.username == username)
