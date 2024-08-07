@@ -124,7 +124,6 @@ class HorseRaceApp:
         if winner_jockey is None:
             raise Exception(f"Horse race {race_type} needs at least two participants!")
 
-        # Резултат
         return (f"The winner of the {race_type} race, with a speed of {highest_speed}km/h is "
                 f"{winner_jockey.name}! Winner's horse: {winner_jockey.horse.name}.")
 
