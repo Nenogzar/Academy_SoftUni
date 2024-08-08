@@ -23,11 +23,6 @@ class RobotsManagingApp:
         return {"MainService": MainService,
                 "SecondaryService": SecondaryService}
 
-    @property
-    def valid_service_for_robot(self):
-        return {"FemaleRobot": MainService,
-                "MaleRobot": SecondaryService}
-
     def add_service(self, service_type: str, name: str):
         if service_type not in self.type_service_mapper:
             raise Exception("Invalid service type!")
