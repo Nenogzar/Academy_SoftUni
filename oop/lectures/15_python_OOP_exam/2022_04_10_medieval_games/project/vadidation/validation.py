@@ -21,7 +21,7 @@ class Validation:
             raise ValueError(message)
 
     @staticmethod
-    def valid_stanima(stanima, min_stamina, max_stamina, message):
-        # if stanima not in range(min_stamina, max_stamina+1):
-        if stanima < min_stamina and stanima > max_stamina:
+    def valid_stanima(stamina, min_stamina, max_stamina, message):
+        if not min_stamina <= stamina <= max_stamina:
+        # if stamina not in range(min_stamina, max_stamina+1):
             raise ValueError(message)
