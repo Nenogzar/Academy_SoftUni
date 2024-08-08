@@ -74,18 +74,18 @@ class Controller:
             attacker, defender = second_player, first_player
 
         # First attack
-        damage = attacker.stamina / 2
-        defender.stamina -= damage
-        if defender.stamina < 0:
+        if defender.stamina - (attacker.stamina / 2) <= 0:
             defender.stamina = 0  # Set to 0 instead of negative value
             return f"Winner: {attacker.name}"
+        else:
+            defender.stamina -= attacker.stamina / 2
 
         # Second attack
-        damage = defender.stamina / 2
-        attacker.stamina -= damage
-        if attacker.stamina < 0:
+        if attacker.stamina -(defender.stamina / 2) <= 0:
             attacker.stamina = 0  # Set to 0 instead of negative value
             return f"Winner: {defender.name}"
+        else:
+            attacker.stamina -= defender.stamina / 2
 
         # Determine winner
         if first_player.stamina > second_player.stamina:
@@ -97,9 +97,10 @@ class Controller:
     def next_day(self):
         # Reduce stamina by age * 2 for each player
         for player in self.players:
-            player.stamina -= player.age * 2
-            if player.stamina < 0:
+            if player.stamina - (player.age * 2) < 0:
                 player.stamina = 0
+            else:
+                player.stamina -= player.age * 2
 
         # Sustain each player with one food and one drink
         for player in self.players:
