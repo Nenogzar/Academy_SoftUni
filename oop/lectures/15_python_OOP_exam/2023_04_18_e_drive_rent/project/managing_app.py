@@ -91,7 +91,9 @@ class ManagingApp:
 
         damaged_vehicles.sort(key=lambda v: (v.brand, v.model))
 
-        vehicles_to_repair = damaged_vehicles[:count] if count > 0 else damaged_vehicles
+        # vehicles_to_repair = damaged_vehicles[:count] if count > 0 else damaged_vehicles # TODO ако ти подадът 0
+        vehicles_to_repair = damaged_vehicles[:count] if count >= 0 else damaged_vehicles  # >= един вариант
+        # vehicles_to_repair = damaged_vehicles[:count] # TODO може и така за по-кратко
 
         for vehicle in vehicles_to_repair:
             vehicle.is_damaged = False

@@ -8,7 +8,7 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
         self.driving_license_number = driving_license_number
-        self.rating = 0.00
+        self.rating = 0
         self.is_blocked = False     # represents the user’s blocked status.
 
     @property
@@ -49,23 +49,26 @@ class User:
 
     # thanks to Bilyana Panova
     def increase_rating(self):
-        if (self.rating + self.increases_points) > 10:
-            self.rating = 10
-        self.rating += self.increases_points
-        #self.rating = min(10, self.rating + self.increases_points)
+        # if (self.rating + self.increases_points) > 10:
+        #     self.rating = 10
+        # else:
+        #     self.rating += self.increases_points
+        self.rating = min(10, self.rating + self.increases_points)
 
     def decrease_rating(self):
-        result = self.rating - self.decreases_points
-        if result < 0:
+        # result = self.rating - self.decreases_points
+        # if result < 0:
+        #     self.rating = 0
+        #     self.is_blocked = True
+        # else:
+        #     self.rating -= 2.0
+
+
+        if(self.rating - self.decreases_points) < 0:
             self.rating = 0
             self.is_blocked = True
         else:
-            self.rating -= 2.0
-
-
-        # if(self.rating - self.decreases_points) < 0:
-        #     self.rating = 0
-        # self.rating -= self.decreases_points
+            self.rating -= self.decreases_points
         #self.rating = max(0, self.rating - self.decreases_points)
 
     def __str__(self):
