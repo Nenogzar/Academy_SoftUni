@@ -1,11 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\fundamentals_python",
-    "\\fundamentals_python\\lectures",
     "\\fundamentals_python\\lectures\\24_Software Development Conceptions - 2",
-    "\\fundamentals_python\\lectures\\25-26_Dictionaries"
+    "\\fundamentals_python\\lectures\\25-26_Dictionaries",
+    "\\oop",
+    "\\oop\\lectures",
+    "\\oop\\lectures\\15_python_OOP_exam",
+    "\\oop\\lectures\\15_python_OOP_exam\\2022_08_14_horse_racings",
+    "\\oop\\lectures\\15_python_OOP_exam\\2022_08_14_horse_racings\\project"
   ],
-  "SelectedNode": "\\fundamentals_python\\README.md",
+  "SelectedNode": "\\oop\\lectures\\15_python_OOP_exam\\2022_08_14_horse_racings",
   "PreviewInSolutionExplorer": false
 }
