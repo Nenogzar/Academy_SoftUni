@@ -18,7 +18,7 @@ class Validation:
 
     @staticmethod
     def three_white_space(value, message):
-        if len(value) != 3 or value.isspace():
+        if len(value) != 3 or " " in value:
             raise ValueError(message)
 
     @staticmethod
