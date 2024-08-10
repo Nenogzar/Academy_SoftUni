@@ -1,7 +1,7 @@
 class Validation:
     @staticmethod
     def validate_len_white_space(value, length, message):
-        if len(value) < length:
+        if len(value.strip()) < length :
             raise ValueError(message)
 
     @staticmethod
