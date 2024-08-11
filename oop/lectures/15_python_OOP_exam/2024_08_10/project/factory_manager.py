@@ -60,7 +60,7 @@ class FactoryManager:
             return "Products do not match in type. Nothing sold."
 
         for product in matching_products:
-            store.products.append(product)
+            store.products.remove(product)
             self.products.remove(product)
             store.capacity -= 1
             self.income += product.price
@@ -127,3 +127,4 @@ class FactoryManager:
         result.extend(store_names)
 
         return "\n".join(result)
+
