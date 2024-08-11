@@ -1,0 +1,17 @@
+from project.products.base_product import BaseProduct
+
+
+class Chair(BaseProduct):
+    MATERIAL = 'Wood'
+    SUB_TYPE = 'Furniture'
+    DISCOUNT = 0.1
+
+    def __init__(self, model: str, price: float):
+        super().__init__(model, price, self.MATERIAL, self.SUB_TYPE)
+
+
+    def discount(self):
+        self.price *= (1-self.DISCOUNT)
+
+    def get_sub_type(self):
+        return self.SUB_TYPE
