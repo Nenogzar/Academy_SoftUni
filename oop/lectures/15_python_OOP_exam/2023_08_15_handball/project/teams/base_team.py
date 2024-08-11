@@ -1,81 +1,60 @@
 from abc import ABC, abstractmethod
 
-class BaseTeam(ABC):
-    valid_team_types = {
-        'OutdoorTeam': 'OutdoorTeam',
-        'IndoorTeam': 'IndoorTeam'
-    }
+from project.equipment.base_equipment import BaseEquipment
 
+from typing import List
+
+
+class BaseTeam(ABC):
     def __init__(self, name: str, country: str, advantage: int, budget: float):
         self.name = name
         self.country = country
         self.advantage = advantage
         self.budget = budget
-        self.wins = 0
-        self.equipment = []
-        self.team_name = self.__class__.__name__
-
-    teams = {
-        "OutdoorTeam": {"budget": 1000.0, "advantage": 115},
-        "IndoorTeam": {"budget": 500.0, "advantage": 145}
-    }
-
-    @staticmethod
-    def check_name(value):
-        return value.replace(" ", "").isalnum()
+        self.wins = 0.00
+        self.equipment: List[BaseEquipment] = []
 
     @property
     def name(self):
-        return self._name
+        return self.__name
 
     @name.setter
     def name(self, value):
-        if not self.check_name(value):
+        if value == "" or value.isspace():
             raise ValueError("Team name cannot be empty!")
-        self._name = value
+        self.__name = value
 
     @property
     def country(self):
-        return self._country
+        return self.__country
 
     @country.setter
     def country(self, value):
         if len(value) < 2:
-            raise ValueError("Team country should be at least 2 symbols long!")
-        self._country = value
+            raise ValueError("Team country cannot be less than 2 characters!")
+        self.__country = value
 
     @property
     def advantage(self):
-        return self._advantage
+        return
 
     @advantage.setter
     def advantage(self, value):
-        if int(value) <= 0:
-            raise ValueError ('Advantage must be greater than zero!')
-        self._advantage = value
+        if value <= 0:
+            raise ValueError("Advantage must be greater than zero!")
+        self.__advantage = value
 
+    @abstractmethod
     def win(self):
-        team_type = self.__class__.__name__
-        self._advantage += self.teams[team_type]["advantage"]
-        self.wins += 1
+        pass
 
     def get_statistics(self):
-        total_equipment_price = sum(eq.price for eq in self.equipment)
-        avg_protection = sum(eq.protection for eq in self.equipment) / len(self.equipment) if self.equipment else 0
-        avg_protection = int(avg_protection)
+        info = [f"Name: {self.name}",
+                f"Country: {self.country}",
+                f"Advantage: {self.__advantage} points",
+                f"Budget: {self.budget:.2f}EUR",
+                f"Wins: {self.wins}",
+                f"Total Equipment Price: {sum(e.price for e in self.equipment):.2f}",
+                f"Average Protection: {int(sum(p.protection for p in self.equipment) / len(self.equipment)) if self.equipment else 0}"]
 
-        return (
-            f"Name: {self.name}\n"
-            f"Country: {self.country}\n"
-            f"Advantage: {self.advantage} points\n"
-            f"Budget: {self.budget:.2f}EUR\n"
-            f"Wins: {self.wins}\n"
-            f"Total Equipment Price: {total_equipment_price:.2f}\n"
-            f"Average Protection: {avg_protection}"
-        )
-
-class OutdoorTeam(BaseTeam):
-    pass
-
-class IndoorTeam(BaseTeam):
-    pass
+        return '\n'.join(info)

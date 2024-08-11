@@ -1,14 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\fundamentals_python\\lectures\\24_Software Development Conceptions - 2",
-    "\\fundamentals_python\\lectures\\25-26_Dictionaries",
     "\\oop",
     "\\oop\\lectures",
     "\\oop\\lectures\\15_python_OOP_exam",
-    "\\oop\\lectures\\15_python_OOP_exam\\2022_08_14_horse_racings",
-    "\\oop\\lectures\\15_python_OOP_exam\\2022_08_14_horse_racings\\project"
+    "\\oop\\lectures\\15_python_OOP_exam\\2022_08_14_horse_racings\\project",
+    "\\oop\\lectures\\15_python_OOP_exam\\2024_08_10_wood_product_manufacturing",
+    "\\oop\\lectures\\15_python_OOP_exam\\2024_08_10_wood_product_manufacturing\\project"
   ],
-  "SelectedNode": "\\oop\\lectures\\15_python_OOP_exam\\2022_08_14_horse_racings",
+  "SelectedNode": "\\oop\\lectures\\15_python_OOP_exam\\2024_08_10_wood_product_manufacturing",
   "PreviewInSolutionExplorer": false
 }

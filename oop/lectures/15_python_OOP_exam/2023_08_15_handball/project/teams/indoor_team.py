@@ -1,6 +1,14 @@
 from project.teams.base_team import BaseTeam
 
-class IndoorTeam(BaseTeam):
-    def __init__(self, name: str, country: str, advantage: int):
-        super().__init__(name, country, advantage, budget=500.0)
-        self.team_type = 'IndoorTeam'
+
+class IndoorTeam (BaseTeam):
+    TEAM_BUDGET = 500
+    INCREASES_ADVANTAGE = 145
+
+    def __init__(self, name, country: str, advantage: int):
+        super().__init__(name, country, advantage, self.TEAM_BUDGET)
+        self.wins = 0
+
+    def win(self):
+        self.advantage += self.INCREASES_ADVANTAGE
+        self.wins += 1
