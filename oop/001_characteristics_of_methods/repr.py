@@ -40,6 +40,9 @@ print(val.__repr__())   # MyClass2(value=42)
 """
 
 class Person:
+    """
+
+    """
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -57,6 +60,9 @@ print(repr(person))           # Person(name='Ivan', age=35)
 """
 
 class Point:
+    """
+
+    """
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -75,6 +81,9 @@ print(repr(p))  # Point(x=2, y=3)
 """
 
 class Rectangle:
+    """
+
+    """
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -95,6 +104,9 @@ print(r_new)  # 9
 """
 
 class Car:
+    """
+
+    """
     def __init__(self, make, model):
         self.make = make
         self.model = model
@@ -116,6 +128,9 @@ print(repr(car))  # Car(make='Toyota', model='Corolla')
 """
 
 class Matrix:
+    """
+
+    """
     def __init__(self, data):
         self.data = data
 
@@ -134,6 +149,9 @@ print(repr(m))  # Matrix =[[1, 2], [3, 4]]
 """
 
 class User:
+    """
+
+    """
     def __init__(self, username, email):
         self.username = username
         self.email = email
@@ -164,6 +182,9 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 
 class Order:
+    """
+
+    """
     def __init__(self, order_id: int, product: str, quantity: int):
         self.order_id = order_id
         self.product = product

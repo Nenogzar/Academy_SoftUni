@@ -1,12 +1,32 @@
 def move_operation(message, number_of_letters):
+    """
+
+    :param message:
+    :param number_of_letters:
+    :return:
+    """
     return message[number_of_letters:] + message[:number_of_letters]
 
 
 def insert_operation(message, index, value):
+    """
+
+    :param message:
+    :param index:
+    :param value:
+    :return:
+    """
     return message[:index] + value + message[index:]
 
 
 def change_operation(message, substring, replacement):
+    """
+
+    :param message:
+    :param substring:
+    :param replacement:
+    :return:
+    """
     return message.replace(substring, replacement)
 
 

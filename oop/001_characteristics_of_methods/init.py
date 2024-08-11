@@ -1,4 +1,7 @@
 class NewCLass:
+    """
+
+    """
     def __init__(self):
         pass
 
@@ -20,6 +23,9 @@ class NewCLass:
 
 
 class MyClass:
+    """
+
+    """
     def __init__(self, value):
         self.value = value
 
@@ -31,6 +37,9 @@ class MyClass:
 
 
 class Person:
+    """
+
+    """
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -43,6 +52,9 @@ class Person:
 
 
 class MyClass1:
+    """
+
+    """
     def __init__(self):
         return "This is not allowed"  # Това ще предизвика грешка
 
@@ -54,11 +66,17 @@ class MyClass1:
 
 
 class Base:
+    """
+
+    """
     def __init__(self, base_value):
         self.base_value = base_value
 
 
 class Derived(Base):
+    """
+
+    """
     def __init__(self, base_value, derived_value):
         super().__init__(base_value)
         self.derived_value = derived_value
@@ -72,6 +90,9 @@ class Derived(Base):
 
 
 class MyClass2:
+    """
+
+    """
     def __init__(self, *args, **kwargs):
         self.args = args
         self.kwargs = kwargs
@@ -84,6 +105,9 @@ class MyClass2:
 
 
 class Person1:
+    """
+
+    """
     def __init__(self, name, age):
         if age < 0:
             raise ValueError("Age cannot be negative")
@@ -112,6 +136,9 @@ obj = MyClass3()  # Това е валидно, дори без дефинира
 
 
 class Rectangle:
+    """
+
+    """
     def __init__(self, width, height):
         self.width = width
         self.height = height

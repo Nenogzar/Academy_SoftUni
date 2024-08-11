@@ -11,6 +11,9 @@ self е референция към текущата инстанция на к�
 
 class MyClass:
     def instance_method(self):
+        """
+
+        """
         pass
 
 
@@ -21,10 +24,17 @@ class MyClass:
 
 
 class Dog:
+    """
+
+    """
     def __init__(self, name):
         self.name = name
 
     def bark(self):
+        """
+
+        :return:
+        """
         return f"{self.name} says woof!"
 
 
@@ -46,10 +56,16 @@ print(dog.bark())  # Rex says woof!
 
 
 class Counter:
+    """
+
+    """
     def __init__(self):
         self.count = 0
 
     def increment(self):
+        """
+
+        """
         self.count += 1
 
 
@@ -65,16 +81,31 @@ print(counter.count)  # 1
 
 
 class Circle:
+    """
+
+    """
     def __init__(self, radius):
         self.radius = radius
 
     def area(self):
+        """
+
+        :return:
+        """
         return 3.14 * self.radius ** 2
 
     def perimeter(self):
+        """
+
+        :return:
+        """
         return 2 * 3.14 * self.radius
 
     def describe(self):
+        """
+
+        :return:
+        """
         return f"Circle with radius {self.radius}, area {self.area()}, and perimeter {self.perimeter()}"
 
 """
@@ -88,11 +119,18 @@ class Circle:
 
 
 class Person:
+    """
+
+    """
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
     def greet(self):
+        """
+
+        :return:
+        """
         return f"Hello, my name is {self.name} and I am {self.age} years old."
 
 

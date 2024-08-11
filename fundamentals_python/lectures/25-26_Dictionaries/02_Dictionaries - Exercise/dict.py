@@ -1,5 +1,10 @@
 """ add 1 to any elements in dict """
 def add_one(x):
+    """
+
+    :param x:
+    :return:
+    """
     return x + 1
 d = {'a':1, 'b':2, 'c':3}
 

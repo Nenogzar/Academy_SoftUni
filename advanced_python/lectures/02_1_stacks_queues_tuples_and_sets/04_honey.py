@@ -84,7 +84,9 @@ from collections import deque
 
 
 class Honey:
+    """
 
+    """
     def __init__(self):
         self.result_message = ''
         self.bees = deque()
@@ -98,21 +100,48 @@ class Honey:
         self.main_meth()
 
     def subtract_numbers(self, bee, nectar):
+        """
+
+        :param bee:
+        :param nectar:
+        :return:
+        """
         return abs(bee - nectar)
 
     def sum_numbers(self, bee, nectar):
+        """
+
+        :param bee:
+        :param nectar:
+        :return:
+        """
         return abs(bee + nectar)
 
     def divide_numbers(self, bee, nectar):
+        """
+
+        :param bee:
+        :param nectar:
+        :return:
+        """
         if nectar != 0:
             return abs(bee / nectar)
         else:
             return 0
 
     def multiply_numbers(self, bee, nectar):
+        """
+
+        :param bee:
+        :param nectar:
+        :return:
+        """
         return abs(bee * nectar)
 
     def main_meth(self):
+        """
+
+        """
         self.fill_bees_deque()
         self.fill_nectar_stack()
         self.fill_symbols_deque()
@@ -120,15 +149,27 @@ class Honey:
         self.prepare_result_message()
 
     def fill_bees_deque(self):
+        """
+
+        """
         self.bees = deque(int(n) for n in input().split())
 
     def fill_nectar_stack(self):
+        """
+
+        """
         self.nectar = [int(x) for x in input().split()]
 
     def fill_symbols_deque(self):
+        """
+
+        """
         self.symbols = deque(x for x in input().split())
 
     def collect_honey(self):
+        """
+
+        """
         while self.bees and self.nectar:
             bee = self.bees.popleft()
             nectar = self.nectar.pop()
@@ -140,6 +181,9 @@ class Honey:
             self.total_honey += self.operators[symbol](bee, nectar)
 
     def prepare_result_message(self):
+        """
+
+        """
         self.result_message = f'Total honey made: {self.total_honey}'
         if self.bees:
             self.result_message += f'\nBees left: {", ".join(str(x) for x in self.bees)}'

@@ -5,26 +5,26 @@
 project/
 │
 ├── aquarium/
-│   ├── __init__.py
+│   ├── 123.py
 │   ├── base_aquarium.py
 │   ├── freshwater_aquarium.py
 │   └── saltwater_aquarium.py
 │
 ├── decoration/
-│   ├── __init__.py
+│   ├── 123.py
 │   ├── base_decoration.py
 │   ├── ornament.py
 │   ├── plant.py
 │   └── decoration_repository.py
 │
 ├── fish/
-│   ├── __init__.py
+│   ├── 123.py
 │   ├── base_fish.py
 │   ├── freshwater_fish.py
 │   └── saltwater_fish.py
 │
 └── controller.py
-    __init__.py
+    123.py
 
 
 1.	BaseDecoration

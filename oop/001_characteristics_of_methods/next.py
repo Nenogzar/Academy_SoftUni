@@ -19,6 +19,9 @@ print(next(iterator))  # 3
 
 
 class Counter:
+    """
+
+    """
     def __init__(self, low, high):
         self.current = low
         self.high = high
@@ -47,6 +50,9 @@ print(next(counter))  # StopIteration
 
 
 class IterableCounter:
+    """
+
+    """
     def __init__(self, low, high):
         self.current = low
         self.high = high
@@ -78,6 +84,9 @@ print(f"counter: {next(counters)}")
 
 
 class Reverse:
+    """
+
+    """
     def __init__(self, data):
         self.data = data
         self.index = len(data)
@@ -116,6 +125,9 @@ print()
 
 
 class Fibonacci:
+    """
+
+    """
     def __init__(self):
         self.a, self.b = 0, 1
 
@@ -140,6 +152,9 @@ print([next(fib) for _ in range(10)])  # [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
 
 class MyIterator:
+    """
+
+    """
     def __init__(self, start, end):
         self.current = start
         self.end = end
@@ -178,6 +193,11 @@ for num in my_iter1:
 """
 
 def my_generator(start, end):
+    """
+
+    :param start:
+    :param end:
+    """
     current = start
     while current < end:
         yield current

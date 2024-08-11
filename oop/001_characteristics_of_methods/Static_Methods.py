@@ -13,6 +13,9 @@
 class MyClass:
     @staticmethod
     def static_method():
+        """
+
+        """
         pass
 """
 3.Нямат достъп до инстанционни или класови атрибути:
@@ -25,6 +28,10 @@ class NewClass:
 
     @staticmethod
     def static_method():
+        """
+
+        :return:
+        """
         return "static method called"
 
 
@@ -50,6 +57,12 @@ print(instance.static_method())  # static method called
 class Math:
     @staticmethod
     def add(a, b):
+        """
+
+        :param a:
+        :param b:
+        :return:
+        """
         return a + b
 
 print(Math.add(5, 3))  # 8
@@ -62,6 +75,11 @@ print(Math.add(5, 3))  # 8
 class Utils:
     @staticmethod
     def is_even(number):
+        """
+
+        :param number:
+        :return:
+        """
         return number % 2 == 0
 
 print(Utils.is_even(4))  # True
@@ -75,10 +93,20 @@ print(Utils.is_even(5))  # False
 class Converter:
     @staticmethod
     def to_fahrenheit(celsius):
+        """
+
+        :param celsius:
+        :return:
+        """
         return celsius * 9/5 + 32
 
     @staticmethod
     def to_celsius(fahrenheit):
+        """
+
+        :param fahrenheit:
+        :return:
+        """
         return (fahrenheit - 32) * 5/9
 
 print(Converter.to_fahrenheit(0))  # 32.0
@@ -93,10 +121,16 @@ print(Converter.to_celsius(32))    # 0.0
 class Example:
     @staticmethod
     def static_method():
+        """
+
+        """
         print("Static method")
 
     @staticmethod
     def decorated_static_method():
+        """
+
+        """
         Example.static_method()
         print("Decorated static method")
 

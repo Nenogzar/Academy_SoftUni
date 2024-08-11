@@ -111,7 +111,9 @@ print(*sorted(second_line), sep=", ")
 """ 3 """
 
 class Numbers:
+    """
 
+    """
     def __init__(self):
         self.output_message = ''
         self.commands = {'Add': self.add_numbers,
@@ -122,37 +124,61 @@ class Numbers:
         self.main_meth()
 
     def main_meth(self):
+        """
+
+        """
         self.fill_rows_with_numbers()
         self.receive_commands()
         self.prepare_result()
 
     def fill_rows_with_numbers(self):
+        """
+
+        """
         for row in self.rows:
             self.rows[row] = set(int(n) for n in input().split())
 
     def receive_commands(self):
+        """
+
+        """
         number_of_commands = int(input())
         for _ in range(number_of_commands):
             act, *data = input().split()
             self.commands[act](*data)
 
     def add_numbers(self, *args):
+        """
+
+        :param args:
+        """
         side = args[0]
         for number in args[1:]:
             self.rows[side].add(int(number))
 
     def remove_numbers(self, *args):
+        """
+
+        :param args:
+        """
         side = args[0]
         for number in args[1:]:
             self.rows[side].discard(int(number))
 
     def check_subset(self, *args):
+        """
+
+        :param args:
+        """
         if self.rows['First'].issubset(self.rows['Second']) or self.rows['Second'].issubset(self.rows['First']):
             self.output_message += 'True\n'
         else:
             self.output_message += 'False\n'
 
     def prepare_result(self):
+        """
+
+        """
         for row in self.rows:
             self.output_message += f'{", ".join(str(n) for n in sorted(self.rows[row]))} \n'
 

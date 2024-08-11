@@ -33,6 +33,9 @@ class MyClass1:
 
 
 class Person:
+    """
+
+    """
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -52,6 +55,9 @@ print(person)  # Person(name=Ivan, age=35)
 
 
 class Point:
+    """
+
+    """
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -70,6 +76,9 @@ print(p)  # Point(2, 3)
 
 
 class Car:
+    """
+
+    """
     def __init__(self, *data):
         [self.make,
          self.model] = data
@@ -114,6 +123,9 @@ print(d)  # Derived class
 
 
 class Product:
+    """
+
+    """
     def __init__(self, name, price):
         self.name = name
         self.price = price
@@ -134,6 +146,9 @@ __str__ и __repr__ могат да съществуват едновремен�
 
 
 class Book:
+    """
+
+    """
     def __init__(self, title, author):
         self.title = title
         self.author = author

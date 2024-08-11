@@ -1,17 +1,40 @@
 def take_odd(password):
+    """
+
+    :param password:
+    :return:
+    """
     return ''.join(password[i] for i in range(len(password)) if i % 2 != 0)
 
 
 def cut_password(password, index, length):
+    """
+
+    :param password:
+    :param index:
+    :param length:
+    :return:
+    """
     return password[:index] + password[index + length:]
 
 
 def substitute_password(password, substring, substitute):
+    """
+
+    :param password:
+    :param substring:
+    :param substitute:
+    :return:
+    """
     if substring in password:
         return password.replace(substring, substitute)
 
 
 def process(test_password):
+    """
+
+    :param test_password:
+    """
     password = test_password
 
     while True:

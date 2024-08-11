@@ -7,7 +7,7 @@
 https://judge.softuni.org/Contests/1939/Encapsulation-Exercise
 
 -projec
--- __init__.py
+-- 123.py
 -- dough
 -- pizza
 -- topping

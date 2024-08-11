@@ -4,14 +4,15 @@ from project.teams.outdoor_team import OutdoorTeam
 from project.teams.indoor_team import IndoorTeam
 from project.equipment.elbow_pad import ElbowPad
 from project.equipment.knee_pad import KneePad
+from typing import List
 
 
 class Tournament:
     def __init__(self, name: str, capacity: int):
         self.name = name
         self.capacity = capacity
-        self.equipment = []
-        self.teams = []
+        self.equipment: List[BaseEquipment]= []
+        self.teams: List[BaseTeam] = []
 
     @property
     def equipment_types(self):
@@ -49,7 +50,7 @@ class Tournament:
         team_class = self.team_types[team_type]
         budget = BaseTeam.teams[team_type]["budget"]
 
-        self.teams.append(team_class(team_name, country, advantage, budget))
+        self.teams.append(team_class(team_name, budget, advantage))
         return f'{team_type} was successfully added.'
 
 

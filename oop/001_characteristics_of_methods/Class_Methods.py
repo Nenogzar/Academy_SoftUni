@@ -13,6 +13,9 @@
 class MyClass:
     @classmethod
     def class_method(cls):
+        """
+
+        """
         pass
 
 
@@ -27,6 +30,10 @@ class MyClass:
 
     @classmethod
     def class_method(cls):
+        """
+
+        :return:
+        """
         return cls.class_attribute
 
 """
@@ -50,12 +57,21 @@ print(instance.class_method())  # class attribute
 
 
 class Person:
+    """
+
+    """
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
     @classmethod
     def from_birth_year(cls, name, birth_year):
+        """
+
+        :param name:
+        :param birth_year:
+        :return:
+        """
         age = 2024 - birth_year
         return cls(name, age)
 
@@ -75,6 +91,9 @@ class Counter:
 
     @classmethod
     def increment(cls):
+        """
+
+        """
         cls.count += 1
 
 
@@ -93,10 +112,20 @@ class Circle:
 
     @classmethod
     def area(cls, radius):
+        """
+
+        :param radius:
+        :return:
+        """
         return cls.pi * radius ** 2
 
     @classmethod
     def perimeter(cls, radius):
+        """
+
+        :param radius:
+        :return:
+        """
         return 2 * cls.pi * radius
 
 
@@ -108,6 +137,10 @@ class Circle:
 class Animal:
     @classmethod
     def create(cls):
+        """
+
+        :return:
+        """
         return cls()
 
 class Dog(Animal):

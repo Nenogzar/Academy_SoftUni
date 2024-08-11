@@ -75,7 +75,4 @@ Budget: 1000.00EUR
 Wins: 0
 Total Equipment Price: 0.00
 Average Protection: 0
-
-
-
 """

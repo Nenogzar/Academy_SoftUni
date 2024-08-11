@@ -1,6 +1,5 @@
-from project.factory_manager import FactoryManager
-from project.products.chair import Chair
-from project.products.hobby_horse import HobbyHorse
+# from project.products.chair import Chair
+# from project.products.hobby_horse import HobbyHorse
 # try:
 #     hh = HobbyHorse("Classic", 100)
 #     print(hh.SUB_TYPE)
@@ -17,6 +16,7 @@ from project.products.hobby_horse import HobbyHorse
 #
 # except ValueError as h:
 #     print(h)
+from project.factory_manager import FactoryManager
 
 # Initialize the FactoryManager
 factory_manager = FactoryManager("Cool Factory")
@@ -64,4 +64,3 @@ print()
 
 # Unregister store
 print(factory_manager.unregister_store("Toy World"))
-

@@ -1,10 +1,23 @@
 def contains_command(key, substring):
+    """
+
+    :param key:
+    :param substring:
+    """
     if substring in key:
         print(f"{key} contains {substring}")
     else:
         print("Substring not found!")
 
 def flip_command(key, case, start_index, end_index):
+    """
+
+    :param key:
+    :param case:
+    :param start_index:
+    :param end_index:
+    :return:
+    """
     if case == "Upper":
         key = key[:start_index] + key[start_index:end_index].upper() + key[end_index:]
     elif case == "Lower":
@@ -13,11 +26,22 @@ def flip_command(key, case, start_index, end_index):
     return key
 
 def slice_command(key, start_index, end_index):
+    """
+
+    :param key:
+    :param start_index:
+    :param end_index:
+    :return:
+    """
     key = key[:start_index] + key[end_index:]
     print(key)
     return key
 
 def process_commands(raw_key):
+    """
+
+    :param raw_key:
+    """
     key = raw_key
     command = input()
     while command != "Generate":

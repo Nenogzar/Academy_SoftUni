@@ -101,7 +101,9 @@ from collections import deque
 
 
 class ExpressionEvaluator:
+    """
 
+    """
     def __init__(self):
         self.expression = deque(input().split())
         self.stack = []
@@ -112,9 +114,15 @@ class ExpressionEvaluator:
         self.main_meth()
 
     def main_meth(self):
+        """
+
+        """
         self.process_the_symbols_in_expression()
 
     def process_the_symbols_in_expression(self):
+        """
+
+        """
         while self.expression:
             symbol = self.expression.popleft()
             if symbol not in '*-+/':
@@ -123,15 +131,27 @@ class ExpressionEvaluator:
                 self.map_functions[symbol]()
 
     def multiply_numbers(self):
+        """
+
+        """
         self.stack = [reduce(lambda a, b: a * b, self.stack)]
 
     def divide_numbers(self):
+        """
+
+        """
         self.stack = [reduce(lambda a, b: a // b, self.stack)]
 
     def sum_numbers(self):
+        """
+
+        """
         self.stack = [reduce(lambda a, b: a + b, self.stack)]
 
     def subtract_numbers(self):
+        """
+
+        """
         self.stack = [reduce(lambda a, b: a - b, self.stack)]
 
     def __repr__(self):

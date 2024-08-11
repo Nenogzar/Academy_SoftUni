@@ -112,6 +112,11 @@ for n in range(0, len(input_products), 2):
 
 
 def check_products(product_dict):
+    """
+
+    :param product_dict: 
+    :return: 
+    """
     results = []
     for product in product_dict:
         if product not in products:
@@ -164,6 +169,12 @@ Example
 
 ```Python
 def product_func(dict_product, product_dict):
+    """
+
+    :param dict_product: 
+    :param product_dict: 
+    :return: 
+    """
     key, value = dict_product[0], int(dict_product[1])
 
     if key not in product_dict:
@@ -330,6 +341,11 @@ print(ascii_dict)
 
 ```Python
 def create_ascii_dict(characters):
+    """
+
+    :param characters: 
+    :return: 
+    """
     ascii_dict = {char: ord(char) for char in characters}
     return ascii_dict
 

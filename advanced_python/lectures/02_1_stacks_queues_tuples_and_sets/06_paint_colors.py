@@ -131,7 +131,9 @@ from collections import deque
 
 
 class PaintColors:
+    """
 
+    """
     def __init__(self):
         self.result_output_message = []
         self.initial_string = deque()
@@ -143,14 +145,23 @@ class PaintColors:
         self.main_meth()
 
     def main_meth(self):
+        """
+
+        """
         self.define_initial_string_as_deque()
         self.start_to_matching_colors()
         self.check_primary_colors_to_form_secondary_colors()
 
     def define_initial_string_as_deque(self):
+        """
+
+        """
         self.initial_string = deque(input().split())
 
     def start_to_matching_colors(self):
+        """
+
+        """
         while self.initial_string:
             first = self.initial_string.popleft()
             second = self.initial_string.pop() if self.initial_string else ''
@@ -164,6 +175,12 @@ class PaintColors:
                 self.return_substring_to_initial_string(first, second)
 
     def check_variants_for_match_color(self, combination01, combination02):
+        """
+
+        :param combination01:
+        :param combination02:
+        :return:
+        """
         for secondary, main in self.color_pairs.items():
             if combination01 == secondary or combination01 in main:
                 return combination01
@@ -171,6 +188,11 @@ class PaintColors:
                 return combination02
 
     def return_substring_to_initial_string(self, first, second):
+        """
+
+        :param first:
+        :param second:
+        """
         first_edit, second_edit = first[:-1], second[:-1]
         middle = len(self.initial_string) // 2
         if first_edit:
@@ -179,6 +201,9 @@ class PaintColors:
             self.initial_string.insert(middle, second_edit)
 
     def check_primary_colors_to_form_secondary_colors(self):
+        """
+
+        """
         founded_secondary_colors = set(self.color_pairs).intersection(self.collected_colors)
 
         for color in founded_secondary_colors:

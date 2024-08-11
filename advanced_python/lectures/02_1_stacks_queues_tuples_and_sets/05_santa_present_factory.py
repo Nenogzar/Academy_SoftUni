@@ -221,7 +221,9 @@ from collections import deque
 
 
 class SantaFactory:
+    """
 
+    """
     def __init__(self):
         self.result_message = ''
         self.boxes = []
@@ -235,18 +237,30 @@ class SantaFactory:
         self.main_meth()
 
     def main_meth(self):
+        """
+
+        """
         self.fill_boxes_with_materials_stack()
         self.fill_magic_values_deque()
         self.start_creating_toys()
         self.prepare_result_message()
 
     def fill_boxes_with_materials_stack(self):
+        """
+
+        """
         self.boxes = [int(x) for x in input().split()]
 
     def fill_magic_values_deque(self):
+        """
+
+        """
         self.magic_values = deque(int(x) for x in input().split())
 
     def start_creating_toys(self):
+        """
+
+        """
         while self.boxes and self.magic_values:
             box = self.boxes.pop()
             magic = self.magic_values.popleft()
@@ -260,6 +274,11 @@ class SantaFactory:
             self.check_crafting_result(box, magic)
 
     def check_crafting_result(self, box, magic):
+        """
+
+        :param box:
+        :param magic:
+        """
         product = box * magic
         if product < 0:
             self.boxes.append(box + magic)
@@ -270,6 +289,9 @@ class SantaFactory:
             self.boxes.append(box + 15)
 
     def prepare_result_message(self):
+        """
+
+        """
         if self.check_success():
             self.result_message = "The presents are crafted! Merry Christmas!"
         else:
@@ -283,6 +305,10 @@ class SantaFactory:
                 self.result_message += f"\n{toy}: {amount}"
 
     def check_success(self):
+        """
+
+        :return:
+        """
         return self.toys['Doll'] >= 1 and self.toys['Wooden train'] >= 1 \
             or self.toys['Bicycle'] >= 1 and self.toys['Teddy bear'] >= 1
 

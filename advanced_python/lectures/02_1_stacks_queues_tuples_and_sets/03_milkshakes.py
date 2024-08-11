@@ -86,7 +86,9 @@ from collections import deque
 
 
 class Milkshakes:
+    """
 
+    """
     def __init__(self):
         self.result_message = ''
         self.chocolate_row = deque()
@@ -95,18 +97,30 @@ class Milkshakes:
         self.main_meth()
 
     def main_meth(self):
+        """
+
+        """
         self.fill_chocolates()
         self.fill_cups_of_milks()
         self.start_creating_milkshakes()
         self.prepare_result()
 
     def fill_chocolates(self):
+        """
+
+        """
         self.chocolate_row = deque(int(x) for x in input().split(', '))
 
     def fill_cups_of_milks(self):
+        """
+
+        """
         self.milk_cups_row = deque(int(x) for x in input().split(', '))
 
     def start_creating_milkshakes(self):
+        """
+
+        """
         while self.chocolate_row and self.milk_cups_row and self.milkshakes != 5:
             current_chocolate = self.chocolate_row.pop()
             current_milk = self.milk_cups_row.popleft()
@@ -123,6 +137,9 @@ class Milkshakes:
                     self.milk_cups_row.append(current_milk)
 
     def prepare_result(self):
+        """
+
+        """
         if self.milkshakes == 5:
             self.result_message = 'Great! You made all the chocolate milkshakes needed!\n'
         else:

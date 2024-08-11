@@ -8,7 +8,7 @@
 You are tasked to create three classes: a Song class, an Album class, and a Band class.
 
 - project
--- __init__.py
+-- 123.py
 -- album.py
 -- band.py
 -- song.py

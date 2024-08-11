@@ -84,6 +84,11 @@ for character in characters:
 ```
 ```Python
 def count_letter(current_text):
+    """
+
+    :param current_text: 
+    :return: 
+    """
     char_dict = {}
 
     for word in current_text:
@@ -382,6 +387,9 @@ def print_func(legendary_items_dict, junk_items_dict, special_item):
 
 
 def legendary_farming():
+    """
+
+    """
     legendary_items_dict = {'shards': 0, 'fragments': 0, 'motes': 0}
     junk_items_dict = {}
     while_condition = False
@@ -492,7 +500,9 @@ def orders_func(dict_products, input_info):
     return dict_products
 
 def orders():
+    """
 
+    """
     dict_products = {}
     input_info = input()
     while  input_info != 'buy':
@@ -632,6 +642,11 @@ def register(username: str, car_plate: str):
 
 
 def unregister(username: str):
+    """
+
+    :param username: 
+    :return: 
+    """
     if username not in parking:
         return f"ERROR: user {username} not found"
 
@@ -822,6 +837,9 @@ def main():
 
 
 def average_grade_checker():
+    """
+
+    """
     for student in students_with_grades:
         average_grade = sum(students_with_grades[student]) / len(students_with_grades[student])
         if average_grade >= 4.50:
@@ -918,6 +936,11 @@ company_info = {}
 
 
 def employee_id_search(id):
+    """
+
+    :param id: 
+    :return: 
+    """
     for value in company_info[id].values():
         if id == value:
             return True

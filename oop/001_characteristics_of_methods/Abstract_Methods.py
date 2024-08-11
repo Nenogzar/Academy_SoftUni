@@ -15,6 +15,9 @@ from abc import ABC, abstractmethod
 class MyBaseClass(ABC):
     @abstractmethod
     def my_abstract_method(self):
+        """
+
+        """
         pass
 
 
@@ -30,6 +33,9 @@ from abc import ABC, abstractmethod
 class Animal(ABC):
     @abstractmethod
     def make_sound(self):
+        """
+
+        """
         pass
 
 
@@ -42,6 +48,10 @@ class Animal(ABC):
 
 class Dog(Animal):
     def make_sound(self):
+        """
+
+        :return:
+        """
         return "Bark"
 
 
@@ -65,6 +75,10 @@ animal = Animal()
 
 class Cat(Animal):
     def make_sound(self):
+        """
+
+        :return:
+        """
         return "Meow"
 
 
@@ -78,10 +92,16 @@ class Cat(Animal):
 class Shape(ABC):
     @abstractmethod
     def area(self):
+        """
+
+        """
         pass
 
     @abstractmethod
     def perimeter(self):
+        """
+
+        """
         pass
 
 
@@ -94,9 +114,16 @@ class Shape(ABC):
 class BaseClass(ABC):
     @abstractmethod
     def required_method(self):
+        """
+
+        """
         pass
 
     def normal_method(self):
+        """
+
+        :return:
+        """
         return "This is a normal method"
 
 
@@ -109,6 +136,10 @@ class BaseClass(ABC):
 
 
 def describe_animal(animal):
+    """
+
+    :param animal:
+    """
     print(animal.make_sound())
 
 

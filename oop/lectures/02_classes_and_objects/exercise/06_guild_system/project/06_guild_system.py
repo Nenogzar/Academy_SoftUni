@@ -10,7 +10,7 @@ You are tasked to create two classes: a Player class and a Guild class.
 -project
 --player.py
 --guild.py
---__init__.py
+--123.py
 
 The Player class should receive a name (string), a hp (int), and a mp (int) upon initialization.
 
