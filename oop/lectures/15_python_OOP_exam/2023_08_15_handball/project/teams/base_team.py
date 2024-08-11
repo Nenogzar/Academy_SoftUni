@@ -36,7 +36,7 @@ class BaseTeam(ABC):
 
     @property
     def advantage(self):
-        return
+        return self.__advantage
 
     @advantage.setter
     def advantage(self, value):
