@@ -9,16 +9,21 @@ class Animal(ABC):
     def get_species(self):
         pass
 
+
 class Dog(Animal):
     def get_species(self):
         return "woof-woof"
+
+
 class Cat(Animal):
     def get_species(self):
         return "meaw"
 
+
 class Pig(Animal):
     def get_species(self):
         return "gruh gruh"
+
 
 class Turtle(Animal):
     def get_species(self):
@@ -28,8 +33,6 @@ class Turtle(Animal):
 def animal_sound(animals: list):
     for animal in animals:
         print(animal.get_species())
-
-
 
 
 animals = [Cat("Tom"), Dog("Bob"), Turtle("Toni"), Pig("Leonardo")]
