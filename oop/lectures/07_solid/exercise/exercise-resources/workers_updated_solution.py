@@ -3,6 +3,7 @@ import time
 
 
 class Workable(ABC):
+
     @staticmethod
     @abstractmethod
     def work():
@@ -10,6 +11,7 @@ class Workable(ABC):
 
 
 class Eatable(ABC):
+
     @staticmethod
     @abstractmethod
     def eat():
@@ -17,6 +19,7 @@ class Eatable(ABC):
 
 
 class Worker(Workable, Eatable):
+
     @staticmethod
     def work():
         print("I'm normal worker. I'm working.")
