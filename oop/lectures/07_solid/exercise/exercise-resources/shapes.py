@@ -11,6 +11,8 @@ class AreaCalculator:
         assert isinstance(shapes, list), "`shapes` should be of type `list`."
         self.shapes = shapes
 
+
+
     @property
     def total_area(self):
         total = 0

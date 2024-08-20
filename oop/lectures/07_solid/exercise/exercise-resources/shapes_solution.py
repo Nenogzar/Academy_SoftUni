@@ -1,29 +1,31 @@
 from abc import ABC, abstractmethod
 
 
-class BaseForm(ABC):
+class Shape(ABC):
+
     @abstractmethod
-    def calculate_area(self):
+    def area(self):
         pass
 
 
-class Rectangle(BaseForm):
+class Rectangle(Shape):
 
     def __init__(self, width, height):
         self.width = width
         self.height = height
 
-    def calculate_area(self):
+    def area(self):
         return self.width * self.height
 
 
-class Triangle(BaseForm):
-    def __init__(self, width, height):
-        self.width = width
+class Triangle(Shape):
+
+    def __init__(self, base, height):
+        self.base = base
         self.height = height
 
-    def calculate_area(self):
-        return self.width * self.height / 2
+    def area(self):
+        return 0.5 * self.base * self.height
 
 
 class AreaCalculator:
@@ -38,14 +40,14 @@ class AreaCalculator:
     @shapes.setter
     def shapes(self, value):
         if not isinstance(value, list):
-            raise AssertionError("`shapes` should be of type `list`.")
+            raise TypeError("`shapes` should be of type `list`.")
         self.__shapes = value
 
     @property
     def total_area(self):
         total = 0
         for shape in self.shapes:
-            total += shape.calculate_area("`shapes` should be of type `list`.")
+            total += shape.area()
 
         return total
 
