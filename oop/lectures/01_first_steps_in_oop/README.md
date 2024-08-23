@@ -137,7 +137,7 @@ For example, let’s say we have an interface Document which defines a method sh
 ```py
 class Document:
     def show(self):
-        raise NotImplementedError("Sublass nust implement abstract method")
+        raise NotImplementedError("Sublass must implement abstract method")
 
 class Pdf(Document):
     def show(self):
@@ -158,7 +158,7 @@ except NotImplementedError as e:
 # OUTPUT:
 # Show PDF content
 # Show Word content
-# Sublass nust implement abstract method
+# Sublass must implement abstract method
 ```
 
 Each subclass (Pdf, Word) of Document implement the show method differently (method overriding), but the interface remains consistent giving the ability to iterate over both the classes using a single for loop.
