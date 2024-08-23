@@ -90,7 +90,7 @@ The child class inherits all the fields and methods of the parent class and can 
 
 Inheritance promotes code reuse and helps create a hierarchical structure.
 
-Let’s say we have a parent Vehicle class with a method named honk().
+Let’s say we have a parent Vehicle class with a method named city().
 
 ```py
 # Devine a parent class called "Vehicle"
@@ -98,7 +98,7 @@ class Vehicle:
     def __init__(self, color):
         self.color = color
 
-    def cyty(self):
+    def city(self):
         print("Sofia")
 
 
