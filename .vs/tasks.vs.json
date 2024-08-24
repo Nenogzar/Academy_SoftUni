@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-2022_08_14_horse_racings",
+      "appliesTo": "oop/lectures/15_python_OOP_exam/2022_08_14_horse_racings/",
+      "type": "launch"
+    }
+  ]
+}
