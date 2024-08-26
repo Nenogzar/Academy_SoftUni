@@ -343,6 +343,17 @@ Applying this principle reduces dependency on specific implementations and makes
 Let's consider a example where we have a EmailService class that sends emails using a specific email provider (e.g., Gmail).
 
 ```py
+class GmailClient:
+    def send_emai(self, recipient, subject, body):
+        # logic to send email using Gmail API
+        ...
+
+class EmailService:
+    def __init__(self):
+        self.gmal_client = GmailClient()
+
+    def send_email(self, recipient, subject, body):
+        self.gmal_client.send_emai(recipient, subject, body)
 
 ```
 In this example, the EmailService class directly depends on the GmailClient class, a low-level module that implements the details of sending emails using the Gmail API.
@@ -352,7 +363,32 @@ This violates the DIP because the high-level EmailService module is tightly coup
 To adhere to the DIP, we can introduce an abstraction (interface) for email clients:
 
 ```py
+class EmailClient:
+    def send_email(self,recipient, subject, body):
+        raise NotImplementedError
 
+
+class GmailClient(EmailClient):
+    def send_emai(self, recipient, subject, body):
+        # logic to send email using Gmail API
+        ...
+class OutlookClient(EmailClient):
+    def send_emai(self, recipient, subject, body):
+        # logic to send email using Outlook API
+    
+class EmailService:
+    def __init__(self, email_client):
+        self.email_client = email_client
+
+    def send_email(self, recipient, subject, body):
+        self.email_client.send_emai(recipient, subject, body)
+
+
+# Usage
+
+gmail_client = GmailClient()
+email_service = EmailService(gmail_client)
+email_service.send_email("recipiend@example.com", "Subject", "Email body")
 ```
 
 Now, the EmailService class depends on the EmailClient abstraction, and the low-level email client implementations (GmailClient and OutlookClient) depend on the abstraction.
