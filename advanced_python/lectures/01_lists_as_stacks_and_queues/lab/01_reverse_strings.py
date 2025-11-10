@@ -67,7 +67,7 @@ from collections import deque
 
 """ Whit deque """
 
-stack = deque(input())
+stack = deque(input("1: "))
 # print(stack)
 stack.reverse()
 print(*stack, sep="")       
@@ -86,8 +86,8 @@ class ReverseString:
     def __repr__(self):
         return ''.join(self.reversed_stack)
 
-string = [char for char in input()]
+string = [char for char in input("2: ")]
 
-output = ReverseString(string)
-output.reversing_string()
-print(output)
+output1 = ReverseString(string)
+output1.reversing_string()
+print(output1)

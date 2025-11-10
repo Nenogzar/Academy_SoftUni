@@ -30,7 +30,7 @@ Output
 
 """
 
-parentheses = input()
+parentheses = input("1: ")
 push = []
 for index in range(len(parentheses)):
     if parentheses[index] == '(':
@@ -63,6 +63,6 @@ class MatchingParentheses:
         return '\n'.join(self.result)
 
 
-output = MatchingParentheses(input())
+output = MatchingParentheses(input("2: "))
 output.matching_parentheses()
 print(output)
